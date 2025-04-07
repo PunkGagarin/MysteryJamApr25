@@ -4,12 +4,12 @@ using Jam.Scripts.Audio.Data;
 using UnityEngine;
 using Zenject;
 
-namespace Jam.Scripts.Audio
+namespace Jam.Scripts.Audio.Domain
 {
     public class AudioService : MonoBehaviour
     {
         [Inject] private SoundRepository _soundRepository;
-        [Inject] private PersistentAudioSettings _persistentAudioSettings;
+        [Inject] private IAudioMixerService _audioMixerService; 
         
         private AudioSource _musicSource;
         private List<AudioSource> _soundSources = new List<AudioSource>();
@@ -82,7 +82,7 @@ namespace Jam.Scripts.Audio
         {
             var source = gameObject.AddComponent<AudioSource>();
             source.playOnAwake = false;
-            source.outputAudioMixerGroup = _persistentAudioSettings.SoundMixer;
+            source.outputAudioMixerGroup = _audioMixerService.SoundMixer;
             _soundSources.Add(source);
             return source;
         }
@@ -92,7 +92,7 @@ namespace Jam.Scripts.Audio
             _musicSource = gameObject.AddComponent<AudioSource>();
             _musicSource.loop = true;
             _musicSource.playOnAwake = false;
-            _musicSource.outputAudioMixerGroup = _persistentAudioSettings.MusicMixer;
+            _musicSource.outputAudioMixerGroup = _audioMixerService.MusicMixer;
 
             for (int i = 0; i < 5; i++)
                 AddNewSoundSource();
