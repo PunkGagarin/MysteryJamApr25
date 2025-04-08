@@ -1,10 +1,11 @@
 ﻿using System;
 using Jam.Scripts.Audio.Data;
 using Jam.Scripts.Audio.View;
+using Zenject;
 
 namespace Jam.Scripts.Audio.Domain
 {
-    public class AudioSettingsPresenter : IDisposable
+    public class AudioSettingsPresenter : IInitializable, IDisposable
     {
         private AudioSettingsModel _audioSettingsModel;
         
@@ -20,6 +21,11 @@ namespace Jam.Scripts.Audio.Domain
             _audioSettingsModel.MasterVolumeChanged += UpdateMasterVolume;
             _audioSettingsModel.SoundVolumeChanged += UpdateSoundVolume;
             _audioSettingsModel.MusicVolumeChanged += UpdateMusicVolume;
+        }
+        
+        public void Initialize()
+        {
+            _audioMixerService.SetMasterVolume(_audioSettingsModel.MusicVolume, _audioSettingsModel.SoundVolume, _audioSettingsModel.MasterVolume);
         }
         
         public void AttachView(AudioSettingsView view)
