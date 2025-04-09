@@ -12,25 +12,26 @@ namespace Jam.Scripts.Utils.UI
         [Inject] private PopupFactory _factory;
         private HashSet<Popup> _popups = new HashSet<Popup>();
         
-        public void OpenPopup<T>(Action closeEvent = null, bool withPause = false) where T : Popup
+        public T OpenPopup<T>(Action closeEvent = null, bool withPause = false) where T : Popup
         {
             foreach (T popup in _popups.OfType<T>())
             {
                 popup.SetCloseEvent(closeEvent);
                 popup.Open(withPause);
-                return;
+                return popup;
             }
 
-            AssignNewPopup<T>(closeEvent, withPause);
+            return AssignNewPopup<T>(closeEvent, withPause);
         }
         
-        private void AssignNewPopup<T>(Action closeEvent, bool withPause) where T : Popup
+        private T AssignNewPopup<T>(Action closeEvent, bool withPause) where T : Popup
         {
             T newPopup = _factory.CreatePopup<T>();
             newPopup.transform.SetParent(transform, false);
             newPopup.SetCloseEvent(closeEvent);
             newPopup.Open(withPause);
             _popups.Add(newPopup);
+            return newPopup; 
         }
     }
 }

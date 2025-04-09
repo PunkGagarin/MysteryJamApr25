@@ -127,6 +127,7 @@ Transform:
   - {fileID: 3493959851144754896}
   - {fileID: 7258424312170536137}
   - {fileID: 6499364400999107220}
+  - {fileID: 4174867029999537307}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2565986588456786615
@@ -149,6 +150,7 @@ MonoBehaviour:
   - {fileID: 6909934021187158411}
   - {fileID: 6385491715541255639}
   - {fileID: 7740269642974872762}
+  - {fileID: 5742488449686105104}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -297,6 +299,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popupsPrefabs:
   - {fileID: 8289118240970559456, guid: 8324bdb625f86df4e9eb608d1393a073, type: 3}
+  - {fileID: 2737058570033945176, guid: 3a81b5f2cb319fe45ad63a60ac290004, type: 3}
+--- !u!1 &7592136200623565166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4174867029999537307}
+  - component: {fileID: 5742488449686105104}
+  m_Layer: 0
+  m_Name: LanguageControllerInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4174867029999537307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592136200623565166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2548839604113478229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5742488449686105104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7592136200623565166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fcc47c2997243e8b30bd1b84fdf5606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _languageControllerPrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054, type: 3}
 --- !u!1 &8458801676252858372
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,6 @@
+﻿.nameOfDialogueContainer
+{
+    margin-top: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

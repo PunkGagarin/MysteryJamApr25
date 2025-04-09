@@ -26,7 +26,7 @@ namespace Jam.Scripts.Utils.UI
             gameObject.SetActive(true);
         }
 
-        protected virtual void Close()
+        public virtual void Close()
         {
             if (_openedWithPause)
                 _pauseService.SetPaused(false);
