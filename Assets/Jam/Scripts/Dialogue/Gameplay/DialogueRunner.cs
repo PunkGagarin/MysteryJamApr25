@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.Dialogue.Runtime.Events;
@@ -27,11 +28,12 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private int _currentIndex = 0;
         private DialogueView _dialogueView;
 
-        public void StartDialogue(DialogueContainerSO dialogueContainer)
+        public void StartDialogue(DialogueContainerSO dialogueContainer, Action closeEvent = null)
         {
             _dialogueContainer = dialogueContainer;
 
             _dialogueView = _popupManager.OpenPopup<DialogueView>(withPause: true);
+            _dialogueView.SetCloseEvent(closeEvent);
             
             CheckNodeType(GetNextNode(_dialogueContainer.StartData[0]));
         }
@@ -108,8 +110,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
                 }
                 else if (_dialogueNodes[i] is DialogueDataText dataText)
                 {
-                    _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType);
-                    ShowButtons();
+                    _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, ShowButtons);
                     break;
                 }
             }
@@ -178,7 +179,15 @@ namespace Jam.Scripts.Dialogue.Gameplay
             
             CheckNodeType(GetNextNode(nodeData));
         }
+        
+        private void RunBranchNode(BranchData nodeData)
+        {
+            bool checkBranch = nodeData.EventDataStringConditions.All(item => _gameEvents.DialogueConditionEvents(item.StringEventText.Value, item.StringEventConditionType.Value, item.Number.Value));
 
+            string nextNode = checkBranch ? nodeData.TrueGuidNode : nodeData.FalseGuidNode;
+            CheckNodeType(GetNodeByGuid(nextNode));
+        }
+        
         private void RunEndNode(EndData nodeData)
         {
             switch (nodeData.EndNodeType.Value)
@@ -193,14 +202,6 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     CheckNodeType(GetNextNode(_dialogueContainer.StartData[0]));
                     break;
             }
-        }
-
-        private void RunBranchNode(BranchData nodeData)
-        {
-            bool checkBranch = false;// nodeData.EventDataStringConditions.All(item => GameEvents.Instance.DialogueConditionEvents(item.StringEventText.Value, item.StringEventConditionType.Value, item.Number.Value));
-
-            string nextNode = checkBranch ? nodeData.TrueGuidNode : nodeData.FalseGuidNode;
-            CheckNodeType(GetNodeByGuid(nextNode));
         }
     }
 }

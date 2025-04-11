@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8223a30af6364a4286444bb9b58c2b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _questEvent: Mystery
   _reputationEvent: Reputation
-  _questEvent: Quest

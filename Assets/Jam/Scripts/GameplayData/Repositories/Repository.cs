@@ -6,8 +6,6 @@ namespace Jam.Scripts.GameplayData.Repositories
 {
     public abstract class Repository<T> : ScriptableObject where T : Definition
     {
-        [SerializeField] private List<T> _definitions;
-        
-        public List<T> Definitions => _definitions;
+        [field: SerializeField] public List<T> Definitions { get; private set; }
     }
 }

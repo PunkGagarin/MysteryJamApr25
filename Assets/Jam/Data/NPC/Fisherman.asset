@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0bced4db5e99b4c88179afd00c29ba, type: 3}
-  m_Name: String event definition
+  m_Script: {fileID: 11500000, guid: c6521bb0669d46a399b01e9cb9cd38f7, type: 3}
+  m_Name: Fisherman
   m_EditorClassIdentifier: 
-  _stringEventsForEditor:
-  - Reputation
-  - Money
-  - Mystery
-  - Clues
+  <Name>k__BackingField: Fisherman
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: eb7b1debe1ad1e84ab066688904f0e13, type: 2}
+  <QuestKeyWords>k__BackingField: []

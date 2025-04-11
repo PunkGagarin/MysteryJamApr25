@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71a25e0e4c52c8e4393e1a5721365c2c, type: 3}
-  m_Name: Dialogue
+  m_Name: Jack Niceguy
   m_EditorClassIdentifier: 
   NodeLinkData:
   - BaseNodeGuid: 8e35634b-4599-4428-916c-6cdd3bbefc58
@@ -196,7 +196,7 @@ MonoBehaviour:
     Position: {x: 1998, y: -262}
     EventDataStringModifiers:
     - StringEventText:
-        Value: Quest
+        Value: Mystery
       Number:
         Value: 1
       StringEventModifierType:

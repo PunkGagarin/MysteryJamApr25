@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Bitwave_Labs.AnimatedTextReveal.Scripts;
 using DG.Tweening;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.Enums;
@@ -15,7 +17,8 @@ namespace Jam.Scripts.Dialogue.UI
         [SerializeField] private RectTransform _dialoguePanel;
         [Header("Text")]
         [SerializeField] private TMP_Text _nameText;
-        [SerializeField] private TMP_Text _dialogueText;
+        //[SerializeField] private TMP_Text _dialogueText;
+        [SerializeField] private AnimatedTextReveal _dialogueText;
         [Header("Button")]
         [SerializeField] private GameObject _buttonContentPanel;
         [SerializeField] private ButtonController _buttonPrefab;
@@ -46,8 +49,12 @@ namespace Jam.Scripts.Dialogue.UI
         public void SetName(string nameText) =>
             _nameText.text = nameText;
 
-        public void SetText(string text) => 
-            _dialogueText.text = text;
+        public void SetText(string text, Action onComplete = null)
+        {
+            _dialogueText.ResetTextVisibility();
+            _dialogueText.TextMesh.text = text;
+            StartCoroutine(_dialogueText.FadeInText(onComplete));
+        }
 
         public void SetButtons(List<DialogueButtonContainer> buttonContainers)
         {

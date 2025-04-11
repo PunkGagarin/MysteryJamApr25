@@ -12,10 +12,272 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a25e0e4c52c8e4393e1a5721365c2c, type: 3}
   m_Name: Tutorial
   m_EditorClassIdentifier: 
-  NodeLinkData: []
-  StartData: []
-  DialogueData: []
-  EventData: []
-  EndData: []
-  BranchData: []
-  ChoiceData: []
+  NodeLinkData:
+  - BaseNodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
+    BasePortGuid: Output
+    TargetNodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
+    TargetPortGuid: Input
+  - BaseNodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
+    BasePortGuid: False
+    TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    TargetPortGuid: Input
+  - BaseNodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
+    BasePortGuid: True
+    TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    TargetPortGuid: Input
+  - BaseNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+    BasePortGuid: Output
+    TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
+    TargetPortGuid: Input
+  - BaseNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+    BasePortGuid: Output
+    TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+    BasePortGuid: Output
+    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
+  - BaseNodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
+    BasePortGuid: Output
+    TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    BasePortGuid: Output
+    TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
+    BasePortGuid: Output
+    TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    BasePortGuid: 67b5244b-9e42-420e-8625-0a5e4ec4b8ed
+    TargetNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    BasePortGuid: 5068aac0-8a4d-4f51-9484-24da25feb07f
+    TargetNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+    TargetPortGuid: Input
+  - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    BasePortGuid: 70456f29-a4a2-4614-a440-d07b1caf352d
+    TargetNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+    TargetPortGuid: Input
+  - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    BasePortGuid: cfb1a589-3846-4af7-8be8-d601ec601c97
+    TargetNodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
+    TargetPortGuid: Input
+  StartData:
+  - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
+    Position: {x: 241, y: 290}
+  DialogueData:
+  - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    Position: {x: 950, y: 458}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 5c5fdc62-f572-4848-a232-eda32598f171
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: Hello arcanist!
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: 55246742-f30b-471b-b737-ff71a3b4e7a1
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: My father died, and hide somewhere his blessed fishing
+          rod!
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 3
+      GuidID:
+        Value: 12569bb6-a660-4c1a-936d-67041ef62b8b
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: Could you please find out where is rod?
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 67b5244b-9e42-420e-8625-0a5e4ec4b8ed
+      InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+      OutputGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    - ID:
+        Value: 0
+      PortGuid: 5068aac0-8a4d-4f51-9484-24da25feb07f
+      InputGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+      OutputGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+  - NodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    Position: {x: 950, y: -140}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 89bb81f0-6be9-4cc1-9e4c-9e0f54ac517f
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 28403139-9d50-43bd-9cb2-4233fbf3074f
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: Did you realize where is my rod?
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 70456f29-a4a2-4614-a440-d07b1caf352d
+      InputGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+      OutputGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    - ID:
+        Value: 0
+      PortGuid: cfb1a589-3846-4af7-8be8-d601ec601c97
+      InputGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
+      OutputGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+  EventData:
+  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    Position: {x: 1800, y: -235}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 4
+    ContainerDialogueEventSOs: []
+  - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
+    Position: {x: 1740, y: 264}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
+  EndData:
+  - NodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    Position: {x: 2656, y: 203}
+    EndNodeType:
+      Value: 1
+  BranchData:
+  - NodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
+    Position: {x: 414, y: 290}
+    TrueGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    FalseGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    EventDataStringConditions:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventConditionType:
+        Value: 3
+  ChoiceData:
+  - NodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+    Position: {x: 1387, y: 361}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: Okay, give me moment!
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+    Position: {x: 1387, y: 530}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: Sorry not today
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+    Position: {x: 1339, y: -235}
+    ChoiceStateType:
+      Value: 2
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: Yes!
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventConditionType:
+        Value: 1
+  - NodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
+    Position: {x: 1371, y: 8}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: Still not!
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []

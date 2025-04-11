@@ -1,0 +1,331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a25e0e4c52c8e4393e1a5721365c2c, type: 3}
+  m_Name: TutorialGhost
+  m_EditorClassIdentifier: 
+  NodeLinkData:
+  - BaseNodeGuid: 32f97bb0-c1af-4535-b7de-158a5b893e38
+    BasePortGuid: Output
+    TargetNodeGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    TargetPortGuid: Input
+  - BaseNodeGuid: 977954a5-1fc5-4d02-a8ef-0a7d075d77e5
+    BasePortGuid: Output
+    TargetNodeGuid: 2377d0d4-8916-4189-870e-9cfa51c8b40b
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3dedfc4c-7c8f-4c37-ac2a-9732c37ecf5c
+    BasePortGuid: Output
+    TargetNodeGuid: 01e47e9b-a8bb-4dfd-bbab-35d0d7424d53
+    TargetPortGuid: Input
+  - BaseNodeGuid: 53501772-7278-4b5c-8ab6-30f80d3323be
+    BasePortGuid: Output
+    TargetNodeGuid: a0501f1f-b0df-4635-9ecc-5226ed787205
+    TargetPortGuid: Input
+  - BaseNodeGuid: 25ae92b5-876c-4757-83a7-11dd2b2fe74d
+    BasePortGuid: Output
+    TargetNodeGuid: 0ef2b08e-193a-4095-9384-00efd33e5d0d
+    TargetPortGuid: Input
+  - BaseNodeGuid: a6326146-f92c-42f9-9440-8454180e516e
+    BasePortGuid: Output
+    TargetNodeGuid: 0ef2b08e-193a-4095-9384-00efd33e5d0d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 31905af9-d948-4a15-86ed-1d55ddc6035d
+    BasePortGuid: Output
+    TargetNodeGuid: 0ef2b08e-193a-4095-9384-00efd33e5d0d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 2377d0d4-8916-4189-870e-9cfa51c8b40b
+    BasePortGuid: Continue
+    TargetNodeGuid: 31905af9-d948-4a15-86ed-1d55ddc6035d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 01e47e9b-a8bb-4dfd-bbab-35d0d7424d53
+    BasePortGuid: Continue
+    TargetNodeGuid: 25ae92b5-876c-4757-83a7-11dd2b2fe74d
+    TargetPortGuid: Input
+  - BaseNodeGuid: a0501f1f-b0df-4635-9ecc-5226ed787205
+    BasePortGuid: Continue
+    TargetNodeGuid: a6326146-f92c-42f9-9440-8454180e516e
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    BasePortGuid: 5389acf9-2995-4a3d-b969-c7206a72d2d4
+    TargetNodeGuid: 3dedfc4c-7c8f-4c37-ac2a-9732c37ecf5c
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    BasePortGuid: 23645ee3-203e-4677-9c9b-7a576959257a
+    TargetNodeGuid: 53501772-7278-4b5c-8ab6-30f80d3323be
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    BasePortGuid: ef4a5a8f-3375-41e4-ac1d-748646f2d033
+    TargetNodeGuid: 977954a5-1fc5-4d02-a8ef-0a7d075d77e5
+    TargetPortGuid: Input
+  StartData:
+  - NodeGuid: 32f97bb0-c1af-4535-b7de-158a5b893e38
+    Position: {x: -474, y: 64}
+  DialogueData:
+  - NodeGuid: 2377d0d4-8916-4189-870e-9cfa51c8b40b
+    Position: {x: 785, y: 444}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 15c5bd7c-6b4f-4f7c-ad88-dac99b94c489
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Baelin the Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: f0cd5e75-faee-42cb-af51-e5895cbe745e
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: wrong clues
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+  - NodeGuid: 01e47e9b-a8bb-4dfd-bbab-35d0d7424d53
+    Position: {x: 785, y: -286}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 404cd917-84a1-48ec-8155-27c835f1ae78
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Baelin the Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 74647f59-8490-462f-8de9-d67605f1fab8
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: okey heres some clues
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+  - NodeGuid: a0501f1f-b0df-4635-9ecc-5226ed787205
+    Position: {x: 785, y: 22}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 411ee25f-bc2a-4181-8d39-368fc9f4d811
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Baelin the Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 6bbeba58-8815-41a3-9b1d-ebf4a5155256
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: a bit less clues
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+  - NodeGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    Position: {x: -245, y: 22}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: f79c8787-cce0-46b0-9f0e-f9e9a5448040
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Baelin the Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 6191a1a1-cdac-4a3a-95c7-bb109da9a9e2
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: Good monin'
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: 2584f7f5-8411-403b-8ca9-c1a417a3e241
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: 'Nice day for fishin'' ain''t it? '
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 3
+      GuidID:
+        Value: 198f44d6-f41a-44e8-9ea4-561f877d8481
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: ha-ha
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 5389acf9-2995-4a3d-b969-c7206a72d2d4
+      InputGuid: 3dedfc4c-7c8f-4c37-ac2a-9732c37ecf5c
+      OutputGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    - ID:
+        Value: 0
+      PortGuid: 23645ee3-203e-4677-9c9b-7a576959257a
+      InputGuid: 53501772-7278-4b5c-8ab6-30f80d3323be
+      OutputGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+    - ID:
+        Value: 0
+      PortGuid: ef4a5a8f-3375-41e4-ac1d-748646f2d033
+      InputGuid: 977954a5-1fc5-4d02-a8ef-0a7d075d77e5
+      OutputGuid: 3d41d1a9-84f9-419b-a1b0-a8a6f3317102
+  EventData:
+  - NodeGuid: 25ae92b5-876c-4757-83a7-11dd2b2fe74d
+    Position: {x: 1253, y: -348}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 1
+    - StringEventText:
+        Value: Clues
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
+  - NodeGuid: a6326146-f92c-42f9-9440-8454180e516e
+    Position: {x: 1271, y: 22}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 1
+    - StringEventText:
+        Value: Clues
+      Number:
+        Value: 1
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
+  - NodeGuid: 31905af9-d948-4a15-86ed-1d55ddc6035d
+    Position: {x: 1271, y: 366}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 1
+    - StringEventText:
+        Value: Clues
+      Number:
+        Value: 2
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
+  EndData:
+  - NodeGuid: 0ef2b08e-193a-4095-9384-00efd33e5d0d
+    Position: {x: 1982, y: 35}
+    EndNodeType:
+      Value: 1
+  BranchData: []
+  ChoiceData:
+  - NodeGuid: 977954a5-1fc5-4d02-a8ef-0a7d075d77e5
+    Position: {x: 243, y: 377}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: Silence! Tell me where is your fishing rod!
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: 3dedfc4c-7c8f-4c37-ac2a-9732c37ecf5c
+    Position: {x: 243, y: -286}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: It's sure is!
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: 53501772-7278-4b5c-8ab6-30f80d3323be
+    Position: {x: 243, y: 35}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 1
+      LanguageGenericType: i don't have time for this, where is your fishing rod?
+    - LanguageType: 2
+      LanguageGenericType: 
+    AudioClips:
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 2
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []

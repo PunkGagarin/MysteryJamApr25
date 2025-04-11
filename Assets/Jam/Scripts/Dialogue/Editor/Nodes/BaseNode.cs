@@ -289,10 +289,9 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
         /// Get a new EnumField Where the enum is StringEventModifierType.
         /// </summary>
         /// <param name="inputValue">ContainerStringEventModifierType that need to be set into the EnumField.</param>
-        /// <param name="action">An action that called when enum field has changed</param>
         /// <param name="USS01">USS class add to the UI element.</param>
         /// <param name="USS02">USS class add to the UI element.</param>
-        protected EnumField GetNewEnumFieldStringEventModifierType(ContainerStringEventModifierType inputValue, Action action, string USS01 = "", string USS02 = "")
+        protected EnumField GetNewEnumFieldStringEventModifierType(ContainerStringEventModifierType inputValue, string USS01 = "", string USS02 = "")
         {
             EnumField enumField = new()
             {
@@ -300,11 +299,7 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
             };
             enumField.Init(inputValue.Value);
 
-            enumField.RegisterValueChangedCallback(value =>
-            {
-                inputValue.Value = (StringEventModifierType) value.newValue;
-                action?.Invoke();
-            });
+            enumField.RegisterValueChangedCallback(value => inputValue.Value = (StringEventModifierType) value.newValue);
             enumField.SetValueWithoutNotify(inputValue.Value);
             
             enumField.AddToClassList(USS01);
@@ -318,10 +313,9 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
         /// Get a new EnumField Where the enum is StringEventConditionType.
         /// </summary>
         /// <param name="inputValue">ContainerStringEventConditionType that need to be set into the EnumField.</param>
-        /// <param name="action">An action that is use to hide/show depending on if a FloatField is needed</param>
         /// <param name="USS01">USS class add to the UI element.</param>
         /// <param name="USS02">USS class add to the UI element.</param>
-        protected EnumField GetNewEnumFieldStringEventConditionType(ContainerStringEventConditionType inputValue, Action action, string USS01 = "", string USS02 = "")
+        protected EnumField GetNewEnumFieldStringEventConditionType(ContainerStringEventConditionType inputValue, string USS01 = "", string USS02 = "")
         {
             EnumField enumField = new()
             {
@@ -329,11 +323,7 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
             };
             enumField.Init(inputValue.Value);
 
-            enumField.RegisterValueChangedCallback(value =>
-            {
-                inputValue.Value = (StringEventConditionType) value.newValue;
-                action?.Invoke();
-            });
+            enumField.RegisterValueChangedCallback(value => inputValue.Value = (StringEventConditionType) value.newValue);
             enumField.SetValueWithoutNotify(inputValue.Value);
             
             enumField.AddToClassList(USS01);
@@ -470,9 +460,7 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
             PopupField<string> textField = GetNewEventTextField(tempStringModifier.StringEventText, "StringEventText");
             FloatField floatField = GetNewFloatField(tempStringModifier.Number, "StringEventInt");
 
-            Action ShowHideAction = () => ShowHideStringEventModifierType(tempStringModifier.StringEventModifierType.Value, boxFloatField);
-            EnumField enumField = GetNewEnumFieldStringEventModifierType(tempStringModifier.StringEventModifierType, ShowHideAction, "StringEventEnum");
-            ShowHideStringEventModifierType(tempStringModifier.StringEventModifierType.Value, boxFloatField);
+            EnumField enumField = GetNewEnumFieldStringEventModifierType(tempStringModifier.StringEventModifierType, "StringEventEnum");
 
             Button removeButton = GetNewButton("X", "RemoveButton");
             removeButton.clicked += () =>
@@ -517,9 +505,7 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
             PopupField<string> textField = GetNewEventTextField(tempStringCondition.StringEventText, "StringEventText");
             FloatField floatField = GetNewFloatField(tempStringCondition.Number, "StringEventInt");
 
-            Action ShowHideAction = () => ShowHideStringEventConditionType(tempStringCondition.StringEventConditionType.Value, boxFloatField);
-            EnumField enumField = GetNewEnumFieldStringEventConditionType(tempStringCondition.StringEventConditionType, ShowHideAction, "StringEventEnum");
-            ShowHideStringEventConditionType(tempStringCondition.StringEventConditionType.Value, boxFloatField);
+            EnumField enumField = GetNewEnumFieldStringEventConditionType(tempStringCondition.StringEventConditionType, "StringEventEnum");
 
             Button removeButton = GetNewButton("X", "RemoveButton");
             removeButton.AddToClassList("RemoveButton");
