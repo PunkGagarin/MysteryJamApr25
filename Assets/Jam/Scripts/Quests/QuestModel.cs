@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Quests.Data;
 using UnityEngine;
@@ -8,21 +7,18 @@ namespace Jam.Scripts.Quests
 {
     public class QuestModel
     {
-        public List<Quest> ActiveQuests { get; private set; }
-        
+        private List<Quest> _activeQuests;
        
         public QuestModel()
         {
-            ActiveQuests = new List<Quest>();
+            _activeQuests = new List<Quest>();
         }
 
-        public void AddQuest(Quest questDefinition)
-        {
-            ActiveQuests.Add(questDefinition);
-        }
-        
+        public void AddQuest(Quest questDefinition) => 
+            _activeQuests.Add(questDefinition);
+
         public bool HaveQuest(int questId) => 
-            ActiveQuests.Any(quest => quest.Id == questId);
+            _activeQuests.Any(quest => quest.Id == questId);
 
         public bool TryRemoveQuest(int questId)
         {
@@ -30,7 +26,7 @@ namespace Jam.Scripts.Quests
             
             if (quest != null)
             {
-                ActiveQuests.Remove(quest);
+                _activeQuests.Remove(quest);
                 return true;
             }
 
@@ -77,7 +73,7 @@ namespace Jam.Scripts.Quests
 
         private Quest GetQuest(int questId)
         {
-            foreach (Quest activeQuest in ActiveQuests)
+            foreach (Quest activeQuest in _activeQuests)
             {
                 if (activeQuest.Id == questId)
                     return activeQuest;

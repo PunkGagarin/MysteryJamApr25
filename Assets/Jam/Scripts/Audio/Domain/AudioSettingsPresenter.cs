@@ -1,26 +1,19 @@
-﻿using System;
-using Jam.Scripts.Audio.Data;
+﻿using Jam.Scripts.Audio.Data;
 using Jam.Scripts.Audio.View;
 using Zenject;
 
 namespace Jam.Scripts.Audio.Domain
 {
-    public class AudioSettingsPresenter : IInitializable, IDisposable
+    public class AudioSettingsPresenter : IInitializable
     {
         private AudioSettingsModel _audioSettingsModel;
-        
         private IAudioMixerService _audioMixerService;
-        
         private AudioSettingsView _audioSettingsView;
 
         public AudioSettingsPresenter(AudioSettingsModel audioSettingsModel, IAudioMixerService audioMixerService)
         {
             _audioSettingsModel = audioSettingsModel;
             _audioMixerService = audioMixerService;
-
-            _audioSettingsModel.MasterVolumeChanged += UpdateMasterVolume;
-            _audioSettingsModel.SoundVolumeChanged += UpdateSoundVolume;
-            _audioSettingsModel.MusicVolumeChanged += UpdateMusicVolume;
         }
         
         public void Initialize()
@@ -37,14 +30,23 @@ namespace Jam.Scripts.Audio.Domain
             SyncWithView();
         }
         
-        public void SetMasterVolume(float volume) => 
+        public void SetMasterVolume(float volume)
+        {
             _audioSettingsModel.SetMasterVolume(volume);
+            UpdateMasterVolume(volume);
+        }
         
-        public void SetSoundVolume(float volume) => 
+        public void SetSoundVolume(float volume)
+        {
             _audioSettingsModel.SetSoundVolume(volume);
+            UpdateSoundVolume(volume);
+        }
         
-        public void SetMusicVolume(float volume) =>
+        public void SetMusicVolume(float volume)
+        {
             _audioSettingsModel.SetMusicVolume(volume);
+            UpdateMusicVolume(volume);
+        }
         
         private void UpdateMasterVolume(float newVolume) =>
             _audioMixerService.SetMasterVolume(_audioSettingsModel.MusicVolume, _audioSettingsModel.SoundVolume, newVolume);
@@ -58,13 +60,6 @@ namespace Jam.Scripts.Audio.Domain
             _audioSettingsView.SetMasterVolume(_audioSettingsModel.MasterVolume);
             _audioSettingsView.SetSoundVolume(_audioSettingsModel.SoundVolume);
             _audioSettingsView.SetMusicVolume(_audioSettingsModel.MusicVolume);
-        }
-
-        public void Dispose()
-        {
-            _audioSettingsModel.MasterVolumeChanged -= UpdateMasterVolume;
-            _audioSettingsModel.SoundVolumeChanged -= UpdateSoundVolume;
-            _audioSettingsModel.MusicVolumeChanged -= UpdateMusicVolume;
         }
     }
 }

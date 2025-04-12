@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Jam.Scripts.Audio.Data
 {
@@ -16,10 +15,6 @@ namespace Jam.Scripts.Audio.Data
         private const float DEFAULT_MASTER_VOLUME = .5f;
         private const float DEFAULT_SOUND_VOLUME = 1f;
         private const float DEFAULT_MUSIC_VOLUME = 1f;
-
-        public event Action<float> MasterVolumeChanged; 
-        public event Action<float> SoundVolumeChanged; 
-        public event Action<float> MusicVolumeChanged;
         
         public AudioSettingsModel() => 
             LoadSettings();
@@ -31,24 +26,15 @@ namespace Jam.Scripts.Audio.Data
             PlayerPrefs.SetFloat(MUSIC_VOLUME_KEY, MusicVolume);
         }
 
-        public void SetMasterVolume(float volume)
-        {
+        public void SetMasterVolume(float volume) => 
             MasterVolume = volume;
-            MasterVolumeChanged?.Invoke(MasterVolume);
-        }
 
-        public void SetSoundVolume(float volume)
-        {
+        public void SetSoundVolume(float volume) => 
             SoundVolume = volume;
-            SoundVolumeChanged?.Invoke(SoundVolume);
-        }
 
-        public void SetMusicVolume(float volume)
-        {
+        public void SetMusicVolume(float volume) => 
             MusicVolume = volume;
-            MusicVolumeChanged?.Invoke(MusicVolume);
-        }
-        
+
         private void LoadSettings()
         {
             MasterVolume = PlayerPrefs.GetFloat(MASTER_VOLUME_KEY, DEFAULT_MASTER_VOLUME);
