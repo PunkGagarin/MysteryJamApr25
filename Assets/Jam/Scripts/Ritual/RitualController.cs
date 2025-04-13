@@ -26,6 +26,10 @@ namespace Jam.Scripts.Ritual
         public bool TryAddComponent(ComponentDefinition componentToAdd, out ComponentRoom componentRoom)
         {
             componentRoom = null;
+            
+            if (_questPresenter.IsQuestComplete(_currentQuestId) || _questPresenter.IsQuestFailed(_currentQuestId))
+                return false;
+            
             if (_components.All(componentRoom => !componentRoom.IsFree))
                 return false;
 
@@ -76,19 +80,21 @@ namespace Jam.Scripts.Ritual
                 }
             }
             
-            
             ClearTable();
             UpdateButtons();
         }
         
         private bool AreComponentListsEqual(List<ComponentDefinition> first, List<ComponentDefinition> second)
         {
-            var firstGrouped = first.GroupBy(x => x)
+            var firstGrouped = first.GroupBy(x => x != null)
                 .ToDictionary(g => g.Key, g => g.Count());
 
-            var secondGrouped = second.GroupBy(x => x)
+            var secondGrouped = second.GroupBy(x => x != null)
                 .ToDictionary(g => g.Key, g => g.Count());
 
+            if (firstGrouped.Count != secondGrouped.Count)
+                return false;
+            
             return firstGrouped.Count == secondGrouped.Count &&
                 firstGrouped.All(kv => secondGrouped.TryGetValue(kv.Key, out var count) && count == kv.Value);
         }

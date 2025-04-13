@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
+  m_Name: Snake scales
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Snake scales
+  <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
+  <ComponentType>k__BackingField: 3
+  <AgeType>k__BackingField: 0
+  <SexType>k__BackingField: 0
+  <RaceType>k__BackingField: 0
+  <DeathType>k__BackingField: 2
+  <ExcludedComponents>k__BackingField:
+  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  <IsDeathReasonExcluded>k__BackingField: 0
+  <ExcludedDeathReasonType>k__BackingField: 0
+  <IsAgeExcluded>k__BackingField: 0
+  <ExcludedAgeType>k__BackingField: 0
