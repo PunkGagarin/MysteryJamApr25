@@ -10,9 +10,10 @@ namespace Jam.Scripts.Factories
     {
         [Inject] private DiContainer _diContainer;
         [Inject] private List<Popup> _popupsPrefabs;
+        [Inject(Optional = true)] private SceneContext _sceneContext;
 
         private Dictionary<Type, Popup> _popupPrefabMap = null;
-        
+
         private void Awake()
         {
             _popupPrefabMap = new Dictionary<Type, Popup>();
@@ -39,10 +40,11 @@ namespace Jam.Scripts.Factories
                 Debug.LogError($"Popup prefab for type {type.Name} not found!");
                 return null;
             }
-            T newPopup = _diContainer.InstantiatePrefabForComponent<T>(prefab);
-            
+
+            var container = _sceneContext != null ? _sceneContext.Container : _diContainer;
+            T newPopup = container.InstantiatePrefabForComponent<T>(prefab);
+
             return newPopup;
         }
     }
-
 }
