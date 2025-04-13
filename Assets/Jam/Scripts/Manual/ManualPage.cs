@@ -1,7 +1,7 @@
 using Jam.Scripts.GameplayData.Definitions;
 using UnityEngine;
 
-namespace Jam.Scripts.Manual.Popup
+namespace Jam.Scripts.Manual
 {
     [CreateAssetMenu(menuName = "Game Resources/Definitions/Manual Page")]
     public class ManualPage: Definition

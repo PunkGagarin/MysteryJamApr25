@@ -1,4 +1,4 @@
-﻿using Jam.Scripts.Manual.Popup;
+﻿using Jam.Scripts.Manual;
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests.Data;
 using UnityEngine;
