@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d871599710c49679f13c32a708380fa, type: 3}
   m_Name: Repository Installer
   m_EditorClassIdentifier: 
+  _manualPagesRepository: {fileID: 11400000, guid: 311b287112c2f4f349e90acd3d39b24d, type: 2}
   _questRepository: {fileID: 11400000, guid: d1c85f6ac98b0584c99733996ac2fd1f, type: 2}
+  _npcRepository: {fileID: 11400000, guid: afaef7de34ffd75449dd98cecfdd7f7e, type: 2}

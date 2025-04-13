@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers:
-  - {fileID: 11400000, guid: 2dc8478221039d343955c04baa1708c9, type: 2}
+  - {fileID: 11400000, guid: 6a1639f7aa93e45228f8169434079512, type: 2}
   _monoInstallers:
   - {fileID: 2709071268093058265}
   - {fileID: 4642445498483433403}
@@ -301,6 +301,7 @@ MonoBehaviour:
   _popupsPrefabs:
   - {fileID: 8289118240970559456, guid: 8324bdb625f86df4e9eb608d1393a073, type: 3}
   - {fileID: 2737058570033945176, guid: 3a81b5f2cb319fe45ad63a60ac290004, type: 3}
+  - {fileID: 4296428516066885871, guid: 27eff24873b7940749cdd53aabc6ae3a, type: 3}
 --- !u!1 &7592136200623565166
 GameObject:
   m_ObjectHideFlags: 0
