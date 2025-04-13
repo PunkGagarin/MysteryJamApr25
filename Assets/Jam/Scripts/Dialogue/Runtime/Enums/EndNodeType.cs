@@ -4,6 +4,7 @@
     {
         End = 1,
         Repeat = 2,
-        ReturnToStart = 3
+        ReturnToStart = 3,
+        EndAndLeave = 4
     }
 }

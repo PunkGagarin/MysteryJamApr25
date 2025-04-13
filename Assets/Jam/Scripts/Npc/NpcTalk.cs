@@ -1,7 +1,6 @@
 ﻿using System;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.SO;
-using Jam.Scripts.Dialogue.UI;
 using UnityEngine;
 using Zenject;
 
@@ -11,20 +10,7 @@ namespace Jam.Scripts.Npc
     {
         [Inject] private DialogueRunner _dialogueRunner;
         
-        public bool DialogueInProcess { get; private set; }
-
-        public event Action OnDialogueComplete;
-
-        public void Talk(DialogueContainerSO dialogueContainer)
-        {
-            DialogueInProcess = true;
-            _dialogueRunner.StartDialogue(dialogueContainer, DialogueComplete);
-        }
-        
-        private void DialogueComplete()
-        {
-            OnDialogueComplete?.Invoke();
-            DialogueInProcess = false;
-        }
+        public void Talk(DialogueContainerSO dialogueContainer, Action leaveAction) => 
+            _dialogueRunner.StartDialogue(dialogueContainer, leaveAction);
     }
 }

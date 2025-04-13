@@ -27,13 +27,14 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private List<DialogueDataBaseContainer> _dialogueNodes;
         private int _currentIndex = 0;
         private DialogueView _dialogueView;
+        private Action _leaveEvent;
 
         public void StartDialogue(DialogueContainerSO dialogueContainer, Action closeEvent = null)
         {
             _dialogueContainer = dialogueContainer;
 
             _dialogueView = _popupManager.OpenPopup<DialogueView>(withPause: true);
-            _dialogueView.SetCloseEvent(closeEvent);
+            _leaveEvent = closeEvent;
             
             CheckNodeType(GetNextNode(_dialogueContainer.StartData[0]));
         }
@@ -200,6 +201,10 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     break;
                 case EndNodeType.ReturnToStart:
                     CheckNodeType(GetNextNode(_dialogueContainer.StartData[0]));
+                    break;
+                case EndNodeType.EndAndLeave:
+                    _dialogueView.Close();
+                    _leaveEvent?.Invoke();
                     break;
             }
         }

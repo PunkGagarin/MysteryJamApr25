@@ -18,13 +18,11 @@ namespace Jam.Scripts.Npc
         
         private NPCDefinition _definition;
         private bool _arrived;
-        private bool _readyToLeave;
 
         public event Action OnCharacterLeave;
 
         public void SetCharacter(NPCDefinition definition)
         {
-            _readyToLeave = false;
             _definition = definition;
             _movement.ShowNpc(CharacterArrived);
         }
@@ -41,39 +39,15 @@ namespace Jam.Scripts.Npc
             _movement.HideNpc(OnCharacterLeave);
         }
         
-        private void QuestRemoved(int questId)
-        {
-            if (questId == _definition.BelongQuestId)
-                _readyToLeave = true;
-        }
-
-        private void DialogueComplete()
-        {
-            if (_readyToLeave)
-                CharacterLeave();
-        }
-
-        private void Awake()
-        {
-            _talk.OnDialogueComplete += DialogueComplete;
-            _questPresenter.OnQuestRemoved += QuestRemoved;
-        }
-        
-        private void OnDestroy()
-        {
-            _talk.OnDialogueComplete -= DialogueComplete;
-            _questPresenter.OnQuestRemoved -= QuestRemoved;
-        }
-        
         public void OnPointerClick(PointerEventData eventData)
         {
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
             
-            if (_arrived && !_talk.DialogueInProcess)
+            if (_arrived)
             {
                 _pointerShower.Hide();
-                _talk.Talk(_definition.Dialogue);
+                _talk.Talk(_definition.Dialogue, CharacterLeave);
             }
         }
     }
