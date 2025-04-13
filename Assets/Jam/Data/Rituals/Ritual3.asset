@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd23689927814c5ea2a5c53bde692b15, type: 3}
+  m_Name: Ritual3
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Ritual3
+  <Components>k__BackingField:
+  - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
+  - {fileID: 11400000, guid: 8695fff8d71769f4daecd66a798a1655, type: 2}
+  - {fileID: 11400000, guid: 8695fff8d71769f4daecd66a798a1655, type: 2}
+  - {fileID: 11400000, guid: 4e4fd6df1fd7fb844abead18c2f427a8, type: 2}

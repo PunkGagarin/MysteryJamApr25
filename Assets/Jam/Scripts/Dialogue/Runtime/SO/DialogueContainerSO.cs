@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Jam.Scripts.Dialogue.Runtime.SO
 {
-    [CreateAssetMenu(menuName = "Dialogue/Dialogue container")]
+    [CreateAssetMenu(menuName = "Game Resources/Dialogue/Dialogue container")]
     [Serializable]
     public class DialogueContainerSO : ScriptableObject
     {

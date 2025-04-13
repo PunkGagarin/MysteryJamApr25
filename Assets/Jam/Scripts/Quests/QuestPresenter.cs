@@ -10,6 +10,7 @@ namespace Jam.Scripts.Quests
         private QuestModel _questModel;
        
         public event Action<int> OnQuestRemoved;
+        public event Action<int> OnQuestAdded;
 
         public QuestPresenter()
         {
@@ -21,6 +22,7 @@ namespace Jam.Scripts.Quests
             QuestDefinition questDefinition = _questsRepository.GetQuest(questId);
             Quest quest = new Quest(questDefinition);
             _questModel.AddQuest(quest);
+            OnQuestAdded?.Invoke(questId);
         }
         
         public void RemoveQuest(int questId)
@@ -30,6 +32,9 @@ namespace Jam.Scripts.Quests
         }
         
         public void SetComplete(int questId) => 
+            _questModel.SetComplete(questId);
+        
+        public void SetFail(int questId) => 
             _questModel.SetComplete(questId);
         
         public void SetIncomplete(int questId) => 

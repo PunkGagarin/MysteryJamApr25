@@ -2,11 +2,12 @@
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Zenject;
 
 namespace Jam.Scripts.Npc
 {
-    public class Character : MonoBehaviour
+    public class Character : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private UnityEngine.Camera _camera;
         [SerializeField] private PointerShower _pointerShower;
@@ -31,21 +32,6 @@ namespace Jam.Scripts.Npc
         {
             _arrived = true;
             _pointerShower.Show();
-        }
-
-        private void Update()
-        {
-            if (_arrived && !_talk.DialogueInProcess && Input.GetMouseButtonDown(0))
-            {
-                Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-
-                if (hit.collider != null && hit.collider.gameObject == gameObject)
-                {
-                    _pointerShower.Hide();
-                    _talk.Talk(_definition.Dialogue);
-                }
-            }
         }
         
         private void CharacterLeave()
@@ -76,6 +62,29 @@ namespace Jam.Scripts.Npc
         {
             _talk.OnDialogueComplete -= DialogueComplete;
             _questPresenter.OnQuestRemoved -= QuestRemoved;
+        }
+        public void OnMouseDown()
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+                return;
+            
+            if (_arrived && !_talk.DialogueInProcess)
+            {
+                _pointerShower.Hide();
+                _talk.Talk(_definition.Dialogue);
+            }
+        }
+        
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+                return;
+            
+            if (_arrived && !_talk.DialogueInProcess)
+            {
+                _pointerShower.Hide();
+                _talk.Talk(_definition.Dialogue);
+            }
         }
     }
 }

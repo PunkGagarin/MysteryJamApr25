@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Jam.Scripts.Npc.Data
 {
-    [CreateAssetMenu(menuName = "Definitions/Npc")]
+    [CreateAssetMenu(menuName = "Game Resources/Definitions/Npc")]
     public class NPCDefinition : Definition
     {
         [field: SerializeField] public DialogueContainerSO Dialogue { get; private set; }

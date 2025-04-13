@@ -14,8 +14,8 @@ namespace Jam.Scripts.Quests
             _activeQuests = new List<Quest>();
         }
 
-        public void AddQuest(Quest questDefinition) => 
-            _activeQuests.Add(questDefinition);
+        public void AddQuest(Quest quest) => 
+            _activeQuests.Add(quest);
 
         public bool HaveQuest(int questId) => 
             _activeQuests.Any(quest => quest.Id == questId);
@@ -41,6 +41,19 @@ namespace Jam.Scripts.Quests
             if (quest != null)
             {
                 quest.IsComplete = true;
+                return;
+            }
+            
+            Debug.LogError($"No active quest with id {questId}!");
+        }
+        
+        public void SetFail(int questId)
+        {
+            Quest quest = GetQuest(questId);
+            
+            if (quest != null)
+            {
+                quest.IsFailed = true;
                 return;
             }
             

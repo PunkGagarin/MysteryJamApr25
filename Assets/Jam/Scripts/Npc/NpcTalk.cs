@@ -10,7 +10,6 @@ namespace Jam.Scripts.Npc
     public class NpcTalk : MonoBehaviour
     {
         [Inject] private DialogueRunner _dialogueRunner;
-        private DialogueView _dialogueView;
         
         public bool DialogueInProcess { get; private set; }
 

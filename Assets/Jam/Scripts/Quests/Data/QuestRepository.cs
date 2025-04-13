@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Jam.Scripts.Quests.Data
 {
-    [CreateAssetMenu(menuName = "Repositories/Quests")]
+    [CreateAssetMenu(menuName = "Game Resources/Repositories/Quests")]
     public class QuestRepository : Repository<QuestDefinition>
     {
         public QuestDefinition GetQuest(int questId)

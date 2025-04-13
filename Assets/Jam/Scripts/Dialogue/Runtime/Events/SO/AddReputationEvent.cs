@@ -2,7 +2,7 @@
 
 namespace Jam.Scripts.Dialogue.Runtime.Events.SO
 {
-    [CreateAssetMenu(menuName = "Dialogue/Events/AddReputationEvent")]
+    [CreateAssetMenu(menuName = "Game Resources/Dialogue/Events/AddReputationEvent")]
     public class AddReputationEvent : DialogueEventSO
     {
         [SerializeField] private int _amount;
