@@ -59,8 +59,8 @@ namespace Jam.Scripts.Ritual
         {
             _attempt++;
 
-            bool areEqual = _currentRitual.Components.All(_components.Select(component => component.ComponentInside).Contains);
-
+            bool areEqual = AreComponentListsEqual(_currentRitual.Components, _components.Select(component => component.ComponentInside).ToList());
+            
             if (areEqual)
             {
                 Debug.Log($"Ritual OK");
@@ -69,7 +69,6 @@ namespace Jam.Scripts.Ritual
             else
             {
                 Debug.Log($"Ritual failed");
-                ClearTable();
                 if (_attempt >= _attemptsBeforeFail)
                 {
                     Debug.Log("Quest failed");
@@ -78,7 +77,20 @@ namespace Jam.Scripts.Ritual
             }
             
             
+            ClearTable();
             UpdateButtons();
+        }
+        
+        private bool AreComponentListsEqual(List<ComponentDefinition> first, List<ComponentDefinition> second)
+        {
+            var firstGrouped = first.GroupBy(x => x)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            var secondGrouped = second.GroupBy(x => x)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            return firstGrouped.Count == secondGrouped.Count &&
+                firstGrouped.All(kv => secondGrouped.TryGetValue(kv.Key, out var count) && count == kv.Value);
         }
         
         private void UpdateButtons()
