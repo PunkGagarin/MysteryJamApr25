@@ -94,7 +94,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 case StringEventConditionType.True:
                     return _questPresenter.IsQuestComplete((int)questId);
                 case StringEventConditionType.False:
-                    return !_questPresenter.IsQuestComplete((int)questId);
+                    return _questPresenter.IsQuestFailed((int)questId);
                 case StringEventConditionType.Equals:
                     return true;
             }

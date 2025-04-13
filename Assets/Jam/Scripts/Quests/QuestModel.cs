@@ -71,6 +71,17 @@ namespace Jam.Scripts.Quests
             return false;
         }
         
+        public bool IsFailed(int questId)
+        {
+            Quest quest = GetQuest(questId);
+            
+            if (quest != null)
+                return quest.IsFailed;
+            
+            Debug.LogError($"No active quest with id {questId}!");
+            return false;
+        }
+        
         public void SetIncomplete(int questId)
         {
             Quest quest = GetQuest(questId);

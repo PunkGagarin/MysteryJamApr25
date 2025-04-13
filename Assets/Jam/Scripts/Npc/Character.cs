@@ -24,6 +24,7 @@ namespace Jam.Scripts.Npc
 
         public void SetCharacter(NPCDefinition definition)
         {
+            _readyToLeave = false;
             _definition = definition;
             _movement.ShowNpc(CharacterArrived);
         }
@@ -62,17 +63,6 @@ namespace Jam.Scripts.Npc
         {
             _talk.OnDialogueComplete -= DialogueComplete;
             _questPresenter.OnQuestRemoved -= QuestRemoved;
-        }
-        public void OnMouseDown()
-        {
-            if (!EventSystem.current.IsPointerOverGameObject())
-                return;
-            
-            if (_arrived && !_talk.DialogueInProcess)
-            {
-                _pointerShower.Hide();
-                _talk.Talk(_definition.Dialogue);
-            }
         }
         
         public void OnPointerClick(PointerEventData eventData)

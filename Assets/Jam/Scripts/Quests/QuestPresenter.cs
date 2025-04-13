@@ -35,7 +35,7 @@ namespace Jam.Scripts.Quests
             _questModel.SetComplete(questId);
         
         public void SetFail(int questId) => 
-            _questModel.SetComplete(questId);
+            _questModel.SetFail(questId);
         
         public void SetIncomplete(int questId) => 
             _questModel.SetIncomplete(questId);
@@ -45,5 +45,8 @@ namespace Jam.Scripts.Quests
         
         public bool IsQuestComplete(int questId) => 
             _questModel.IsComplete(questId);
+        
+        public bool IsQuestFailed(int questId) => 
+            _questModel.IsFailed(questId);
     }
 }

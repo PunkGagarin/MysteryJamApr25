@@ -13,7 +13,7 @@ namespace Jam.Scripts.Ritual.Components
         private void Awake()
         {
             for (int i = 0; i < 4; i++)
-                _animations.Add(Instantiate(_componentAnimationPrefab));
+                _animations.Add(Instantiate(_componentAnimationPrefab, transform));
         }
         
         public void PlayAnimation(ComponentDefinition componentDefinition, Vector3 componentPosition, ComponentRoom componentRoom)

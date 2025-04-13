@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffac5a6127024af3930c9f19347151ad, type: 3}
-  m_Name: Quest Repository
+  m_Script: {fileID: 11500000, guid: 7569a7c025a84519acdd831258145013, type: 3}
+  m_Name: PageRitual 3
   m_EditorClassIdentifier: 
-  <Definitions>k__BackingField:
-  - {fileID: 11400000, guid: 54e8f7fe1f1e1ab48a88d4b14583b4ac, type: 2}
-  - {fileID: 11400000, guid: 4fcf32f92dd3d4641b138abad018dcb6, type: 2}
+  <Name>k__BackingField: PageRitual 3
+  PagePrefab: {fileID: 4232655595982133446, guid: 80afdc9371119ab47aff8fcf55ff1579, type: 3}

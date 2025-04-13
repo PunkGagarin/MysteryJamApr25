@@ -52,6 +52,7 @@ namespace Jam.Scripts.Ritual
         {
             _currentQuestId = questId;
             _currentRitual = _questRepository.GetQuest(questId).Ritual;
+            Debug.Log($"set ritual {_currentRitual.Name}");
         }
         
         private void StartRitual()
@@ -61,18 +62,30 @@ namespace Jam.Scripts.Ritual
             bool areEqual = _currentRitual.Components.All(_components.Select(component => component.ComponentInside).Contains);
 
             if (areEqual)
+            {
+                Debug.Log($"Ritual OK");
                 _questPresenter.SetComplete(_currentQuestId);
+            }
+            else
+            {
+                Debug.Log($"Ritual failed");
+                ClearTable();
+                if (_attempt >= _attemptsBeforeFail)
+                {
+                    Debug.Log("Quest failed");
+                    _questPresenter.SetFail(_currentQuestId);
+                }
+            }
             
-            else if (_attempt >= _attemptsBeforeFail)
-                _questPresenter.SetFail(_currentQuestId);
             
             UpdateButtons();
         }
         
         private void UpdateButtons()
         {
-            _clearTable.gameObject.SetActive(_components.Any(component => !component.IsFree));
-            _startRitual.gameObject.SetActive(_components.All(componentRoom => !componentRoom.IsFree));
+            bool isActive = _components.Any(component => !component.IsFree);
+            _clearTable.gameObject.SetActive(isActive);
+            _startRitual.gameObject.SetActive(isActive);
         }
         
         private void Awake()

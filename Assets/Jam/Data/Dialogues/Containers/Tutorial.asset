@@ -21,10 +21,6 @@ MonoBehaviour:
     BasePortGuid: False
     TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     TargetPortGuid: Input
-  - BaseNodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
-    BasePortGuid: True
-    TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
-    TargetPortGuid: Input
   - BaseNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
     BasePortGuid: Output
     TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
@@ -65,9 +61,25 @@ MonoBehaviour:
     BasePortGuid: cfb1a589-3846-4af7-8be8-d601ec601c97
     TargetNodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
     TargetPortGuid: Input
+  - BaseNodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
+    BasePortGuid: True
+    TargetNodeGuid: 48eea30a-9ed3-4021-8f37-f22633e0ddce
+    TargetPortGuid: Input
+  - BaseNodeGuid: 48eea30a-9ed3-4021-8f37-f22633e0ddce
+    BasePortGuid: False
+    TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    TargetPortGuid: Input
+  - BaseNodeGuid: 48eea30a-9ed3-4021-8f37-f22633e0ddce
+    BasePortGuid: True
+    TargetNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    TargetPortGuid: Input
+  - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    BasePortGuid: Continue
+    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
-    Position: {x: 241, y: 290}
+    Position: {x: -383, y: 301}
   DialogueData:
   - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     Position: {x: 950, y: 458}
@@ -176,17 +188,36 @@ MonoBehaviour:
       PortGuid: cfb1a589-3846-4af7-8be8-d601ec601c97
       InputGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
       OutputGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
-  EventData:
-  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    Position: {x: 1800, y: -235}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Mystery
-      Number:
+  - NodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    Position: {x: 1002, y: -626}
+    DialogueDataNames:
+    - ID:
         Value: 0
-      StringEventModifierType:
-        Value: 4
-    ContainerDialogueEventSOs: []
+      GuidID:
+        Value: fefc9d66-4fdc-4ff4-b6ab-f5e90404f722
+      CharacterName:
+      - LanguageType: 1
+        LanguageGenericType: Fisherman
+      - LanguageType: 2
+        LanguageGenericType: 
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 9596277b-7a40-47db-92ca-51b451985c71
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: I'm hardly disapointet in you!
+      - LanguageType: 2
+        LanguageGenericType: 
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 2
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+  EventData:
   - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     Position: {x: 1740, y: 264}
     EventDataStringModifiers:
@@ -197,6 +228,16 @@ MonoBehaviour:
       StringEventModifierType:
         Value: 3
     ContainerDialogueEventSOs: []
+  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    Position: {x: 1903, y: -235}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 4
+    ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: ec749340-e18e-413c-91c0-f8506443026d
     Position: {x: 2656, y: 203}
@@ -204,8 +245,8 @@ MonoBehaviour:
       Value: 1
   BranchData:
   - NodeGuid: 6b9f658a-f1a1-447b-a940-1c9210476be8
-    Position: {x: 414, y: 290}
-    TrueGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    Position: {x: -210, y: 301}
+    TrueGuidNode: 48eea30a-9ed3-4021-8f37-f22633e0ddce
     FalseGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     EventDataStringConditions:
     - StringEventText:
@@ -214,6 +255,17 @@ MonoBehaviour:
         Value: 0
       StringEventConditionType:
         Value: 3
+  - NodeGuid: 48eea30a-9ed3-4021-8f37-f22633e0ddce
+    Position: {x: 313, y: -295}
+    TrueGuidNode: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    FalseGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    EventDataStringConditions:
+    - StringEventText:
+        Value: Mystery
+      Number:
+        Value: 0
+      StringEventConditionType:
+        Value: 2
   ChoiceData:
   - NodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
     Position: {x: 1387, y: 361}
