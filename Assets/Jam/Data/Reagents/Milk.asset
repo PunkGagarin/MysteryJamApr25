@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Milk
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Milk
+  <Id>k__BackingField: 14
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ComponentType>k__BackingField: 2
   <AgeType>k__BackingField: 0

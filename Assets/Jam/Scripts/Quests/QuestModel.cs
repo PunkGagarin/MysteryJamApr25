@@ -1,108 +1,72 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Jam.Scripts.Quests.Data;
+﻿using Jam.Scripts.Quests.Data;
+using Jam.Scripts.Ritual.Components;
 using UnityEngine;
 
 namespace Jam.Scripts.Quests
 {
     public class QuestModel
     {
-        private List<Quest> _activeQuests;
-       
-        public QuestModel()
+        private Quest _activeQuest;
+
+        public void AddQuest(Quest quest) =>
+            _activeQuest = quest;
+
+        public bool HaveQuest(int questId) =>
+            _activeQuest != null && _activeQuest.Id == questId;
+
+        public bool TryRemoveQuest()
         {
-            _activeQuests = new List<Quest>();
-        }
-
-        public void AddQuest(Quest quest) => 
-            _activeQuests.Add(quest);
-
-        public bool HaveQuest(int questId) => 
-            _activeQuests.Any(quest => quest.Id == questId);
-
-        public bool TryRemoveQuest(int questId)
-        {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
+            if (_activeQuest != null)
             {
-                _activeQuests.Remove(quest);
+                _activeQuest = null;
                 return true;
             }
 
-            Debug.LogError($"No active quest with id {questId}!");
+            Debug.LogError($"No active quest!");
             return false;
         }
 
-        public void SetComplete(int questId)
+        public void SetComplete()
         {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
-            {
-                quest.IsComplete = true;
-                return;
-            }
-            
-            Debug.LogError($"No active quest with id {questId}!");
+            if (_activeQuest != null)
+                _activeQuest.IsComplete = true;
+            else
+                Debug.LogError($"No active quest!");
         }
         
-        public void SetFail(int questId)
+        public void SetIncomplete()
         {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
-            {
-                quest.IsFailed = true;
-                return;
-            }
-            
-            Debug.LogError($"No active quest with id {questId}!");
-        }
-        
-        public bool IsComplete(int questId)
-        {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
-                return quest.IsComplete;
-            
-            Debug.LogError($"No active quest with id {questId}!");
-            return false;
-        }
-        
-        public bool IsFailed(int questId)
-        {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
-                return quest.IsFailed;
-            
-            Debug.LogError($"No active quest with id {questId}!");
-            return false;
-        }
-        
-        public void SetIncomplete(int questId)
-        {
-            Quest quest = GetQuest(questId);
-            
-            if (quest != null)
-            {
-                quest.IsComplete = false;
-                return;
-            }
-            
-            Debug.LogError($"No active quest with id {questId}!");
+            if (_activeQuest != null)
+                _activeQuest.IsComplete = false;
+            else
+                Debug.LogError($"No active quest!");
         }
 
-        private Quest GetQuest(int questId)
+        
+        public void SetFail()
         {
-            foreach (Quest activeQuest in _activeQuests)
-            {
-                if (activeQuest.Id == questId)
-                    return activeQuest;
-            }
-            return null;
+            if (_activeQuest != null)
+                _activeQuest.IsFailed = true;
+            else
+                Debug.LogError($"No active quest!");
+        }
+        
+        public bool IsComplete()
+        {
+            if (_activeQuest != null)
+                return _activeQuest.IsComplete;
+
+            Debug.LogError($"No active quest!");
+            return false;
+        }
+        
+        public bool IsFailed()
+        {
+            if (_activeQuest != null)
+                return _activeQuest.IsFailed;
+
+            Debug.LogError($"No active quest!");
+            return false;
         }
     }
 }

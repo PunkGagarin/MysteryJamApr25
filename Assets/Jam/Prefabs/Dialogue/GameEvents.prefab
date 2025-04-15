@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questEvent: Mystery
   _reputationEvent: Reputation
+  _moneyEvent: Money
+  _componentEvent: Component
+  _attemptsEvent: Atempts

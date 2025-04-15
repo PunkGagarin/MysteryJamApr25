@@ -6,7 +6,7 @@ namespace Jam.Scripts.GameplayData.Player
     {
         public override void InstallBindings()
         {
-            Container.Bind<PlayerStats>().AsSingle().NonLazy();
+            Container.Bind<PlayerStatsPresenter>().AsSingle().NonLazy();
         }
     }
 }

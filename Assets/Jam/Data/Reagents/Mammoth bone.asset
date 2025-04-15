@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mammoth bone
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Mammoth bone
+  <Id>k__BackingField: 13
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ComponentType>k__BackingField: 1
   <AgeType>k__BackingField: 0

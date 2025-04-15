@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Phoenix ashes
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Phoenix ashes
+  <Id>k__BackingField: 17
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ComponentType>k__BackingField: 3
   <AgeType>k__BackingField: 0

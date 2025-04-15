@@ -8,6 +8,7 @@ namespace Jam.Scripts.Ritual.Components
     [CreateAssetMenu(menuName = "Game Resources/Definitions/Component")]
     public class ComponentDefinition : Definition
     {
+        [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public Sprite Visual { get; private set; }
         [field: SerializeField] public ComponentType ComponentType {get; private set; }
         [field: SerializeField, ShowIf(nameof(ComponentType), ComponentType.Age)] public AgeType AgeType {get; private set; }

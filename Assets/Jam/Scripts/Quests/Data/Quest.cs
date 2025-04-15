@@ -1,4 +1,5 @@
 ﻿using System;
+using Jam.Scripts.Ritual.Components;
 using UnityEngine;
 
 namespace Jam.Scripts.Quests.Data
@@ -10,6 +11,10 @@ namespace Jam.Scripts.Quests.Data
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public bool IsComplete { get; set; }
         [field: SerializeField] public bool IsFailed { get; set; }
+        [field: SerializeField] public AgeType AgeType { get; private set; }
+        [field: SerializeField] public SexType SexType { get; private set; }
+        [field: SerializeField] public RaceType RaceType { get; private set; }
+        [field: SerializeField] public DeathType DeathType { get; private set; }
 
         public Quest(QuestDefinition questDefinition)
         {
@@ -17,6 +22,10 @@ namespace Jam.Scripts.Quests.Data
             Id = questDefinition.Id;
             IsComplete = false;
             IsFailed = false;
+            AgeType = questDefinition.AgeType;
+            SexType = questDefinition.SexType;
+            RaceType = questDefinition.RaceType;
+            DeathType = questDefinition.DeathType;
         }
     }
 }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rhinestone
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Rhinestone
+  <Id>k__BackingField: 18
   <Visual>k__BackingField: {fileID: 21300000, guid: dc3e01ed930b4ee4ea683f06c06c7350, type: 3}
   <ComponentType>k__BackingField: 2
   <AgeType>k__BackingField: 0
