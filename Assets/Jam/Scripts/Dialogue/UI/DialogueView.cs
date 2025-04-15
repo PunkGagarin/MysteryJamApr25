@@ -14,6 +14,7 @@ namespace Jam.Scripts.Dialogue.UI
 {
     public class DialogueView : Popup
     {
+        [SerializeField] private GameObject _inputBlocker;
         [SerializeField] private RectTransform _dialoguePanel;
         [Header("Text")]
         [SerializeField] private TMP_Text _nameText;
@@ -32,6 +33,7 @@ namespace Jam.Scripts.Dialogue.UI
 
         public override void Open(bool withPause)
         {
+            _inputBlocker.gameObject.SetActive(false);
             _dialoguePanel.gameObject.SetActive(true);
             _dialoguePanel.DOScale(1f, 1f).SetEase(Ease.Linear);
             base.Open(withPause);
@@ -39,6 +41,7 @@ namespace Jam.Scripts.Dialogue.UI
 
         public override void Close()
         {
+            _inputBlocker.gameObject.SetActive(true);
             _dialoguePanel.DOScale(0f, 1f).SetEase(Ease.Linear).OnComplete(() =>
             {
                 _dialoguePanel.gameObject.SetActive(true);

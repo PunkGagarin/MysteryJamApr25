@@ -1,5 +1,6 @@
 ﻿using System;
 using Jam.Scripts.Quests.Data;
+using Jam.Scripts.Ritual.Components;
 using Zenject;
 
 namespace Jam.Scripts.Quests
@@ -9,8 +10,7 @@ namespace Jam.Scripts.Quests
         [Inject] private QuestRepository _questsRepository;
         private QuestModel _questModel;
        
-        public event Action<int> OnQuestRemoved;
-        public event Action<int> OnQuestAdded;
+        public event Action<Quest> OnQuestAdded;
 
         public QuestPresenter()
         {
@@ -22,31 +22,28 @@ namespace Jam.Scripts.Quests
             QuestDefinition questDefinition = _questsRepository.GetQuest(questId);
             Quest quest = new Quest(questDefinition);
             _questModel.AddQuest(quest);
-            OnQuestAdded?.Invoke(questId);
+            OnQuestAdded?.Invoke(quest);
         }
         
-        public void RemoveQuest(int questId)
-        {
-            if (_questModel.TryRemoveQuest(questId))
-                OnQuestRemoved?.Invoke(questId);
-        }
+        public void RemoveQuest() => 
+            _questModel.TryRemoveQuest();
+
+        public void SetComplete() => 
+            _questModel.SetComplete();
         
-        public void SetComplete(int questId) => 
-            _questModel.SetComplete(questId);
+        public void SetFail() => 
+            _questModel.SetFail();
         
-        public void SetFail(int questId) => 
-            _questModel.SetFail(questId);
-        
-        public void SetIncomplete(int questId) => 
-            _questModel.SetIncomplete(questId);
+        public void SetIncomplete() => 
+            _questModel.SetIncomplete();
         
         public bool HaveQuest(int questId) =>
             _questModel.HaveQuest(questId);
         
-        public bool IsQuestComplete(int questId) => 
-            _questModel.IsComplete(questId);
+        public bool IsQuestComplete() => 
+            _questModel.IsComplete();
         
-        public bool IsQuestFailed(int questId) => 
-            _questModel.IsFailed(questId);
+        public bool IsQuestFailed() => 
+            _questModel.IsFailed();
     }
 }

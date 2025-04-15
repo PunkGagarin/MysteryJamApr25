@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Ritual1
   <Components>k__BackingField:
-  - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
-  - {fileID: 11400000, guid: 4e4fd6df1fd7fb844abead18c2f427a8, type: 2}
-  - {fileID: 11400000, guid: 4e4fd6df1fd7fb844abead18c2f427a8, type: 2}
-  - {fileID: 11400000, guid: 23bbfc883b94d1d4dab99549cb27f1cf, type: 2}
+  - <ComponentType>k__BackingField: 0
+    <AgeType>k__BackingField: 0
+    <SexType>k__BackingField: 0
+    <RaceType>k__BackingField: 0
+    <DeathType>k__BackingField: 0
+    <Amount>k__BackingField: 0
+  - <ComponentType>k__BackingField: 0
+    <AgeType>k__BackingField: 0
+    <SexType>k__BackingField: 0
+    <RaceType>k__BackingField: 0
+    <DeathType>k__BackingField: 0
+    <Amount>k__BackingField: 0

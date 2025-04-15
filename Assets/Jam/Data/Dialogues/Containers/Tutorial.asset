@@ -37,6 +37,10 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     TargetPortGuid: Input
+  - BaseNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
   - BaseNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
@@ -48,6 +52,10 @@ MonoBehaviour:
   - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     BasePortGuid: Output
     TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     BasePortGuid: 67b5244b-9e42-420e-8625-0a5e4ec4b8ed
@@ -68,14 +76,6 @@ MonoBehaviour:
   - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
     BasePortGuid: Continue
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    TargetPortGuid: Input
-  - BaseNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -114,8 +114,8 @@ MonoBehaviour:
         Value: 55246742-f30b-471b-b737-ff71a3b4e7a1
       Text:
       - LanguageType: 1
-        LanguageGenericType: My father died, and hide somewhere his blessed fishing
-          rod!
+        LanguageGenericType: My <color="blue">father</color> died, and hide somewhere
+          his blessed fishing rod!
       - LanguageType: 2
         LanguageGenericType: 
       AudioClips:

@@ -27,10 +27,12 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private List<DialogueDataBaseContainer> _dialogueNodes;
         private int _currentIndex = 0;
         private DialogueView _dialogueView;
+        private bool _isDialogueActive = false;
         private Action _leaveEvent;
 
         public void StartDialogue(DialogueContainerSO dialogueContainer, Action closeEvent = null)
         {
+            _isDialogueActive = true;
             _dialogueContainer = dialogueContainer;
 
             _dialogueView = _popupManager.OpenPopup<DialogueView>(withPause: true);
@@ -175,6 +177,9 @@ namespace Jam.Scripts.Dialogue.Gameplay
         
         private void RunEventNode(EventData nodeData)
         {
+            if (!_isDialogueActive)
+                return;
+            
             nodeData.ContainerDialogueEventSOs.ForEach(item => item.DialogueEventSO.RunEvent());
             nodeData.EventDataStringModifiers.ForEach(item => _gameEvents.DialogueModifierEvents(item.StringEventText.Value, item.StringEventModifierType.Value, item.Number.Value));
             
@@ -194,6 +199,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
             switch (nodeData.EndNodeType.Value)
             {
                 case EndNodeType.End:
+                    _isDialogueActive = false;
                     _dialogueView.Close();
                     break;
                 case EndNodeType.Repeat:
@@ -203,6 +209,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     CheckNodeType(GetNextNode(_dialogueContainer.StartData[0]));
                     break;
                 case EndNodeType.EndAndLeave:
+                    _isDialogueActive = false;
                     _dialogueView.Close();
                     _leaveEvent?.Invoke();
                     break;
