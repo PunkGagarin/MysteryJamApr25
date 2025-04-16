@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Quests.Data;
 using Jam.Scripts.Ritual.Components;
@@ -19,6 +20,7 @@ namespace Jam.Scripts.Ritual
 
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private QuestRepository _questRepository;
+        [Inject] private AudioService _audioService;
 
         private Quest _currentQuest;
 
@@ -49,6 +51,7 @@ namespace Jam.Scripts.Ritual
 
         private void ClearTable()
         {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
             foreach (ComponentRoom componentRoom in _components)
                 componentRoom.ReleaseComponent();
 
@@ -57,6 +60,7 @@ namespace Jam.Scripts.Ritual
         
         private void StartRitual()
         {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
 
             bool areComplete = CheckRitualState(_components.Select(component => component.ComponentInside).ToList());

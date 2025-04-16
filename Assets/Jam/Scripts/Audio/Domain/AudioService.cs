@@ -12,6 +12,7 @@ namespace Jam.Scripts.Audio.Domain
         [Inject] private IAudioMixerService _audioMixerService; 
         
         private AudioSource _musicSource;
+        private AudioSource _sfxInterruptibleSource;
         private List<AudioSource> _soundSources = new List<AudioSource>();
         
         private SoundElement _nextMusicClip;
@@ -24,6 +25,21 @@ namespace Jam.Scripts.Audio.Domain
                 return;
 
             AudioSource source = GetSource();
+            
+            SetSoundClip(source, clip);
+        }
+        
+        public void PlaySoundInSingleAudioSource(string clipName)
+        {
+            SoundElement clip = FindClip(clipName, SoundType.Effect);
+            
+            if (clip == null)
+                return;
+
+            if (_sfxInterruptibleSource == null)
+                _sfxInterruptibleSource = GetSource();
+            
+            AudioSource source = _sfxInterruptibleSource;
             
             SetSoundClip(source, clip);
         }

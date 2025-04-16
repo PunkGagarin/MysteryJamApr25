@@ -9,6 +9,8 @@ namespace Jam.Scripts.Audio.Domain
         private AudioSettingsModel _audioSettingsModel;
         private IAudioMixerService _audioMixerService;
         private AudioSettingsView _audioSettingsView;
+        
+        private float prevMasterVolume, prevMusicVolume, prevSfxVolume;
 
         public AudioSettingsPresenter(AudioSettingsModel audioSettingsModel, IAudioMixerService audioMixerService)
         {
@@ -47,14 +49,36 @@ namespace Jam.Scripts.Audio.Domain
             _audioSettingsModel.SetMusicVolume(volume);
             UpdateMusicVolume(volume);
         }
+
+        public void UndoChanges()
+        {
+            SetMasterVolume(prevMasterVolume);
+            SetMusicVolume(prevMusicVolume);
+            SetSoundVolume(prevSfxVolume);
+            Initialize();
+            SyncWithView();
+        }
+
+        public void SaveChanges() => _audioSettingsModel.SaveSettings();
         
+        public void OnOpen()
+        {
+            prevMasterVolume = _audioSettingsModel.MasterVolume;
+            prevMusicVolume = _audioSettingsModel.MusicVolume;
+            prevSfxVolume = _audioSettingsModel.SoundVolume;
+            SyncWithView();
+        }
+
         private void UpdateMasterVolume(float newVolume) =>
             _audioMixerService.SetMasterVolume(_audioSettingsModel.MusicVolume, _audioSettingsModel.SoundVolume, newVolume);
+
         private void UpdateSoundVolume(float newVolume) => 
             _audioMixerService.SetSoundVolume(newVolume, _audioSettingsModel.MasterVolume);
+
         private void UpdateMusicVolume(float newVolume) => 
             _audioMixerService.SetMusicVolume(newVolume, _audioSettingsModel.MasterVolume);
-        
+
+
         private void SyncWithView()
         {
             _audioSettingsView.SetMasterVolume(_audioSettingsModel.MasterVolume);

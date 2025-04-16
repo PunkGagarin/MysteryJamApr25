@@ -1,4 +1,5 @@
 ﻿using System;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Jam.Scripts.Npc
         [SerializeField] private NpcTalk _talk;
         
         [Inject] private QuestPresenter _questPresenter;
+        [Inject] private AudioService _audioService;
         
         private NPCDefinition _definition;
         private bool _arrived;
@@ -46,6 +48,7 @@ namespace Jam.Scripts.Npc
             
             if (_arrived)
             {
+                _audioService.PlaySound(Sounds.buttonClick.ToString());
                 _pointerShower.Hide();
                 _talk.Talk(_definition.Dialogue, CharacterLeave);
             }

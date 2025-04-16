@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +15,10 @@ namespace Jam.Scripts.Manual
         [SerializeField] private Button _nextPageButton;
         [SerializeField] private Transform _leftPageHolder;
         [SerializeField] private Transform _rightPageHolder;
+        
         [Inject] private ManualPagesRepository _repository;
-
+        [Inject] private AudioService _audioService;
+        
         private List<GameObject> _pages;
         private int _currentPage = 0;
 
@@ -31,6 +34,12 @@ namespace Jam.Scripts.Manual
             base.Open(withPause);
             if (_pages == null) InitPages();
             else ShowPages();
+        }
+
+        public override void Close()
+        {
+            _audioService.PlaySound(Sounds.manualClose.ToString());
+            base.Close();
         }
 
         private void InitPages()
@@ -84,6 +93,7 @@ namespace Jam.Scripts.Manual
 
         private void PrevPageClick()
         {
+            _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
             _currentPage -= 2;
             ShowPages();
@@ -91,6 +101,7 @@ namespace Jam.Scripts.Manual
 
         private void NextPageClick()
         {
+            _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
             _currentPage += 2;
             ShowPages();

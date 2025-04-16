@@ -1,3 +1,4 @@
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,6 +9,7 @@ namespace Jam.Scripts.Manual
     public class ManualBookItem : MonoBehaviour, IPointerClickHandler
     {
         [Inject] private PopupManager _popupManager;
+        [Inject] private AudioService _audioService;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -17,7 +19,8 @@ namespace Jam.Scripts.Manual
 
         private void OpenPopup()
         {
-             _popupManager.OpenPopup<ManualPopup>();
+            _audioService.PlaySound(Sounds.manualOpening.ToString());
+            _popupManager.OpenPopup<ManualPopup>();
         }
     }
 }

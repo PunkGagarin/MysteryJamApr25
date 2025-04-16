@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0990f65fc2354e33b97312c5df62b540, type: 3}
   m_Name: SoundsHolder
   m_EditorClassIdentifier: 
-  <Sounds>k__BackingField: []
+  <Sounds>k__BackingField:
+  - {fileID: 8300000, guid: 69e2dea9b301649fab7d9b414365e112, type: 3}
+  - {fileID: 8300000, guid: 15806242faf244786a6e487c2af00a1d, type: 3}
+  - {fileID: 8300000, guid: 3c10cd525906445d6929b1080f81d63b, type: 3}
+  - {fileID: 8300000, guid: f4a4d7838b5c84575966b165bea34ce4, type: 3}
+  - {fileID: 8300000, guid: 13c98f6a3eccb4009961875dfb4af604, type: 3}

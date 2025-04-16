@@ -14,5 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _soundsHolder: {fileID: 11400000, guid: e255c9fdf046bcb4ea022fe9103a6780, type: 2}
   _musicHolder: {fileID: 11400000, guid: 51107d27c8f1be74ca711840483e7daf, type: 2}
-  <Sounds>k__BackingField: []
-  <Music>k__BackingField: []
+  <Sounds>k__BackingField:
+  - _name: buttonClick
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 69e2dea9b301649fab7d9b414365e112, type: 3}
+  - _name: buttonClickShortHigh
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 15806242faf244786a6e487c2af00a1d, type: 3}
+  - _name: bookFlip
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 3c10cd525906445d6929b1080f81d63b, type: 3}
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 7446e974f0c4a4648bb58fa236501526, type: 3}
+  - _name: manualClose
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: f4a4d7838b5c84575966b165bea34ce4, type: 3}
+  - _name: manualOpening
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 13c98f6a3eccb4009961875dfb4af604, type: 3}
+  <Music>k__BackingField:
+  - _name: mainMenuBgm
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 237d79253b73441208c730bff4be4daf, type: 3}
+  - _name: gameplayBgm
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: b84a37c6ec4fd4ca4a38a0dad4efbcf0, type: 3}

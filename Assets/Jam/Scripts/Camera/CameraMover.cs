@@ -1,7 +1,9 @@
 using System;
 using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Jam.Scripts.Camera
 {
@@ -12,6 +14,8 @@ namespace Jam.Scripts.Camera
         [SerializeField] private float _timeToMove;
         [SerializeField] private Button _leftButton, _rightButton;
 
+        [Inject] private AudioService _audioService;
+        
         private CameraPosition _position;
         
         private void Start()
@@ -24,6 +28,7 @@ namespace Jam.Scripts.Camera
 
         private void MoveLeft()
         {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
             _position--;
 
             UpdateButtons();
@@ -59,6 +64,7 @@ namespace Jam.Scripts.Camera
 
         private void MoveRight()
         {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
             _position++;
 
             UpdateButtons();
