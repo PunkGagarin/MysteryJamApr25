@@ -15,11 +15,11 @@ MonoBehaviour:
   <Name>k__BackingField: Honeycomb
   <Id>k__BackingField: 10
   <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
-  <ComponentType>k__BackingField: 3
+  <ComponentType>k__BackingField: 4
   <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
-  <DeathType>k__BackingField: 3
+  <DeathType>k__BackingField: 4
   <ExcludedComponents>k__BackingField:
   - {fileID: 11400000, guid: bdf137b077359d44b85e70fc22cd48d1, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0

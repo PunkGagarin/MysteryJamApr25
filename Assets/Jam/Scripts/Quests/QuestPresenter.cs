@@ -45,5 +45,8 @@ namespace Jam.Scripts.Quests
         
         public bool IsQuestFailed() => 
             _questModel.IsFailed();
+
+        public bool HaveAnyQuest() => 
+            _questModel.HaveAnyQuest();
     }
 }

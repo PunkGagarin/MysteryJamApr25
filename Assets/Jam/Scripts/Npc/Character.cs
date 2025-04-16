@@ -11,20 +11,23 @@ namespace Jam.Scripts.Npc
     {
         [SerializeField] private UnityEngine.Camera _camera;
         [SerializeField] private PointerShower _pointerShower;
-        [SerializeField] private NpcMovement _movement;
         [SerializeField] private NpcTalk _talk;
+        [SerializeField] private SpriteRenderer _visual;
         
         [Inject] private QuestPresenter _questPresenter;
         
         private NPCDefinition _definition;
         private bool _arrived;
 
+        public event Action<int> OnCharacterArrived;
         public event Action OnCharacterLeave;
 
         public void SetCharacter(NPCDefinition definition)
         {
             _definition = definition;
-            _movement.ShowNpc(CharacterArrived);
+            CharacterArrived();
+            OnCharacterArrived?.Invoke(definition.Id);
+            _visual.sprite = definition.Visual;
         }
 
         private void CharacterArrived()
@@ -36,7 +39,7 @@ namespace Jam.Scripts.Npc
         private void CharacterLeave()
         {
             _arrived = false;
-            _movement.HideNpc(OnCharacterLeave);
+            OnCharacterLeave?.Invoke();
         }
         
         public void OnPointerClick(PointerEventData eventData)

@@ -196,7 +196,7 @@ MonoBehaviour:
     Position: {x: 1998, y: -262}
     EventDataStringModifiers:
     - StringEventText:
-        Value: Mystery
+        Value: Quest
       Number:
         Value: 1
       StringEventModifierType:

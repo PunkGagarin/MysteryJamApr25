@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Amber resin
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Amber resin
+  <Id>k__BackingField: 0
   <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
-  <ComponentType>k__BackingField: 0
-  <AgeType>k__BackingField: 0
+  <ComponentType>k__BackingField: 1
+  <AgeType>k__BackingField: 2
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 0

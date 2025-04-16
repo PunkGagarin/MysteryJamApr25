@@ -15,11 +15,11 @@ MonoBehaviour:
   <Name>k__BackingField: Dagger fragment
   <Id>k__BackingField: 3
   <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
-  <ComponentType>k__BackingField: 3
+  <ComponentType>k__BackingField: 4
   <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
-  <DeathType>k__BackingField: 4
+  <DeathType>k__BackingField: 5
   <ExcludedComponents>k__BackingField:
   - {fileID: 11400000, guid: 4e4fd6df1fd7fb844abead18c2f427a8, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0

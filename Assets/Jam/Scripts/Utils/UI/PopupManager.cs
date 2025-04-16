@@ -10,14 +10,14 @@ namespace Jam.Scripts.Utils.UI
     public class PopupManager : MonoBehaviour
     {
         [Inject] private PopupFactory _factory;
-        private HashSet<Popup> _popups = new HashSet<Popup>();
+        private HashSet<Popup> _popups = new();
         
         public T OpenPopup<T>(Action closeEvent = null, bool withPause = false) where T : Popup
         {
             foreach (T popup in _popups.OfType<T>())
             {
-                popup.SetCloseEvent(closeEvent);
                 popup.Open(withPause);
+                popup.SetCloseEvent(closeEvent);
                 return popup;
             }
 
@@ -28,8 +28,8 @@ namespace Jam.Scripts.Utils.UI
         {
             T newPopup = _factory.CreatePopup<T>();
             newPopup.transform.SetParent(transform, false);
-            newPopup.SetCloseEvent(closeEvent);
             newPopup.Open(withPause);
+            newPopup.SetCloseEvent(closeEvent);
             _popups.Add(newPopup);
             return newPopup; 
         }

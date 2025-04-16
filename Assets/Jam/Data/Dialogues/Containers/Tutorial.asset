@@ -41,10 +41,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
-  - BaseNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
-    BasePortGuid: Output
-    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    TargetPortGuid: Input
   - BaseNodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
     BasePortGuid: Output
     TargetNodeGuid: ec749340-e18e-413c-91c0-f8506443026d
@@ -73,8 +69,20 @@ MonoBehaviour:
     BasePortGuid: cfb1a589-3846-4af7-8be8-d601ec601c97
     TargetNodeGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
     TargetPortGuid: Input
+  - BaseNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+    BasePortGuid: Output
+    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
+    TargetPortGuid: Input
+  - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
+    BasePortGuid: Output
+    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
   - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
     BasePortGuid: Continue
+    TargetNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    TargetPortGuid: Input
+  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     TargetPortGuid: Input
   StartData:
@@ -222,21 +230,47 @@ MonoBehaviour:
     Position: {x: 1740, y: 264}
     EventDataStringModifiers:
     - StringEventText:
-        Value: Mystery
+        Value: Quest
       Number:
         Value: 0
       StringEventModifierType:
         Value: 3
     ContainerDialogueEventSOs: []
-  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    Position: {x: 1903, y: -235}
+  - NodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    Position: {x: 1641, y: -539}
     EventDataStringModifiers:
     - StringEventText:
-        Value: Mystery
+        Value: Reputation
+      Number:
+        Value: 5
+      StringEventModifierType:
+        Value: 4
+    ContainerDialogueEventSOs: []
+  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    Position: {x: 2364, y: -380}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
       Number:
         Value: 0
       StringEventModifierType:
         Value: 4
+    ContainerDialogueEventSOs: []
+  - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
+    Position: {x: 1827, y: -315}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Reputation
+      Number:
+        Value: 5
+      StringEventModifierType:
+        Value: 3
+    - StringEventText:
+        Value: Money
+      Number:
+        Value: 50
+      StringEventModifierType:
+        Value: 3
     ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: ec749340-e18e-413c-91c0-f8506443026d
@@ -244,7 +278,7 @@ MonoBehaviour:
     EndNodeType:
       Value: 1
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    Position: {x: 2580, y: 105}
+    Position: {x: 3110, y: 8}
     EndNodeType:
       Value: 4
   BranchData:
@@ -254,7 +288,7 @@ MonoBehaviour:
     FalseGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     EventDataStringConditions:
     - StringEventText:
-        Value: Mystery
+        Value: Quest
       Number:
         Value: 0
       StringEventConditionType:
@@ -265,7 +299,7 @@ MonoBehaviour:
     FalseGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
     EventDataStringConditions:
     - StringEventText:
-        Value: Mystery
+        Value: Quest
       Number:
         Value: 0
       StringEventConditionType:
@@ -317,7 +351,7 @@ MonoBehaviour:
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions:
     - StringEventText:
-        Value: Mystery
+        Value: Quest
       Number:
         Value: 0
       StringEventConditionType:

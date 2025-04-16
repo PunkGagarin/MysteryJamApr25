@@ -15,11 +15,11 @@ MonoBehaviour:
   <Name>k__BackingField: Spider poison
   <Id>k__BackingField: 24
   <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
-  <ComponentType>k__BackingField: 3
+  <ComponentType>k__BackingField: 4
   <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
-  <DeathType>k__BackingField: 2
+  <DeathType>k__BackingField: 3
   <ExcludedComponents>k__BackingField:
   - {fileID: 11400000, guid: 420c3ca5bf8fb234da7acf99c08981d6, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
