@@ -27,7 +27,7 @@ namespace Jam.Scripts
         private void Start()
         {
             _characterController.SetCharacter(_tutorialCharacter);
-            _audioService.PlayMusic(Sounds.gameplayBgm.ToString());
+            _audioService.PlayMusic(Sounds.gameplayBgm.ToString(), true);
         }
         
         private void SetNextCharacter()
