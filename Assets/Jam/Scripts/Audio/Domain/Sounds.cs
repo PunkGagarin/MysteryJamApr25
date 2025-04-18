@@ -8,6 +8,7 @@ namespace Jam.Scripts.Audio.Domain
         bookFlip,
         manualOpening,
         manualClose,
-        gameplayBgm
+        gameplayBgm,
+        dialogueTextSound
     }
 }

@@ -302,9 +302,9 @@ MonoBehaviour:
   - {fileID: 8289118240970559456, guid: 8324bdb625f86df4e9eb608d1393a073, type: 3}
   - {fileID: 2737058570033945176, guid: 3a81b5f2cb319fe45ad63a60ac290004, type: 3}
   - {fileID: 4296428516066885871, guid: 27eff24873b7940749cdd53aabc6ae3a, type: 3}
-  - {fileID: 6504274837331174605, guid: 53657ec941bd252449f0e4677ad63d56, type: 3}
   - {fileID: 1243619856826952552, guid: f80a0678ecd7848a38f992c62cef5dfd, type: 3}
   - {fileID: -5507696701582909377, guid: e28f70dce9b0d4645b95338d29b447bd, type: 3}
+  - {fileID: 6504274837331174605, guid: 53657ec941bd252449f0e4677ad63d56, type: 3}
 --- !u!1 &7592136200623565166
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,8 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc47c2997243e8b30bd1b84fdf5606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _languageControllerPrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054,
-    type: 3}
+  _languageControllerPrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054, type: 3}
 --- !u!1 &8458801676252858372
 GameObject:
   m_ObjectHideFlags: 0

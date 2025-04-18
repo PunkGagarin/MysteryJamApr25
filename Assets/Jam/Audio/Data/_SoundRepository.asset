@@ -31,12 +31,16 @@ MonoBehaviour:
       _clip: {fileID: 8300000, guid: 7446e974f0c4a4648bb58fa236501526, type: 3}
   - _name: manualClose
     _clips:
-    - _volume: 3
+    - _volume: 1
       _clip: {fileID: 8300000, guid: f4a4d7838b5c84575966b165bea34ce4, type: 3}
   - _name: manualOpening
     _clips:
-    - _volume: 10
+    - _volume: 1
       _clip: {fileID: 8300000, guid: 13c98f6a3eccb4009961875dfb4af604, type: 3}
+  - _name: dialogueTextSound
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 6b43caf4edbf5457aac160b2050c7227, type: 3}
   <Music>k__BackingField:
   - _name: mainMenuBgm
     _clips:

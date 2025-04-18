@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
+using Jam.Scripts.Audio.Domain;
 using TMPro;
 using UnityEngine;
+using Zenject;
+using Random = UnityEngine.Random;
 
 namespace Bitwave_Labs.AnimatedTextReveal.Scripts
 {
@@ -26,6 +29,8 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
         /// </summary>
         [SerializeField] private int characterSpread = 10;
 
+        [Inject] private AudioService _audioService;
+        
         /// <summary>
         /// Stores the running coroutine instance.
         /// </summary>
@@ -59,6 +64,8 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
             int totalCharacters = textInfo.characterCount;
             int visibleCharacters = 0; // Tracks how many characters have started fading in.
             bool fullyRevealed = false; // Determines when the text is fully revealed.
+
+            _audioService.PlaySfxQueue(Sounds.dialogueTextSound.ToString());
 
             // Loop until the entire text has been revealed.
             while (!fullyRevealed)
@@ -102,10 +109,14 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
                 // Determine if all characters are fully visible.
                 fullyRevealed = visibleCharacters >= totalCharacters && newVertexColors != null &&
                                 newVertexColors[textInfo.characterInfo[totalCharacters - 1].vertexIndex].a == 255;
-
+                
+                _audioService.SetSfxQueuePitch(Random.Range(0.8f, 1.2f));
+                
                 // Control the timing of the fade-in effect.
                 yield return new WaitForSeconds(0.02f + (0.25f - fadeSpeed * 0.01f));
             }
+            
+            _audioService.StopSfxQueue();
             
             onComplete?.Invoke();
         }
