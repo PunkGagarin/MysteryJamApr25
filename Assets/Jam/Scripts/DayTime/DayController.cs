@@ -33,10 +33,12 @@ namespace Jam.Scripts.DayTime
         private bool _dayEnded;
         private bool _canCallNextClient;
         private Tween _currentDayTween;
+        
+        private bool IsLastClient =>
+            _currentClient == _dayConfig.DayNpcs[_currentDay].Npcs.Count;
 
         private void CallNextClient()
         {
-            Debug.Log($"DayController : CallNextClient");
             if (!_canCallNextClient)
                 return;
             
@@ -61,7 +63,6 @@ namespace Jam.Scripts.DayTime
 
         private void ResetDayValues()
         {
-            Debug.Log($"DayController : ResetDayValues");
             _daySprite.DOColor(_opaqueColor, 0f);
             _morningSprite.DOColor(_opaqueColor, 0f);
             _dayStarted = true;
@@ -72,7 +73,6 @@ namespace Jam.Scripts.DayTime
 
         private void EndDay()
         {
-            Debug.Log($"DayController : EndDay");
             _currentDay++;
             _canCallNextClient = false;
             _dayEnded = true;
@@ -86,7 +86,7 @@ namespace Jam.Scripts.DayTime
 
         private void ReactOnClosedCurtains()
         {
-            if (_dayEnded)
+            if (_dayEnded || IsLastClient)
                 ShowDayDetails();
             else
                 AllowCallNextClient();
@@ -94,7 +94,6 @@ namespace Jam.Scripts.DayTime
 
         private void AllowCallNextClient()
         {
-            Debug.Log($"DayController : AllowCallNextClient");
             _canCallNextClient = true;
         }
 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
   m_Name: Iron Ore
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Pocket
+  <Name>k__BackingField: "\u0416\u0435\u043B\u0435\u0437\u043D\u0430\u044F \u0440\u0443\u0434\u0430"
   <Id>k__BackingField: 11
-  <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 1b722e74ac9c7b74ead49831b80f98af, type: 3}
   <ComponentType>k__BackingField: 3
   <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 0

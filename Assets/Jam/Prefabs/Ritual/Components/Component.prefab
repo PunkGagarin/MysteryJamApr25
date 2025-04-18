@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2789844458301948396}
   - component: {fileID: 216961551982746845}
   m_Layer: 0
-  m_Name: Pocket
+  m_Name: Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,3 +382,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1706861431670010462}
   _componentDefinition: {fileID: 11400000, guid: 8695fff8d71769f4daecd66a798a1655, type: 2}
+  _name: {fileID: 187986200284231593}
