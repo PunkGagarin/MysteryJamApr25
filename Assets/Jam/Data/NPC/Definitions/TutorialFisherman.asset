@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: TutorialFisherman
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Fisherman
+  <Id>k__BackingField: 0
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 0835affc744369249b031e3dccef173f, type: 2}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}

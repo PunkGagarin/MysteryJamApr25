@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
   m_Name: Mammoth bone
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Mammoth bone
+  <Name>k__BackingField: "\u041A\u043E\u0441\u0442\u044C \u043C\u0430\u043C\u043E\u043D\u0442\u0430"
   <Id>k__BackingField: 13
-  <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
-  <ComponentType>k__BackingField: 1
+  <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
+  <ComponentType>k__BackingField: 2
   <AgeType>k__BackingField: 0
-  <SexType>k__BackingField: 0
+  <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
   <ExcludedComponents>k__BackingField:

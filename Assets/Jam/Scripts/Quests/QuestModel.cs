@@ -1,5 +1,4 @@
 ﻿using Jam.Scripts.Quests.Data;
-using Jam.Scripts.Ritual.Components;
 using UnityEngine;
 
 namespace Jam.Scripts.Quests
@@ -68,5 +67,8 @@ namespace Jam.Scripts.Quests
             Debug.LogError($"No active quest!");
             return false;
         }
+
+        public bool HaveAnyQuest() => 
+            _activeQuest != null;
     }
 }

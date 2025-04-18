@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Fisherman
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Fisherman
+  <Id>k__BackingField: 0
   <Dialogue>k__BackingField: {fileID: 11400000, guid: eb7b1debe1ad1e84ab066688904f0e13, type: 2}
-  <QuestKeyWords>k__BackingField: []
+  <Visual>k__BackingField: {fileID: 21300000, guid: 96f6a051a9b47a145ae7245bc3e73eef, type: 3}

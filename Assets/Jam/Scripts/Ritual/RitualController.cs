@@ -30,7 +30,7 @@ namespace Jam.Scripts.Ritual
         {
             componentRoom = null;
             
-            if (_questPresenter.IsQuestComplete() || _questPresenter.IsQuestFailed())
+            if (!_questPresenter.HaveAnyQuest() || _questPresenter.IsQuestComplete() || _questPresenter.IsQuestFailed())
                 return false;
             
             if (_components.All(componentRoom => !componentRoom.IsFree))
@@ -47,6 +47,7 @@ namespace Jam.Scripts.Ritual
         private void SetQuest(Quest quest)
         {
             _currentQuest = quest;
+            Attempt = 0;
         }
 
         private void ClearTable()
@@ -63,7 +64,9 @@ namespace Jam.Scripts.Ritual
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
 
-            bool areComplete = CheckRitualState(_components.Select(component => component.ComponentInside).ToList());
+            List<ComponentDefinition> selectedComponents =
+                _components.Where(component => component.ComponentInside != null).Select(component => component.ComponentInside).ToList();
+            bool areComplete = CheckRitualState(selectedComponents);
             
             if (areComplete)
             {

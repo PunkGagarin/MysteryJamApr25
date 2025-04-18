@@ -1,18 +1,30 @@
 Dialogue name,Node Guid ID,Text Guid ID,English,Russian
-Dialogue,a714f06f-3d23-4e6c-b8ae-324315b54a50,5ef3b7db-3d3a-4d16-b559-66054b55ed68,Hello Alchemist!,"Привет, алхимик!"
-Dialogue,a714f06f-3d23-4e6c-b8ae-324315b54a50,9fb54d78-b58a-4c66-98c1-1b248ec692c1,Adventurer,Авантюрист
-Dialogue,d4338421-7158-40b2-bc71-fdc33484f091,d7744ffc-f673-44cf-9d5f-e49c3955c59f,Hi my name is Jack Niceguy!,"Привет, меня зовут Джек Найсгай!"
-Dialogue,d4338421-7158-40b2-bc71-fdc33484f091,4ef41c7a-6c8d-40cc-8f6f-a0de51b015d2,I going to clear dangerous dungeon,Я собираюсь очистить опасное подземелье
-Dialogue,d4338421-7158-40b2-bc71-fdc33484f091,139ff30b-3df5-4ef6-b5f3-b533cc274097,So could you please make Health potion for me ?,Так что не мог бы ты сделать для меня зелье здоровья?
-Dialogue,d4338421-7158-40b2-bc71-fdc33484f091,2c660bc0-acf2-40a9-a05d-633e92679e43,Jack Niceguy,Перевод: Jack Niceguy
-Dialogue,6f917cc9-117a-4fe0-ab83-9a4c9204e1ca,Choice Dont have Text ID,Hello Adventurer! it's nice to meet you!,Перевод: Hello Adventurer! it's nice to meet you!
-Dialogue,8a301c1c-7799-42dd-b553-825f0d99a536,Choice Dont have Text ID,I don't serve people of your profession!,Перевод: I don't serve people of your profession!
-Dialogue,6a2222b5-adff-44fa-9286-1d825f17ce12,Choice Dont have Text ID,Alright i'll make one!,Перевод: Alright i'll make one!
-Dialogue,dff78684-2af1-496f-b511-51ab87de15ae,Choice Dont have Text ID,i don't have time for this,Перевод: i don't have time for this
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,5a5f606f-435b-4096-8d9d-15bbdb2e2a8b,good monin,Перевод: good monin
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,23d98286-ffde-41a9-b238-7a795419bafd,nice day for fishin aint it ?,Перевод: nice day for fishin aint it ?
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,7bcd6291-3499-415f-8994-d4e3f1736b41,Fisherman,Перевод: Fisherman
-Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,e2021d1c-2c87-4283-ba8b-1b335a1ab8c4,Ha-ha!,Перевод: Ha-ha!
-Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,ee5f3054-e074-4732-a3f4-b04b74958f55,Fisherman,Перевод: Fisherman
-Fisherman,f48f817e-ee9b-480f-ab4d-c61e7a7d8b59,Choice Dont have Text ID,nope,Перевод: nope
-Fisherman,ef9258ed-f520-48e3-9157-c5da262ef43b,Choice Dont have Text ID,It sure is!,Перевод: It sure is!
+Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,5a5f606f-435b-4096-8d9d-15bbdb2e2a8b,good monin,хороший Монин
+Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,23d98286-ffde-41a9-b238-7a795419bafd,nice day for fishin aint it ?,"хороший день для рыбалки, не так ли?"
+Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,7bcd6291-3499-415f-8994-d4e3f1736b41,Fisherman,Рыбак
+Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,e2021d1c-2c87-4283-ba8b-1b335a1ab8c4,Ha-ha!,Ха-ха!
+Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,ee5f3054-e074-4732-a3f4-b04b74958f55,Fisherman,Рыбак
+Fisherman,f48f817e-ee9b-480f-ab4d-c61e7a7d8b59,Choice Dont have Text ID,nope,неа
+Fisherman,ef9258ed-f520-48e3-9157-c5da262ef43b,Choice Dont have Text ID,It sure is!,Это точно!
+Jack Niceguy,a714f06f-3d23-4e6c-b8ae-324315b54a50,5ef3b7db-3d3a-4d16-b559-66054b55ed68,Hello Alchemist!,Привет Алхимик!
+Jack Niceguy,a714f06f-3d23-4e6c-b8ae-324315b54a50,9fb54d78-b58a-4c66-98c1-1b248ec692c1,Adventurer,авантюрист
+Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,d7744ffc-f673-44cf-9d5f-e49c3955c59f,Hi my name is Jack Niceguy!,"Привет, меня зовут Джек Найсгай!"
+Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,4ef41c7a-6c8d-40cc-8f6f-a0de51b015d2,I going to clear dangerous dungeon,Я собираюсь очистить опасное подземелье
+Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,139ff30b-3df5-4ef6-b5f3-b533cc274097,So could you please make Health potion for me ?,Не могли бы вы приготовить для меня зелье здоровья?
+Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,2c660bc0-acf2-40a9-a05d-633e92679e43,Jack Niceguy,Джек Найсгай
+Jack Niceguy,6f917cc9-117a-4fe0-ab83-9a4c9204e1ca,Choice Dont have Text ID,Hello Adventurer! it's nice to meet you!,"Привет, авантюрист! Приятно познакомиться!"
+Jack Niceguy,8a301c1c-7799-42dd-b553-825f0d99a536,Choice Dont have Text ID,I don't serve people of your profession!,Я не обслуживаю людей вашей профессии!
+Jack Niceguy,6a2222b5-adff-44fa-9286-1d825f17ce12,Choice Dont have Text ID,Alright i'll make one!,"Хорошо, я сделаю один!"
+Jack Niceguy,dff78684-2af1-496f-b511-51ab87de15ae,Choice Dont have Text ID,i don't have time for this,у меня нет на это времени
+Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Hello arcanist!,Привет арканист!
+Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,55246742-f30b-471b-b737-ff71a3b4e7a1,"My <color=""blue"">father</color> died, and hide somewhere his blessed fishing rod!","Мой <color=""blue"">отец</color> умер, и спрятал где-нибудь свою благословенную удочку!"
+Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,12569bb6-a660-4c1a-936d-67041ef62b8b,Could you please find out where is rod?,"Не могли бы вы узнать, где находится стержень?"
+Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,5c5fdc62-f572-4848-a232-eda32598f171,Fisherman,Рыбак
+Tutorial,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Did you realize where is my rod?,"Ты понял, где мой стержень?"
+Tutorial,51ef8acd-a853-4b0f-a413-7ad51e328041,89bb81f0-6be9-4cc1-9e4c-9e0f54ac517f,Fisherman,Рыбак
+Tutorial,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,I'm hardly disapointet in you!,Я почти не разочаровываюсь в тебе!
+Tutorial,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Fisherman,Рыбак
+Tutorial,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Okay, give me moment!","Хорошо, дай мне минутку!"
+Tutorial,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Sorry not today,"Извините, не сегодня"
+Tutorial,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Yes!,Да!
+Tutorial,a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e,Choice Dont have Text ID,Still not!,Все еще нет!

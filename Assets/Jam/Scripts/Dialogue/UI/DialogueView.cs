@@ -35,18 +35,14 @@ namespace Jam.Scripts.Dialogue.UI
         {
             _inputBlocker.gameObject.SetActive(false);
             _dialoguePanel.gameObject.SetActive(true);
-            _dialoguePanel.DOScale(1f, 1f).SetEase(Ease.Linear);
             base.Open(withPause);
         }
 
         public override void Close()
         {
             _inputBlocker.gameObject.SetActive(true);
-            _dialoguePanel.DOScale(0f, 1f).SetEase(Ease.Linear).OnComplete(() =>
-            {
-                _dialoguePanel.gameObject.SetActive(true);
-                base.Close();
-            });
+            _dialoguePanel.gameObject.SetActive(true);
+            base.Close();
         }
 
         public void SetName(string nameText) =>

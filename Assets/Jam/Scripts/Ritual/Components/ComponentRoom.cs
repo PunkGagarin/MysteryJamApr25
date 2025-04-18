@@ -9,7 +9,7 @@ namespace Jam.Scripts.Ritual.Components
         [SerializeField] private Color _freeColor;
         [SerializeField] private Color _fillColor;
 
-        public ComponentDefinition ComponentInside { get; private set; }
+        [field: SerializeField] public ComponentDefinition ComponentInside { get; private set; }
         public bool IsFree => ComponentInside == null;
         public Vector3 Position => transform.position;
 

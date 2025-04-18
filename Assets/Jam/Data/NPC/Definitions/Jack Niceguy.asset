@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Jack Niceguy
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Jack Niceguy
+  <Id>k__BackingField: 0
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 0f76a62658a4b704e9416dbd4001809d, type: 2}
-  <QuestKeyWords>k__BackingField: []
+  <Visual>k__BackingField: {fileID: 21300000, guid: 99b2f5fc596df7d4c941a7030dc4c8b6, type: 3}

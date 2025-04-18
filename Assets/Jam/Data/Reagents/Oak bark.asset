@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
   m_Name: Oak bark
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Oak bark
+  <Name>k__BackingField: "\u041A\u043E\u0440\u0430 \u0434\u0443\u0431\u0430"
   <Id>k__BackingField: 16
-  <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
-  <ComponentType>k__BackingField: 0
-  <AgeType>k__BackingField: 2
+  <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
+  <ComponentType>k__BackingField: 1
+  <AgeType>k__BackingField: 3
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 0

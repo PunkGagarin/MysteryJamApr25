@@ -10,7 +10,6 @@ namespace Jam.Scripts.Dialogue.Runtime.SO
     public class DialogueContainerSO : ScriptableObject
     {
         public List<LinkData> NodeLinkData = new();
-        
         public List<StartData> StartData = new();
         public List<DialogueData> DialogueData = new();
         public List<EventData> EventData = new();

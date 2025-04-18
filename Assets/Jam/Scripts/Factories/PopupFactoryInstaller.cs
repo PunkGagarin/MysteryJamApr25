@@ -10,6 +10,11 @@ namespace Jam.Scripts.Factories
         [SerializeField] private List<Popup> _popupsPrefabs;
         public override void InstallBindings()
         {
+            ProjectPopupFactoryInstall();
+        }
+        
+        private void ProjectPopupFactoryInstall()
+        {
             Container.Bind<PopupFactory>()
                 .FromNewComponentOnNewGameObject()
                 .AsSingle()

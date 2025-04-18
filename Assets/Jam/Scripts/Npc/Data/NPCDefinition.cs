@@ -7,7 +7,8 @@ namespace Jam.Scripts.Npc.Data
     [CreateAssetMenu(menuName = "Game Resources/Definitions/Npc")]
     public class NPCDefinition : Definition
     {
+        [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public DialogueContainerSO Dialogue { get; private set; }
-        [field: SerializeField] public int BelongQuestId { get; private set; }
+        [field: SerializeField] public Sprite Visual { get; private set; } 
     }
 }
