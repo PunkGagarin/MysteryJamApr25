@@ -23,6 +23,7 @@ namespace Jam.Scripts.Ritual
         [Inject] private AudioService _audioService;
 
         private Quest _currentQuest;
+        public event Action OnRitual; 
 
         public int Attempt { get; private set; }
 
@@ -82,7 +83,9 @@ namespace Jam.Scripts.Ritual
                     _questPresenter.SetFail();
                 }
             }
-            
+
+            OnRitual?.Invoke();
+
             ClearTable();
             UpdateButtons();
         }

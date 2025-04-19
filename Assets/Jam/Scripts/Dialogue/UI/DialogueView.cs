@@ -4,73 +4,79 @@ using Bitwave_Labs.AnimatedTextReveal.Scripts;
 using DG.Tweening;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.Enums;
-using Jam.Scripts.Utils.UI;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Zenject;
 
 namespace Jam.Scripts.Dialogue.UI
 {
-    public class DialogueView : Popup
+    public class DialogueView : MonoBehaviour
     {
-        [SerializeField] private GameObject _inputBlocker;
+        [SerializeField] private Transform _contentContainer;
         [SerializeField] private RectTransform _dialoguePanel;
+        [SerializeField] private ScrollRect _scrollRect;
         [Header("Text")]
-        [SerializeField] private TMP_Text _nameText;
-        //[SerializeField] private TMP_Text _dialogueText;
-        [SerializeField] private AnimatedTextReveal _dialogueText;
+        [SerializeField] private AnswerButtonHistory _answerTextPrefab;
         [Header("Button")]
-        [SerializeField] private GameObject _buttonContentPanel;
+        [SerializeField] private Transform _buttonContentPanel;
         [SerializeField] private ButtonController _buttonPrefab;
+        [SerializeField] private Button _continueButton;
         [Header("Button color")]
         [SerializeField] private Color _textDisableColor;
         [SerializeField] private Color _buttonDisableColor;
         [Header("Interactable")]
         [SerializeField] private Color _textInteractableColor;
 
+        [Inject] private AnimatedTextFactory _animatedTextFactory;
+
         private List<ButtonController> _buttons = new();
+        private AnimatedTextReveal _currentText;
 
-        public override void Open(bool withPause)
-        {
-            _inputBlocker.gameObject.SetActive(false);
+        public void Open() => 
             _dialoguePanel.gameObject.SetActive(true);
-            base.Open(withPause);
-        }
 
-        public override void Close()
+        public void Close() => 
+            _dialoguePanel.gameObject.SetActive(false);
+
+        public void SetText(string text, bool isGhost, Action onComplete = null)
         {
-            _inputBlocker.gameObject.SetActive(true);
-            _dialoguePanel.gameObject.SetActive(true);
-            base.Close();
-        }
-
-        public void SetName(string nameText) =>
-            _nameText.text = nameText;
-
-        public void SetText(string text, Action onComplete = null)
-        {
-            _dialogueText.ResetTextVisibility();
-            _dialogueText.TextMesh.text = text;
-            StartCoroutine(_dialogueText.FadeInText(onComplete));
+            _currentText = _animatedTextFactory.Create(isGhost, _contentContainer);
+            ScrollContent();
+            _currentText.ResetTextVisibility();
+            _currentText.TextMesh.text = text;
+            StartCoroutine(_currentText.FadeInText(onComplete));
         }
 
         public void SetButtons(List<DialogueButtonContainer> buttonContainers)
         {
             HideButtons();
+
+            if (buttonContainers.Count == 1 && buttonContainers[0].Text == "Continue")
+            {
+                _continueButton.onClick.AddListener(() =>
+                {
+                    buttonContainers[0].UnityAction?.Invoke();
+                    _continueButton.onClick.RemoveAllListeners();
+                    _continueButton.onClick.AddListener(FastFinishWriter);
+                });
+                return;
+            }
+
             CheckAndFillDialogueAnswerRooms(buttonContainers.Count);
             for (int i = 0; i < buttonContainers.Count; i++)
             {
-                Button currentButton = _buttons[i].GetComponent<Button>();
+                Button currentButton = _buttons[i].Button;
                 currentButton.onClick = new Button.ButtonClickedEvent();
                 currentButton.interactable = true;
                 _buttons[i].ButtonText.color = _textInteractableColor;
-                if (buttonContainers[i].ConditionCheck || buttonContainers[i].ChoiceStateType == ChoiceStateType.GrayOut)
+                var buttonContainer = buttonContainers[i];
+                if (buttonContainer.ConditionCheck || buttonContainer.ChoiceStateType == ChoiceStateType.GrayOut)
                 {
-                    _buttons[i].SetText($"{i + 1}: {buttonContainers[i].Text}");
                     _buttons[i].gameObject.SetActive(true);
+                    _buttons[i].SetText($"{i + 1}: {buttonContainer.Text}");
 
-                    if (!buttonContainers[i].ConditionCheck)
+                    if (!buttonContainer.ConditionCheck)
                     {
                         currentButton.interactable = false;
                         _buttons[i].ButtonText.color = _textDisableColor;
@@ -80,13 +86,32 @@ namespace Jam.Scripts.Dialogue.UI
                     }
                     else
                     {
-                        currentButton.onClick.AddListener(buttonContainers[i].UnityAction);
+                        currentButton.onClick.AddListener(() =>
+                        {
+                            buttonContainer.UnityAction?.Invoke();
+                            AddButtonText(buttonContainer.Text);
+                            HideButtons();
+                        });
                     }
                 }
             }
         }
 
-        public void HideButtons() => 
+        private void AddButtonText(string text)
+        {
+            var answerButtonHistory = Instantiate(_answerTextPrefab, _contentContainer);
+            answerButtonHistory.SetText(text);
+            ScrollContent();
+        }
+
+        private void ScrollContent()
+        {
+            Canvas.ForceUpdateCanvases();
+
+            _scrollRect.DONormalizedPos(Vector2.zero, .3f);
+        }
+
+        public void HideButtons() =>
             _buttons.ForEach(button => button.gameObject.SetActive(false));
 
         private void Update()
@@ -95,8 +120,9 @@ namespace Jam.Scripts.Dialogue.UI
             {
                 if (Keyboard.current[Key.Digit1 + i].wasPressedThisFrame)
                 {
-                    Button currentButton = _buttons[i].GetComponent<Button>();
-                    if (currentButton.gameObject.activeSelf) currentButton.onClick.Invoke();
+                    Button currentButton = _buttons[i].Button;
+                    if (currentButton.gameObject.activeSelf)
+                        currentButton.onClick.Invoke();
                 }
             }
         }
@@ -107,10 +133,19 @@ namespace Jam.Scripts.Dialogue.UI
             int buttonsToCreate = buttonsCountToCreate - _buttons.Count;
             for (int i = 0; i < buttonsToCreate; i++)
             {
-                ButtonController button = Instantiate(_buttonPrefab, _buttonContentPanel.transform);
+                ButtonController button = Instantiate(_buttonPrefab, _buttonContentPanel);
                 _buttons.Add(button);
                 button.gameObject.SetActive(false);
             }
         }
+
+        private void FastFinishWriter() =>
+            _currentText?.FinishCoroutine();
+
+        private void Awake() => 
+            _continueButton.onClick.AddListener(FastFinishWriter);
+
+        private void OnDestroy() => 
+            _continueButton.onClick.RemoveAllListeners();
     }
 }

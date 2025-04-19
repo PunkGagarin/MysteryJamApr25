@@ -40,6 +40,8 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
         /// Tracks which text to display.
         /// </summary>
         private int _textCount;
+
+        private bool _fastFinish;
         
         public TextMeshProUGUI TextMesh => textMesh;
         
@@ -53,6 +55,7 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
             // Ensure the text mesh updates immediately so we get valid character data.
             textMesh.ForceMeshUpdate();
             TMP_TextInfo textInfo = textMesh.textInfo;
+            _fastFinish = false;
 
             // Holds the vertex color data for modifying character transparency.
             Color32[] newVertexColors = null;
@@ -106,6 +109,9 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
                 if (visibleCharacters < totalCharacters)
                     visibleCharacters++;
 
+                if (_fastFinish)
+                    visibleCharacters = totalCharacters;
+
                 // Determine if all characters are fully visible.
                 fullyRevealed = visibleCharacters >= totalCharacters && newVertexColors != null &&
                                 newVertexColors[textInfo.characterInfo[totalCharacters - 1].vertexIndex].a == 255;
@@ -120,6 +126,10 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
             
             onComplete?.Invoke();
         }
+
+        public void FinishCoroutine() => 
+            _fastFinish = true;
+
 
         /// <summary>
         /// Resets all characters to be fully transparent before starting the animation.

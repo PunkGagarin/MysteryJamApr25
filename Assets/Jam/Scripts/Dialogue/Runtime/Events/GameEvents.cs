@@ -19,6 +19,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _moneyEvent;
         [SerializeField, StringEvent] private string _componentEvent;
         [SerializeField, StringEvent] private string _attemptsEvent;
+        [SerializeField, StringEvent] private string _ritualEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
@@ -27,6 +28,23 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
 
+        public void DialogueModifierEvents(string stringEvent, StringEventModifierType modifierType, float value = 0)
+        {
+            if (_eventHandlers.TryGetValue(stringEvent, out var handler))
+                handler.Invoke(value, modifierType);
+            else
+                Debug.LogWarning($"Неизвестное событие: {stringEvent}");
+        }
+
+        public bool DialogueConditionEvents(string stringEvent, StringEventConditionType conditionType, float value = 0)
+        {
+            if (_conditionHandlers.TryGetValue(stringEvent, out var handler))
+                return handler.Invoke(value, conditionType);
+            
+            Debug.LogWarning($"Неизвестное событие: {stringEvent}");
+            return false;
+        }
+        
         private void Start()
         {
             _eventHandlers = new Dictionary<string, Action<float, StringEventModifierType>>
@@ -36,14 +54,18 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _reputationEvent, HandleReputation },
                 { _moneyEvent, HandleMoney },
             };
-            
+
             _conditionHandlers = new Dictionary<string, StringEventCondition>
             {
                 { _questEvent, CheckQuest },
                 { _attemptsEvent, CheckAttempts },
-                { _moneyEvent, CheckMoney}
+                { _moneyEvent, CheckMoney },
+                { _ritualEvent, CheckRitual }
             };
         }
+
+        private bool CheckRitual(float _, StringEventConditionType __) => 
+            _questPresenter.IsQuestComplete();
 
         private bool CheckMoney(float value, StringEventConditionType conditionType) => 
             _playerStats.CheckMoney((int)value, conditionType);
@@ -67,29 +89,6 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 default:
                     return false;
             }
-        }
-
-        public void DialogueModifierEvents(string stringEvent, StringEventModifierType modifierType, float value = 0)
-        {
-            if (_eventHandlers.TryGetValue(stringEvent, out var handler))
-            {
-                handler.Invoke(value, modifierType);
-            }
-            else
-            {
-                Debug.LogWarning($"Неизвестное событие: {stringEvent}");
-            }
-        }
-
-        public bool DialogueConditionEvents(string stringEvent, StringEventConditionType conditionType, float value = 0)
-        {
-            if (_conditionHandlers.TryGetValue(stringEvent, out var handler))
-            {
-                return handler.Invoke(value, conditionType);
-            }
-            
-            Debug.LogWarning($"Неизвестное событие: {stringEvent}");
-            return false;
         }
         
         private void HandleReputation(float value, StringEventModifierType modifierType)
@@ -132,6 +131,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
 
         private void HandleQuest(float value, StringEventModifierType modifierType)
         {
+            Debug.Log($"Player quest modified by {value} with modifier {modifierType}");
             switch (modifierType)
             {
                 case StringEventModifierType.SetTrue:
@@ -156,7 +156,6 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             switch (modifierType)
             {
                 case StringEventModifierType.Add:
-                    
                     break;
                 case StringEventModifierType.Remove:
                     break;

@@ -49,3 +49,4 @@ MonoBehaviour:
   _moneyEvent: Money
   _componentEvent: Component
   _attemptsEvent: Atempts
+  _ritualEvent: Ritual

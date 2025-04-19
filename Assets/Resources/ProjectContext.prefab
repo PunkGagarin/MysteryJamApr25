@@ -47,6 +47,50 @@ MonoBehaviour:
   _musicMixer: {fileID: 24300002, guid: 8a83e683443f9e948b4f3fd10a9adf77, type: 2}
   _soundMixer: {fileID: 24300002, guid: ad66ae52c5606a74b9655b985c705279, type: 2}
   _soundRepository: {fileID: 11400000, guid: dc926880fae59fb409cebcaf900dc800, type: 2}
+--- !u!1 &696561328432660269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4976093555099659573}
+  - component: {fileID: 924264764272417415}
+  m_Layer: 0
+  m_Name: InputInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4976093555099659573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696561328432660269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2548839604113478229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &924264764272417415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696561328432660269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850735b2bd0f462c82e3fbd50a6cb794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1829024776959784697
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +172,7 @@ Transform:
   - {fileID: 7258424312170536137}
   - {fileID: 6499364400999107220}
   - {fileID: 4174867029999537307}
+  - {fileID: 4976093555099659573}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2565986588456786615
@@ -152,6 +197,7 @@ MonoBehaviour:
   - {fileID: 6385491715541255639}
   - {fileID: 7740269642974872762}
   - {fileID: 5742488449686105104}
+  - {fileID: 924264764272417415}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0
@@ -300,7 +346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popupsPrefabs:
   - {fileID: 8289118240970559456, guid: 8324bdb625f86df4e9eb608d1393a073, type: 3}
-  - {fileID: 2737058570033945176, guid: 3a81b5f2cb319fe45ad63a60ac290004, type: 3}
   - {fileID: 4296428516066885871, guid: 27eff24873b7940749cdd53aabc6ae3a, type: 3}
   - {fileID: 1243619856826952552, guid: f80a0678ecd7848a38f992c62cef5dfd, type: 3}
   - {fileID: -5507696701582909377, guid: e28f70dce9b0d4645b95338d29b447bd, type: 3}

@@ -6,6 +6,7 @@ namespace Jam.Scripts.Dialogue.UI
 {
     public class ButtonController : MonoBehaviour
     {
+        [field: SerializeField] public Button Button { get; private set; }
         [field: SerializeField] public TMP_Text ButtonText { get; private set; }
 
         public void SetText(string text) => 

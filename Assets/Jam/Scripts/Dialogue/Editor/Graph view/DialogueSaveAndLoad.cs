@@ -196,7 +196,7 @@ namespace Jam.Scripts.Dialogue.Editor.Graph_view
                 NodeGuid = node.NodeGuid,
                 Position = node.GetPosition().position,
                 TrueGuidNode = trueOutput != null ? ((BaseNode) trueOutput.input.node).NodeGuid : string.Empty,
-                FalseGuidNode = falseOutput != null ? ((BaseNode) falseOutput.input.node).NodeGuid : string.Empty
+                FalseGuidNode = falseOutput != null ? ((BaseNode) falseOutput.input.node).NodeGuid : string.Empty,
             };
             
             node.BranchData.EventDataStringConditions.ForEach(stringEvent =>

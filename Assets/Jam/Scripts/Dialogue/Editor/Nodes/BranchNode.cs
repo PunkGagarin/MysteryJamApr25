@@ -11,6 +11,7 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
         private const string BRANCH_NODE_STYLE_SHEET = "USS/Nodes/BranchNodeStyleSheet";
 
         public BranchData BranchData { get; set; } = new();
+
         public BranchNode() { }
 
         public BranchNode(Vector2 position, DialogueEditorWindow editorWindow, DialogueGraphView dialogueGraphView) : base(position, editorWindow, dialogueGraphView, BRANCH_NODE_STYLE_SHEET)
