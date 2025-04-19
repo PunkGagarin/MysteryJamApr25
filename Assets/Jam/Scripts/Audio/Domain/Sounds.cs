@@ -9,6 +9,7 @@ namespace Jam.Scripts.Audio.Domain
         manualOpening,
         manualClose,
         gameplayBgm,
-        dialogueTextSound
+        dialogueTextSound,
+        ropeBell
     }
 }

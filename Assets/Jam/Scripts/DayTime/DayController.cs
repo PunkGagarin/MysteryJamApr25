@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.DayTime.Results;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
@@ -22,6 +23,7 @@ namespace Jam.Scripts.DayTime
         [Inject] private PopupManager _popupManager;
         [Inject] private PauseService _pauseService;
         [Inject] private PlayerStatsPresenter _playerStatsPresenter;
+        [Inject] private AudioService _audioService;
         
         private int _currentDay = 0;
         private int _currentClient = 0;
@@ -122,6 +124,8 @@ namespace Jam.Scripts.DayTime
         {
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
+            
+            _audioService.PlaySound(Sounds.ropeBell.ToString());
             
             CallNextClient();
         }

@@ -41,6 +41,10 @@ MonoBehaviour:
     _clips:
     - _volume: 1
       _clip: {fileID: 8300000, guid: 6b43caf4edbf5457aac160b2050c7227, type: 3}
+  - _name: ropeBell
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: e8c9d91b3485641eaac6db9ee200893a, type: 3}
   <Music>k__BackingField:
   - _name: mainMenuBgm
     _clips:
