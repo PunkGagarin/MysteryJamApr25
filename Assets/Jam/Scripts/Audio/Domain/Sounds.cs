@@ -10,6 +10,14 @@ namespace Jam.Scripts.Audio.Domain
         manualClose,
         gameplayBgm,
         dialogueTextSound,
-        ropeBell
+        ropeBell,
+        woodCreak,
+        foundConflict,
+        bagOnTable,
+        bottlleOnTable,
+        whisperingGhosts,
+        error,
+        ritualFailed,
+        ritualSuccess
     }
 }

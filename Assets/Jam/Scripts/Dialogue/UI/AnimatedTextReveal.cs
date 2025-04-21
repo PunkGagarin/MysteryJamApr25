@@ -68,7 +68,7 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
             int visibleCharacters = 0; // Tracks how many characters have started fading in.
             bool fullyRevealed = false; // Determines when the text is fully revealed.
 
-            _audioService.PlaySfxQueue(Sounds.dialogueTextSound.ToString());
+            _audioService.PlaySfxLoop(Sounds.dialogueTextSound.ToString());
 
             // Loop until the entire text has been revealed.
             while (!fullyRevealed)
@@ -116,13 +116,13 @@ namespace Bitwave_Labs.AnimatedTextReveal.Scripts
                 fullyRevealed = visibleCharacters >= totalCharacters && newVertexColors != null &&
                                 newVertexColors[textInfo.characterInfo[totalCharacters - 1].vertexIndex].a == 255;
                 
-                _audioService.SetSfxQueuePitch(Random.Range(0.8f, 1.2f));
+                _audioService.SetSfxLoopPitch(Random.Range(0.8f, 1.2f));
                 
                 // Control the timing of the fade-in effect.
                 yield return new WaitForSeconds(0.02f + (0.25f - fadeSpeed * 0.01f));
             }
             
-            _audioService.StopSfxQueue();
+            _audioService.StopSfxLoop();
             
             onComplete?.Invoke();
         }

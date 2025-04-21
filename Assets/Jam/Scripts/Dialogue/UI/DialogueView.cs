@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Bitwave_Labs.AnimatedTextReveal.Scripts;
 using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using UnityEngine;
@@ -29,6 +30,7 @@ namespace Jam.Scripts.Dialogue.UI
         [SerializeField] private Color _textInteractableColor;
 
         [Inject] private AnimatedTextFactory _animatedTextFactory;
+        [Inject] private AudioService _audioService;
 
         private List<ButtonController> _buttons = new();
         private AnimatedTextReveal _currentText;
@@ -56,6 +58,7 @@ namespace Jam.Scripts.Dialogue.UI
             {
                 _continueButton.onClick.AddListener(() =>
                 {
+                    _audioService.PlaySound(Sounds.buttonClick.ToString());
                     buttonContainers[0].UnityAction?.Invoke();
                     _continueButton.onClick.RemoveAllListeners();
                     _continueButton.onClick.AddListener(FastFinishWriter);
@@ -88,6 +91,7 @@ namespace Jam.Scripts.Dialogue.UI
                     {
                         currentButton.onClick.AddListener(() =>
                         {
+                            _audioService.PlaySound(Sounds.buttonClick.ToString());
                             buttonContainer.UnityAction?.Invoke();
                             AddButtonText(buttonContainer.Text);
                             HideButtons();

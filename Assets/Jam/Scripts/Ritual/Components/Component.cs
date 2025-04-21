@@ -1,5 +1,5 @@
+﻿using Jam.Scripts.Audio.Domain;
 using TMPro;
-using Jam.Scripts.Audio.Domain;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -11,6 +11,7 @@ namespace Jam.Scripts.Ritual.Components
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private ComponentDefinition _componentDefinition;
         [SerializeField] private TMP_Text _name;
+        [SerializeField] private Sounds _clickSound;
         [Inject] private RitualController _ritualController;
         [Inject] private ComponentsAnimationController _componentsAnimationController;
         [Inject] private AudioService _audioService;
@@ -26,9 +27,15 @@ namespace Jam.Scripts.Ritual.Components
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            _audioService.PlaySound(Sounds.buttonClick.ToString());
             if (_ritualController.TryAddComponent(_componentDefinition, out ComponentRoom room))
+            {
+                _audioService.PlaySound(_clickSound.ToString());
                 _componentsAnimationController.PlayAnimation(_componentDefinition, transform.position, room);
+            }
+            else
+            {
+                _audioService.PlaySound(Sounds.error.ToString());
+            }
         }
     }
 }

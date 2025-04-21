@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Audio.Data;
+using JetBrains.Annotations;
 using UnityEngine;
 using Zenject;
 
@@ -13,11 +14,11 @@ namespace Jam.Scripts.Audio.Domain
 
         private AudioSource _musicSource;
         private AudioSource _sfxInterruptibleSource;
-        private AudioSource _sfxQueueSource;
+        private AudioSource _sfxLoopSource;
         private List<AudioSource> _soundSources = new List<AudioSource>();
 
         private SoundElement _nextMusicClip;
-        private SoundElement _nextSfxQueueClip;
+        private SoundElement _nextSfxLoopClip;
 
         public void PlaySound(string clipName)
         {
@@ -68,41 +69,41 @@ namespace Jam.Scripts.Audio.Domain
             }
         }
 
-        public void PlaySfxQueue(string clipName)
+        public void PlaySfxLoop([CanBeNull] string clipName)
         {
             SoundElement clip = FindClip(clipName, SoundType.Effect);
 
             if (clip == null)
                 return;
 
-            if (_sfxQueueSource == null)
+            if (_sfxLoopSource == null)
             {
-                _sfxQueueSource = gameObject.AddComponent<AudioSource>();
-                _sfxQueueSource.playOnAwake = false;
-                _sfxQueueSource.outputAudioMixerGroup = _audioMixerService.SoundMixer;
+                _sfxLoopSource = gameObject.AddComponent<AudioSource>();
+                _sfxLoopSource.playOnAwake = false;
+                _sfxLoopSource.outputAudioMixerGroup = _audioMixerService.SoundMixer;
             }
 
-            if (_sfxQueueSource.isPlaying == false)
+            if (_sfxLoopSource.isPlaying == false)
             {
-                SetSfxQueueClip(clip);
+                SetSfxLoopClip(clip);
             }
             else
             {
-                _sfxQueueSource.loop = false;
-                _nextSfxQueueClip = clip;
+                _sfxLoopSource.loop = false;
+                _nextSfxLoopClip = clip;
             }
         }
 
-        public void StopSfxQueue()
+        public void StopSfxLoop()
         {
-            if (_sfxQueueSource != null)
-                _sfxQueueSource.Stop();
+            if (_sfxLoopSource != null)
+                _sfxLoopSource.Stop();
         }
 
-        public void SetSfxQueuePitch(float pitch)
+        public void SetSfxLoopPitch(float pitch)
         {
-            if (_sfxQueueSource != null)
-                _sfxQueueSource.pitch = pitch;   
+            if (_sfxLoopSource != null)
+                _sfxLoopSource.pitch = pitch;   
         }
 
         private AudioSource GetSource()
@@ -137,12 +138,12 @@ namespace Jam.Scripts.Audio.Domain
             _musicSource.Play();
         }
 
-        private void SetSfxQueueClip(SoundElement clip)
+        private void SetSfxLoopClip(SoundElement clip)
         {
-            _sfxQueueSource.clip = clip.Clip;
-            _sfxQueueSource.volume = clip.Volume;
-            _sfxQueueSource.loop = true;
-            _sfxQueueSource.Play();
+            _sfxLoopSource.clip = clip.Clip;
+            _sfxLoopSource.volume = clip.Volume;
+            _sfxLoopSource.loop = true;
+            _sfxLoopSource.Play();
         }
 
         private AudioSource AddNewSoundSource()
@@ -168,19 +169,19 @@ namespace Jam.Scripts.Audio.Domain
         private void Update()
         {
             CheckNextMusicClip();
-            CheckNextSfxQueueClip();
+            CheckNextSfxLoopClip();
         }
 
-        private void CheckNextSfxQueueClip()
+        private void CheckNextSfxLoopClip()
         {
-            if (_sfxQueueSource == null ||
-                _sfxQueueSource.loop ||
-                _sfxQueueSource.isPlaying ||
-                _nextSfxQueueClip == null)
+            if (_sfxLoopSource == null ||
+                _sfxLoopSource.loop ||
+                _sfxLoopSource.isPlaying ||
+                _nextSfxLoopClip == null)
                 return;
 
-            SetSfxQueueClip(_nextSfxQueueClip);
-            _nextSfxQueueClip = null;
+            SetSfxLoopClip(_nextSfxLoopClip);
+            _nextSfxLoopClip = null;
         }
 
         private void CheckNextMusicClip()

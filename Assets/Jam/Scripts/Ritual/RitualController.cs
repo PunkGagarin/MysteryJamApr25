@@ -72,11 +72,13 @@ namespace Jam.Scripts.Ritual
             if (areComplete)
             {
                 Debug.Log($"Ritual OK");
+                _audioService.PlaySound(Sounds.whisperingGhosts.ToString());
                 _questPresenter.SetComplete();
             }
             else
             {
                 Debug.Log($"Ritual failed");
+                _audioService.PlaySound(Sounds.ritualFailed.ToString());
                 if (Attempt >= _attemptsBeforeFail)
                 {
                     Debug.Log("Quest failed");
