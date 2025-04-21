@@ -7,40 +7,43 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class PausePopup : Popup
+namespace Jam.Scripts.MainMenuPopups
 {
-    [SerializeField] private Button _settingsButton;
-    [SerializeField] private Button _mainMenuButton;
-    [SerializeField] private Button _playButton;
-
-    [Inject] private CoroutineHelper _coroutineHelper;
-    [Inject] private PopupManager _popupManager;
-    [Inject] private SceneLoader _sceneLoader;
-    [Inject] private AudioService _audioService;
-
-    private void Awake()
+    public class PausePopup : Popup
     {
-        _settingsButton.onClick.AddListener(OnSettingsButtonClick);
-        _mainMenuButton.onClick.AddListener(OnMainMenuButtonClick);
-        _playButton.onClick.AddListener(Close);
-    }
+        [SerializeField] private Button _settingsButton;
+        [SerializeField] private Button _mainMenuButton;
+        [SerializeField] private Button _playButton;
 
-    private void OnSettingsButtonClick()
-    {
-        _audioService.PlaySound(Sounds.buttonClick.ToString());
-        _popupManager.OpenPopup<AudioSettingsView>();
-    }
+        [Inject] private CoroutineHelper _coroutineHelper;
+        [Inject] private PopupManager _popupManager;
+        [Inject] private SceneLoader _sceneLoader;
+        [Inject] private AudioService _audioService;
 
-    private void OnMainMenuButtonClick()
-    {
-        _audioService.PlaySound(Sounds.buttonClick.ToString());
-        _coroutineHelper.RunCoroutine(_sceneLoader.LoadScene(SceneEnum.MainMenu));
-    }
+        private void Awake()
+        {
+            _settingsButton.onClick.AddListener(OnSettingsButtonClick);
+            _mainMenuButton.onClick.AddListener(OnMainMenuButtonClick);
+            _playButton.onClick.AddListener(Close);
+        }
 
-    private void OnDestroy()
-    {
-        _settingsButton.onClick.RemoveListener(OnSettingsButtonClick);
-        _mainMenuButton.onClick.RemoveListener(OnMainMenuButtonClick);
-        _playButton.onClick.RemoveListener(Close);
+        private void OnSettingsButtonClick()
+        {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            _popupManager.OpenPopup<AudioSettingsView>();
+        }
+
+        private void OnMainMenuButtonClick()
+        {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            _coroutineHelper.RunCoroutine(_sceneLoader.LoadScene(SceneEnum.MainMenu));
+        }
+
+        private void OnDestroy()
+        {
+            _settingsButton.onClick.RemoveListener(OnSettingsButtonClick);
+            _mainMenuButton.onClick.RemoveListener(OnMainMenuButtonClick);
+            _playButton.onClick.RemoveListener(Close);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Jam.Scripts.Ritual.Components;
+﻿using Jam.Scripts.Ritual.Inventory;
+using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
 using Zenject;
 
@@ -7,17 +8,19 @@ namespace Jam.Scripts.Ritual
     public class RitualInstaller : MonoInstaller
     {
         [SerializeField] private RitualController _ritualController;
-        [SerializeField] private ComponentsAnimationController _componentsAnimationControllerPrefab;
+        [SerializeField] private ReagentAnimationController _reagentAnimationControllerPrefab;
+        [SerializeField] private InventorySystem _inventorySystem;
         public override void InstallBindings()
         {
             RitualControllerInstall();
             ComponentsAnimationControllerInstall();
+            InventoryInstall();
         }
         
         private void ComponentsAnimationControllerInstall()
         {
-            Container.Bind<ComponentsAnimationController>()
-                .FromInstance(_componentsAnimationControllerPrefab)
+            Container.Bind<ReagentAnimationController>()
+                .FromInstance(_reagentAnimationControllerPrefab)
                 .AsSingle()
                 .NonLazy();
         }
@@ -30,5 +33,13 @@ namespace Jam.Scripts.Ritual
                 .NonLazy();
         }
 
+        private void InventoryInstall()
+        {
+            Container
+                .Bind<InventorySystem>()
+                .FromInstance(_inventorySystem)
+                .AsSingle()
+                .NonLazy();
+        }
     }
 }

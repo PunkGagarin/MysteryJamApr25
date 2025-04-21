@@ -6,7 +6,7 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace Bitwave_Labs.AnimatedTextReveal.Scripts
+namespace Jam.Scripts.Dialogue.UI
 {
     /// <summary>
     /// This class animates the fade-in effect of a TextMeshProUGUI component, 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6aa4b34a6fc40358d082f229ef310ca, type: 3}
   m_Name: DayConfig
   m_EditorClassIdentifier: 
-  <DayLength>k__BackingField: 222
+  <DayLength>k__BackingField: 1200
   <DayNpcs>k__BackingField:
   - <Npcs>k__BackingField:
     - {fileID: 11400000, guid: 4dbf5339b26ab614ebdb326a8b04110b, type: 2}

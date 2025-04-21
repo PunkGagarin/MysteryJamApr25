@@ -4,6 +4,7 @@ using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual;
+using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Utils.String_Tool;
 using UnityEngine;
 using Zenject;
@@ -17,13 +18,15 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _questEvent;
         [SerializeField, StringEvent] private string _reputationEvent;
         [SerializeField, StringEvent] private string _moneyEvent;
-        [SerializeField, StringEvent] private string _componentEvent;
+        [SerializeField, StringEvent] private string _reagentEvent;
         [SerializeField, StringEvent] private string _attemptsEvent;
         [SerializeField, StringEvent] private string _ritualEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private RitualController _ritualController;
+        [Inject] private InventorySystem _inventorySystem;
+        [Inject] private InventoryConfig _inventoryConfig;
  
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
@@ -50,7 +53,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             _eventHandlers = new Dictionary<string, Action<float, StringEventModifierType>>
             {
                 { _questEvent, HandleQuest },
-                { _componentEvent, HandleComponent },
+                { _reagentEvent, HandleReagent },
                 { _reputationEvent, HandleReputation },
                 { _moneyEvent, HandleMoney },
             };
@@ -151,11 +154,12 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             }
         }
         
-        private void HandleComponent(float id, StringEventModifierType modifierType)
+        private void HandleReagent(float id, StringEventModifierType modifierType)
         {
             switch (modifierType)
             {
                 case StringEventModifierType.Add:
+                    _inventorySystem.AddReagent((int)id, _inventoryConfig.MaxReagentAmount);
                     break;
                 case StringEventModifierType.Remove:
                     break;

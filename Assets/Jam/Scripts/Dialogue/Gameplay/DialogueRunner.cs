@@ -38,6 +38,9 @@ namespace Jam.Scripts.Dialogue.Gameplay
 
         public void StartDialogue(DialogueContainerSO dialogueContainer, Action closeEvent = null)
         {
+            if (_isDialogueActive)
+                return;
+            
             _isDialogueActive = true;
             _dialogueContainer = dialogueContainer;
 
