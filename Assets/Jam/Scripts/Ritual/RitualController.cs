@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.PostProcessing;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Quests.Data;
 using Jam.Scripts.Ritual.Components;
@@ -21,6 +22,7 @@ namespace Jam.Scripts.Ritual
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private QuestRepository _questRepository;
         [Inject] private AudioService _audioService;
+        [Inject] private GhostResponseEffect _ghostResponseEffect;
 
         private Quest _currentQuest;
         public event Action OnRitual; 
@@ -73,6 +75,7 @@ namespace Jam.Scripts.Ritual
             {
                 Debug.Log($"Ritual OK");
                 _audioService.PlaySound(Sounds.whisperingGhosts.ToString());
+                _ghostResponseEffect.ToggleEffect();
                 _questPresenter.SetComplete();
             }
             else

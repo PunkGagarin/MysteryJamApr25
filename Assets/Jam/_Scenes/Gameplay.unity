@@ -2846,6 +2846,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5e4132b340c40e1a7dc912f9f205f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _volume: {fileID: 1704939537}
+  _effectDuration: 1
+  hexColor: '#051022'
+  _vignetteCenter: {x: 0.5, y: 0.5}
+  _vignetteIntensity: 0.3
+  _vignetteSmoothness: 0.5
+  _chromaticAberrationIntensity: 1
+  _lensDistortionIntensity: -0.3
 --- !u!1 &869953316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5235,6 +5243,51 @@ MonoBehaviour:
   - {fileID: 132050189}
   - {fileID: 1524913564}
   _attemptsBeforeFail: 3
+--- !u!1 &1991820619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991820620}
+  - component: {fileID: 1991820621}
+  m_Layer: 0
+  m_Name: PostProcessingEffectInstaller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991820620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991820619}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6911566749269166320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1991820621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991820619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259e132b48cbf4e27b84bd8c82b465a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ghostResponseEffect: {fileID: 845886325}
 --- !u!1 &2062930478
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,6 +5636,7 @@ MonoBehaviour:
   - {fileID: 1221795565}
   - {fileID: 285407803}
   - {fileID: 673783600}
+  - {fileID: 1991820621}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -5795,6 +5849,7 @@ Transform:
   - {fileID: 1221795564}
   - {fileID: 285407802}
   - {fileID: 673783599}
+  - {fileID: 1991820620}
   m_Father: {fileID: 786818878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6965399913844355072
