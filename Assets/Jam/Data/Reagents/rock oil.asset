@@ -15,6 +15,7 @@ MonoBehaviour:
   <Name>k__BackingField: "\u0433\u043E\u0440\u043D\u043E\u0435 \u043C\u0430\u0441\u043B\u043E"
   <Id>k__BackingField: 16
   <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
+  <ClickClip>k__BackingField: 12
   <ReagentType>k__BackingField: 3
   <AgeType>k__BackingField: 3
   <SexType>k__BackingField: 0

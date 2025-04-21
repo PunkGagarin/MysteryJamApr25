@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.GameplayData.Definitions;
 using NaughtyAttributes;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
     {
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public Sprite Visual { get; private set; }
+        [field: SerializeField] public Sounds ClickClip { get; private set; }
         [field: SerializeField] public ReagentType ReagentType {get; private set; }
         [field: SerializeField, ShowIf(nameof(ReagentType), ReagentType.Age)] public AgeType AgeType {get; private set; }
         [field: SerializeField, ShowIf(nameof(ReagentType), ReagentType.Sex)] public SexType SexType {get; private set; }

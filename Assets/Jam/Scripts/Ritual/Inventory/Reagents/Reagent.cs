@@ -25,14 +25,14 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         public void SetReagent(ReagentDefinition reagentDefinition)
         {
             _reagentDefinition = reagentDefinition;
-            
+
             _spriteRenderer.gameObject.SetActive(true);
             _spriteRenderer.sprite = reagentDefinition.Visual;
-            
+
             _name.gameObject.SetActive(true);
             _name.text = reagentDefinition.Name;
         }
-        
+
         public void AddReagent(int amount = 1)
         {
             _amount += amount;
@@ -41,8 +41,9 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             FillAnimation();
         }
 
-        private void FillAnimation() => 
-            _fill.DOFillAmount((float)_amount / _inventoryConfig.MaxReagentAmount, _inventoryConfig.ReagentAnimationTime).SetEase(Ease.Linear);
+        private void FillAnimation() =>
+            _fill.DOFillAmount((float)_amount / _inventoryConfig.MaxReagentAmount,
+                _inventoryConfig.ReagentAnimationTime).SetEase(Ease.Linear);
 
         private void RemoveReagent()
         {
@@ -70,18 +71,22 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         {
             if (_reagentDefinition == null)
                 return;
-            
+
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            _audioService.PlaySound(Sounds.buttonClick.ToString());
             if (_ritualController.TryAddComponent(_reagentDefinition, out ReagentRoom room))
             {
+                _audioService.PlaySound(_reagentDefinition.ClickClip.ToString());
                 _reagentAnimationController.PlayAnimation(_reagentDefinition, transform.position, room);
                 RemoveReagent();
             }
+            else
+            {
+                _audioService.PlaySound(Sounds.error.ToString());
+            }
         }
-        
+
         private void Awake()
         {
             _spriteRenderer.gameObject.SetActive(false);
