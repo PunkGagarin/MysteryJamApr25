@@ -10,7 +10,7 @@ namespace Jam.Scripts.Npc
     {
         [Inject] private DialogueRunner _dialogueRunner;
         
-        public void Talk(DialogueContainerSO dialogueContainer, Action leaveAction) => 
+        public void Talk(DialogueContainerSO dialogueContainer, Action leaveAction) =>
             _dialogueRunner.StartDialogue(dialogueContainer, leaveAction);
     }
 }

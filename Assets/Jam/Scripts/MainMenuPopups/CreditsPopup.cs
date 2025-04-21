@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class CreditsPopup : Popup
+namespace Jam.Scripts.MainMenuPopups
 {
-    [SerializeField] private Button _closeButton;
-
-    [Inject] private AudioService _audioService;
-    private void Awake() => _closeButton.onClick.AddListener(Close);
-
-    private void OnDestroy() => _closeButton.onClick.RemoveListener(Close);
-
-    public override void Close()
+    public class CreditsPopup : Popup
     {
-        _audioService.PlaySound(Sounds.buttonClick.ToString());
-        base.Close();
+        [SerializeField] private Button _closeButton;
+
+        [Inject] private AudioService _audioService;
+        private void Awake() => _closeButton.onClick.AddListener(Close);
+
+        private void OnDestroy() => _closeButton.onClick.RemoveListener(Close);
+
+        public override void Close()
+        {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            base.Close();
+        }
     }
 }

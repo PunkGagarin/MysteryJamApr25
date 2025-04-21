@@ -1,5 +1,5 @@
 ﻿using Jam.Scripts.GameplayData.Definitions;
-using Jam.Scripts.Ritual.Components;
+using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
 
 namespace Jam.Scripts.Quests.Data

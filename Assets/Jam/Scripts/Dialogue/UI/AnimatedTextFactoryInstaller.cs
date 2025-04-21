@@ -1,5 +1,4 @@
-﻿using Bitwave_Labs.AnimatedTextReveal.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace Jam.Scripts.Dialogue.UI

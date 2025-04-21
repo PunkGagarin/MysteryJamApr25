@@ -16,3 +16,5 @@ MonoBehaviour:
   _questRepository: {fileID: 11400000, guid: d1c85f6ac98b0584c99733996ac2fd1f, type: 2}
   _npcRepository: {fileID: 11400000, guid: afaef7de34ffd75449dd98cecfdd7f7e, type: 2}
   _dayConfig: {fileID: 11400000, guid: 6c6e71658f88c7c4d8d61a371240a3b6, type: 2}
+  _reagentRepository: {fileID: 11400000, guid: 05879a0c78ed14f49baba9081e989a6c, type: 2}
+  _inventoryConfig: {fileID: 11400000, guid: 5fb9518a30bd20c46b5a3553f9632e42, type: 2}

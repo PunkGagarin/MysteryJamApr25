@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Bitwave_Labs.AnimatedTextReveal.Scripts;
 using DG.Tweening;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.Enums;
@@ -32,16 +31,22 @@ namespace Jam.Scripts.Dialogue.UI
 
         private List<ButtonController> _buttons = new();
         private AnimatedTextReveal _currentText;
+        private List<GameObject> _dialogueObjects = new();
 
         public void Open() => 
             _dialoguePanel.gameObject.SetActive(true);
 
-        public void Close() => 
+        public void Close()
+        {
             _dialoguePanel.gameObject.SetActive(false);
-
+            foreach (var dialogueObject in _dialogueObjects) 
+                Destroy(dialogueObject);
+        }
         public void SetText(string text, bool isGhost, Action onComplete = null)
         {
-            _currentText = _animatedTextFactory.Create(isGhost, _contentContainer);
+            var currentText = _animatedTextFactory.Create(isGhost, _contentContainer);
+            _dialogueObjects.Add(currentText.gameObject);
+            _currentText = currentText;
             ScrollContent();
             _currentText.ResetTextVisibility();
             _currentText.TextMesh.text = text;
@@ -100,6 +105,7 @@ namespace Jam.Scripts.Dialogue.UI
         private void AddButtonText(string text)
         {
             var answerButtonHistory = Instantiate(_answerTextPrefab, _contentContainer);
+            _dialogueObjects.Add(answerButtonHistory.gameObject);
             answerButtonHistory.SetText(text);
             ScrollContent();
         }
