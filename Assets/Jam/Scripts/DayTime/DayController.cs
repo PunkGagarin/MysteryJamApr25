@@ -13,11 +13,11 @@ namespace Jam.Scripts.DayTime
 {
     public class DayController : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private Character _characterController;
         [SerializeField] private WagonCurtains _curtains;
         [SerializeField] private CharacterResultWriter _characterResultWriter;
         [SerializeField] private RandomNpcController _randomNpcController;
 
+        [Inject] private Character _characterController;
         [Inject] private DayConfig _dayConfig;
         [Inject] private PopupManager _popupManager;
         [Inject] private PauseService _pauseService;
@@ -26,7 +26,6 @@ namespace Jam.Scripts.DayTime
         
         private int _currentDay = 0;
         private int _currentClient = 0;
-
         private bool _canCallNextClient;
         
         private bool IsLastClient =>

@@ -10,14 +10,14 @@ namespace Jam.Scripts.Npc
 {
     public class Character : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private UnityEngine.Camera _camera;
         [SerializeField] private PointerShower _pointerShower;
         [SerializeField] private NpcTalk _talk;
         [SerializeField] private SpriteRenderer _visual;
-        
+
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
-        
+
+        private UnityEngine.Camera _camera;
         private NPCDefinition _definition;
         private bool _arrived;
 
@@ -55,6 +55,11 @@ namespace Jam.Scripts.Npc
                 _pointerShower.Hide();
                 _talk.Talk(_definition.Dialogue, CharacterLeave);
             }
+        }
+
+        private void Awake()
+        {
+            _camera = UnityEngine.Camera.main;
         }
     }
 }

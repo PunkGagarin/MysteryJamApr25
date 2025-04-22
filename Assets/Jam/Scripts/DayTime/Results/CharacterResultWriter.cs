@@ -9,7 +9,7 @@ namespace Jam.Scripts.DayTime.Results
     public class CharacterResultWriter : MonoBehaviour
     {
         [SerializeField] private NpcRepository _charactersRepository;
-        [SerializeField] private Character _characterController;
+        [Inject] private Character _characterController;
         [Inject] private PlayerStatsPresenter _playerStatsPresenter;
         [Inject] private DayController _dayController;
 

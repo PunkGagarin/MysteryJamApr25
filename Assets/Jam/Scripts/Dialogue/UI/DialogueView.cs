@@ -13,6 +13,7 @@ namespace Jam.Scripts.Dialogue.UI
 {
     public class DialogueView : MonoBehaviour
     {
+        [SerializeField] private Canvas _canvas;
         [SerializeField] private Transform _contentContainer;
         [SerializeField] private RectTransform _dialoguePanel;
         [SerializeField] private ScrollRect _scrollRect;
@@ -152,9 +153,11 @@ namespace Jam.Scripts.Dialogue.UI
         private void FastFinishWriter() =>
             _currentText?.FinishCoroutine();
 
-        private void Awake() => 
+        private void Awake()
+        {
+            _canvas.worldCamera = UnityEngine.Camera.main;
             _continueButton.onClick.AddListener(FastFinishWriter);
-
+        }
         private void OnDestroy() => 
             _continueButton.onClick.RemoveAllListeners();
     }

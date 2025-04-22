@@ -15,6 +15,7 @@ namespace Jam.Scripts.Ritual
 {
     public class RitualController : MonoBehaviour
     {
+        [SerializeField] private Canvas _canvas;
         [SerializeField] private ReagentRoom _reagentRoomPrefab;
         [SerializeField] private Transform _reagentsGroup;
         [SerializeField] private Button _startRitual;
@@ -123,30 +124,30 @@ namespace Jam.Scripts.Ritual
             CheckForComponent(
                 selectedComponents,
                 _currentQuest.AgeType,
-                c => c.AgeType,
+                reagent => reagent.AgeType,
                 AgeType.None,
                 "age")
             && CheckForComponent(
                 selectedComponents,
                 _currentQuest.SexType,
-                c => c.SexType,
+                reagent => reagent.SexType,
                 SexType.None,
                 "sex")
             && CheckForComponent(
                 selectedComponents,
                 _currentQuest.RaceType,
-                c => c.RaceType,
+                reagent => reagent.RaceType,
                 RaceType.None,
                 "race")
             && CheckForComponent(
                 selectedComponents,
                 _currentQuest.DeathType,
-                c => c.DeathType,
+                reagent => reagent.DeathType,
                 DeathType.None,
                 "death");
 
         private bool CheckForComponent<T>(
-            List<ReagentDefinition> components,
+            List<ReagentDefinition> reagents,
             T currentQuestValue,
             Func<ReagentDefinition, T> selector,
             T noneValue,
@@ -155,7 +156,7 @@ namespace Jam.Scripts.Ritual
         {
             if (!currentQuestValue.Equals(noneValue))
             {
-                if (components.All(c => !selector(c).Equals(currentQuestValue)))
+                if (reagents.Any(reagent => !selector(reagent).Equals(currentQuestValue)))
                 {
                     Debug.Log($"No {typeName} component");
                     return false;
@@ -168,11 +169,8 @@ namespace Jam.Scripts.Ritual
         {
             for (int i = 0; i < selectedComponents.Count - 1; i++)
             {
-                for (int j = 1; j < selectedComponents.Count; j++)
+                for (int j = i + 1; j < selectedComponents.Count; j++)
                 {
-                    if (i == j)
-                        continue;
-
                     if (selectedComponents[i].ExcludedReagents.Contains(selectedComponents[j]))
                     {
                         Debug.Log($"Component {selectedComponents[i].Name} have excluded component: {selectedComponents[j].Name}");
@@ -234,9 +232,10 @@ namespace Jam.Scripts.Ritual
 
         private void Awake()
         {
+            _canvas.worldCamera = UnityEngine.Camera.main;
+            
             UpdateButtons();
             SetupRooms();
-            
             _clearTable.onClick.AddListener(OnClearTableButton);
             _startRitual.onClick.AddListener(StartRitual);
             _questPresenter.OnQuestAdded += SetQuest;
