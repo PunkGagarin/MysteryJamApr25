@@ -55,6 +55,7 @@ MonoBehaviour:
   _totalReputation: {fileID: 3311126277148266740}
   _totalMoney: {fileID: 253668671889415929}
   _nextDayButton: {fileID: 8744830165133932724}
+  _nextDayButtonText: {fileID: 9066754313835855484}
   _charactersResultsContainer: {fileID: 1271740765998663574}
   _characterResultViewPrefab: {fileID: 523983061549459640, guid: 787e440141ff58a4497a2111569c99e6, type: 3}
 --- !u!1 &628619990564453525

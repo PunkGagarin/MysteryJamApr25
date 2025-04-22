@@ -23,6 +23,13 @@ namespace Jam.Scripts.Utils.UI
 
             return AssignNewPopup<T>(closeEvent, withPause);
         }
+
+        public void ResetPopup<T>() where T : Popup
+        {
+            var popupToRemove = _popups.FirstOrDefault(popup => popup.GetType() == typeof(T));
+            if (popupToRemove != null)
+                _popups.Remove(popupToRemove);
+        }
         
         private T AssignNewPopup<T>(Action closeEvent, bool withPause) where T : Popup
         {

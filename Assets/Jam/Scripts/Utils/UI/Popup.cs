@@ -8,6 +8,7 @@ namespace Jam.Scripts.Utils.UI
     public abstract class Popup : MonoBehaviour
     {
         [Inject] private PauseService _pauseService;
+        
         private bool _openedWithPause;
         
         private event Action OnClose;
@@ -34,6 +35,5 @@ namespace Jam.Scripts.Utils.UI
             gameObject.SetActive(false);
             OnClose?.Invoke();
         }
-
     }
 }

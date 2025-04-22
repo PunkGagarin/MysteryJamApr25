@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639fa3a8cb424dab8b49c3ad75b900cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _npcRepository: {fileID: 11400000, guid: afaef7de34ffd75449dd98cecfdd7f7e, type: 2}
   _name: {fileID: 4361242053175094548}
   _reputation: {fileID: 4783006739473579008}
   _money: {fileID: 7809266393288553881}

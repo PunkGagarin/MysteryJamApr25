@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Jam.Scripts.GameplayData.Player;
+﻿using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Npc.Data;
 using UnityEngine;
@@ -9,12 +8,13 @@ namespace Jam.Scripts.DayTime.Results
 {
     public class CharacterResultWriter : MonoBehaviour
     {
+        [SerializeField] private NpcRepository _charactersRepository;
         [SerializeField] private Character _characterController;
         [Inject] private PlayerStatsPresenter _playerStatsPresenter;
         [Inject] private DayController _dayController;
-        [Inject] private NpcRepository _charactersRepository;
 
         public DayInfo DayInfo { get; private set; }
+        public bool IsLastDay => _dayController.IsLastDay;
         
         private CharacterResult _currentCharacterResult;
         
@@ -71,19 +71,5 @@ namespace Jam.Scripts.DayTime.Results
             _playerStatsPresenter.OnMoneyChanged -= CountMoney;
             _playerStatsPresenter.OnReputationChanged -= CountReputation;
         }
-    }
-
-    public class DayInfo
-    {
-        public int DayNumber;
-        public List<CharacterResult> CharactersResults = new();
-        public int TotalEarnMoney;
-    }
-
-    public class CharacterResult
-    {
-        public int CharacterId;
-        public int EarnMoney;
-        public int EarnReputation;
     }
 }

@@ -1,8 +1,8 @@
-﻿using DG.Tweening;
-using Jam.Scripts.Audio.Domain;
+﻿using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.DayTime.Results;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
+using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Utils.Pause;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
@@ -11,13 +11,12 @@ using Zenject;
 
 namespace Jam.Scripts.DayTime
 {
-    public class DayController : MonoBehaviour, IPointerClickHandler, IPauseHandler
+    public class DayController : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private SpriteRenderer _morningSprite;
-        [SerializeField] private SpriteRenderer _daySprite;
         [SerializeField] private Character _characterController;
         [SerializeField] private WagonCurtains _curtains;
         [SerializeField] private CharacterResultWriter _characterResultWriter;
+        [SerializeField] private RandomNpcController _randomNpcController;
 
         [Inject] private DayConfig _dayConfig;
         [Inject] private PopupManager _popupManager;
@@ -27,48 +26,37 @@ namespace Jam.Scripts.DayTime
         
         private int _currentDay = 0;
         private int _currentClient = 0;
-        
-        private Color _transparentColor = new(1, 1, 1, 0);
-        private Color _opaqueColor = new(1, 1, 1, 1);
 
-        private bool _dayStarted;
-        private bool _dayEnded;
         private bool _canCallNextClient;
-        private Tween _currentDayTween;
         
         private bool IsLastClient =>
             _currentClient == _dayConfig.DayNpcs[_currentDay].Npcs.Count;
+
+        public bool IsLastDay =>
+            _currentDay >= _dayConfig.DayNpcs.Count;
 
         private void CallNextClient()
         {
             if (!_canCallNextClient)
                 return;
             
-            if (!_dayStarted)
-                StartDay();
-            
             _canCallNextClient = false;
-            _characterController.SetCharacter(_dayConfig.DayNpcs[_currentDay].Npcs[_currentClient]);
+            NPCDefinition npcDefinition = GetNpcFromConfig();
+            _characterController.SetCharacter(npcDefinition);
             _currentClient++;
             
             _curtains.OpenCurtains();
         }
 
-        private void StartDay()
+        private NPCDefinition GetNpcFromConfig()
         {
-            ResetDayValues();
-            
-            _currentDayTween = _morningSprite.DOColor(_transparentColor, _dayConfig.DayLength / 2)
-                .OnComplete(() => _currentDayTween = _daySprite.DOColor(_transparentColor, _dayConfig.DayLength / 2)
-                    .OnComplete(EndDay));
+            var currentDayNpc = _dayConfig.DayNpcs[_currentDay].Npcs[_currentClient];
+            return currentDayNpc.IsRandomNpc ? _randomNpcController.GetNpc() : currentDayNpc.Npc;
         }
 
         private void ResetDayValues()
         {
-            _daySprite.DOColor(_opaqueColor, 0f);
-            _morningSprite.DOColor(_opaqueColor, 0f);
-            _dayStarted = true;
-            _dayEnded = false;
+            AllowCallNextClient();
             
             _characterResultWriter.ChangeDay(_currentDay);
         }
@@ -77,19 +65,16 @@ namespace Jam.Scripts.DayTime
         {
             _currentDay++;
             _canCallNextClient = false;
-            _dayEnded = true;
-            _dayStarted = false;
+            ShowDayDetails();
         }
 
-        private void OnCharacterLeave()
-        {
+        private void OnCharacterLeave() => 
             _curtains.CloseCurtains();
-        }
 
         private void ReactOnClosedCurtains()
         {
-            if (_dayEnded || IsLastClient)
-                ShowDayDetails();
+            if (IsLastClient)
+                EndDay();
             else
                 AllowCallNextClient();
         }
@@ -101,23 +86,22 @@ namespace Jam.Scripts.DayTime
 
         private void ShowDayDetails()
         {
-            var dayResultView = _popupManager.OpenPopup<DayResultView>(closeEvent: AllowCallNextClient);
+            var dayResultView = _popupManager.OpenPopup<DayResultView>(closeEvent: ResetDayValues);
             dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter);
         }
 
         private void Awake()
         {
-            _pauseService.Register(this);
             _characterController.OnCharacterLeave += OnCharacterLeave;
             _curtains.OnCurtainsClosed += ReactOnClosedCurtains;
-            AllowCallNextClient();
+            ResetDayValues();
         }
 
         private void OnDestroy()
         {
-            _pauseService.Unregister(this);
             _characterController.OnCharacterLeave -= OnCharacterLeave;
             _curtains.OnCurtainsClosed -= ReactOnClosedCurtains;
+            _popupManager.ResetPopup<DayResultView>();
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -128,14 +112,6 @@ namespace Jam.Scripts.DayTime
             _audioService.PlaySound(Sounds.ropeBell.ToString());
             
             CallNextClient();
-        }
-
-        public void SetPaused(bool isPaused)
-        {
-            if (isPaused)
-                _currentDayTween.Pause();
-            else
-                _currentDayTween.Play();
         }
     }
 }
