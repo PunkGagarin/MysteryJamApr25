@@ -21,7 +21,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
+  - {fileID: 11400000, guid: d85ddaedadbee5f4cabe695ae9bd9054, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 2
   <IsAgeExcluded>k__BackingField: 0

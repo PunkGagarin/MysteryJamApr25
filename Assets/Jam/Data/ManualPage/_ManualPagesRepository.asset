@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23477e85324342308016e4aebe883ea3, type: 3}
-  m_Name: ManualPagesRepository
+  m_Name: _ManualPagesRepository
   m_EditorClassIdentifier: 
   <Definitions>k__BackingField:
   - {fileID: 11400000, guid: ba684bc4dcf504b09a9bc4fbb4f92a78, type: 2}
-  - {fileID: 11400000, guid: 8e19fd8d83f27478ebfaf80578651fb5, type: 2}
-  - {fileID: 11400000, guid: 11a0604e7c52c4645b87aab680e9d7da, type: 2}
-  - {fileID: 11400000, guid: 99cba1d87f69cb94fa342b642a85375d, type: 2}
+  - {fileID: 11400000, guid: 2f583ebd06ca18d4185aed4eaec9c562, type: 2}
+  - {fileID: 11400000, guid: 555ff26ab3b3117438237e7eecfebcac, type: 2}
+  - {fileID: 11400000, guid: dc24a8054cddc9849b08e2a01251f541, type: 2}

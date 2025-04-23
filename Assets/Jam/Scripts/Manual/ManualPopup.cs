@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory.Reagents;
@@ -18,9 +17,6 @@ namespace Jam.Scripts.Manual
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _prevPageButton;
         [SerializeField] private Button _nextPageButton;
-        [Header("Bookmarks")] 
-        [SerializeField] private Transform _leftBookmarksHolder;
-        [SerializeField] private Transform _rightBookmarksHolder;
         
         [SerializeField] private List<Bookmark> _rightBookmarks;
         [SerializeField] private List<Bookmark> _leftBookmarks;
@@ -42,8 +38,9 @@ namespace Jam.Scripts.Manual
         public override void Open(bool withPause)
         {
             base.Open(withPause);
-            if (_pages == null) InitPages();
-            else ShowPages();
+            if (_pages == null)
+                InitPages();
+            ShowPages();
         }
 
         public override void Close()
@@ -52,20 +49,16 @@ namespace Jam.Scripts.Manual
             base.Close();
         }
 
-        public void Initialize(List<ReagentExclusion> reagentExclusions)
-        {
-            _pages.ForEach(page =>
-            {
-                page.Initialize(reagentExclusions);
-            });
-        }
+        public void Initialize(List<ReagentExclusion> reagentExclusions) => 
+            _pages.ForEach(page => page.Initialize(reagentExclusions));
 
         private void InitPages()
         {
             _pages = new List<Page>();
             for (int i = 0; i < _pagesRepository.Definitions.Count; i++)
             {
-                Page pageObject = Instantiate(_pagesRepository.Definitions[i].Page, i % 2 == 0 ? _leftBookmarksHolder : _rightBookmarksHolder);
+                Page pageObject = Instantiate(_pagesRepository.Definitions[i].Page, i % 2 == 0 ? _leftPageHolder : _rightPageHolder);
+                pageObject.gameObject.SetActive(false);
                 _pages.Add(pageObject);
             }
             ShowPages();

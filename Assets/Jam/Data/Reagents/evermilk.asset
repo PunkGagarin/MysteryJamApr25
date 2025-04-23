@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
-  m_Name: everlasting milk
+  m_Name: evermilk
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0432\u0435\u0447\u043D\u043E\u0435 \u043C\u043E\u043B\u043E\u043A\u043E"
   <Id>k__BackingField: 12
@@ -21,7 +21,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 2
   <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
+  - {fileID: 11400000, guid: 210d2be073d86d24ab4ca731444e6fab, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0

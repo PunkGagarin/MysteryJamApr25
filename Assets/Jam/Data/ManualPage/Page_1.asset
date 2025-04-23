@@ -10,11 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7569a7c025a84519acdd831258145013, type: 3}
-  m_Name: SecondPage
+  m_Name: Page_1
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: SecondPage
-  PagePrefab: {fileID: 4232655595982133446, guid: 81ec71adf94134306a8fb495c384d177, type: 3}
-  Bookmarks:
-  - {fileID: 11400000, guid: e3dd94237dddc43aca7ea37d2f12e808, type: 2}
-  - {fileID: 11400000, guid: 2e53ccf8e5fc5422ab804361ef4b677f, type: 2}
-  IsActive: 1
+  <Name>k__BackingField: Page_1
+  Page: {fileID: 7479845781292301853, guid: 81bd195611c802842a1b3e7708a37a01, type: 3}

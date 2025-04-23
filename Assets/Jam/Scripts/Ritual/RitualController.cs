@@ -172,10 +172,13 @@ namespace Jam.Scripts.Ritual
         {
             bool haveExcludedReagents = false; 
             List<ReagentExclusion> excludedReagents = new ();
-            for (int i = 0; i < selectedReagents.Count - 1; i++)
+            for (int i = 0; i < selectedReagents.Count; i++)
             {
-                for (int j = i + 1; j < selectedReagents.Count; j++)
+                for (int j = 0; j < selectedReagents.Count; j++)
                 {
+                    if (i == j) 
+                        continue;
+                    
                     if (selectedReagents[i].ExcludedReagents.Contains(selectedReagents[j]))
                     {
                         excludedReagents.Add(new ReagentExclusion { ReagentId = selectedReagents[i].Id, ExcludedReagentId = selectedReagents[j].Id });
