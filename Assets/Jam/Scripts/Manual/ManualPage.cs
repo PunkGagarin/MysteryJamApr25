@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Jam.Scripts.Manual
 {
     [CreateAssetMenu(menuName = "Game Resources/Definitions/Manual Page")]
-    public class ManualPage: Definition
+    public class ManualPage : Definition
     {
-        public GameObject PagePrefab;
+        public Page Page;
     }
 }

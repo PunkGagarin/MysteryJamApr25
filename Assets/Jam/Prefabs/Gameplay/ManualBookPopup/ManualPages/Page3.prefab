@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 2088270177869566326}
   - component: {fileID: 2274066427124407410}
   m_Layer: 5
-  m_Name: PageDayResult1
+  m_Name: Page3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

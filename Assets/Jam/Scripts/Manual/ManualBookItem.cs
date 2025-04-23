@@ -12,6 +12,7 @@ namespace Jam.Scripts.Manual
     {
         [Inject] private PopupManager _popupManager;
         [Inject] private AudioService _audioService;
+        private List<ReagentExclusion> _reagentExclusions = new();
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -23,16 +24,26 @@ namespace Jam.Scripts.Manual
         {
             _audioService.PlaySound(Sounds.manualOpening.ToString());
             var manualPopup = _popupManager.OpenPopup<ManualPopup>();
+            manualPopup.Initialize(_reagentExclusions);
         }
 
         public bool CheckReagentExclusion(List<ReagentExclusion> excludedReagents, out ReagentExclusion reagentExclusion)
         {
-            throw new System.NotImplementedException();
+            reagentExclusion = null;
+            foreach (var exclusion in excludedReagents)
+            {
+                if (!_reagentExclusions.Contains(exclusion))
+                {
+                    reagentExclusion = exclusion;
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void AddReagentExclusion(ReagentExclusion excludedReagentToAdd)
         {
-            throw new System.NotImplementedException();
+            _reagentExclusions.Add(excludedReagentToAdd);
         }
     }
 }

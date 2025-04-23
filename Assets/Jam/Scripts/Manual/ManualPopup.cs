@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Ritual;
+using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,17 +12,25 @@ namespace Jam.Scripts.Manual
 {
     public class ManualPopup : Popup
     {
+        [SerializeField] private Transform _leftPageHolder;
+        [SerializeField] private Transform _rightPageHolder;
+        [Header("Navigation buttons")]
         [SerializeField] private Button _closeButton;
         [SerializeField] private Button _prevPageButton;
         [SerializeField] private Button _nextPageButton;
-        [SerializeField] private Transform _leftPageHolder;
-        [SerializeField] private Transform _rightPageHolder;
+        [Header("Bookmarks")] 
+        [SerializeField] private Transform _leftBookmarksHolder;
+        [SerializeField] private Transform _rightBookmarksHolder;
         
-        [Inject] private ManualPagesRepository _repository;
+        [SerializeField] private List<Bookmark> _rightBookmarks;
+        [SerializeField] private List<Bookmark> _leftBookmarks;
+
+        [Inject] private ManualPagesRepository _pagesRepository;
+        [Inject] private ReagentRepository _reagentRepository;
         [Inject] private AudioService _audioService;
-        
-        private List<GameObject> _pages;
-        private int _currentPage = 0;
+
+        private List<Page> _pages;
+        private int _currentPageIndex = 0;
 
         private void Awake()
         {
@@ -42,21 +52,20 @@ namespace Jam.Scripts.Manual
             base.Close();
         }
 
+        public void Initialize(List<ReagentExclusion> reagentExclusions)
+        {
+            _pages.ForEach(page =>
+            {
+                page.Initialize(reagentExclusions);
+            });
+        }
+
         private void InitPages()
         {
-            var pages = _repository.Definitions;
-            _pages = new List<GameObject>();
-            foreach (var page in pages.Select((value, index) => new { value, index }))
+            _pages = new List<Page>();
+            for (int i = 0; i < _pagesRepository.Definitions.Count; i++)
             {
-                var holder = (page.index + 1) switch
-                {
-                    1 when pages.Count == 1 => _rightPageHolder,
-                    var i when i % 2 == 0 => _rightPageHolder,
-                    _ => _leftPageHolder
-                };
-                var pageObject = Instantiate(page.value.PagePrefab, holder);
-                pageObject.gameObject.SetActive(false);
-                
+                Page pageObject = Instantiate(_pagesRepository.Definitions[i].Page, i % 2 == 0 ? _leftBookmarksHolder : _rightBookmarksHolder);
                 _pages.Add(pageObject);
             }
             ShowPages();
@@ -65,28 +74,57 @@ namespace Jam.Scripts.Manual
         private void ShowPages()
         {
             RenderNavigateButtons();
+            RenderBookmarks();
 
             if (_pages.Count == 1)
             {
-                _pages[_currentPage].gameObject.SetActive(true);
+                _pages[_currentPageIndex].gameObject.SetActive(true);
                 return;
             }
 
-            if (_currentPage < _pages.Count)
+            if (_currentPageIndex < _pages.Count)
             {
-                _pages[_currentPage].SetActive(true);
+                _pages[_currentPageIndex].gameObject.SetActive(true);
             }
 
-            if (_currentPage + 1 < _pages.Count)
+            if (_currentPageIndex + 1 < _pages.Count)
             {
-                _pages[_currentPage + 1].SetActive(true);
+                _pages[_currentPageIndex + 1].gameObject.SetActive(true);
             }
+        }
+
+        private void RenderBookmarks()
+        {
+            _leftBookmarks.ForEach(bookmark =>
+            {
+                bookmark.gameObject.SetActive(_currentPageIndex >= bookmark.PageIndex);
+                if (bookmark.PageIndex == _currentPageIndex)
+                {
+                    bookmark.transform.SetAsLastSibling();
+                }
+                else
+                {
+                    bookmark.transform.SetAsFirstSibling();
+                }
+            });
+            _rightBookmarks.ForEach(bookmark =>
+            {
+                bookmark.gameObject.SetActive(_currentPageIndex + 1 <= bookmark.PageIndex);
+                if (bookmark.PageIndex == _currentPageIndex + 1)
+                {
+                    bookmark.transform.SetAsLastSibling();
+                }
+                else
+                {
+                    bookmark.transform.SetAsFirstSibling();
+                }
+            });
         }
 
         private void RenderNavigateButtons()
         {
-            var isNextButtonVisible = _currentPage + 2 < _pages.Count;
-            var isPreviousButtonVisible = _currentPage != 0;
+            var isNextButtonVisible = _currentPageIndex + 2 < _pages.Count;
+            var isPreviousButtonVisible = _currentPageIndex != 0;
             _nextPageButton.gameObject.SetActive(isNextButtonVisible);
             _prevPageButton.gameObject.SetActive(isPreviousButtonVisible);
         }
@@ -95,7 +133,7 @@ namespace Jam.Scripts.Manual
         {
             _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
-            _currentPage -= 2;
+            _currentPageIndex -= 2;
             ShowPages();
         }
 
@@ -103,16 +141,16 @@ namespace Jam.Scripts.Manual
         {
             _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
-            _currentPage += 2;
+            _currentPageIndex += 2;
             ShowPages();
         }
 
         private void HideCurrentPages()
         {
-            _pages[_currentPage].SetActive(false);
-            if (_currentPage + 1 < _pages.Count)
+            _pages[_currentPageIndex].gameObject.SetActive(false);
+            if (_currentPageIndex + 1 < _pages.Count)
             {
-                _pages[_currentPage + 1].SetActive(false);
+                _pages[_currentPageIndex + 1].gameObject.SetActive(false);
             }
         }
 

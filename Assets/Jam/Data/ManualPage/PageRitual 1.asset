@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: PageRitual 1
   PagePrefab: {fileID: 4232655595982133446, guid: a42f4f04381aaa7409affadfde047693, type: 3}
+  Bookmarks:
+  - {fileID: 11400000, guid: 683741caeb4d14553bd67474dd0241f6, type: 2}
+  - {fileID: 11400000, guid: 98e962adc34d44639b9e80a6e7b13042, type: 2}

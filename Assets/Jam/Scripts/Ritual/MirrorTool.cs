@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Manual;
 using UnityEngine;
 using Zenject;
@@ -9,6 +10,7 @@ namespace Jam.Scripts.Ritual
     {
         [Inject] private RitualController _ritualController;
         [Inject] private ManualBookItem _manual;
+        [Inject] private AudioService _audioService;
         private int _charges;
 
         private void Awake()
@@ -31,7 +33,7 @@ namespace Jam.Scripts.Ritual
             {
                 _charges--;
                 _manual.AddReagentExclusion(excludedReagentToAdd);
-                //TODO: VFX SFX
+                _audioService.PlaySound(Sounds.foundConflict.ToString());
             }
         }
     }
