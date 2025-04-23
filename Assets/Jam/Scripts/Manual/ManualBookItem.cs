@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Ritual;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -20,7 +22,17 @@ namespace Jam.Scripts.Manual
         private void OpenPopup()
         {
             _audioService.PlaySound(Sounds.manualOpening.ToString());
-            _popupManager.OpenPopup<ManualPopup>();
+            var manualPopup = _popupManager.OpenPopup<ManualPopup>();
+        }
+
+        public bool CheckReagentExclusion(List<ReagentExclusion> excludedReagents, out ReagentExclusion reagentExclusion)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void AddReagentExclusion(ReagentExclusion excludedReagentToAdd)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Jam.Scripts.Audio.Domain
         woodCreak,
         foundConflict,
         bagOnTable,
-        bottlleOnTable,
+        bottleOnTable,
         whisperingGhosts,
         error,
         ritualFailed,

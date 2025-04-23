@@ -15,6 +15,8 @@ namespace Jam.Scripts.Ritual
 {
     public class RitualController : MonoBehaviour
     {
+        public delegate void ExcludedReagentsFound(List<ReagentExclusion> excludedReagents);
+        
         [SerializeField] private Canvas _canvas;
         [SerializeField] private ReagentRoom _reagentRoomPrefab;
         [SerializeField] private Transform _reagentsGroup;
@@ -31,7 +33,8 @@ namespace Jam.Scripts.Ritual
         private List<ReagentRoom> _reagentRooms = new ();
 
         private Quest _currentQuest;
-        public event Action OnRitual; 
+        public event Action OnRitual;
+        public event ExcludedReagentsFound OnExcludedReagentsFound;
 
         public int Attempt { get; private set; }
 
@@ -114,39 +117,39 @@ namespace Jam.Scripts.Ritual
             if (!CheckForAgeExcludes(selectedComponents)) 
                 return false;
 
-            if (!CheckForExcludedComponents(selectedComponents))
+            if (CheckForExcludedReagents(selectedComponents))
                 return false;
 
-            return CheckComponentMatches(selectedComponents);
+            return CheckReagentsMatches(selectedComponents);
         }
 
-        private bool CheckComponentMatches(List<ReagentDefinition> selectedComponents) =>
-            CheckForComponent(
+        private bool CheckReagentsMatches(List<ReagentDefinition> selectedComponents) =>
+            CheckForReagents(
                 selectedComponents,
                 _currentQuest.AgeType,
                 reagent => reagent.AgeType,
                 AgeType.None,
                 "age")
-            && CheckForComponent(
+            && CheckForReagents(
                 selectedComponents,
                 _currentQuest.SexType,
                 reagent => reagent.SexType,
                 SexType.None,
                 "sex")
-            && CheckForComponent(
+            && CheckForReagents(
                 selectedComponents,
                 _currentQuest.RaceType,
                 reagent => reagent.RaceType,
                 RaceType.None,
                 "race")
-            && CheckForComponent(
+            && CheckForReagents(
                 selectedComponents,
                 _currentQuest.DeathType,
                 reagent => reagent.DeathType,
                 DeathType.None,
                 "death");
 
-        private bool CheckForComponent<T>(
+        private bool CheckForReagents<T>(
             List<ReagentDefinition> reagents,
             T currentQuestValue,
             Func<ReagentDefinition, T> selector,
@@ -165,21 +168,27 @@ namespace Jam.Scripts.Ritual
             return true;
         }
 
-        private bool CheckForExcludedComponents(List<ReagentDefinition> selectedComponents)
+        private bool CheckForExcludedReagents(List<ReagentDefinition> selectedReagents, bool withSignal = true)
         {
-            for (int i = 0; i < selectedComponents.Count - 1; i++)
+            bool haveExcludedReagents = false; 
+            List<ReagentExclusion> excludedReagents = new ();
+            for (int i = 0; i < selectedReagents.Count - 1; i++)
             {
-                for (int j = i + 1; j < selectedComponents.Count; j++)
+                for (int j = i + 1; j < selectedReagents.Count; j++)
                 {
-                    if (selectedComponents[i].ExcludedReagents.Contains(selectedComponents[j]))
+                    if (selectedReagents[i].ExcludedReagents.Contains(selectedReagents[j]))
                     {
-                        Debug.Log($"Component {selectedComponents[i].Name} have excluded component: {selectedComponents[j].Name}");
-                        return false;
+                        excludedReagents.Add(new ReagentExclusion { ReagentId = selectedReagents[i].Id, ExcludedReagentId = selectedReagents[j].Id });
+                        Debug.Log($"Component {selectedReagents[i].Name} have excluded component: {selectedReagents[j].Name}");
+                        haveExcludedReagents = true;
                     }
                 }
             }
 
-            return true;
+            if (haveExcludedReagents && withSignal) 
+                OnExcludedReagentsFound?.Invoke(excludedReagents);
+
+            return haveExcludedReagents;
         }
 
         private bool CheckForDeathReason(List<ReagentDefinition> selectedComponents)
@@ -212,13 +221,6 @@ namespace Jam.Scripts.Ritual
             return true;
         }
 
-        private void UpdateButtons()
-        {
-            bool isActive = _reagentRooms.Any(component => !component.IsFree);
-            _clearTable.gameObject.SetActive(isActive);
-            _startRitual.gameObject.SetActive(isActive);
-        }
-
         private void SetupRooms()
         {
             for (int i = 0; i < _inventoryConfig.RoomsForRitual; i++)
@@ -228,6 +230,13 @@ namespace Jam.Scripts.Ritual
                 _reagentRooms.Add(room);
                 room.OnRoomChanged += UpdateButtons;
             }
+        }
+
+        private void UpdateButtons()
+        {
+            bool isActive = _reagentRooms.Any(component => !component.IsFree);
+            _clearTable.gameObject.SetActive(isActive);
+            _startRitual.gameObject.SetActive(isActive);
         }
 
         private void Awake()
@@ -250,5 +259,11 @@ namespace Jam.Scripts.Ritual
             foreach (var room in _reagentRooms) 
                 room.OnRoomChanged -= UpdateButtons;
         }
+    }
+
+    public class ReagentExclusion
+    {
+        public int ReagentId;
+        public int ExcludedReagentId;
     }
 }
