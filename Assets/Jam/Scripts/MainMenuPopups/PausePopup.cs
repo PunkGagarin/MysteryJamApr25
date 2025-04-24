@@ -37,6 +37,7 @@ namespace Jam.Scripts.MainMenuPopups
         {
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             _coroutineHelper.RunCoroutine(_sceneLoader.LoadScene(SceneEnum.MainMenu));
+            Close();
         }
 
         private void OnDestroy()
