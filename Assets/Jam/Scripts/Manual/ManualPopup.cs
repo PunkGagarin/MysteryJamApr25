@@ -30,6 +30,8 @@ namespace Jam.Scripts.Manual
 
         private void Awake()
         {
+            _rightBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
+            _leftBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
             _closeButton.onClick.AddListener(Close);
             _prevPageButton.onClick.AddListener(PrevPageClick);
             _nextPageButton.onClick.AddListener(NextPageClick);
@@ -113,6 +115,16 @@ namespace Jam.Scripts.Manual
                 }
             });
         }
+        
+        private void OnBookmarkClick(Bookmark bookmark)
+        {
+            if (_currentPageIndex == bookmark.PageIndex)
+                return;
+            _audioService.PlaySound(Sounds.bookFlip.ToString());
+            HideCurrentPages();
+            _currentPageIndex = bookmark.PageIndex % 2 == 0 ? bookmark.PageIndex : bookmark.PageIndex - 1;
+            ShowPages();
+        }
 
         private void RenderNavigateButtons()
         {
@@ -152,6 +164,8 @@ namespace Jam.Scripts.Manual
             _closeButton.onClick.RemoveListener(Close);
             _prevPageButton.onClick.RemoveListener(PrevPageClick);
             _nextPageButton.onClick.RemoveListener(NextPageClick);
+            _rightBookmarks.ForEach(bookmark => bookmark.OnClick.RemoveAllListeners());
+            _leftBookmarks.ForEach(bookmark => bookmark.OnClick.RemoveAllListeners());
         }
     }
 }
