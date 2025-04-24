@@ -157,6 +157,7 @@ MonoBehaviour:
       PortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
       InputGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
       OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    SkipContinue: 0
   - NodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
     Position: {x: 674, y: -698}
     DialogueDataNames:
@@ -197,6 +198,7 @@ MonoBehaviour:
       PortGuid: 8106dc27-c846-4b8b-acc5-2ebede45e1b1
       InputGuid: a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e
       OutputGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    SkipContinue: 0
   - NodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     Position: {x: 1065, y: -343}
     DialogueDataNames: []
@@ -219,6 +221,7 @@ MonoBehaviour:
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
+    SkipContinue: 0
   - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     Position: {x: 1065, y: 257}
     DialogueDataNames: []
@@ -240,6 +243,7 @@ MonoBehaviour:
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
+    SkipContinue: 1
   EventData:
   - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     Position: {x: 2247, y: -580}

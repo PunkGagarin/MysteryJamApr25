@@ -22,5 +22,17 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         [field: SerializeField, ShowIf("IsDeathReasonExcluded")] public DeathType ExcludedDeathReasonType { get; private set;}
         [field: SerializeField] public bool IsAgeExcluded { get; private set; }
         [field: SerializeField, ShowIf("IsAgeExcluded")] public AgeType ExcludedAgeType { get; private set;}
+
+        public Sprite GetExcludedSprite(int reagentExclusionExcludedReagentId)
+        {
+            foreach (var excludedReagent in ExcludedReagents)
+            {
+                if (excludedReagent.Id == reagentExclusionExcludedReagentId)
+                    return excludedReagent.Visual;
+            }
+
+            Debug.LogError($"Trying to get sprite for excluded reagent with id {reagentExclusionExcludedReagentId}, but it doesn't exist in excluded reagents");
+            return null;
+        }
     }
 }

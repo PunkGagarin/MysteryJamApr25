@@ -13,9 +13,21 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
     public class DialogueNode : BaseNode
     {
         private const string DIALOGUE_NODE_STYLE_SHEET = "USS/Nodes/DialogueNodeStyleSheet";
+        private List<Box> _boxes = new();
+        private Toggle _skipContinueToggle;
+        private bool _skipContinue;
         public DialogueData DialogueData { get; } = new();
 
-        private List<Box> _boxes = new();
+        public bool SkipContinue
+        {
+            get => _skipContinue;
+            set
+            {
+                _skipContinue = value;
+                if (_skipContinueToggle != null)
+                    _skipContinueToggle.value = value;
+            }
+        }
 
         public DialogueNode(){}
 
@@ -27,6 +39,21 @@ namespace Jam.Scripts.Dialogue.Editor.Nodes
             AddOutputPort("Continue");
             
             TopContainer();
+            AddToggle();
+        }
+
+        private void AddToggle()
+        {
+            _skipContinueToggle = new Toggle("Auto Continue")
+            {
+                value = SkipContinue
+            };
+            _skipContinueToggle.RegisterValueChangedCallback(evt =>
+            {
+                SkipContinue = evt.newValue;
+            });
+
+            mainContainer.Add(_skipContinueToggle);
         }
 
         private void TopContainer()

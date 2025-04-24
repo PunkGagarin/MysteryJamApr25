@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,14 +6,18 @@ using UnityEngine.UI;
 public class ReagentUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text _name;
-    [SerializeField] private Image _conflictImage1;
-    [SerializeField] private Image _conflictImage2;
     [SerializeField] private Sprite _undefinedSprite;
+    [SerializeField] private List<Image> _conflictImages;
 
-    public void InitData(string reagentName, Sprite conflictImage1, Sprite conflictImage2)
+    public void InitData(string reagentName, List<Sprite> conflictSprites)
     {
         _name.text = reagentName;
-        _conflictImage1.sprite = conflictImage1 == null ? _undefinedSprite : conflictImage1;
-        _conflictImage2.sprite = conflictImage2 == null ? _undefinedSprite : conflictImage2;
+        for (int i = 0; i < _conflictImages.Count; i++)
+        {
+            if (conflictSprites.Count <= i)
+                _conflictImages[i].sprite = _undefinedSprite;
+            else
+                _conflictImages[i].sprite = conflictSprites[i] == null ? _undefinedSprite : conflictSprites[i];
+        }
     }
 }

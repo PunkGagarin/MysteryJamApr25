@@ -181,7 +181,7 @@ namespace Jam.Scripts.Ritual
                     
                     if (selectedReagents[i].ExcludedReagents.Contains(selectedReagents[j]))
                     {
-                        excludedReagents.Add(new ReagentExclusion { ReagentId = selectedReagents[i].Id, ExcludedReagentId = selectedReagents[j].Id });
+                        excludedReagents.Add(new ReagentExclusion (selectedReagents[i].Id, selectedReagents[j].Id));
                         Debug.Log($"Component {selectedReagents[i].Name} have excluded component: {selectedReagents[j].Name}");
                         haveExcludedReagents = true;
                     }
@@ -266,7 +266,33 @@ namespace Jam.Scripts.Ritual
 
     public class ReagentExclusion
     {
-        public int ReagentId;
-        public int ExcludedReagentId;
+        public int ReagentId { get; private set; }
+        public int ExcludedReagentId { get; private set; }
+
+        public ReagentExclusion(int reagentId, int excludedReagentId)
+        {
+            ReagentId = reagentId;
+            ExcludedReagentId = excludedReagentId;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is ReagentExclusion other)
+            {
+                return ReagentId == other.ReagentId &&
+                       ExcludedReagentId == other.ExcludedReagentId;
+            }
+            return false;
+        }
+
+        protected bool Equals(ReagentExclusion other)
+        {
+            return ReagentId == other.ReagentId && ExcludedReagentId == other.ExcludedReagentId;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(ReagentId, ExcludedReagentId);
+        }
     }
 }

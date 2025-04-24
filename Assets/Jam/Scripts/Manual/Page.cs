@@ -17,22 +17,18 @@ namespace Jam.Scripts.Manual
             
             for (int i = 0; i < _reagentsDefinitions.Count; i++)
             {
-                Sprite excludedReagentSprite1 = null;
-                Sprite excludedReagentSprite2 = null;
+                List<Sprite> excludedReagentSprites = new List<Sprite>();
 
                 foreach (var reagentExclusion in reagentExclusions)
                 {
                     if (reagentExclusion.ReagentId == _reagentsDefinitions[i].Id)
                     {
-                        if (_reagentsDefinitions[i].ExcludedReagents[0].Id == reagentExclusion.ExcludedReagentId)
-                            excludedReagentSprite1 = _reagentsDefinitions[i].ExcludedReagents[0].Visual;
-                        
-                        if (_reagentsDefinitions[i].ExcludedReagents[1].Id == reagentExclusion.ExcludedReagentId)
-                            excludedReagentSprite2 = _reagentsDefinitions[i].ExcludedReagents[1].Visual;
+                        Sprite excludedSprite = _reagentsDefinitions[i].GetExcludedSprite(reagentExclusion.ExcludedReagentId);
+                        excludedReagentSprites.Add(excludedSprite);
                     }
                 }
                 
-                _reagentsViews[i].InitData(_reagentsDefinitions[i].Name, excludedReagentSprite1, excludedReagentSprite2);
+                _reagentsViews[i].InitData(_reagentsDefinitions[i].Name, excludedReagentSprites);
             }
         }
     }

@@ -15,6 +15,7 @@ namespace Jam.Scripts.Dialogue.Runtime.SO.Dialogue
         public List<DialogueDataText> DialogueDataTexts = new();
         public List<DialogueDataImage> DialogueDataImages = new();
         public List<DialogueDataPort> DialogueDataPorts = new();
+        public bool SkipContinue;
     }
 
     [Serializable]

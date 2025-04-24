@@ -114,7 +114,8 @@ namespace Jam.Scripts.Dialogue.Editor.Graph_view
             DialogueData dialogueNodeData = new DialogueData
             {
                 NodeGuid = node.NodeGuid,
-                Position = node.GetPosition().position
+                Position = node.GetPosition().position,
+                SkipContinue = node.SkipContinue
             };
 
             for (int i = 0; i < node.DialogueData.DialogueDataBaseContainers.Count; i++)
@@ -381,6 +382,7 @@ namespace Jam.Scripts.Dialogue.Editor.Graph_view
             {
                 DialogueNode tempNode = _graphView.CreateDialogueNode(node.Position);
                 tempNode.NodeGuid = node.NodeGuid;
+                tempNode.SkipContinue = node.SkipContinue;
 
                 List<DialogueDataBaseContainer> dataBaseContainer = new();
                 

@@ -122,7 +122,16 @@ namespace Jam.Scripts.Dialogue.Gameplay
                 }
                 else if (_dialogueNodes[i] is DialogueDataText dataText)
                 {
-                    _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking, ShowButtons);
+                    if (_currentDialogueNodeData.SkipContinue)
+                    {
+                        void OnUnityAction() => CheckNodeType(GetNextNode(_currentDialogueNodeData));
+                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking,OnUnityAction);
+                    }
+                    else
+                    {
+                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking, ShowButtons);
+                    }
+                    
                     if (_isGhostTalking)
                         _isGhostTalking = false;
                     break;
