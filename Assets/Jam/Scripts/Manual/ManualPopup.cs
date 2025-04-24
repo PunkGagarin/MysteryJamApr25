@@ -51,8 +51,8 @@ namespace Jam.Scripts.Manual
             base.Close();
         }
 
-        public void Initialize(List<ReagentExclusion> reagentExclusions) => 
-            _pages.ForEach(page => page.Initialize(reagentExclusions));
+        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions) => 
+            _pages.ForEach(page => page.Initialize(unlockedReagents, reagentExclusions));
 
         private void InitPages()
         {

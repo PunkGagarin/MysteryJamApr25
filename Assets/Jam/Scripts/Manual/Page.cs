@@ -10,11 +10,23 @@ namespace Jam.Scripts.Manual
         [SerializeField] private List<ReagentUI> _reagentsViews;
         [SerializeField] private List<ReagentDefinition> _reagentsDefinitions;
 
-        public void Initialize(List<ReagentExclusion> reagentExclusions)
+        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions)
         {
             if (_reagentsDefinitions == null || _reagentsDefinitions.Count == 0) 
                 return;
-            
+
+            SetupReagents(unlockedReagents);
+            SetupExcludedReagents(reagentExclusions);
+        }
+
+        private void SetupReagents(HashSet<int> unlockedReagents)
+        {
+            for (int i = 0; i < _reagentsDefinitions.Count; i++) 
+                _reagentsViews[i].gameObject.SetActive(unlockedReagents.Contains(_reagentsDefinitions[i].Id));
+        }
+
+        private void SetupExcludedReagents(HashSet<ReagentExclusion> reagentExclusions)
+        {
             for (int i = 0; i < _reagentsDefinitions.Count; i++)
             {
                 List<Sprite> excludedReagentSprites = new List<Sprite>();

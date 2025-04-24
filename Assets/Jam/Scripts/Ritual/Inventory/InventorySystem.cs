@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
@@ -10,7 +11,8 @@ namespace Jam.Scripts.Ritual.Inventory
     {
         [SerializeField] private List<Reagent> _slots;
         [Inject] private ReagentRepository _reagentRepository;
-        
+        public event Action<int> OnReagentAdded;
+
         public void AddReagent(int id, int amount)
         {
             if (_slots.All(slot => !slot.IsEmpty))
@@ -24,7 +26,7 @@ namespace Jam.Scripts.Ritual.Inventory
             var slot = _slots[reagentDefinition.Id - 1];
             slot.SetReagent(reagentDefinition);
             slot.AddReagent(amount);
+            OnReagentAdded?.Invoke(id);
         }
-
     }
 }

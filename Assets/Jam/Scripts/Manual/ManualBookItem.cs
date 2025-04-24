@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Ritual;
+using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,19 +13,14 @@ namespace Jam.Scripts.Manual
     {
         [Inject] private PopupManager _popupManager;
         [Inject] private AudioService _audioService;
-        private List<ReagentExclusion> _reagentExclusions = new();
+        [Inject] private InventorySystem _inventorySystem;
+        private HashSet<ReagentExclusion> _reagentExclusions = new();
+        private HashSet<int> _unlockedReagents = new();
 
         public void OnPointerClick(PointerEventData eventData)
         {
             if (!EventSystem.current.IsPointerOverGameObject()) return;
             OpenPopup();
-        }
-
-        private void OpenPopup()
-        {
-            _audioService.PlaySound(Sounds.manualOpening.ToString());
-            var manualPopup = _popupManager.OpenPopup<ManualPopup>();
-            manualPopup.Initialize(_reagentExclusions);
         }
 
         public bool CheckReagentExclusion(List<ReagentExclusion> excludedReagents, out ReagentExclusion reagentExclusion)
@@ -44,6 +40,26 @@ namespace Jam.Scripts.Manual
         public void AddReagentExclusion(ReagentExclusion excludedReagentToAdd)
         {
             _reagentExclusions.Add(excludedReagentToAdd);
+        }
+
+        private void UnlockReagent(int reagentId) => 
+            _unlockedReagents.Add(reagentId);
+
+        private void OpenPopup()
+        {
+            _audioService.PlaySound(Sounds.manualOpening.ToString());
+            var manualPopup = _popupManager.OpenPopup<ManualPopup>();
+            manualPopup.Initialize(_unlockedReagents, _reagentExclusions);
+        }
+
+        private void Awake()
+        {
+            _inventorySystem.OnReagentAdded += UnlockReagent;
+        }
+
+        private void OnDestroy()
+        {
+            _inventorySystem.OnReagentAdded -= UnlockReagent;
         }
     }
 }

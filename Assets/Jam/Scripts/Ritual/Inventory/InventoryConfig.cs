@@ -15,5 +15,7 @@ namespace Jam.Scripts.Ritual.Inventory
         
         [field: Header("Rewards"), SerializeField] public int RewardReputationForQuestCompletion { get; private set; }
         [field: SerializeField] public int RewardMoneyForQuestCompletion { get; private set; }
+        [field: SerializeField] public int MirrorMaxCharges { get; private set; }
+        [field: SerializeField] public int MirrorCost { get; private set; }
     }
 }

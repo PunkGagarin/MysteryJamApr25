@@ -284,6 +284,30 @@ MonoBehaviour:
         Value: 0
       StringEventModifierType:
         Value: 3
+    - StringEventText:
+        Value: Reagent
+      Number:
+        Value: 1
+      StringEventModifierType:
+        Value: 3
+    - StringEventText:
+        Value: Reagent
+      Number:
+        Value: 2
+      StringEventModifierType:
+        Value: 3
+    - StringEventText:
+        Value: Reagent
+      Number:
+        Value: 3
+      StringEventModifierType:
+        Value: 3
+    - StringEventText:
+        Value: Reagent
+      Number:
+        Value: 14
+      StringEventModifierType:
+        Value: 3
     ContainerDialogueEventSOs: []
   - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     Position: {x: 1490, y: -802}

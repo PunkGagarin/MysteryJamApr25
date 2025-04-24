@@ -47,6 +47,6 @@ MonoBehaviour:
   _questEvent: Quest
   _reputationEvent: Reputation
   _moneyEvent: Money
-  _componentEvent: Component
+  _reagentEvent: Reagent
   _attemptsEvent: Atempts
   _ritualEvent: Ritual

@@ -23,3 +23,5 @@ MonoBehaviour:
   <RitualAttemptsToFail>k__BackingField: 3
   <RewardReputationForQuestCompletion>k__BackingField: 5
   <RewardMoneyForQuestCompletion>k__BackingField: 50
+  <MirrorMaxCharges>k__BackingField: 3
+  <MirrorCost>k__BackingField: 100
