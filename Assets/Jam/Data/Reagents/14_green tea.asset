@@ -10,21 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
-  m_Name: Thursday salt
+  m_Name: 14_green tea
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u0447\u0435\u0442\u0432\u0435\u0440\u0433\u043E\u0432\u0430\u044F
-    \u0441\u043E\u043B\u044C"
-  <Id>k__BackingField: 10
-  <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
-  <ClickClip>k__BackingField: 11
-  <ReagentType>k__BackingField: 1
-  <AgeType>k__BackingField: 3
+  <Name>k__BackingField: "\u0417\u0435\u043B\u0435\u043D\u044B\u0439 \u0447\u0430\u0439"
+  <Id>k__BackingField: 14
+  <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
+  <ClickClip>k__BackingField: 12
+  <ReagentType>k__BackingField: 3
+  <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 2
-  <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField:
-  - {fileID: 11400000, guid: 420c3ca5bf8fb234da7acf99c08981d6, type: 2}
-  - {fileID: 11400000, guid: ca0bf6021c36a92408770b5aca9a3c37, type: 2}
+  <DeathType>k__BackingField: 2
+  <ExcludedReagents>k__BackingField: []
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0
