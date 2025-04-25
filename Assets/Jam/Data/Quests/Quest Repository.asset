@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Quest Repository
   m_EditorClassIdentifier: 
   <Definitions>k__BackingField:
-  - {fileID: 11400000, guid: 54e8f7fe1f1e1ab48a88d4b14583b4ac, type: 2}
-  - {fileID: 11400000, guid: 4fcf32f92dd3d4641b138abad018dcb6, type: 2}
+  - {fileID: 11400000, guid: 3e0e635c0d8c7034c96bf2599baa14c2, type: 2}
+  - {fileID: 11400000, guid: 118e51812fcf8f94294b280eec103e97, type: 2}
+  - {fileID: 11400000, guid: 214b02496d798f148a3729303daeb255, type: 2}
