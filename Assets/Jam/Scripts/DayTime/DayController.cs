@@ -62,8 +62,10 @@ namespace Jam.Scripts.DayTime
 
         private void EndDay()
         {
-            _currentDay++;
+            _currentClient = 0;
             _canCallNextClient = false;
+            
+            _currentDay++;
             ShowDayDetails();
         }
 

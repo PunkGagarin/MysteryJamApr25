@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
-  m_Name: dandelion powder
+  m_Name: 10_Thursday salt
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u041E\u0434\u0443\u0432\u0430\u043D\u0447\u0438\u043A\u043E\u0432\u044B\u0439
-    \u043F\u043E\u0440\u043E\u0448\u043E\u043A"
-  <Id>k__BackingField: 5
+  <Name>k__BackingField: "\u0447\u0435\u0442\u0432\u0435\u0440\u0433\u043E\u0432\u0430\u044F
+    \u0441\u043E\u043B\u044C"
+  <Id>k__BackingField: 10
   <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 1
-  <AgeType>k__BackingField: 1
+  <AgeType>k__BackingField: 3
   <SexType>k__BackingField: 0
-  <RaceType>k__BackingField: 0
-  <DeathType>k__BackingField: 5
-  <ExcludedReagents>k__BackingField:
-  - {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
-  - {fileID: 11400000, guid: d85ddaedadbee5f4cabe695ae9bd9054, type: 2}
+  <RaceType>k__BackingField: 2
+  <DeathType>k__BackingField: 0
+  <ExcludedReagents>k__BackingField: []
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0
