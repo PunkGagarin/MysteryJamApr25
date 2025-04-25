@@ -16,3 +16,8 @@ MonoBehaviour:
   - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 4dbf5339b26ab614ebdb326a8b04110b, type: 2}
+  - <Npcs>k__BackingField:
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 4dbf5339b26ab614ebdb326a8b04110b, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 4dbf5339b26ab614ebdb326a8b04110b, type: 2}

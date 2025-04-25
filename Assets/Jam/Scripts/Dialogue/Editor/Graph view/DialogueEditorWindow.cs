@@ -51,6 +51,7 @@ namespace Jam.Scripts.Dialogue.Editor.Graph_view
 
         private void OnDisable()
         {
+            Save();
             rootVisualElement.Remove(_graphView);
         }
 
