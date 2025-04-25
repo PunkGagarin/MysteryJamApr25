@@ -159,7 +159,7 @@ namespace Jam.Scripts.Ritual
         {
             if (!currentQuestValue.Equals(noneValue))
             {
-                if (reagents.Any(reagent => !selector(reagent).Equals(currentQuestValue)))
+                if (reagents.All(reagent => !selector(reagent).Equals(currentQuestValue)))
                 {
                     Debug.Log($"No {typeName} component");
                     return false;
