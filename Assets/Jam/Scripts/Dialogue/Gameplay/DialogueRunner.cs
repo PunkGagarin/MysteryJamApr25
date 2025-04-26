@@ -197,7 +197,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
             if (!_isDialogueActive)
                 return;
             
-            nodeData.ContainerDialogueEventSOs.ForEach(item => item.DialogueEventSO.RunEvent());
+            nodeData.ContainerDialogueEventSOs.ForEach(item => _gameEvents.RunEvent(item.DialogueEventSO));
             nodeData.EventDataStringModifiers.ForEach(item => _gameEvents.DialogueModifierEvents(item.StringEventText.Value, item.StringEventModifierType.Value, item.Number.Value));
             
             CheckNodeType(GetNextNode(nodeData));

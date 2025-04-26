@@ -348,15 +348,10 @@ MonoBehaviour:
         Value: 4
     ContainerDialogueEventSOs: []
   - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    Position: {x: 2801, y: 60}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Reagent
-      Number:
-        Value: 5
-      StringEventModifierType:
-        Value: 3
-    ContainerDialogueEventSOs: []
+    Position: {x: 2801, y: 59}
+    EventDataStringModifiers: []
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     Position: {x: 3416, y: 66}

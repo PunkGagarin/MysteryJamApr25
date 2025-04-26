@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Jam.Scripts.Dialogue.Runtime.Enums;
+using Jam.Scripts.Dialogue.Runtime.Events.SO;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
+using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Utils.String_Tool;
 using UnityEngine;
 using Zenject;
@@ -189,6 +191,22 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
 
             Debug.LogError($"Wrong condition type for quests: {conditionType}!");
             return false;
+        }
+
+        public void RunEvent(DialogueEventSO itemDialogueEventSo)
+        {
+            if (itemDialogueEventSo is AddReagentsEvent addReagentsEvent)
+            {
+                addReagentsEvent.OnReagentsAdded += AddReagents;
+                addReagentsEvent.RunEvent();
+                addReagentsEvent.OnReagentsAdded -= AddReagents;
+
+                void AddReagents(List<ReagentDefinition> reagentDefinitions)
+                {
+                    foreach (var reagentDefinition in reagentDefinitions) 
+                        _inventorySystem.AddReagent(reagentDefinition.Id, _inventoryConfig.MaxReagentAmount);
+                }
+            }
         }
     }
 }
