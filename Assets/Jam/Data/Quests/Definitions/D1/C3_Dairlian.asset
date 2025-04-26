@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C3_Dairlian
   m_EditorClassIdentifier: 
   <Name>k__BackingField: 
-  <Id>k__BackingField: 2
+  <Id>k__BackingField: 3
   <SexType>k__BackingField: 2
-  <AgeType>k__BackingField: 1
-  <RaceType>k__BackingField: 0
+  <AgeType>k__BackingField: 3
+  <RaceType>k__BackingField: 3
   <DeathType>k__BackingField: 0
