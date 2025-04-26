@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Jam.Scripts.DayTime
 {
-    [CreateAssetMenu(fileName = "DayConfig", menuName = "Game Resources/DayConfig")]
+    [CreateAssetMenu(fileName = "DayConfig", menuName = "Game Resources/Configs/Day")]
     public class DayConfig : ScriptableObject
     {
         [field: SerializeField, Tooltip("Списки персонажей которые приходят на каждый день")] public List<NpcList> DayNpcs { get; private set; }

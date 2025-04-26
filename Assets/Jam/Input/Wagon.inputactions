@@ -70,6 +70,76 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Manual",
+            "id": "5176732d-7fe3-4c60-82b1-7ec5af900a05",
+            "actions": [
+                {
+                    "name": "NextPage",
+                    "type": "Button",
+                    "id": "3056051c-df81-4409-9284-777a45a97dc7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrevPage",
+                    "type": "Button",
+                    "id": "3eb99cd6-b6d9-4048-93b1-48609fbfcf25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4908dfaf-8898-42a7-9247-2195c312a2a9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b90193a-d317-4b1b-9bbc-785d73a47e96",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42122912-1c18-4cf2-b483-e67ee150e70d",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrevPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5937707c-6ff1-47ff-984c-24b94bac954b",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrevPage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -13,25 +13,13 @@ namespace Jam.Scripts.GameplayData.Repositories
     {
         [SerializeField] private ManualPagesRepository _manualPagesRepository;
         [SerializeField] private QuestRepository _questRepository;
-        [SerializeField] private DayConfig _dayConfig;
         [SerializeField] private ReagentRepository _reagentRepository;
-        [SerializeField] private InventoryConfig _inventoryConfig;
 
         public override void InstallBindings()
         {
             ManualInstall();
             QuestsInstall();
-            ConfigInstall();
             ComponentInstall();
-            InventoryInstall();
-        }
-
-        private void InventoryInstall()
-        {
-            Container
-                .Bind<InventoryConfig>()
-                .FromInstance(_inventoryConfig)
-                .AsSingle();
         }
 
         private void ComponentInstall()
@@ -39,14 +27,6 @@ namespace Jam.Scripts.GameplayData.Repositories
             Container
                 .Bind<ReagentRepository>()
                 .FromInstance(_reagentRepository)
-                .AsSingle();
-        }
-
-        private void ConfigInstall()
-        {
-            Container
-                .Bind<DayConfig>()
-                .FromInstance(_dayConfig)
                 .AsSingle();
         }
         

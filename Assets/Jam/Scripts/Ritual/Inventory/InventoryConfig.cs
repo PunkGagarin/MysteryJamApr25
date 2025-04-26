@@ -12,10 +12,9 @@ namespace Jam.Scripts.Ritual.Inventory
         [field: SerializeField] public int MaxReagentAmount { get; private set; }
         [field: SerializeField] public List<ReagentDefinition> StartReagents { get; private set; }
         [field: SerializeField] public int RitualAttemptsToFail { get; private set; }
-        
         [field: Header("Rewards"), SerializeField] public int RewardReputationForQuestCompletion { get; private set; }
         [field: SerializeField] public int RewardMoneyForQuestCompletion { get; private set; }
-        [field: SerializeField] public int MirrorMaxCharges { get; private set; }
-        [field: SerializeField] public int MirrorCost { get; private set; }
+        [field: Header("Penalties"), SerializeField] public int PenaltyReputationForQuestFail { get; private set; }
+        [field: SerializeField] public int PenaltyMoneyForQuestFail { get; private set; }
     }
 }

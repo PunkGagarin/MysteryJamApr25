@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Ritual.Inventory.Reagents;
+using Jam.Scripts.Ritual.Tools;
 using UnityEngine;
 using Zenject;
 
@@ -11,7 +12,12 @@ namespace Jam.Scripts.Ritual.Inventory
     {
         [SerializeField] private List<Reagent> _slots;
         [Inject] private ReagentRepository _reagentRepository;
-        public event Action<int> OnReagentAdded;
+        [Inject] private InventoryConfig _inventoryConfig;
+        [Inject] private ToolController _toolController;
+        public event Action<int> OnReagentSeen;
+
+        public void BuyReagent(int id) => 
+            AddReagent(id, _inventoryConfig.MaxReagentAmount);
 
         public void AddReagent(int id, int amount)
         {
@@ -26,7 +32,16 @@ namespace Jam.Scripts.Ritual.Inventory
             var slot = _slots[reagentDefinition.Id - 1];
             slot.SetReagent(reagentDefinition);
             slot.AddReagent(amount);
-            OnReagentAdded?.Invoke(id);
+
+            SeenReagent(id);
+        }
+
+        public void SeenReagent(int id) => 
+            OnReagentSeen?.Invoke(id);
+
+        public void BuyTool(ToolDefinition unlockedTool)
+        {
+            _toolController.BuyTool(unlockedTool);
         }
     }
 }

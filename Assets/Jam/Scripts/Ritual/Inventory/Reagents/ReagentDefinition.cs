@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Jam.Scripts.Ritual.Inventory.Reagents
 {
-    [CreateAssetMenu(menuName = "Game Resources/Definitions/Component")]
+    [CreateAssetMenu(menuName = "Game Resources/Definitions/Reagent")]
     public class ReagentDefinition : Definition
     {
         [field: SerializeField] public int Id { get; private set; }
@@ -22,6 +22,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         [field: SerializeField, ShowIf("IsDeathReasonExcluded")] public DeathType ExcludedDeathReasonType { get; private set;}
         [field: SerializeField] public bool IsAgeExcluded { get; private set; }
         [field: SerializeField, ShowIf("IsAgeExcluded")] public AgeType ExcludedAgeType { get; private set;}
+        [field: SerializeField] public int Cost { get; private set; }
 
         public Sprite GetExcludedSprite(int reagentExclusionExcludedReagentId)
         {

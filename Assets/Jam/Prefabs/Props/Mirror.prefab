@@ -124,6 +124,7 @@ MonoBehaviour:
   _fill: {fileID: 4108421600992552502}
   _animationTime: 0.5
   _canvas: {fileID: 3186108258487023503}
+  _mirrorDefinition: {fileID: 11400000, guid: f79933d36b748d0429cbfd89f3aeb810, type: 2}
 --- !u!1 &2788171776386816778
 GameObject:
   m_ObjectHideFlags: 0

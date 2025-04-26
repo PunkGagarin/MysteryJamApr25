@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Input;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Utils.UI;
@@ -24,6 +25,7 @@ namespace Jam.Scripts.Manual
         [Inject] private ManualPagesRepository _pagesRepository;
         [Inject] private ReagentRepository _reagentRepository;
         [Inject] private AudioService _audioService;
+        [Inject] private InputService _inputService;
 
         private List<Page> _pages;
         private int _currentPageIndex = 0;
@@ -35,6 +37,8 @@ namespace Jam.Scripts.Manual
             _closeButton.onClick.AddListener(Close);
             _prevPageButton.onClick.AddListener(PrevPageClick);
             _nextPageButton.onClick.AddListener(NextPageClick);
+            _inputService.OnNextPage += NextPageClick;
+            _inputService.OnPreviousPage += PrevPageClick;
         }
 
         public override void Open(bool withPause)
@@ -43,10 +47,12 @@ namespace Jam.Scripts.Manual
             if (_pages == null)
                 InitPages();
             ShowPages();
+            _inputService.EnableManualInput();
         }
 
         public override void Close()
         {
+            _inputService.EnableWagonInput();
             _audioService.PlaySound(Sounds.manualClose.ToString());
             base.Close();
         }
@@ -136,6 +142,9 @@ namespace Jam.Scripts.Manual
 
         private void PrevPageClick()
         {
+            if (_currentPageIndex == 0)
+                return;
+            
             _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
             _currentPageIndex -= 2;
@@ -144,6 +153,9 @@ namespace Jam.Scripts.Manual
 
         private void NextPageClick()
         {
+            if (_currentPageIndex + 2 >= _pages.Count)
+                return;
+            
             _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();
             _currentPageIndex += 2;
@@ -166,6 +178,8 @@ namespace Jam.Scripts.Manual
             _nextPageButton.onClick.RemoveListener(NextPageClick);
             _rightBookmarks.ForEach(bookmark => bookmark.OnClick.RemoveAllListeners());
             _leftBookmarks.ForEach(bookmark => bookmark.OnClick.RemoveAllListeners());
+            _inputService.OnNextPage -= NextPageClick;
+            _inputService.OnPreviousPage -= PrevPageClick;
         }
     }
 }

@@ -54,12 +54,12 @@ namespace Jam.Scripts.Manual
 
         private void Awake()
         {
-            _inventorySystem.OnReagentAdded += UnlockReagent;
+            _inventorySystem.OnReagentSeen += UnlockReagent;
         }
 
         private void OnDestroy()
         {
-            _inventorySystem.OnReagentAdded -= UnlockReagent;
+            _inventorySystem.OnReagentSeen -= UnlockReagent;
         }
     }
 }

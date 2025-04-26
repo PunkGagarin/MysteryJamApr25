@@ -9,16 +9,16 @@ namespace Jam.Scripts.GameplayData.Player.UI
         [SerializeField] private TMP_Text _amount;
 
         [Inject] private PlayerStatsPresenter _playerStatsPresenter;
-
+        
+        private void UpdateWidget(int newValue, int oldValue)
+        {
+            _amount.text = newValue.ToString();
+        }
+        
         private void Awake()
         {
             _playerStatsPresenter.OnMoneyChanged += UpdateWidget;
-            UpdateWidget(_playerStatsPresenter.Money);
-        }
-
-        private void UpdateWidget(int newValue)
-        {
-            _amount.text = newValue.ToString();
+            UpdateWidget(_playerStatsPresenter.Money, 0);
         }
 
         private void OnDestroy()

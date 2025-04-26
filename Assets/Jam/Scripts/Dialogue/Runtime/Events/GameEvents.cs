@@ -103,7 +103,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                     _playerStats.AddReputation(value == 0 ? _inventoryConfig.RewardReputationForQuestCompletion : (int)value);
                     break;
                 case StringEventModifierType.Remove:
-                    _playerStats.RemoveReputation((int)value);
+                    _playerStats.RemoveReputation(value == 0 ? _inventoryConfig.PenaltyReputationForQuestFail : (int)value);
                     break;   
                 case StringEventModifierType.SetTrue:
                 case StringEventModifierType.SetFalse:
@@ -122,6 +122,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                     _playerStats.AddMoney(value == 0 ? _inventoryConfig.RewardMoneyForQuestCompletion : (int)value);
                     break;
                 case StringEventModifierType.Remove:
+                    _playerStats.RemoveMoney(value == 0 ? _inventoryConfig.PenaltyMoneyForQuestFail : (int)value);
                     _playerStats.RemoveMoney((int)value);
                     break;   
                 case StringEventModifierType.SetTrue:

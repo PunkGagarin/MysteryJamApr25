@@ -42,18 +42,21 @@ namespace Jam.Scripts.DayTime.Results
             DayInfo.CharactersResults.Add(characterResult);
         }
 
-        private void CountReputation(int value)
+        private void CountReputation(int value, int oldValue)
         {
+            int valueChangedAmount = value - oldValue;
             if (_currentCharacterResult != null)
-                _currentCharacterResult.EarnReputation += value;
+                _currentCharacterResult.EarnReputation += valueChangedAmount;
         }
         
-        private void CountMoney(int value)
+        private void CountMoney(int value, int oldValue)
         {
+            int valueChangedAmount = value - oldValue;
+            
             if (_currentCharacterResult != null)
-                _currentCharacterResult.EarnMoney += value;
+                _currentCharacterResult.EarnMoney += valueChangedAmount;
 
-            DayInfo.TotalEarnMoney += value;
+            DayInfo.TotalEarnMoney += valueChangedAmount;
         }
         
         private void Awake()

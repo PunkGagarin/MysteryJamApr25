@@ -2,32 +2,34 @@
 using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Manual;
-using Jam.Scripts.Ritual.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Jam.Scripts.Ritual
+namespace Jam.Scripts.Ritual.Tools
 {
     public class MirrorTool : MonoBehaviour
     {
         [SerializeField] private Image _fill;
         [SerializeField] private float _animationTime;
         [SerializeField] private Canvas _canvas;
+        [SerializeField] private ToolDefinition _mirrorDefinition;
         [Inject] private RitualController _ritualController;
         [Inject] private ManualBookItem _manual;
-        [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private AudioService _audioService;
         private int _charges;
-
-        public void Buy()
+        
+        public ToolDefinition Definition => _mirrorDefinition;
+        public bool IsUnlocked { get; set; }
+        
+        public void ResetCharges()
         {
-            _charges = _inventoryConfig.MirrorMaxCharges;
-            ShowAnimation();
+            _charges = _mirrorDefinition.Charges;
+            ShowUpdateCharges();
         }
 
-        private void ShowAnimation() => 
-            _fill.DOFillAmount(_charges/(float)_inventoryConfig.MirrorMaxCharges, _animationTime).SetEase(Ease.Linear);
+        private void ShowUpdateCharges() => 
+            _fill.DOFillAmount(_charges/(float)_mirrorDefinition.Charges, _animationTime).SetEase(Ease.Linear);
 
         private void Awake()
         {
@@ -35,7 +37,7 @@ namespace Jam.Scripts.Ritual
             
             _charges = 0;
             _ritualController.OnExcludedReagentsFound += CheckReagentExclusion;
-            Buy();
+            ResetCharges();
         }
 
         private void OnDestroy()
@@ -45,13 +47,13 @@ namespace Jam.Scripts.Ritual
 
         private void CheckReagentExclusion(List<ReagentExclusion> excludedReagents)
         {
-            if (_charges == 0)
+            if (_charges == 0 || !IsUnlocked)
                 return;
 
             if (_manual.CheckReagentExclusion(excludedReagents, out ReagentExclusion excludedReagentToAdd))
             {
                 _charges--;
-                ShowAnimation();
+                ShowUpdateCharges();
                 _manual.AddReagentExclusion(excludedReagentToAdd);
                 _audioService.PlaySound(Sounds.foundConflict.ToString());
             }

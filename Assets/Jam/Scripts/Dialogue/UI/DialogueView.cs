@@ -98,8 +98,8 @@ namespace Jam.Scripts.Dialogue.UI
                         currentButton.onClick.AddListener(() =>
                         {
                             _audioService.PlaySound(Sounds.buttonClick.ToString());
-                            buttonContainer.UnityAction?.Invoke();
                             AddButtonText(buttonContainer.Text);
+                            buttonContainer.UnityAction?.Invoke();
                             HideButtons();
                         });
                     }

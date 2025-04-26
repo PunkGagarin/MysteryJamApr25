@@ -5,10 +5,11 @@ namespace Jam.Scripts.GameplayData.Player
 {
     public class PlayerStatsPresenter
     {
+        public delegate void IntChanged(int newValue, int oldValue);
         private PlayerStats _playerStats;
 
-        public event Action<int> OnMoneyChanged;
-        public event Action<int> OnReputationChanged;
+        public event IntChanged OnMoneyChanged;
+        public event IntChanged OnReputationChanged;
         
         public int Money => _playerStats.Money;
         public int Reputation => _playerStats.Reputation;
@@ -20,26 +21,33 @@ namespace Jam.Scripts.GameplayData.Player
 
         public void AddMoney(int amount)
         {
+            int oldValue = _playerStats.Money;
             _playerStats.Money += amount;
-            OnMoneyChanged?.Invoke(_playerStats.Money);
+            OnMoneyChanged?.Invoke(_playerStats.Money, oldValue);
         }
         
         public void RemoveMoney(int amount)
         {
+            int oldValue = _playerStats.Money;
             _playerStats.Money -= amount;
-            OnMoneyChanged?.Invoke(_playerStats.Money);
+            OnMoneyChanged?.Invoke(_playerStats.Money, oldValue);
         }
+
+        public bool CanSpend(int amount) =>
+            _playerStats.Money >= amount;
         
         public void AddReputation(int amount)
         {
+            int oldValue = _playerStats.Reputation;
             _playerStats.Reputation += amount;
-            OnReputationChanged?.Invoke(_playerStats.Reputation);
+            OnReputationChanged?.Invoke(_playerStats.Reputation, oldValue);
         }
         
         public void RemoveReputation(int amount)
         {
+            int oldValue = _playerStats.Reputation;
             _playerStats.Reputation -= amount;
-            OnReputationChanged?.Invoke(_playerStats.Reputation);
+            OnReputationChanged?.Invoke(_playerStats.Reputation, oldValue);
         }
 
         public bool CheckMoney(int value, StringEventConditionType conditionType)

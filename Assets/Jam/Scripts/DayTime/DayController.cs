@@ -3,6 +3,8 @@ using Jam.Scripts.DayTime.Results;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Npc.Data;
+using Jam.Scripts.Ritual.Tools;
+using Jam.Scripts.Shop;
 using Jam.Scripts.Utils.Pause;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
@@ -23,6 +25,8 @@ namespace Jam.Scripts.DayTime
         [Inject] private PauseService _pauseService;
         [Inject] private PlayerStatsPresenter _playerStatsPresenter;
         [Inject] private AudioService _audioService;
+        [Inject] private ShopSystem _shopSystem;
+        [Inject] private ToolController _toolController;
         
         private int _currentDay = 0;
         private int _currentClient = 0;
@@ -62,10 +66,9 @@ namespace Jam.Scripts.DayTime
 
         private void EndDay()
         {
+            _currentDay++;
             _currentClient = 0;
             _canCallNextClient = false;
-            
-            _currentDay++;
             ShowDayDetails();
         }
 
@@ -87,9 +90,13 @@ namespace Jam.Scripts.DayTime
 
         private void ShowDayDetails()
         {
-            var dayResultView = _popupManager.OpenPopup<DayResultView>(closeEvent: ResetDayValues);
+            bool showShop = _currentDay != 1 && !IsLastDay;
+            var dayResultView = _popupManager.OpenPopup<DayResultView>(closeEvent: showShop ? ShowShop : ResetDayValues);
             dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter);
         }
+
+        private void ShowShop() => 
+            _shopSystem.OpenShop(ResetDayValues);
 
         private void Awake()
         {
