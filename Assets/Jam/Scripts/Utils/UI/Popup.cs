@@ -12,9 +12,13 @@ namespace Jam.Scripts.Utils.UI
         private bool _openedWithPause;
         
         private event Action OnClose;
-
+        private event Action OnOpen;
+        
         public void SetCloseEvent(Action onClose) => 
             OnClose = onClose;
+        
+        public void SetOpenEvent(Action onOpen) => 
+            OnOpen = onOpen;
         
         public virtual void Open(bool withPause)
         {
@@ -25,6 +29,7 @@ namespace Jam.Scripts.Utils.UI
                 _pauseService.SetPaused(true);
             
             gameObject.SetActive(true);
+            OnOpen?.Invoke();
         }
 
         public virtual void Close()
