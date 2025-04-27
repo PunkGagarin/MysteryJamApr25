@@ -61,6 +61,10 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
     TargetPortGuid: Input
+  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
   - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     BasePortGuid: Output
     TargetNodeGuid: ca530d60-e195-4d69-84a2-0b18d6846ba5
@@ -72,6 +76,10 @@ MonoBehaviour:
   - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
+  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     BasePortGuid: Output
@@ -105,14 +113,6 @@ MonoBehaviour:
     BasePortGuid: Continue
     TargetNodeGuid: ca530d60-e195-4d69-84a2-0b18d6846ba5
     TargetPortGuid: Input
-  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
     Position: {x: -1427, y: -75}
@@ -127,17 +127,34 @@ MonoBehaviour:
         Value: 1b922cec-a73e-447d-af20-e5a26c142e59
       Text:
       - LanguageType: 1
+        LanguageGenericType: Good night, aunt medium! My <b>grandfather</b> died,
+          I want to know how he got on... there.
+      - LanguageType: 2
         LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
           \u0442\u0435\u0442\u044F \u043C\u0435\u0434\u0438\u0443\u043C! \u041C\u043E\u0439
           <b>\u0434\u0435\u0434\u0443\u0448\u043A\u0430</b> \u0443\u043C\u0435\u0440,
           \u044F \u0445\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C, \u043A\u0430\u043A
-          \u043E\u043D \u0443\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F... \u0442\u0430\u043C."
+          \u043E\u043D \u0443\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F...
+          \u0442\u0430\u043C."
+      AudioClips:
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
       - LanguageType: 2
-        LanguageGenericType: "\u041C\u043E\u0439 \u043B\u0443\u0447\u0448\u0438\u0439
-          \u0434\u0440\u0443\u0433, <color=\"green\">\u0433\u043D\u043E\u043C</color>,
-          \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u0441\u043A\u043E\u043D\u0447\u0430\u043B\u0441\u044F,
-          \u0445\u043E\u0447\u0443 \u0447\u0442\u043E\u0431\u044B \u043E\u043D \u0437\u043D\u0430\u043B
-          \u043A\u0430\u043A \u0441\u0438\u043B\u044C\u043D\u043E \u044F \u0441\u043A\u0443\u0447\u0430\u044E"
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: c36b51eb-9d01-4f80-afe8-439fecf379ce
+      Text:
+      - LanguageType: 1
+        LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
+          \u0442\u0435\u0442\u044F \u043C\u0435\u0434\u0438\u0443\u043C! \u041C\u043E\u0439
+          <b>\u0434\u0435\u0434\u0443\u0448\u043A\u0430</b> \u0443\u043C\u0435\u0440,
+          \u044F \u0445\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C, \u043A\u0430\u043A
+          \u043E\u043D \u0443\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F...
+          \u0442\u0430\u043C."
+      - LanguageType: 2
+        LanguageGenericType: 
       AudioClips:
       - LanguageType: 1
         LanguageGenericType: {fileID: 0}
@@ -347,27 +364,10 @@ MonoBehaviour:
         Value: 4
     ContainerDialogueEventSOs: []
   - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    Position: {x: 2801, y: 59}
+    Position: {x: 2728, y: -70}
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5,
-        type: 2}
-  - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    Position: {x: 2780, y: 188}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Reagent
-      Number:
-        Value: 5
-      StringEventModifierType:
-        Value: 3
-    - StringEventText:
-        Value: Reagent
-      Number:
-        Value: 7
-      StringEventModifierType:
-        Value: 3
-    ContainerDialogueEventSOs: []
+    - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     Position: {x: 3416, y: 66}
@@ -428,7 +428,8 @@ MonoBehaviour:
       LanguageGenericType: "\u041D\u0435\u0442. \u0412\u0430\u043C \u044F \u043D\u0435
         \u043C\u043E\u0433\u0443 \u043F\u043E\u043C\u043E\u0447\u044C."
     - LanguageType: 2
-      LanguageGenericType: 
+      LanguageGenericType: "\u041D\u0435\u0442. \u0412\u0430\u043C \u044F \u043D\u0435
+        \u043C\u043E\u0433\u0443 \u043F\u043E\u043C\u043E\u0447\u044C."
     AudioClips:
     - LanguageType: 1
       LanguageGenericType: {fileID: 0}
@@ -444,7 +445,8 @@ MonoBehaviour:
       LanguageGenericType: "\u0425\u043E\u0440\u043E\u0448\u043E, \u044F \u0432\u0430\u043C
         \u043F\u043E\u043C\u043E\u0433\u0443"
     - LanguageType: 2
-      LanguageGenericType: 
+      LanguageGenericType: "\u0425\u043E\u0440\u043E\u0448\u043E, \u044F \u0432\u0430\u043C
+        \u043F\u043E\u043C\u043E\u0433\u0443"
     AudioClips:
     - LanguageType: 1
       LanguageGenericType: {fileID: 0}
