@@ -1,5 +1,6 @@
 ﻿using System;
 using Jam.Scripts.Quests.Data;
+using UnityEngine;
 using Zenject;
 
 namespace Jam.Scripts.Quests
@@ -8,6 +9,7 @@ namespace Jam.Scripts.Quests
     {
         [Inject] private QuestRepository _questsRepository;
         private QuestModel _questModel;
+        private int _currentCharacterId;
        
         public event Action<Quest> OnQuestAdded;
 
@@ -16,14 +18,18 @@ namespace Jam.Scripts.Quests
             _questModel = new QuestModel();
         }
 
-        public void AddQuest(int questId)
+        public void AddQuest()
         {
-            QuestDefinition questDefinition = _questsRepository.GetQuest(questId);
+            QuestDefinition questDefinition = _questsRepository.GetQuest(_currentCharacterId);
             Quest quest = new Quest(questDefinition);
             _questModel.AddQuest(quest);
+            Debug.Log($"added quest {quest.Id}");
             OnQuestAdded?.Invoke(quest);
         }
-        
+
+        public void SetCharacter(int id) => 
+            _currentCharacterId = id;
+
         public void RemoveQuest() => 
             _questModel.TryRemoveQuest();
 
@@ -36,8 +42,8 @@ namespace Jam.Scripts.Quests
         public void SetIncomplete() => 
             _questModel.SetIncomplete();
         
-        public bool HaveQuest(int questId) =>
-            _questModel.HaveQuest(questId);
+        public bool HaveQuest() =>
+            _questModel.HaveQuest(_currentCharacterId);
         
         public bool IsQuestComplete() => 
             _questModel.IsComplete();

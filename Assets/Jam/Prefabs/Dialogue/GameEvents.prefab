@@ -50,3 +50,8 @@ MonoBehaviour:
   _reagentEvent: Reagent
   _attemptsEvent: Atempts
   _ritualEvent: Ritual
+  _ritualFailedByAgeEvent: RitualFailedByAge
+  _ritualFailedBySexEvent: RitualFailedBySex
+  _ritualFailedByRaceEvent: RitualFailedByRace
+  _ritualFailedByDeathEvent: RitualFailedByDeath
+  _ritualFailedByExcludedEvent: RitualFailedByExcludedReagent

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Random Npc Repository
   m_EditorClassIdentifier: 
   <Definitions>k__BackingField:
-  - {fileID: 11400000, guid: 9300b77052098244c87a173d05caf4a2, type: 2}
+  - {fileID: 11400000, guid: 0ecce3cfc3c118243aa6ec5da5891b0f, type: 2}

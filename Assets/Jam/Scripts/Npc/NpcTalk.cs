@@ -9,7 +9,8 @@ namespace Jam.Scripts.Npc
     public class NpcTalk : MonoBehaviour
     {
         [Inject] private DialogueRunner _dialogueRunner;
-        
+        public bool IsDialogueActive => _dialogueRunner.IsDialogueActive;
+
         public void Talk(DialogueContainerSO dialogueContainer, Action leaveAction) =>
             _dialogueRunner.StartDialogue(dialogueContainer, leaveAction);
     }

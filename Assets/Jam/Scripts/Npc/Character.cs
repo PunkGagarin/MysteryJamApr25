@@ -2,6 +2,7 @@
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests;
+using Jam.Scripts.Ritual;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -16,10 +17,10 @@ namespace Jam.Scripts.Npc
 
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
+        [Inject] private RitualController _ritualController;
 
-        private UnityEngine.Camera _camera;
         private NPCDefinition _definition;
-        private bool _arrived;
+        private bool _canInteract;
 
         public event Action<int> OnCharacterArrived;
         public event Action OnCharacterLeave;
@@ -30,36 +31,45 @@ namespace Jam.Scripts.Npc
             CharacterArrived();
             OnCharacterArrived?.Invoke(definition.Id);
             _visual.sprite = definition.Visual;
+            _questPresenter.SetCharacter(definition.Id);
         }
+
+        private void Talk() => 
+            _talk.Talk(_definition.Dialogue, CharacterLeave);
 
         private void CharacterArrived()
         {
-            _arrived = true;
+            _canInteract = true;
             _pointerShower.Show();
         }
         
         private void CharacterLeave()
         {
-            _arrived = false;
             OnCharacterLeave?.Invoke();
         }
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!EventSystem.current.IsPointerOverGameObject() )
                 return;
             
-            if (_arrived)
+            if (_canInteract && !_talk.IsDialogueActive)
             {
+                _canInteract = false;
                 _audioService.PlaySound(Sounds.buttonClick.ToString());
                 _pointerShower.Hide();
-                _talk.Talk(_definition.Dialogue, CharacterLeave);
+                Talk();
             }
         }
 
         private void Awake()
         {
-            _camera = UnityEngine.Camera.main;
+            _ritualController.OnRitual += Talk;
+        }
+
+        private void OnDestroy()
+        {
+            _ritualController.OnRitual -= Talk;
         }
     }
 }

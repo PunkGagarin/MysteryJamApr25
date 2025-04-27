@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6521bb0669d46a399b01e9cb9cd38f7, type: 3}
   m_Name: "\u04214_RionGershe"
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Dairlian
+  <Name>k__BackingField: RionGershe
   <Id>k__BackingField: 4
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 9a805e5776b62f548a77ad7b78c060e3, type: 2}
+  <Quest>k__BackingField: {fileID: 11400000, guid: f4408bcc65db8224ebbd2350f4baf65b, type: 2}
   <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}

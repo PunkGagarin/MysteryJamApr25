@@ -19,3 +19,8 @@ MonoBehaviour:
   - Reagent
   - Atempts
   - Ritual
+  - RitualFailedByAge
+  - RitualFailedBySex
+  - RitualFailedByRace
+  - RitualFailedByDeath
+  - RitualFailedByExcludedReagent
