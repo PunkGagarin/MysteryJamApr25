@@ -1,0 +1,21 @@
+Ключ,Russian,English
+MAIN_MENU_TITLE,The Dead%Truth,The Dead%Truth
+MAIN_MENU_PLAY,Играть,Play
+MAIN_MENU_SETTINGS,Настройки,Settings
+MAIN_MENU_CREDITS,Титры,Credits
+SETTINGS_AUDIO,Звук,Audio
+SETTINGS_LANGUAGE,Язык,Language
+SETTINGS_MASTER,Мастер,Master
+SETTINGS_SFX,Звуки,SFX
+SETTINGS_MUSIC,Музыка,Music
+SETTINGS_LANG_RU,Русский,Russian
+SETTINGS_LANG_EN,Английский,English
+SETTINGS_CANCEL,Отмена,Cancel
+SETTINGS_APPLY,Ок,Ok
+CREDITS_TITLE,Господа создатели,Who created this
+CREDITS_CLOSE,Закрыть,Close
+CREDITS_DESC,"ГД - PunkGagarim%ГД - ccor3xx%Нарратив - Kudgine_Solis%Разработка - Fenneig%Разработка - Madgine_Solis%Нарратив, Арт - Leit%Арт - NyaKawaii","Game design - PunkGagarim%Game design - ccor3xx%Narrative - Kudgine_Solis%Developer - Fenneig%Developer - Madgine_Solis%Narrative, Art - Leit%Art - NyaKawaii"
+PAUSE_TITLE,Пауза,Paused
+PAUSE_SETTINGS,Настройки,Settings
+PAUSE_RETURN,Вернуться,Return
+PAUSE_TO_MAIN_MENU,В главное меню,To main menu

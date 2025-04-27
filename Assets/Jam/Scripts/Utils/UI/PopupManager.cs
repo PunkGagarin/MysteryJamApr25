@@ -17,6 +17,7 @@ namespace Jam.Scripts.Utils.UI
             foreach (T popup in _popups.OfType<T>())
             {
                 popup.Open(withPause);
+                popup.transform.SetAsLastSibling();
                 popup.SetCloseEvent(closeEvent);
                 return popup;
             }

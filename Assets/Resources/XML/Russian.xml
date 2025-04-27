@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Language LANG="Russian" ID="0">
+  <text key="MAIN_MENU_TITLE">The Dead%Truth</text>
+  <text key="MAIN_MENU_PLAY">Играть</text>
+  <text key="MAIN_MENU_SETTINGS">Настройки</text>
+  <text key="MAIN_MENU_CREDITS">Титры</text>
+  <text key="SETTINGS_AUDIO">Звук</text>
+  <text key="SETTINGS_LANGUAGE">Язык</text>
+  <text key="SETTINGS_MASTER">Мастер</text>
+  <text key="SETTINGS_SFX">Звуки</text>
+  <text key="SETTINGS_MUSIC">Музыка</text>
+  <text key="SETTINGS_LANG_RU">Русский</text>
+  <text key="SETTINGS_LANG_EN">Английский</text>
+  <text key="SETTINGS_CANCEL">Отмена</text>
+  <text key="SETTINGS_APPLY">Ок</text>
+  <text key="CREDITS_TITLE">Господа создатели</text>
+  <text key="CREDITS_CLOSE">Закрыть</text>
+  <text key="CREDITS_DESC">ГД - PunkGagarim%ГД - ccor3xx%Нарратив - Kudgine_Solis%Разработка - Fenneig%Разработка - Madgine_Solis%Нарратив, Арт - Leit%Арт - NyaKawaii</text>
+  <text key="PAUSE_TITLE">Пауза</text>
+  <text key="PAUSE_SETTINGS">Настройки</text>
+  <text key="PAUSE_RETURN">Вернуться</text>
+  <text key="PAUSE_TO_MAIN_MENU">В главное меню</text>
+</Language>

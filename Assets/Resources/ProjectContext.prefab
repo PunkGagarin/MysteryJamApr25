@@ -196,7 +196,7 @@ MonoBehaviour:
   - {fileID: 6909934021187158411}
   - {fileID: 6385491715541255639}
   - {fileID: 7740269642974872762}
-  - {fileID: 5742488449686105104}
+  - {fileID: 1280417090492751689}
   - {fileID: 924264764272417415}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
@@ -360,9 +360,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4174867029999537307}
-  - component: {fileID: 5742488449686105104}
+  - component: {fileID: 1280417090492751689}
   m_Layer: 0
-  m_Name: LanguageControllerInstaller
+  m_Name: LanguageServiceInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +383,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2548839604113478229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5742488449686105104
+--- !u!114 &1280417090492751689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,7 +395,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcc47c2997243e8b30bd1b84fdf5606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _languageControllerPrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054, type: 3}
+  languageServicePrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054, type: 3}
+  _localizationTextAssets:
+  - {fileID: 4900000, guid: 1c335648bd6a04a37a895920f9a52f16, type: 3}
+  - {fileID: 4900000, guid: 527750bd624764215bce0584cc6c7bad, type: 3}
 --- !u!1 &8458801676252858372
 GameObject:
   m_ObjectHideFlags: 0

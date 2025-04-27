@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 542615471822987839}
   - component: {fileID: 5303164530386132941}
   m_Layer: 0
-  m_Name: LanguageController
+  m_Name: LanguageService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLanguage: 1
+  _defaultFont: {fileID: 11400000, guid: ed07c18ad62cc4165a6eaf4245bd892d, type: 2}

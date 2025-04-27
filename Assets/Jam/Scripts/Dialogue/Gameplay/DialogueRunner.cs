@@ -18,7 +18,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
     {
         [SerializeField, StringEvent] private string _ritualEvent;
         [SerializeField] private DialogueView _dialogueView;
-        [Inject] private LanguageController _languageController;
+        [Inject] private LanguageService _languageService;
         [Inject] private GameEvents _gameEvents;
         [Inject] private RitualController _ritualController;
 
@@ -116,7 +116,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
                 {
                     if (string.Equals(dataName.CharacterName
                             .Find(text => 
-                                text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, "Ghost", StringComparison.InvariantCultureIgnoreCase))
+                                text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType, "Ghost", StringComparison.InvariantCultureIgnoreCase))
                         
                         _isGhostTalking = true;
                 }
@@ -125,11 +125,11 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     if (_currentDialogueNodeData.SkipContinue)
                     {
                         void OnUnityAction() => CheckNodeType(GetNextNode(_currentDialogueNodeData));
-                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking,OnUnityAction);
+                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType, _isGhostTalking,OnUnityAction);
                     }
                     else
                     {
-                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking, ShowButtons);
+                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType, _isGhostTalking, ShowButtons);
                     }
                     
                     if (_isGhostTalking)
@@ -185,7 +185,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
             void OnUnityAction() => CheckNodeType(GetNextNode(choiceNode));
 
             dialogueButtonContainer.ChoiceStateType = choiceNode.ChoiceStateType.Value;
-            dialogueButtonContainer.Text = choiceNode.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType;
+            dialogueButtonContainer.Text = choiceNode.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType;
             dialogueButtonContainer.UnityAction = OnUnityAction;
             dialogueButtonContainer.ConditionCheck = checkBranch;
 
