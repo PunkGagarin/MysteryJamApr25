@@ -15,4 +15,5 @@ MonoBehaviour:
   <Name>k__BackingField: Dairlian
   <Id>k__BackingField: 3
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 90af1d2779c7cce43b74ae9d2d0cca9f, type: 2}
+  <Quest>k__BackingField: {fileID: 11400000, guid: 214b02496d798f148a3729303daeb255, type: 2}
   <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}

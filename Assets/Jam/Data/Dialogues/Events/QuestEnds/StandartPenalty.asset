@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b4eab81552434ebfba0be414d21cfb, type: 3}
-  m_Name: Random Npc Repository
+  m_Script: {fileID: 11500000, guid: ddb6dc28cb344eeb8e79c9e18e30bec7, type: 3}
+  m_Name: StandartPenalty
   m_EditorClassIdentifier: 
-  <Definitions>k__BackingField:
-  - {fileID: 11400000, guid: 0ecce3cfc3c118243aa6ec5da5891b0f, type: 2}
+  _moneyPenalty: 0
+  _reputationPenalty: 5

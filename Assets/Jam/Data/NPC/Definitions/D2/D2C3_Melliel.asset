@@ -15,4 +15,5 @@ MonoBehaviour:
   <Name>k__BackingField: Ferra Fatalle
   <Id>k__BackingField: 8
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 08aad9447165bad44a45c9b2e91dc658, type: 2}
+  <Quest>k__BackingField: {fileID: 11400000, guid: 4cbdd3c97905ff64992bbd35361e95f3, type: 2}
   <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}

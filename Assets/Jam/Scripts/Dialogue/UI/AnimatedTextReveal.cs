@@ -73,6 +73,30 @@ namespace Jam.Scripts.Dialogue.UI
             // Loop until the entire text has been revealed.
             while (!fullyRevealed)
             {
+                if (_fastFinish)
+                {
+                    // Форсим весь текст сразу полностью видимым
+                    for (int i = 0; i < totalCharacters; i++)
+                    {
+                        if (!textInfo.characterInfo[i].isVisible)
+                            continue;
+
+                        int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
+                        newVertexColors = textInfo.meshInfo[materialIndex].colors32;
+                        int vertexIndex = textInfo.characterInfo[i].vertexIndex;
+
+                        // Устанавливаем альфу в 255 для всех вершин символа
+                        newVertexColors[vertexIndex + 0].a = 255;
+                        newVertexColors[vertexIndex + 1].a = 255;
+                        newVertexColors[vertexIndex + 2].a = 255;
+                        newVertexColors[vertexIndex + 3].a = 255;
+                    }
+
+                    textMesh.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+                    fullyRevealed = true;
+                    break;
+                }
+                
                 // Determines how much each character fades per update cycle.
                 byte fadeAmount = (byte)Mathf.Max(1, 255 / characterSpread);
 
@@ -108,9 +132,6 @@ namespace Jam.Scripts.Dialogue.UI
                 // Increase the number of characters that are being revealed.
                 if (visibleCharacters < totalCharacters)
                     visibleCharacters++;
-
-                if (_fastFinish)
-                    visibleCharacters = totalCharacters;
 
                 // Determine if all characters are fully visible.
                 fullyRevealed = visibleCharacters >= totalCharacters && newVertexColors != null &&

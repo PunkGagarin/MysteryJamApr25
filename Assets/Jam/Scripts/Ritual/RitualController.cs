@@ -35,6 +35,11 @@ namespace Jam.Scripts.Ritual
         private Quest _currentQuest;
         public event Action OnRitual;
         public event ExcludedReagentsFound OnExcludedReagentsFound;
+        public bool RitualFailedByExcludedReagents { get; private set; }
+        public bool RitualFailedByMissingSexReagent { get; private set; }
+        public bool RitualFailedByMissingAgeReagent { get; private set; }
+        public bool RitualFailedByMissingRaceReagent { get; private set; }
+        public bool RitualFailedByMissingDeathReagent { get; private set; }
 
         public int Attempt { get; private set; }
 
@@ -79,6 +84,11 @@ namespace Jam.Scripts.Ritual
         {
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
+            RitualFailedByExcludedReagents = false;
+            RitualFailedByMissingSexReagent = false;
+            RitualFailedByMissingAgeReagent = false;
+            RitualFailedByMissingRaceReagent = false;
+            RitualFailedByMissingDeathReagent = false;
 
             List<ReagentDefinition> selectedComponents =
                 _reagentRooms.Where(component => !component.IsFree).Select(component => component.ReagentInside).ToList();
@@ -111,6 +121,7 @@ namespace Jam.Scripts.Ritual
         
         private bool CheckRitualState(List<ReagentDefinition> selectedComponents)
         {
+            
             if (!CheckForDeathReason(selectedComponents)) 
                 return false;
             
@@ -123,32 +134,55 @@ namespace Jam.Scripts.Ritual
             return CheckReagentsMatches(selectedComponents);
         }
 
-        private bool CheckReagentsMatches(List<ReagentDefinition> selectedComponents) =>
-            CheckForReagents(
-                selectedComponents,
-                _currentQuest.AgeType,
-                reagent => reagent.AgeType,
-                AgeType.None,
-                "age")
-            && CheckForReagents(
-                selectedComponents,
-                _currentQuest.SexType,
-                reagent => reagent.SexType,
-                SexType.None,
-                "sex")
-            && CheckForReagents(
-                selectedComponents,
-                _currentQuest.RaceType,
-                reagent => reagent.RaceType,
-                RaceType.None,
-                "race")
-            && CheckForReagents(
-                selectedComponents,
-                _currentQuest.DeathType,
-                reagent => reagent.DeathType,
-                DeathType.None,
-                "death");
+        private bool CheckReagentsMatches(List<ReagentDefinition> selectedComponents)
+        {
+            bool isRitualComplete = true;
+            if (!CheckForReagents(
+                    selectedComponents,
+                    _currentQuest.AgeType,
+                    reagent => reagent.AgeType,
+                    AgeType.None,
+                    "age"))
+            {
+                isRitualComplete = false;
+                RitualFailedByMissingAgeReagent = true;
+            }
 
+            if (!CheckForReagents(
+                    selectedComponents,
+                    _currentQuest.SexType,
+                    reagent => reagent.SexType,
+                    SexType.None,
+                    "sex"))
+            {
+                isRitualComplete = false;
+                RitualFailedByMissingSexReagent = true;
+            }
+
+            if (!CheckForReagents(
+                    selectedComponents,
+                    _currentQuest.RaceType,
+                    reagent => reagent.RaceType,
+                    RaceType.None,
+                    "race"))
+            {
+                isRitualComplete = false;
+                RitualFailedByMissingRaceReagent = true;
+            }
+
+            if (!CheckForReagents(
+                    selectedComponents,
+                    _currentQuest.DeathType,
+                    reagent => reagent.DeathType,
+                    DeathType.None,
+                    "death"))
+            {
+                isRitualComplete = false;
+                RitualFailedByMissingDeathReagent = true;
+            }
+
+            return isRitualComplete;
+        }
         private bool CheckForReagents<T>(
             List<ReagentDefinition> reagents,
             T currentQuestValue,
@@ -184,6 +218,7 @@ namespace Jam.Scripts.Ritual
                         excludedReagents.Add(new ReagentExclusion (selectedReagents[i].Id, selectedReagents[j].Id));
                         Debug.Log($"Component {selectedReagents[i].Name} have excluded component: {selectedReagents[j].Name}");
                         haveExcludedReagents = true;
+                        RitualFailedByExcludedReagents = true;
                     }
                 }
             }

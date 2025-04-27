@@ -8,7 +8,7 @@ public class ReagentUI : MonoBehaviour
     [SerializeField] private TMP_Text _name;
     [SerializeField] private Sprite _undefinedSprite;
     [SerializeField] private List<Image> _conflictImages;
-
+    
     public void InitData(string reagentName, List<Sprite> conflictSprites)
     {
         _name.text = reagentName;

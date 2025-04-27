@@ -23,6 +23,11 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _reagentEvent;
         [SerializeField, StringEvent] private string _attemptsEvent;
         [SerializeField, StringEvent] private string _ritualEvent;
+        [SerializeField, StringEvent] private string _ritualFailedByAgeEvent;
+        [SerializeField, StringEvent] private string _ritualFailedBySexEvent;
+        [SerializeField, StringEvent] private string _ritualFailedByRaceEvent;
+        [SerializeField, StringEvent] private string _ritualFailedByDeathEvent;
+        [SerializeField, StringEvent] private string _ritualFailedByExcludedEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
@@ -65,9 +70,29 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _questEvent, CheckQuest },
                 { _attemptsEvent, CheckAttempts },
                 { _moneyEvent, CheckMoney },
-                { _ritualEvent, CheckRitual }
+                { _ritualEvent, CheckRitual },
+                { _ritualFailedByAgeEvent, CheckRitualFailedByAge },
+                { _ritualFailedBySexEvent, CheckRitualFailedBySex },
+                { _ritualFailedByRaceEvent, CheckRitualFailedByRace },
+                { _ritualFailedByDeathEvent, CheckRitualFailedByDeath },
+                { _ritualFailedByExcludedEvent, CheckRitualFailedByExcludedReagent },
             };
         }
+
+        private bool CheckRitualFailedByExcludedReagent(float value, StringEventConditionType conditionType) =>
+            _ritualController.RitualFailedByExcludedReagents;
+        
+        private bool CheckRitualFailedByDeath(float value, StringEventConditionType conditionType) => 
+            _ritualController.RitualFailedByMissingDeathReagent;
+        
+        private bool CheckRitualFailedByRace(float value, StringEventConditionType conditionType) => 
+            _ritualController.RitualFailedByMissingRaceReagent;
+        
+        private bool CheckRitualFailedBySex(float value, StringEventConditionType conditionType) => 
+            _ritualController.RitualFailedByMissingSexReagent;
+        
+        private bool CheckRitualFailedByAge(float value, StringEventConditionType conditionType) => 
+            _ritualController.RitualFailedByMissingAgeReagent;
 
         private bool CheckRitual(float _, StringEventConditionType __) => 
             _questPresenter.IsQuestComplete();
@@ -102,10 +127,10 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             switch (modifierType)
             {
                 case StringEventModifierType.Add:
-                    _playerStats.AddReputation(value == 0 ? _inventoryConfig.RewardReputationForQuestCompletion : (int)value);
+                    _playerStats.AddReputation((int)value);
                     break;
                 case StringEventModifierType.Remove:
-                    _playerStats.RemoveReputation(value == 0 ? _inventoryConfig.PenaltyReputationForQuestFail : (int)value);
+                    _playerStats.RemoveReputation((int)value);
                     break;   
                 case StringEventModifierType.SetTrue:
                 case StringEventModifierType.SetFalse:
@@ -121,10 +146,9 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             switch (modifierType)
             {
                 case StringEventModifierType.Add:
-                    _playerStats.AddMoney(value == 0 ? _inventoryConfig.RewardMoneyForQuestCompletion : (int)value);
+                    _playerStats.AddMoney((int)value);
                     break;
                 case StringEventModifierType.Remove:
-                    _playerStats.RemoveMoney(value == 0 ? _inventoryConfig.PenaltyMoneyForQuestFail : (int)value);
                     _playerStats.RemoveMoney((int)value);
                     break;   
                 case StringEventModifierType.SetTrue:
@@ -137,7 +161,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
 
         private void HandleQuest(float value, StringEventModifierType modifierType)
         {
-            Debug.Log($"Player quest modified by {value} with modifier {modifierType}");
+            //Debug.Log($"Player quest modified by {value} with modifier {modifierType}");
             switch (modifierType)
             {
                 case StringEventModifierType.SetTrue:
@@ -147,7 +171,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                     _questPresenter.SetIncomplete();
                     break;
                 case StringEventModifierType.Add:
-                    _questPresenter.AddQuest((int)value);
+                    _questPresenter.AddQuest();
                     break;
                 case StringEventModifierType.Remove:
                     _questPresenter.RemoveQuest();
@@ -176,7 +200,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         
         private bool CheckQuest(float questId, StringEventConditionType conditionType)
         {
-            if (!_questPresenter.HaveQuest((int)questId))
+            if (!_questPresenter.HaveQuest())
                 return false;
             
             switch (conditionType)
@@ -205,6 +229,38 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 {
                     foreach (var reagentDefinition in reagentDefinitions) 
                         _inventorySystem.AddReagent(reagentDefinition.Id, _inventoryConfig.MaxReagentAmount);
+                }
+            }
+
+            if (itemDialogueEventSo is RewardEvent rewardEvent)
+            {
+                rewardEvent.OnReward += AddRewards;
+                rewardEvent.RunEvent();
+                rewardEvent.OnReward -= AddRewards;
+
+                void AddRewards(Reward reward)
+                {
+                    _playerStats.AddMoney(reward.MoneyReward);
+                    _playerStats.AddReputation(reward.ReputationReward);
+
+                    if (reward.ReagentsReward == null) 
+                        return;
+                    
+                    foreach (var reagent in reward.ReagentsReward)
+                        _inventorySystem.AddReagent(reagent.Id, _inventoryConfig.MaxReagentAmount);
+                }
+            }
+
+            if (itemDialogueEventSo is PenaltyEvent penaltyEvent)
+            {
+                penaltyEvent.OnPenalty += AddPenalty;
+                penaltyEvent.RunEvent();
+                penaltyEvent.OnPenalty -= AddPenalty;
+
+                void AddPenalty(PenaltyEvent.Penalty reward)
+                {
+                    _playerStats.RemoveMoney(reward.MoneyPenalty);
+                    _playerStats.RemoveReputation(reward.ReputationPenalty);
                 }
             }
         }

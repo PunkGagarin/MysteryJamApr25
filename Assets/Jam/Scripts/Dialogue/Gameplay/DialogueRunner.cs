@@ -16,11 +16,9 @@ namespace Jam.Scripts.Dialogue.Gameplay
 {
     public class DialogueRunner : MonoBehaviour
     {
-        [SerializeField, StringEvent] private string _ritualEvent;
         [SerializeField] private DialogueView _dialogueView;
         [Inject] private LanguageController _languageController;
         [Inject] private GameEvents _gameEvents;
-        [Inject] private RitualController _ritualController;
 
         private DialogueContainerSO _dialogueContainer;
         
@@ -31,10 +29,9 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private int _currentIndex = 0;
         private bool _isDialogueActive = false;
         private bool _isGhostTalking;
-        private BranchData _waitingBranchData;
         private Action _leaveEvent;
         
-        public bool IsBranchWaiting => _waitingBranchData != null;
+        public bool IsDialogueActive => _isDialogueActive;
 
         public void StartDialogue(DialogueContainerSO dialogueContainer, Action closeEvent = null)
         {
@@ -117,12 +114,11 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     if (string.Equals(dataName.CharacterName
                             .Find(text => 
                                 text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, "Ghost", StringComparison.InvariantCultureIgnoreCase))
-                        
                         _isGhostTalking = true;
                 }
                 else if (_dialogueNodes[i] is DialogueDataText dataText)
                 {
-                    if (_currentDialogueNodeData.SkipContinue)
+                    if (i == _dialogueNodes.Count - 1 && _currentDialogueNodeData.SkipContinue)
                     {
                         void OnUnityAction() => CheckNodeType(GetNextNode(_currentDialogueNodeData));
                         _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageController.CurrentLanguage).LanguageGenericType, _isGhostTalking,OnUnityAction);
@@ -205,11 +201,6 @@ namespace Jam.Scripts.Dialogue.Gameplay
         
         private void RunBranchNode(BranchData nodeData)
         {
-            if (nodeData.EventDataStringConditions.Any(item => item.StringEventText.Value == _ritualEvent))
-            {
-                _waitingBranchData = nodeData;
-                return;
-            }
             bool checkBranch = nodeData.EventDataStringConditions.All(item => _gameEvents.DialogueConditionEvents(item.StringEventText.Value, item.StringEventConditionType.Value, item.Number.Value));
 
             string nextNode = checkBranch ? nodeData.TrueGuidNode : nodeData.FalseGuidNode;
@@ -222,7 +213,6 @@ namespace Jam.Scripts.Dialogue.Gameplay
             {
                 case EndNodeType.End:
                     _isDialogueActive = false;
-                    _dialogueView.Close();
                     break;
                 case EndNodeType.Repeat:
                     CheckNodeType(GetNodeByGuid(_currentDialogueNodeData.NodeGuid));
@@ -236,33 +226,6 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     _leaveEvent?.Invoke();
                     break;
             }
-        }
-
-        private void ReactOnRitual()
-        {
-            if (!IsBranchWaiting)
-                return;
-            
-            RunWaitingBranchNode();
-        }
-
-        private void RunWaitingBranchNode()
-        {
-            bool checkBranch = _waitingBranchData.EventDataStringConditions.All(item => _gameEvents.DialogueConditionEvents(item.StringEventText.Value, item.StringEventConditionType.Value, item.Number.Value));
-
-            string nextNode = checkBranch ? _waitingBranchData.TrueGuidNode : _waitingBranchData.FalseGuidNode;
-            _waitingBranchData = null;
-            CheckNodeType(GetNodeByGuid(nextNode));
-        }
-
-        private void Awake()
-        {
-            _ritualController.OnRitual += ReactOnRitual;
-        }
-
-        private void OnDestroy()
-        {
-            _ritualController.OnRitual -= ReactOnRitual;
         }
     }
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   <Name>k__BackingField: Elizabeth Arm
   <Id>k__BackingField: 5
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 4435f00af16e97d4987dd0557714db79, type: 2}
+  <Quest>k__BackingField: {fileID: 11400000, guid: 51ec080c39ea44247b898e374d9441cb, type: 2}
   <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}
