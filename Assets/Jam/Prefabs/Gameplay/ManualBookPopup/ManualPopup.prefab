@@ -191,7 +191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftPageHolder: {fileID: 2846073139899081224}
   _rightPageHolder: {fileID: 5070037979035393526}
-  _closeButton: {fileID: 0}
   _backgroundArea: {fileID: 3923912774413809852}
   _prevPageButton: {fileID: 2931958120311363691}
   _nextPageButton: {fileID: 3217906457547276873}

@@ -22,4 +22,7 @@
   <text key="PAUSE_TO_MAIN_MENU">To main menu</text>
   <text key="RITUAL_START">Start ritual</text>
   <text key="RITUAL_CLEAR">Clear table</text>
+  <text key="MANUAL_PAGE_0_TITLE">What is this book about?</text>
+  <text key="MANUAL_PAGE_0_DESC">Inside is a description of the recipes for mixing ingredients for the ghost summoning ritual, conflicts that may arise during the process, and how the tools work.</text>
+  <text key="MANUAL_PAGE_0_AGE">Age</text>
 </Language>

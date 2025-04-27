@@ -43,10 +43,9 @@ namespace Jam.Scripts.Camera
 
         private void MoveLeft()
         {
-            if (_popupManager.CurrentPopup is ManualPopup)
+            if (_popupManager.IsPopupOpen(out ManualPopup popup))
             {
-                _popupManager.CurrentPopup.Close();
-                return;
+                popup.Close();
             }
             
             _position--;

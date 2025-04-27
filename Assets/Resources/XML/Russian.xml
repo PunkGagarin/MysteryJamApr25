@@ -22,4 +22,7 @@
   <text key="PAUSE_TO_MAIN_MENU">В главное меню</text>
   <text key="RITUAL_START">Начать ритуал</text>
   <text key="RITUAL_CLEAR">Очистить стол</text>
+  <text key="MANUAL_PAGE_0_TITLE">Что это за книга?</text>
+  <text key="MANUAL_PAGE_0_DESC">Внутри находится описание рецептов смешивания ингредиентов для ритуала призыва призрака, конфликты, которые могут возникать в процессе и то, как работают интсрументы</text>
+  <text key="MANUAL_PAGE_0_AGE">Пол</text>
 </Language>
