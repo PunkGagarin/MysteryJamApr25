@@ -26,14 +26,19 @@ namespace Jam.Scripts.Manual
         [Inject] private ReagentRepository _reagentRepository;
         [Inject] private AudioService _audioService;
         [Inject] private InputService _inputService;
+        [Inject] private ManualPagesFactory _manualPagesFactory;
 
         private List<Page> _pages;
         private int _currentPageIndex = 0;
 
         private void Awake()
         {
-            _rightBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
-            _leftBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
+            _rightBookmarks.ForEach(bookmark =>
+                bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark))
+            );
+            _leftBookmarks.ForEach(bookmark =>
+                bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark))
+            );
             _backgroundArea.onClick.AddListener(Close);
             _prevPageButton.onClick.AddListener(PrevPageClick);
             _nextPageButton.onClick.AddListener(NextPageClick);
@@ -65,7 +70,7 @@ namespace Jam.Scripts.Manual
             _pages = new List<Page>();
             for (int i = 0; i < _pagesRepository.Definitions.Count; i++)
             {
-                Page pageObject = Instantiate(_pagesRepository.Definitions[i].Page, i % 2 == 0 ? _leftPageHolder : _rightPageHolder);
+                Page pageObject = _manualPagesFactory.Create(_pagesRepository.Definitions[i], i % 2 == 0 ? _leftPageHolder : _rightPageHolder);
                 pageObject.gameObject.SetActive(false);
                 _pages.Add(pageObject);
             }

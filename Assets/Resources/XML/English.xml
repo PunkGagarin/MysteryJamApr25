@@ -24,5 +24,13 @@
   <text key="RITUAL_CLEAR">Clear table</text>
   <text key="MANUAL_PAGE_0_TITLE">What is this book about?</text>
   <text key="MANUAL_PAGE_0_DESC">Inside is a description of the recipes for mixing ingredients for the ghost summoning ritual, conflicts that may arise during the process, and how the tools work.</text>
-  <text key="MANUAL_PAGE_0_AGE">Age</text>
+  <text key="MANUAL_PAGE_0_SEX">Sex</text>
+  <text key="MANUAL_PAGE_1_AGE">Age</text>
+  <text key="MANUAL_PAGE_1_RASE">Race</text>
+  <text key="MANUAL_PAGE_1_MIRROR_TITLE">Mirror</text>
+  <text key="MANUAL_PAGE_1_MIRROR_DESC">This tool allows you to detect conflicts in reagents. But use with caution. The mirror cannot withstand all the otherworldly power</text>
+  <text key="MANUAL_PAGE_1_MAGNIFIER_TITLE">Magnifier</text>
+  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">Obviously something needs to be brought closer, but I don't know what.</text>
+  <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Pendulum</text>
+  <text key="MANUAL_PAGE_2_PENDULUM_DESC">Swing the pendulum in time with your pulse. Misses worsen the connection with souls</text>
 </Language>

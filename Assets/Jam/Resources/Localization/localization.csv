@@ -23,4 +23,12 @@ RITUAL_START,Начать ритуал,Start ritual
 RITUAL_CLEAR,Очистить стол,Clear table
 MANUAL_PAGE_0_TITLE,Что это за книга?,What is this book about?
 MANUAL_PAGE_0_DESC,"Внутри находится описание рецептов смешивания ингредиентов для ритуала призыва призрака, конфликты, которые могут возникать в процессе и то, как работают интсрументы","Inside is a description of the recipes for mixing ingredients for the ghost summoning ritual, conflicts that may arise during the process, and how the tools work."
-MANUAL_PAGE_0_AGE,Пол,Age
+MANUAL_PAGE_0_SEX,Пол,Sex
+MANUAL_PAGE_1_AGE,Возраст,Age
+MANUAL_PAGE_1_RASE,Раса,Race
+MANUAL_PAGE_1_MIRROR_TITLE,Зеркало,Mirror
+MANUAL_PAGE_1_MIRROR_DESC,Этот инструмент позволяет вам обнаружить конфликты в реагентах. Но используйте с осторожностью. Зеркало не может выдержать всей потусторонней мощи,This tool allows you to detect conflicts in reagents. But use with caution. The mirror cannot withstand all the otherworldly power
+MANUAL_PAGE_1_MAGNIFIER_TITLE,Лупа,Magnifier
+MANUAL_PAGE_1_MAGNIFIER_DESC,"Очевидно приближать что то, но я не знаю что ","Obviously something needs to be brought closer, but I don't know what."
+MANUAL_PAGE_2_PENDULUM_TITLE,Маятник,Pendulum
+MANUAL_PAGE_2_PENDULUM_DESC,Раскачивайте маятник в такт пульсу. Промахи ухудшают связь с душами,Swing the pendulum in time with your pulse. Misses worsen the connection with souls
