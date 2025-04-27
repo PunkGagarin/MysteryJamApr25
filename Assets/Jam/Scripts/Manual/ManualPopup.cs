@@ -15,7 +15,6 @@ namespace Jam.Scripts.Manual
         [SerializeField] private Transform _leftPageHolder;
         [SerializeField] private Transform _rightPageHolder;
         [Header("Navigation buttons")]
-        [SerializeField] private Button _closeButton;
         [SerializeField] private Button _backgroundArea;
         [SerializeField] private Button _prevPageButton;
         [SerializeField] private Button _nextPageButton;
@@ -35,7 +34,6 @@ namespace Jam.Scripts.Manual
         {
             _rightBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
             _leftBookmarks.ForEach(bookmark => bookmark.OnClick.AddListener(() => OnBookmarkClick(bookmark)));
-            _closeButton.onClick.AddListener(Close);
             _backgroundArea.onClick.AddListener(Close);
             _prevPageButton.onClick.AddListener(PrevPageClick);
             _nextPageButton.onClick.AddListener(NextPageClick);
@@ -175,7 +173,6 @@ namespace Jam.Scripts.Manual
 
         private void OnDestroy()
         {
-            _closeButton.onClick.RemoveListener(Close);
             _backgroundArea.onClick.RemoveListener(Close);
             _prevPageButton.onClick.RemoveListener(PrevPageClick);
             _nextPageButton.onClick.RemoveListener(NextPageClick);

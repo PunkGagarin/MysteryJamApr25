@@ -9,6 +9,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
     public class ToLocalize : MonoBehaviour
     {
         [SerializeField] private string _key;
+        [SerializeField] private TMP_FontAsset _fontAsset; 
         private RectTransform _rectTransform;
         private TextMeshProUGUI _tmpText;
 
@@ -37,6 +38,8 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private void SwitchText()
         {
             _tmpText.text = _localization.GetText(_key).Replace("\\n", "\n");
+
+            if (_fontAsset != null) _tmpText.font = _fontAsset;
 
             if (_tmpText.gameObject.transform.childCount > 0)
             {

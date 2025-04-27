@@ -2,6 +2,8 @@ using System;
 using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Input;
+using Jam.Scripts.Manual;
+using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -17,7 +19,8 @@ namespace Jam.Scripts.Camera
 
         [Inject] private AudioService _audioService;
         [Inject] private InputService _inputService;
-
+        [Inject] private PopupManager _popupManager;
+        
         private CameraPosition _position;
         
         private void Start()
@@ -40,6 +43,12 @@ namespace Jam.Scripts.Camera
 
         private void MoveLeft()
         {
+            if (_popupManager.CurrentPopup is ManualPopup)
+            {
+                _popupManager.CurrentPopup.Close();
+                return;
+            }
+            
             _position--;
 
             if (_position < CameraPosition.Left)

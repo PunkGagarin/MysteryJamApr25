@@ -20,4 +20,6 @@
   <text key="PAUSE_SETTINGS">Настройки</text>
   <text key="PAUSE_RETURN">Вернуться</text>
   <text key="PAUSE_TO_MAIN_MENU">В главное меню</text>
+  <text key="RITUAL_START">Начать ритуал</text>
+  <text key="RITUAL_CLEAR">Очистить стол</text>
 </Language>

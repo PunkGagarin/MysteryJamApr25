@@ -12,17 +12,22 @@ namespace Jam.Scripts.Utils.UI
         [Inject] private PopupFactory _factory;
         private HashSet<Popup> _popups = new();
         
+        public Popup CurrentPopup { get; private set; }
+        
         public T OpenPopup<T>(Action closeEvent = null, bool withPause = false) where T : Popup
         {
+            closeEvent += () => CurrentPopup = null;
             foreach (T popup in _popups.OfType<T>())
             {
                 popup.Open(withPause);
                 popup.transform.SetAsLastSibling();
                 popup.SetCloseEvent(closeEvent);
+                CurrentPopup = popup;
                 return popup;
             }
 
-            return AssignNewPopup<T>(closeEvent, withPause);
+            CurrentPopup = AssignNewPopup<T>(closeEvent, withPause); 
+            return (T) CurrentPopup;
         }
 
         public void ResetPopup<T>() where T : Popup
@@ -41,5 +46,6 @@ namespace Jam.Scripts.Utils.UI
             _popups.Add(newPopup);
             return newPopup; 
         }
+        
     }
 }

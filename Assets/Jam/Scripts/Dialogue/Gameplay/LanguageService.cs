@@ -1,6 +1,5 @@
 ﻿using System;
 using Jam.Scripts.Dialogue.Runtime.Enums;
-using TMPro;
 using UnityEngine;
 
 namespace Jam.Scripts.Dialogue.Gameplay

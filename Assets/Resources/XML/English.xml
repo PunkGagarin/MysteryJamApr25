@@ -20,4 +20,6 @@
   <text key="PAUSE_SETTINGS">Settings</text>
   <text key="PAUSE_RETURN">Return</text>
   <text key="PAUSE_TO_MAIN_MENU">To main menu</text>
+  <text key="RITUAL_START">Start ritual</text>
+  <text key="RITUAL_CLEAR">Clear table</text>
 </Language>

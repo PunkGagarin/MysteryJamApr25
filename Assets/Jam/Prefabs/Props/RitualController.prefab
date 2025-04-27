@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8938754610904048364}
   - component: {fileID: 6304171268532641576}
   - component: {fileID: 3613369745697690953}
+  - component: {fileID: 6524289297425439186}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -256,6 +257,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6524289297425439186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754509104524343401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb3dafd9b6a444338a55c546820428b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: RITUAL_CLEAR
+  _fontAsset: {fileID: 0}
 --- !u!1 &5739835375706592644
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,8 +367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.5734, y: 0.721}
-  m_SizeDelta: {x: 185.2186, y: 49.8036}
+  m_AnchoredPosition: {x: 4.3739977, y: 0.721}
+  m_SizeDelta: {x: 282.8153, y: 49.8036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2816923986691958915
 CanvasRenderer:
@@ -473,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6182, y: -0.6471}
-  m_SizeDelta: {x: 185.2186, y: 49.8036}
+  m_AnchoredPosition: {x: 4.4424043, y: -0.6471}
+  m_SizeDelta: {x: 282.8153, y: 49.8036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &574236888401116953
 CanvasRenderer:
@@ -569,6 +584,7 @@ GameObject:
   - component: {fileID: 6849157520284419067}
   - component: {fileID: 1565612852044360423}
   - component: {fileID: 4222958023190616321}
+  - component: {fileID: 1425076314919802644}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -632,7 +648,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -692,3 +708,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1425076314919802644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273400355181559261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb3dafd9b6a444338a55c546820428b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _key: RITUAL_START
+  _fontAsset: {fileID: 0}

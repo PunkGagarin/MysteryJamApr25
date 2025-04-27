@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_AUDIO
+  _fontAsset: {fileID: 0}
 --- !u!1 &2471049270430421802
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_MUSIC
+  _fontAsset: {fileID: 0}
 --- !u!1 &3353484907038026955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_LANG_EN
+  _fontAsset: {fileID: 0}
 --- !u!1 &3857329024599236112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_CANCEL
+  _fontAsset: {fileID: 0}
 --- !u!1 &4795237728584875478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_LANG_RU
+  _fontAsset: {fileID: 0}
 --- !u!1 &6348624338709838210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_LANGUAGE
+  _fontAsset: {fileID: 0}
 --- !u!1 &8236856169859277380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,6 +2726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_MASTER
+  _fontAsset: {fileID: 0}
 --- !u!1 &8324461354087315797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,6 +2875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_APPLY
+  _fontAsset: {fileID: 0}
 --- !u!1 &8452354539033481197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,7 +2938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3114,6 +3122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: SETTINGS_SFX
+  _fontAsset: {fileID: 0}
 --- !u!1 &8544620100156304535
 GameObject:
   m_ObjectHideFlags: 0

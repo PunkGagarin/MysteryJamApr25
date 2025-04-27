@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: PAUSE_TO_MAIN_MENU
+  _fontAsset: {fileID: 0}
 --- !u!1 &1255383038207760329
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6003615964676239236}
   - component: {fileID: 1243619856826952552}
+  - component: {fileID: 4889215881760279431}
   m_Layer: 5
   m_Name: PausePopup
   m_TagString: Untagged
@@ -326,6 +328,29 @@ MonoBehaviour:
   _settingsButton: {fileID: 5098774621401179334}
   _mainMenuButton: {fileID: 8145972018097945492}
   _playButton: {fileID: 6392255014153026835}
+--- !u!223 &4889215881760279431
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822797994686687259}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 55
+  m_TargetDisplay: 0
 --- !u!1 &3837165501232801414
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: PAUSE_SETTINGS
+  _fontAsset: {fileID: 0}
 --- !u!1 &6079095779913336610
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: PAUSE_TITLE
+  _fontAsset: {fileID: 0}
 --- !u!1 &6490652207255060460
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,6 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: PAUSE_RETURN
+  _fontAsset: {fileID: 0}
 --- !u!1 &7091285775411585038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
