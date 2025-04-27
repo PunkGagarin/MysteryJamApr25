@@ -40,6 +40,7 @@ namespace Jam.Scripts.Ritual
         public bool RitualFailedByMissingAgeReagent { get; private set; }
         public bool RitualFailedByMissingRaceReagent { get; private set; }
         public bool RitualFailedByMissingDeathReagent { get; private set; }
+        public List<ReagentExclusion> ExcludedReagents { get; private set; }
 
         public int Attempt { get; private set; }
 
@@ -89,6 +90,7 @@ namespace Jam.Scripts.Ritual
             RitualFailedByMissingAgeReagent = false;
             RitualFailedByMissingRaceReagent = false;
             RitualFailedByMissingDeathReagent = false;
+            ExcludedReagents = new List<ReagentExclusion>();
 
             List<ReagentDefinition> selectedComponents =
                 _reagentRooms.Where(component => !component.IsFree).Select(component => component.ReagentInside).ToList();
@@ -205,7 +207,6 @@ namespace Jam.Scripts.Ritual
         private bool CheckForExcludedReagents(List<ReagentDefinition> selectedReagents, bool withSignal = true)
         {
             bool haveExcludedReagents = false; 
-            List<ReagentExclusion> excludedReagents = new ();
             for (int i = 0; i < selectedReagents.Count; i++)
             {
                 for (int j = 0; j < selectedReagents.Count; j++)
@@ -215,7 +216,7 @@ namespace Jam.Scripts.Ritual
                     
                     if (selectedReagents[i].ExcludedReagents.Contains(selectedReagents[j]))
                     {
-                        excludedReagents.Add(new ReagentExclusion (selectedReagents[i].Id, selectedReagents[j].Id));
+                        ExcludedReagents.Add(new ReagentExclusion (selectedReagents[i].Id, selectedReagents[j].Id));
                         Debug.Log($"Component {selectedReagents[i].Name} have excluded component: {selectedReagents[j].Name}");
                         haveExcludedReagents = true;
                         RitualFailedByExcludedReagents = true;
@@ -224,7 +225,7 @@ namespace Jam.Scripts.Ritual
             }
 
             if (haveExcludedReagents && withSignal) 
-                OnExcludedReagentsFound?.Invoke(excludedReagents);
+                OnExcludedReagentsFound?.Invoke(ExcludedReagents);
 
             return haveExcludedReagents;
         }
