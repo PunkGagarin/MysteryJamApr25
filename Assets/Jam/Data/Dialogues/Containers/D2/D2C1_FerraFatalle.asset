@@ -365,12 +365,12 @@ MonoBehaviour:
     Position: {x: -341, y: 66}
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+    - DialogueEventSO: {fileID: 0}
   - NodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     Position: {x: 579, y: -1099}
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+    - DialogueEventSO: {fileID: 0}
   - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     Position: {x: 1143, y: -925}
     EventDataStringModifiers: []
