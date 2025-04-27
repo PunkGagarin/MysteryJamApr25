@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: R3_AFourArmedFriend
   m_EditorClassIdentifier: 
   <Name>k__BackingField: A four-armed friend
-  <Id>k__BackingField: 101
-  <SexType>k__BackingField: 2
-  <AgeType>k__BackingField: 2
-  <RaceType>k__BackingField: 2
+  <Id>k__BackingField: 103
+  <SexType>k__BackingField: 1
+  <AgeType>k__BackingField: 3
+  <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
