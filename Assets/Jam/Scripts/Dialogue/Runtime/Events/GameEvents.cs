@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.Dialogue.Runtime.Events.SO;
 using Jam.Scripts.GameplayData.Player;
@@ -79,8 +80,24 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
             };
         }
 
-        private bool CheckRitualFailedByExcludedReagent(float value, StringEventConditionType conditionType) =>
-            _ritualController.RitualFailedByExcludedReagents;
+        private bool CheckRitualFailedByExcludedReagent(float value, StringEventConditionType conditionType)
+        {
+            if (value == 0)
+                return _ritualController.RitualFailedByExcludedReagents;
+
+            var matchReagent = value.ToString(CultureInfo.InvariantCulture).Split(".");
+            int excludedReagentId1 = int.Parse(matchReagent[0]);
+            int excludedReagentId2 = int.Parse(matchReagent[1]);
+            
+            foreach (var excludedReagent in _ritualController.ExcludedReagents)
+            {
+                if ((excludedReagent.ReagentId == excludedReagentId1 || excludedReagent.ExcludedReagentId == excludedReagentId1) 
+                    && (excludedReagent.ReagentId == excludedReagentId2 || excludedReagent.ExcludedReagentId == excludedReagentId2))
+                    return true;
+            }
+
+            return false;
+        }
         
         private bool CheckRitualFailedByDeath(float value, StringEventConditionType conditionType) => 
             _ritualController.RitualFailedByMissingDeathReagent;
