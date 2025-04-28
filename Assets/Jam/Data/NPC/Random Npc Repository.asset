@@ -14,3 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Definitions>k__BackingField:
   - {fileID: 11400000, guid: 0ecce3cfc3c118243aa6ec5da5891b0f, type: 2}
+  - {fileID: 11400000, guid: bb7f0e69243e1014f9fb6a375608e61b, type: 2}
+  - {fileID: 11400000, guid: 1dca60ccb9100d04a82e1f2c7d840e7b, type: 2}
+  - {fileID: 11400000, guid: 48412f4b158b45f47aabf4aa4a0a3288, type: 2}
+  - {fileID: 11400000, guid: 2dff96fd5dc36874e807bb12603c0ea4, type: 2}
+  - {fileID: 11400000, guid: aaa3d0d94e2a91443966b644ac3b3e8b, type: 2}
+  - {fileID: 11400000, guid: 29762cd9a67284b4489ee1571c2d4b82, type: 2}
+  - {fileID: 11400000, guid: afea20d4efb439a4988f6ffbb8b16a76, type: 2}
+  - {fileID: 11400000, guid: b36d477bb08d7dc4aba49d7697b26fd1, type: 2}
+  - {fileID: 11400000, guid: 168d73abf63f4bd4090cd5d5f19ce445, type: 2}
+  - {fileID: 11400000, guid: 0bf1770de1dacf44da61e966c54d3f99, type: 2}
+  - {fileID: 11400000, guid: b854cbd1f3e15f84b83f030634c395cb, type: 2}
+  - {fileID: 11400000, guid: edaaed62e0dd12d4ab17f248630c27be, type: 2}
+  - {fileID: 11400000, guid: baec481f2fce17e439c7737684919f13, type: 2}
+  - {fileID: 11400000, guid: 50aa199a3da1d5641bd03ca3542eaf8d, type: 2}
+  - {fileID: 11400000, guid: d2322747ee83616489ad7679293250b9, type: 2}
+  - {fileID: 11400000, guid: 17ea509186dd7cd42bc1d0772a6cacd9, type: 2}
+  - {fileID: 11400000, guid: ff89cf8ee5287804898e354bd6c3c78a, type: 2}

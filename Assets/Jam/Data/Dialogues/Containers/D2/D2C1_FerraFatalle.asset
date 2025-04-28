@@ -89,13 +89,13 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
-  - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
-    BasePortGuid: Output
-    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    TargetPortGuid: Input
   - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     BasePortGuid: Output
     TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
+    TargetPortGuid: Input
+  - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
+    BasePortGuid: Output
+    TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     TargetPortGuid: Input
   - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
     BasePortGuid: Output

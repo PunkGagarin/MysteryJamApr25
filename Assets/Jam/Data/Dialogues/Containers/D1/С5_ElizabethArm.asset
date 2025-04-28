@@ -334,16 +334,6 @@ MonoBehaviour:
       StringEventModifierType:
         Value: 3
     ContainerDialogueEventSOs: []
-  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
-    Position: {x: 3091, y: -209}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Quest
-      Number:
-        Value: 5
-      StringEventModifierType:
-        Value: 4
-    ContainerDialogueEventSOs: []
   - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     Position: {x: 605, y: -1128}
     EventDataStringModifiers: []
@@ -354,6 +344,16 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    Position: {x: 3091, y: -209}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 5
+      StringEventModifierType:
+        Value: 4
+    ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     Position: {x: 3734, y: 37}
