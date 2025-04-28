@@ -5,7 +5,7 @@ using System.Xml.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace elshtwb.Utils.Editor
+namespace Jam.Scripts.Utils.Editor
 {
     public class CSVToXMLParser : EditorWindow
     {
