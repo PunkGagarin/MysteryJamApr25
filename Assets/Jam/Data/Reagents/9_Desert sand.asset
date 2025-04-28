@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 9_Desert sand
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u043F\u0435\u0441\u043E\u043A \u043F\u0443\u0441\u0442\u044B\u043D\u0438"
+  <LocalizeId>k__BackingField: REAGENT_DESERT_SAND_NAME
   <Id>k__BackingField: 9
   <Visual>k__BackingField: {fileID: 21300000, guid: dc3e01ed930b4ee4ea683f06c06c7350, type: 3}
   <ClickClip>k__BackingField: 11

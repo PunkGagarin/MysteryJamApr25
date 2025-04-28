@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 14_green tea
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0417\u0435\u043B\u0435\u043D\u044B\u0439 \u0447\u0430\u0439"
+  <LocalizeId>k__BackingField: REAGENT_GREEN_TEA_NAME
   <Id>k__BackingField: 14
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ClickClip>k__BackingField: 12

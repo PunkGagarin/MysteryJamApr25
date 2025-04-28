@@ -12,7 +12,7 @@ namespace Jam.Scripts.Manual
 
         public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions)
         {
-            if (_reagentsDefinitions == null || _reagentsDefinitions.Count == 0) 
+            if (_reagentsDefinitions == null || _reagentsDefinitions.Count == 0)
                 return;
 
             SetupReagents(unlockedReagents);
@@ -21,7 +21,7 @@ namespace Jam.Scripts.Manual
 
         private void SetupReagents(HashSet<int> unlockedReagents)
         {
-            for (int i = 0; i < _reagentsDefinitions.Count; i++) 
+            for (int i = 0; i < _reagentsDefinitions.Count; i++)
                 _reagentsViews[i].gameObject.SetActive(unlockedReagents.Contains(_reagentsDefinitions[i].Id));
         }
 
@@ -35,12 +35,13 @@ namespace Jam.Scripts.Manual
                 {
                     if (reagentExclusion.ReagentId == _reagentsDefinitions[i].Id)
                     {
-                        Sprite excludedSprite = _reagentsDefinitions[i].GetExcludedSprite(reagentExclusion.ExcludedReagentId);
+                        Sprite excludedSprite = _reagentsDefinitions[i]
+                            .GetExcludedSprite(reagentExclusion.ExcludedReagentId);
                         excludedReagentSprites.Add(excludedSprite);
                     }
                 }
-                
-                _reagentsViews[i].InitData(_reagentsDefinitions[i].Name, excludedReagentSprites);
+
+                _reagentsViews[i].InitData(_reagentsDefinitions[i].LocalizeId, excludedReagentSprites);
             }
         }
     }
