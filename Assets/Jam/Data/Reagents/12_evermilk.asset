@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 12_evermilk
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0432\u0435\u0447\u043D\u043E\u0435 \u043C\u043E\u043B\u043E\u043A\u043E"
+  <LocalizeId>k__BackingField: REAGENT_EVERMILK_NAME
   <Id>k__BackingField: 12
   <Visual>k__BackingField: {fileID: 21300000, guid: 9a250c24141bccd4885ee63fcec44fc9, type: 3}
   <ClickClip>k__BackingField: 12

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041E\u043B\u0438\u0432\u043A\u043E\u0432\u043E\u0435
     \u043C\u0430\u0441\u043B\u043E"
+  <LocalizeId>k__BackingField: REAGENT_OLIVE_OIL_NAME
   <Id>k__BackingField: 13
   <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
   <ClickClip>k__BackingField: 12

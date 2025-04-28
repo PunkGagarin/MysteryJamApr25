@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,16 +22,18 @@ namespace Jam.Scripts.Dialogue.Gameplay
             _key = keyValue;
             SwitchText();
         }
-         
-        private void Start()
+
+        private void Awake()
         {
             if (_rectTransform == null)
                 _rectTransform = GetComponent<RectTransform>();
 
             _tmpText = GetComponent<TextMeshProUGUI>();
             _languageService.OnSwitchLanguage += SwitchText;
-            SwitchText();
         }
+
+        private void Start() =>
+            SwitchText();
 
         private void OnDestroy() => 
             _languageService.OnSwitchLanguage -= SwitchText;

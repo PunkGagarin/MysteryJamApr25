@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 16_rock oil
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0433\u043E\u0440\u043D\u043E\u0435 \u043C\u0430\u0441\u043B\u043E"
+  <LocalizeId>k__BackingField: REAGENT_ROCK_OIL_NAME
   <Id>k__BackingField: 16
   <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
   <ClickClip>k__BackingField: 12

@@ -1,23 +1,26 @@
 using System.Collections.Generic;
-using TMPro;
+using Jam.Scripts.Dialogue.Gameplay;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ReagentUI : MonoBehaviour
+namespace Jam.Scripts.Manual
 {
-    [SerializeField] private TMP_Text _name;
-    [SerializeField] private Sprite _undefinedSprite;
-    [SerializeField] private List<Image> _conflictImages;
-    
-    public void InitData(string reagentName, List<Sprite> conflictSprites)
+    public class ReagentUI : MonoBehaviour
     {
-        _name.text = reagentName;
-        for (int i = 0; i < _conflictImages.Count; i++)
+        [SerializeField] private ToLocalize _name;
+        [SerializeField] private Sprite _undefinedSprite;
+        [SerializeField] private List<Image> _conflictImages;
+
+        public void InitData(string reagentLocalizeId, List<Sprite> conflictSprites)
         {
-            if (conflictSprites.Count <= i)
-                _conflictImages[i].sprite = _undefinedSprite;
-            else
-                _conflictImages[i].sprite = conflictSprites[i] == null ? _undefinedSprite : conflictSprites[i];
+            _name.SetKey(reagentLocalizeId);
+            for (int i = 0; i < _conflictImages.Count; i++)
+            {
+                if (conflictSprites.Count <= i)
+                    _conflictImages[i].sprite = _undefinedSprite;
+                else
+                    _conflictImages[i].sprite = conflictSprites[i] == null ? _undefinedSprite : conflictSprites[i];
+            }
         }
     }
 }

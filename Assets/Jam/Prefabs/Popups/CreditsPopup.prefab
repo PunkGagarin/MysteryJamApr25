@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Who created this
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ed07c18ad62cc4165a6eaf4245bd892d, type: 2}
-  m_sharedMaterial: {fileID: -8445280796903797310, guid: ed07c18ad62cc4165a6eaf4245bd892d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f3ab6e6f7cf9c41258491263b0b77ed7, type: 2}
+  m_sharedMaterial: {fileID: 2816534864151317940, guid: f3ab6e6f7cf9c41258491263b0b77ed7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: CREDITS_TITLE
+  _fontAsset: {fileID: 0}
 --- !u!1 &3822797994686687259
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: CREDITS_DESC
+  _fontAsset: {fileID: 0}
 --- !u!1 &7153619256938191155
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.9490196}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -567,7 +569,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -85.17395, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.3881836, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -586,6 +588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _key: CREDITS_CLOSE
+  _fontAsset: {fileID: 0}
 --- !u!1 &9046815776756350453
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,8 +625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64, y: -400}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -400}
+  m_SizeDelta: {x: 381.9158, y: 86.3034}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7796146222695770185
 CanvasRenderer:

@@ -9,7 +9,7 @@
   <text key="SETTINGS_MASTER">Master</text>
   <text key="SETTINGS_SFX">SFX</text>
   <text key="SETTINGS_MUSIC">Music</text>
-  <text key="SETTINGS_LANG_RU">Russian</text>
+  <text key="SETTINGS_LANG_RU">Русский</text>
   <text key="SETTINGS_LANG_EN">English</text>
   <text key="SETTINGS_CANCEL">Cancel</text>
   <text key="SETTINGS_APPLY">Ok</text>
@@ -33,4 +33,20 @@
   <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">Obviously something needs to be brought closer, but I don't know what.</text>
   <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Pendulum</text>
   <text key="MANUAL_PAGE_2_PENDULUM_DESC">Swing the pendulum in time with your pulse. Misses worsen the connection with souls</text>
+  <text key="REAGENT_HOT_PAPRIKA_NAME">Hot paprika</text>
+  <text key="REAGENT_TOBACCO_LEAVES_NAME">Tobacco leaves</text>
+  <text key="REAGENT_HIBISCUS_POWDER_NAME">Hibiscus powder</text>
+  <text key="REAGENT_FRAGRANT_LAVENDER_NAME">Fragrant lavender</text>
+  <text key="REAGENT_DANDELION_POWDER_NAME">Dandelion powder</text>
+  <text key="REAGENT_FAIRY_DUST_NAME">Fairy dust</text>
+  <text key="REAGENT_SALAMANDER_EGGS_NAME">Salamander eggs</text>
+  <text key="REAGENT_LAZURITE_POWDER_NAME">Lasurite powder</text>
+  <text key="REAGENT_DESERT_SAND_NAME">Desert sand</text>
+  <text key="REAGENT_THURSDAY_SALT_NAME">Thursday salt</text>
+  <text key="REAGENT_SPRING_WATER_NAME">Spring water</text>
+  <text key="REAGENT_EVERMILK_NAME">Evermilk</text>
+  <text key="REAGENT_OLIVE_OIL_NAME">Olive oil</text>
+  <text key="REAGENT_GREEN_TEA_NAME">Green tea</text>
+  <text key="REAGENT_HOP_EXTRACT_NAME">Hops extract</text>
+  <text key="REAGENT_ROCK_OIL_NAME">Rock oil</text>
 </Language>
