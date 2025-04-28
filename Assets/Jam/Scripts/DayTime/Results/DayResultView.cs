@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.SceneManagement;
 using Jam.Scripts.Utils.Coroutine;
@@ -24,12 +25,16 @@ namespace Jam.Scripts.DayTime.Results
 
         [Inject] private SceneLoader _sceneLoader;
         [Inject] private CoroutineHelper _coroutineHelper;
+        [Inject] private LanguageService _languageService;
+        [Inject] private Localization _localization;
         
         private List<CharacterResultView> _charactersResults;
         private CharacterResultWriter _characterResultWriter;
 
         private PlayerStatsPresenter _playerStats;
         private bool _isInitialized;
+
+        private const string DAY_LOCALIZE_KEY = "DAY_RESULT_NUM";
         
         public override void Open(bool withPause)
         {
@@ -54,8 +59,7 @@ namespace Jam.Scripts.DayTime.Results
         private void ShowResult()
         {
             var dayResult = _characterResultWriter.DayInfo;
-
-            _dayNumber.text = dayResult.DayNumber.ToString(); 
+            _dayNumber.text = $"{_localization.GetText(DAY_LOCALIZE_KEY)} {dayResult.DayNumber}"; 
             _thoughts.text = "тут должны были быть мысли но у меня их нет (";
             _earnedMoney.text = dayResult.TotalEarnMoney.ToString();
             _totalMoney.text = _playerStats.Money.ToString();

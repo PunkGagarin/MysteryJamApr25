@@ -18,6 +18,7 @@ namespace Jam.Scripts.DayTime
         [SerializeField] private WagonCurtains _curtains;
         [SerializeField] private CharacterResultWriter _characterResultWriter;
         [SerializeField] private RandomNpcController _randomNpcController;
+        [SerializeField] private GameplayOverlayUI _gameplayOverlayUI;
 
         [Inject] private Character _characterController;
         [Inject] private DayConfig _dayConfig;
@@ -27,11 +28,11 @@ namespace Jam.Scripts.DayTime
         [Inject] private AudioService _audioService;
         [Inject] private ShopSystem _shopSystem;
         [Inject] private ToolController _toolController;
-        
+
         private int _currentDay = 0;
         private int _currentClient = 0;
         private bool _canCallNextClient;
-        
+
         private bool IsLastClient =>
             _currentClient == _dayConfig.DayNpcs[_currentDay].Npcs.Count;
 
@@ -42,12 +43,12 @@ namespace Jam.Scripts.DayTime
         {
             if (!_canCallNextClient)
                 return;
-            
+
             _canCallNextClient = false;
             NPCDefinition npcDefinition = GetNpcFromConfig();
             _characterController.SetCharacter(npcDefinition);
             _currentClient++;
-            
+
             _curtains.OpenCurtains();
         }
 
@@ -60,7 +61,7 @@ namespace Jam.Scripts.DayTime
         private void ResetDayValues()
         {
             AllowCallNextClient();
-            
+
             _characterResultWriter.ChangeDay(_currentDay);
         }
 
@@ -72,7 +73,7 @@ namespace Jam.Scripts.DayTime
             ShowDayDetails();
         }
 
-        private void OnCharacterLeave() => 
+        private void OnCharacterLeave() =>
             _curtains.CloseCurtains();
 
         private void ReactOnClosedCurtains()
@@ -90,12 +91,27 @@ namespace Jam.Scripts.DayTime
 
         private void ShowDayDetails()
         {
-            bool showShop = _currentDay != 1 && !IsLastDay;
-            var dayResultView = _popupManager.OpenPopup<DayResultView>(closeEvent: showShop ? ShowShop : ResetDayValues);
+            var dayResultView = _popupManager.OpenPopup<DayResultView>(OnOpenDayResultView, OnCloseDayResultView);
             dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter);
         }
 
-        private void ShowShop() => 
+        private void OnOpenDayResultView() => 
+            _gameplayOverlayUI.gameObject.SetActive(false);
+
+        private void OnCloseDayResultView()
+        {
+            _gameplayOverlayUI.gameObject.SetActive(true);
+            if (_currentDay != 1 && !IsLastDay)
+            {
+                ShowShop();
+            }
+            else
+            {
+                ResetDayValues();
+            }
+        }
+
+        private void ShowShop() =>
             _shopSystem.OpenShop(ResetDayValues);
 
         private void Awake()
@@ -116,9 +132,9 @@ namespace Jam.Scripts.DayTime
         {
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
-            
+
             _audioService.PlaySound(Sounds.ropeBell.ToString());
-            
+
             CallNextClient();
         }
     }
