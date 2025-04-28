@@ -89,10 +89,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
-  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
-    BasePortGuid: Output
-    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    TargetPortGuid: Input
   - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
@@ -104,6 +100,10 @@ MonoBehaviour:
   - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
+  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    BasePortGuid: Output
+    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
@@ -323,11 +323,6 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
-  - NodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
-    Position: {x: 371, y: -78}
-    EventDataStringModifiers: []
-    ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
   - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     Position: {x: 89, y: -1649}
     EventDataStringModifiers: []
@@ -345,6 +340,11 @@ MonoBehaviour:
     ContainerDialogueEventSOs: []
   - NodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     Position: {x: -148, y: -1250}
+    EventDataStringModifiers: []
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    Position: {x: 133, y: -114}
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
