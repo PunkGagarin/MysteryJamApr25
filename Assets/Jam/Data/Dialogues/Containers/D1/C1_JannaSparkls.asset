@@ -73,22 +73,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: d56ceb67-689b-4865-b437-dcab9ec3a925
     TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
   - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
@@ -104,6 +88,22 @@ MonoBehaviour:
   - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
     BasePortGuid: Output
     TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    TargetPortGuid: Input
+  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
+  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
+  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
+  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
@@ -199,7 +199,7 @@ MonoBehaviour:
         Value: fefc9d66-4fdc-4ff4-b6ab-f5e90404f722
       CharacterName:
       - LanguageType: 0
-        LanguageGenericType: It's alright, little cornflower.
+        LanguageGenericType: Ghost
       - LanguageType: 1
         LanguageGenericType: Ghost
     DialogueDataTexts:
@@ -209,7 +209,8 @@ MonoBehaviour:
         Value: 9596277b-7a40-47db-92ca-51b451985c71
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
+        LanguageGenericType: "\u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E,
+          \u0432\u0430\u0441\u0438\u043B\u0435\u043A"
       - LanguageType: 1
         LanguageGenericType: "\u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E,
           \u0432\u0430\u0441\u0438\u043B\u0435\u043A"
@@ -318,11 +319,6 @@ MonoBehaviour:
       StringEventModifierType:
         Value: 3
     ContainerDialogueEventSOs: []
-  - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    Position: {x: 1160, y: -1168}
-    EventDataStringModifiers: []
-    ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
   - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     Position: {x: 89, y: -1649}
     EventDataStringModifiers: []
@@ -348,6 +344,11 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    Position: {x: 1160, y: -1168}
+    EventDataStringModifiers: []
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     Position: {x: 1556, y: -1168}
