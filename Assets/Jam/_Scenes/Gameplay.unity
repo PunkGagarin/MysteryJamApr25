@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 673783599}
   - component: {fileID: 673783600}
   m_Layer: 0
-  m_Name: AnimatedTextFactoryInstaller
+  m_Name: TextFactoryInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,6 +966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterTextPrefab: {fileID: 4785848966214624102, guid: cb82a8b425f72004ab36482f7b0e95d6, type: 3}
   _ghostTextPrefab: {fileID: 6878289573997440405, guid: 889e269a02cd9414db7c23c76cbcdb5d, type: 3}
+  _answerButtonHistoryPrefab: {fileID: 9152392094506432033, guid: 8b3dd31f2d1400a49b7fbea294424204, type: 3}
+  _buttonControllerPrefab: {fileID: 7754843252208447579, guid: 1a263466d5fde864ebc14dc831082f1d, type: 3}
 --- !u!224 &775433296 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5976663474688944382, guid: 6dca4a23e8ccc144c953f8cfce706f95, type: 3}

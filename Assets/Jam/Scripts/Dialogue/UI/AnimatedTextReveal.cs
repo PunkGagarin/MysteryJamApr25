@@ -1,6 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Dialogue.Gameplay;
+using Jam.Scripts.Dialogue.Runtime.SO;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -30,6 +33,7 @@ namespace Jam.Scripts.Dialogue.UI
         [SerializeField] private int characterSpread = 10;
 
         [Inject] private AudioService _audioService;
+        [Inject] private LanguageService _languageService;
         
         /// <summary>
         /// Stores the running coroutine instance.
@@ -40,17 +44,29 @@ namespace Jam.Scripts.Dialogue.UI
         /// Tracks which text to display.
         /// </summary>
         private int _textCount;
-
         private bool _fastFinish;
+        private List<LanguageGeneric<string>> _genericText;
+        private Coroutine _revealTextCoroutine;
+        private Action onTextReveal;
         
-        public TextMeshProUGUI TextMesh => textMesh;
-        
+        public void SetText(List<LanguageGeneric<string>> genericText)
+        {
+            _genericText = genericText;
+            UpdateTextLanguage();
+        }
+
+        public void ShowText(Action onComplete = null)
+        {
+            onTextReveal = onComplete;
+
+            _fadeCoroutine = StartCoroutine(FadeInText());
+        }
 
         /// <summary>
         /// Coroutine to gradually fade in the text from left to right.
         /// </summary>
         /// <returns>IEnumerator for coroutine execution.</returns>
-        public IEnumerator FadeInText(Action onComplete = null)
+        private IEnumerator FadeInText()
         {
             // Ensure the text mesh updates immediately so we get valid character data.
             textMesh.ForceMeshUpdate();
@@ -75,24 +91,7 @@ namespace Jam.Scripts.Dialogue.UI
             {
                 if (_fastFinish)
                 {
-                    // Форсим весь текст сразу полностью видимым
-                    for (int i = 0; i < totalCharacters; i++)
-                    {
-                        if (!textInfo.characterInfo[i].isVisible)
-                            continue;
-
-                        int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
-                        newVertexColors = textInfo.meshInfo[materialIndex].colors32;
-                        int vertexIndex = textInfo.characterInfo[i].vertexIndex;
-
-                        // Устанавливаем альфу в 255 для всех вершин символа
-                        newVertexColors[vertexIndex + 0].a = 255;
-                        newVertexColors[vertexIndex + 1].a = 255;
-                        newVertexColors[vertexIndex + 2].a = 255;
-                        newVertexColors[vertexIndex + 3].a = 255;
-                    }
-
-                    textMesh.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+                    RevealText();
                     fullyRevealed = true;
                     break;
                 }
@@ -145,7 +144,31 @@ namespace Jam.Scripts.Dialogue.UI
             
             _audioService.StopSfxLoop();
             
-            onComplete?.Invoke();
+            onTextReveal?.Invoke();
+            onTextReveal = null;
+        }
+
+        private void RevealText()
+        {
+            textMesh.ForceMeshUpdate(); // Ensure valid text data.
+            TMP_TextInfo textInfo = textMesh.textInfo;
+            Color32[] newVertexColors;
+            for (int i = 0; i < textInfo.characterCount; i++)
+            {
+                if (!textInfo.characterInfo[i].isVisible)
+                    continue;
+
+                int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
+                newVertexColors = textInfo.meshInfo[materialIndex].colors32;
+                int vertexIndex = textInfo.characterInfo[i].vertexIndex;
+
+                newVertexColors[vertexIndex + 0].a = 255;
+                newVertexColors[vertexIndex + 1].a = 255;
+                newVertexColors[vertexIndex + 2].a = 255;
+                newVertexColors[vertexIndex + 3].a = 255;
+            }
+
+            textMesh.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
         }
 
         public void FinishCoroutine() => 
@@ -183,5 +206,17 @@ namespace Jam.Scripts.Dialogue.UI
                 textInfo.meshInfo[i].mesh.colors32 = textInfo.meshInfo[i].colors32;
             }
         }
+
+        private void UpdateTextLanguage()
+        {
+            textMesh.text = _genericText.Find(language => language.LanguageType == _languageService.CurrentLanguage).LanguageGenericType;
+            ResetTextVisibility();
+            RevealText();
+        }
+        private void Awake() => 
+            _languageService.OnSwitchLanguage += UpdateTextLanguage;
+
+        private void OnDestroy() => 
+            _languageService.OnSwitchLanguage -= UpdateTextLanguage;
     }
 }
