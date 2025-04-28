@@ -89,10 +89,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
-  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
-    BasePortGuid: Output
-    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    TargetPortGuid: Input
   - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
@@ -104,6 +100,10 @@ MonoBehaviour:
   - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    TargetPortGuid: Input
+  - BaseNodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    BasePortGuid: Output
+    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
@@ -146,15 +146,15 @@ MonoBehaviour:
       GuidID:
         Value: 28403139-9d50-43bd-9cb2-4233fbf3074f
       Text:
+      - LanguageType: 0
+        LanguageGenericType: I... uh... I don't want to anymore... for now!..
       - LanguageType: 1
         LanguageGenericType: "\u042F... \u044D\u0442\u043E... \u044F \u043D\u0435
           \u0445\u043E\u0447\u0443 \u0431\u043E\u043B\u044C\u0448\u0435... \u043F\u043E\u043A\u0430!.. "
-      - LanguageType: 2
-        LanguageGenericType: 
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
@@ -167,25 +167,25 @@ MonoBehaviour:
       GuidID:
         Value: fc64f175-8a79-4c2c-88c9-dbd3def52fd6
       CharacterName:
+      - LanguageType: 0
+        LanguageGenericType: Thank you!.. Thank you so much!!!
       - LanguageType: 1
         LanguageGenericType: "\u041A\u043B\u0438\u0435\u043D\u0442"
-      - LanguageType: 2
-        LanguageGenericType: 
     DialogueDataTexts:
     - ID:
         Value: 1
       GuidID:
         Value: a9be781f-44d5-4311-9d07-5c1fc9497502
       Text:
+      - LanguageType: 0
+        LanguageGenericType: 
       - LanguageType: 1
         LanguageGenericType: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!.. \u0421\u043F\u0430\u0441\u0438\u0431\u043E
           \u0431\u043E\u043B\u044C\u0448\u043E\u0435!!!"
-      - LanguageType: 2
-        LanguageGenericType: 
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
@@ -198,25 +198,25 @@ MonoBehaviour:
       GuidID:
         Value: fefc9d66-4fdc-4ff4-b6ab-f5e90404f722
       CharacterName:
+      - LanguageType: 0
+        LanguageGenericType: It's alright, little cornflower.
       - LanguageType: 1
         LanguageGenericType: Ghost
-      - LanguageType: 2
-        LanguageGenericType: 
     DialogueDataTexts:
     - ID:
         Value: 1
       GuidID:
         Value: 9596277b-7a40-47db-92ca-51b451985c71
       Text:
+      - LanguageType: 0
+        LanguageGenericType: 
       - LanguageType: 1
         LanguageGenericType: "\u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E,
           \u0432\u0430\u0441\u0438\u043B\u0435\u043A"
-      - LanguageType: 2
-        LanguageGenericType: 
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts:
@@ -235,6 +235,9 @@ MonoBehaviour:
       GuidID:
         Value: 1b922cec-a73e-447d-af20-e5a26c142e59
       Text:
+      - LanguageType: 0
+        LanguageGenericType: Good evening, medium aunt! My <b>grandfather</b> has
+          died, and I want to know how he is doing... over there.
       - LanguageType: 1
         LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
           \u0442\u0435\u0442\u044F \u043C\u0435\u0434\u0438\u0443\u043C! \u041C\u043E\u0439
@@ -242,16 +245,10 @@ MonoBehaviour:
           \u044F \u0445\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C, \u043A\u0430\u043A
           \u043E\u043D \u0443\u0441\u0442\u0440\u043E\u0438\u043B\u0441\u044F...
           \u0442\u0430\u043C."
-      - LanguageType: 2
-        LanguageGenericType: "\u041C\u043E\u0439 \u043B\u0443\u0447\u0448\u0438\u0439
-          \u0434\u0440\u0443\u0433, <color=\"green\">\u0433\u043D\u043E\u043C</color>,
-          \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u0441\u043A\u043E\u043D\u0447\u0430\u043B\u0441\u044F,
-          \u0445\u043E\u0447\u0443 \u0447\u0442\u043E\u0431\u044B \u043E\u043D \u0437\u043D\u0430\u043B
-          \u043A\u0430\u043A \u0441\u0438\u043B\u044C\u043D\u043E \u044F \u0441\u043A\u0443\u0447\u0430\u044E"
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts:
@@ -275,15 +272,15 @@ MonoBehaviour:
       GuidID:
         Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
       Text:
+      - LanguageType: 0
+        LanguageGenericType: "Is everything... everything alright? What\u2019s wrong?"
       - LanguageType: 1
         LanguageGenericType: "\u0412\u0441\u0435... \u0432\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E?
           \u0427\u0442\u043E \u043D\u0435 \u0442\u0430\u043A?"
-      - LanguageType: 2
-        LanguageGenericType: 
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
@@ -297,15 +294,15 @@ MonoBehaviour:
       GuidID:
         Value: 66a0ce7b-fbb1-470e-8aac-bf6b953adf7e
       Text:
+      - LanguageType: 0
+        LanguageGenericType: " Is it... grandfather doesn\u2019t want to speak?"
       - LanguageType: 1
         LanguageGenericType: "\u042D\u0442\u043E... \u0434\u0435\u0434\u0443\u0448\u043A\u0430
           \u043D\u0435 \u0445\u043E\u0447\u0435\u0442 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C?"
-      - LanguageType: 2
-        LanguageGenericType: 
       AudioClips:
-      - LanguageType: 1
+      - LanguageType: 0
         LanguageGenericType: {fileID: 0}
-      - LanguageType: 2
+      - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
@@ -326,11 +323,6 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
-  - NodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
-    Position: {x: 371, y: -78}
-    EventDataStringModifiers: []
-    ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
   - NodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     Position: {x: 89, y: -1649}
     EventDataStringModifiers: []
@@ -348,6 +340,11 @@ MonoBehaviour:
     ContainerDialogueEventSOs: []
   - NodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     Position: {x: -148, y: -1250}
+    EventDataStringModifiers: []
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: a9e72853-7e44-4b78-a584-814404284c0a
+    Position: {x: 133, y: -114}
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
@@ -426,15 +423,15 @@ MonoBehaviour:
     ChoiceStateType:
       Value: 2
     Text:
+    - LanguageType: 0
+      LanguageGenericType: "Deliver the ghost\u2019s answer to the client."
     - LanguageType: 1
       LanguageGenericType: "\u041F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442
         \u043F\u0440\u0438\u0437\u0440\u0430\u043A\u0430 \u043A\u043B\u0438\u0435\u043D\u0442\u0443"
-    - LanguageType: 2
-      LanguageGenericType: 
     AudioClips:
-    - LanguageType: 1
+    - LanguageType: 0
       LanguageGenericType: {fileID: 0}
-    - LanguageType: 2
+    - LanguageType: 1
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
   - NodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
@@ -442,15 +439,15 @@ MonoBehaviour:
     ChoiceStateType:
       Value: 1
     Text:
+    - LanguageType: 0
+      LanguageGenericType: Alright, I will help you.
     - LanguageType: 1
       LanguageGenericType: "\u0425\u043E\u0440\u043E\u0448\u043E, \u044F \u0432\u0430\u043C
         \u043F\u043E\u043C\u043E\u0433\u0443"
-    - LanguageType: 2
-      LanguageGenericType: 
     AudioClips:
-    - LanguageType: 1
+    - LanguageType: 0
       LanguageGenericType: {fileID: 0}
-    - LanguageType: 2
+    - LanguageType: 1
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
   - NodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
@@ -458,14 +455,14 @@ MonoBehaviour:
     ChoiceStateType:
       Value: 1
     Text:
+    - LanguageType: 0
+      LanguageGenericType: No. I cannot help you.
     - LanguageType: 1
       LanguageGenericType: "\u041D\u0435\u0442. \u0412\u0430\u043C \u044F \u043D\u0435
         \u043C\u043E\u0433\u0443 \u043F\u043E\u043C\u043E\u0447\u044C."
-    - LanguageType: 2
-      LanguageGenericType: 
     AudioClips:
-    - LanguageType: 1
+    - LanguageType: 0
       LanguageGenericType: {fileID: 0}
-    - LanguageType: 2
+    - LanguageType: 1
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []

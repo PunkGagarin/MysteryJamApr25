@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.Dialogue.Runtime.Enums;
+using Jam.Scripts.Dialogue.Runtime.SO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -17,11 +19,8 @@ namespace Jam.Scripts.Dialogue.UI
         [SerializeField] private Transform _contentContainer;
         [SerializeField] private RectTransform _dialoguePanel;
         [SerializeField] private ScrollRect _scrollRect;
-        [Header("Text")]
-        [SerializeField] private AnswerButtonHistory _answerTextPrefab;
         [Header("Button")]
         [SerializeField] private Transform _buttonContentPanel;
-        [SerializeField] private ButtonController _buttonPrefab;
         [SerializeField] private Button _continueButton;
         [Header("Button color")]
         [SerializeField] private Color _textDisableColor;
@@ -29,8 +28,9 @@ namespace Jam.Scripts.Dialogue.UI
         [Header("Interactable")]
         [SerializeField] private Color _textInteractableColor;
 
-        [Inject] private AnimatedTextFactory _animatedTextFactory;
+        [Inject] private TextFactory _textFactory;
         [Inject] private AudioService _audioService;
+        [Inject] private LanguageService _languageService;
 
         private List<ButtonController> _buttons = new();
         private AnimatedTextReveal _currentText;
@@ -45,22 +45,22 @@ namespace Jam.Scripts.Dialogue.UI
             foreach (var dialogueObject in _dialogueObjects) 
                 Destroy(dialogueObject);
         }
-        public void SetText(string text, bool isGhost, Action onComplete = null)
+        public void SetText(List<LanguageGeneric<string>> text, bool isGhost, Action onComplete = null)
         {
-            var currentText = _animatedTextFactory.Create(isGhost, _contentContainer);
+            var currentText = _textFactory.CreateAnimatedText(isGhost, _contentContainer);
             _dialogueObjects.Add(currentText.gameObject);
             _currentText = currentText;
             ScrollContent();
             _currentText.ResetTextVisibility();
-            _currentText.TextMesh.text = text;
-            StartCoroutine(_currentText.FadeInText(onComplete));
+            _currentText.SetText(text);
+            _currentText.ShowText(onComplete);
         }
 
         public void SetButtons(List<DialogueButtonContainer> buttonContainers)
         {
             HideButtons();
 
-            if (buttonContainers.Count == 1 && buttonContainers[0].Text == "Continue")
+            if (buttonContainers.Count == 1 && buttonContainers[0].Text.Any(languageGeneric => languageGeneric.LanguageGenericType is "Continue" or "Продолжить"))
             {
                 _continueButton.onClick.AddListener(() =>
                 {
@@ -83,7 +83,7 @@ namespace Jam.Scripts.Dialogue.UI
                 if (buttonContainer.ConditionCheck || buttonContainer.ChoiceStateType == ChoiceStateType.GrayOut)
                 {
                     _buttons[i].gameObject.SetActive(true);
-                    _buttons[i].SetText($"{i + 1}: {buttonContainer.Text}");
+                    _buttons[i].SetText(i + 1, buttonContainer.Text);
 
                     if (!buttonContainer.ConditionCheck)
                     {
@@ -107,9 +107,9 @@ namespace Jam.Scripts.Dialogue.UI
             }
         }
 
-        private void AddButtonText(string text)
+        private void AddButtonText(List<LanguageGeneric<string>> text)
         {
-            var answerButtonHistory = Instantiate(_answerTextPrefab, _contentContainer);
+            var answerButtonHistory = _textFactory.CreateHistoryButton(_contentContainer);
             _dialogueObjects.Add(answerButtonHistory.gameObject);
             answerButtonHistory.SetText(text);
             ScrollContent();
@@ -144,7 +144,7 @@ namespace Jam.Scripts.Dialogue.UI
             int buttonsToCreate = buttonsCountToCreate - _buttons.Count;
             for (int i = 0; i < buttonsToCreate; i++)
             {
-                ButtonController button = Instantiate(_buttonPrefab, _buttonContentPanel);
+                ButtonController button = _textFactory.CreateButton(_buttonContentPanel);
                 _buttons.Add(button);
                 button.gameObject.SetActive(false);
             }
@@ -158,7 +158,10 @@ namespace Jam.Scripts.Dialogue.UI
             _canvas.worldCamera = UnityEngine.Camera.main;
             _continueButton.onClick.AddListener(FastFinishWriter);
         }
-        private void OnDestroy() => 
+
+        private void OnDestroy()
+        {
             _continueButton.onClick.RemoveAllListeners();
+        }
     }
 }

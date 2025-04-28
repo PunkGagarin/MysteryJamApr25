@@ -6,8 +6,6 @@ using Jam.Scripts.Dialogue.Runtime.Events;
 using Jam.Scripts.Dialogue.Runtime.SO;
 using Jam.Scripts.Dialogue.Runtime.SO.Dialogue;
 using Jam.Scripts.Dialogue.UI;
-using Jam.Scripts.Ritual;
-using Jam.Scripts.Utils.String_Tool;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
@@ -121,11 +119,11 @@ namespace Jam.Scripts.Dialogue.Gameplay
                     if (i == _dialogueNodes.Count - 1 && _currentDialogueNodeData.SkipContinue)
                     {
                         void OnUnityAction() => CheckNodeType(GetNextNode(_currentDialogueNodeData));
-                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType, _isGhostTalking,OnUnityAction);
+                        _dialogueView.SetText(dataText.Text, _isGhostTalking,OnUnityAction);
                     }
                     else
                     {
-                        _dialogueView.SetText(dataText.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType, _isGhostTalking, ShowButtons);
+                        _dialogueView.SetText(dataText.Text, _isGhostTalking, ShowButtons);
                     }
                     
                     if (_isGhostTalking)
@@ -161,9 +159,15 @@ namespace Jam.Scripts.Dialogue.Gameplay
 
         private DialogueButtonContainer GetContinueButton(UnityAction unityAction)
         {
+            List<LanguageGeneric<string>> continueButton = new List<LanguageGeneric<string>>
+            {
+                new() { LanguageType = LanguageType.English, LanguageGenericType = "Continue" },
+                new() { LanguageType = LanguageType.Russian, LanguageGenericType = "Продолжить" }
+            };
+            
             DialogueButtonContainer buttonContainer = new DialogueButtonContainer()
             {
-                Text = "Continue",
+                Text = continueButton,
                 ConditionCheck = true,
                 UnityAction = unityAction,
                 ChoiceStateType = default
@@ -181,7 +185,7 @@ namespace Jam.Scripts.Dialogue.Gameplay
             void OnUnityAction() => CheckNodeType(GetNextNode(choiceNode));
 
             dialogueButtonContainer.ChoiceStateType = choiceNode.ChoiceStateType.Value;
-            dialogueButtonContainer.Text = choiceNode.Text.Find(text => text.LanguageType == _languageService.CurrentLanguage).LanguageGenericType;
+            dialogueButtonContainer.Text = choiceNode.Text;
             dialogueButtonContainer.UnityAction = OnUnityAction;
             dialogueButtonContainer.ConditionCheck = checkBranch;
 
