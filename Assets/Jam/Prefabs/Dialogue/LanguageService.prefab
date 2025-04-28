@@ -45,4 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLanguage: 1
-  _defaultFont: {fileID: 11400000, guid: ed07c18ad62cc4165a6eaf4245bd892d, type: 2}

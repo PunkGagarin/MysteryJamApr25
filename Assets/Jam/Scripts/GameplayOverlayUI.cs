@@ -10,6 +10,7 @@ public class GameplayOverlayUI : MonoBehaviour
     [SerializeField] private GameObject _content;
     [Inject] private PopupManager _popupManager;
     
+    
     private void Awake() => _pauseButton.onClick.AddListener(OnPauseClick);
 
     private void OnDestroy() => _pauseButton.onClick.RemoveListener(OnPauseClick);
