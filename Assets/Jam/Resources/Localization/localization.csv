@@ -8,8 +8,8 @@ SETTINGS_LANGUAGE,Язык,Language
 SETTINGS_MASTER,Мастер,Master
 SETTINGS_SFX,Звуки,SFX
 SETTINGS_MUSIC,Музыка,Music
-SETTINGS_LANG_RU,Русский,Russian
-SETTINGS_LANG_EN,Английский,English
+SETTINGS_LANG_RU,Русский,Русский
+SETTINGS_LANG_EN,English,English
 SETTINGS_CANCEL,Отмена,Cancel
 SETTINGS_APPLY,Ок,Ok
 CREDITS_TITLE,Господа создатели,Who created this
