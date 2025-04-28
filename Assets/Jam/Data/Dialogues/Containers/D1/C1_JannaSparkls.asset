@@ -159,37 +159,6 @@ MonoBehaviour:
     DialogueDataImages: []
     DialogueDataPorts: []
     SkipContinue: 0
-  - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
-    Position: {x: -323, y: -1733}
-    DialogueDataNames:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: fc64f175-8a79-4c2c-88c9-dbd3def52fd6
-      CharacterName:
-      - LanguageType: 0
-        LanguageGenericType: Thank you!.. Thank you so much!!!
-      - LanguageType: 1
-        LanguageGenericType: "\u041A\u043B\u0438\u0435\u043D\u0442"
-    DialogueDataTexts:
-    - ID:
-        Value: 1
-      GuidID:
-        Value: a9be781f-44d5-4311-9d07-5c1fc9497502
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
-        LanguageGenericType: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!.. \u0421\u043F\u0430\u0441\u0438\u0431\u043E
-          \u0431\u043E\u043B\u044C\u0448\u043E\u0435!!!"
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 0
   - NodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
     Position: {x: -1042, y: -1748}
     DialogueDataNames:
@@ -209,8 +178,7 @@ MonoBehaviour:
         Value: 9596277b-7a40-47db-92ca-51b451985c71
       Text:
       - LanguageType: 0
-        LanguageGenericType: "\u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E,
-          \u0432\u0430\u0441\u0438\u043B\u0435\u043A"
+        LanguageGenericType: It's alright, little cornflower.
       - LanguageType: 1
         LanguageGenericType: "\u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E,
           \u0432\u0430\u0441\u0438\u043B\u0435\u043A"
@@ -308,6 +276,28 @@ MonoBehaviour:
     DialogueDataImages: []
     DialogueDataPorts: []
     SkipContinue: 1
+  - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
+    Position: {x: -323, y: -1733}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: a9be781f-44d5-4311-9d07-5c1fc9497502
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: Thank you!.. Thank you so much!!!
+      - LanguageType: 1
+        LanguageGenericType: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!.. \u0421\u043F\u0430\u0441\u0438\u0431\u043E
+          \u0431\u043E\u043B\u044C\u0448\u043E\u0435!!!"
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 0
   EventData:
   - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     Position: {x: -1125, y: -346}

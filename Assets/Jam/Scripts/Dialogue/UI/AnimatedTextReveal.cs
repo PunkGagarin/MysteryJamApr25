@@ -52,7 +52,7 @@ namespace Jam.Scripts.Dialogue.UI
         public void SetText(List<LanguageGeneric<string>> genericText)
         {
             _genericText = genericText;
-            UpdateTextLanguage();
+            textMesh.text = _genericText.Find(language => language.LanguageType == _languageService.CurrentLanguage).LanguageGenericType;
         }
 
         public void ShowText(Action onComplete = null)
@@ -207,12 +207,17 @@ namespace Jam.Scripts.Dialogue.UI
             }
         }
 
-        private void UpdateTextLanguage()
+        private void UpdateTextLanguage() => 
+            StartCoroutine(UpdateTextLanguageCoroutine());
+
+        private IEnumerator UpdateTextLanguageCoroutine()
         {
             textMesh.text = _genericText.Find(language => language.LanguageType == _languageService.CurrentLanguage).LanguageGenericType;
+            yield return null;
             ResetTextVisibility();
             RevealText();
         }
+        
         private void Awake() => 
             _languageService.OnSwitchLanguage += UpdateTextLanguage;
 
