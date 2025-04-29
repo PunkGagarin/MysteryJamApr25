@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers:
-  - {fileID: 11400000, guid: 651cda81c23057b47886e3e774d1f104, type: 2}
+  - {fileID: 11400000, guid: 255bbe25792ec4cde8db35818e5ea0b6, type: 2}
   - {fileID: 11400000, guid: 6a1639f7aa93e45228f8169434079512, type: 2}
   _monoInstallers:
   - {fileID: 2709071268093058265}
@@ -443,9 +443,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   languageServicePrefab: {fileID: 5303164530386132941, guid: bc8c19d280511fd4684827828f00b054, type: 3}
-  _localizationTextAssets:
-  - {fileID: 4900000, guid: 1c335648bd6a04a37a895920f9a52f16, type: 3}
-  - {fileID: 4900000, guid: 527750bd624764215bce0584cc6c7bad, type: 3}
 --- !u!1 &8458801676252858372
 GameObject:
   m_ObjectHideFlags: 0
