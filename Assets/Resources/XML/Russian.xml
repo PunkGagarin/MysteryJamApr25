@@ -49,4 +49,10 @@
   <text key="REAGENT_GREEN_TEA_NAME">Зеленый чай</text>
   <text key="REAGENT_HOP_EXTRACT_NAME">Экстракт хмеля</text>
   <text key="REAGENT_ROCK_OIL_NAME">Горное масло</text>
+  <text key="DAY_RESULT_NUM">День</text>
+  <text key="GOLD_AMOUNT_KEY">Золото</text>
+  <text key="DAY_RESULT_MONEY_EARNED">Денег%заработано</text>
+  <text key="DAY_RESULT_REPUTATION">Репутация</text>
+  <text key="DAY_RESULT_MONEY_TOTAL">Всего%денег</text>
+  <text key="DAY_RESULT_CONTINUE">Продолжить</text>
 </Language>

@@ -48,3 +48,9 @@ REAGENT_OLIVE_OIL_NAME,Оливковое масло,Olive oil
 REAGENT_GREEN_TEA_NAME,Зеленый чай,Green tea
 REAGENT_HOP_EXTRACT_NAME,Экстракт хмеля,Hops extract
 REAGENT_ROCK_OIL_NAME,Горное масло,Rock oil
+DAY_RESULT_NUM,День,Day
+GOLD_AMOUNT_KEY,Золото,Gold
+DAY_RESULT_MONEY_EARNED,Денег%заработано,Money%earned
+DAY_RESULT_REPUTATION,Репутация,Reputation
+DAY_RESULT_MONEY_TOTAL,Всего%денег,Total%money
+DAY_RESULT_CONTINUE,Продолжить,Continue

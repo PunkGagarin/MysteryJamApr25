@@ -49,4 +49,10 @@
   <text key="REAGENT_GREEN_TEA_NAME">Green tea</text>
   <text key="REAGENT_HOP_EXTRACT_NAME">Hops extract</text>
   <text key="REAGENT_ROCK_OIL_NAME">Rock oil</text>
+  <text key="DAY_RESULT_NUM">Day</text>
+  <text key="GOLD_AMOUNT_KEY">Gold</text>
+  <text key="DAY_RESULT_MONEY_EARNED">Money%earned</text>
+  <text key="DAY_RESULT_REPUTATION">Reputation</text>
+  <text key="DAY_RESULT_MONEY_TOTAL">Total%money</text>
+  <text key="DAY_RESULT_CONTINUE">Continue</text>
 </Language>

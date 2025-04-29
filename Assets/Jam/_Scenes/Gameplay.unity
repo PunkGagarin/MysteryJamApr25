@@ -973,6 +973,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5976663474688944382, guid: 6dca4a23e8ccc144c953f8cfce706f95, type: 3}
   m_PrefabInstance: {fileID: 5179408551669793321}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &775433297 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3935253535125452690, guid: 6dca4a23e8ccc144c953f8cfce706f95, type: 3}
+  m_PrefabInstance: {fileID: 5179408551669793321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44214655cac19445697ac782262625f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786818877
 GameObject:
   m_ObjectHideFlags: 0
@@ -2237,6 +2248,10 @@ PrefabInstance:
       propertyPath: _curtains
       value: 
       objectReference: {fileID: 347503848}
+    - target: {fileID: 1509002843743714631, guid: df08143402c061a4e917d50cc851596e, type: 3}
+      propertyPath: _gameplayOverlayUI
+      value: 
+      objectReference: {fileID: 775433297}
     - target: {fileID: 1509002843743714631, guid: df08143402c061a4e917d50cc851596e, type: 3}
       propertyPath: _characterController
       value: 
