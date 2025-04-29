@@ -16,11 +16,6 @@ namespace Jam.Scripts.VFX
 
         private void Update()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Q))
-            {
-                ChangeTarget();
-            }
-
             if (!_isMovingToTarget)
                 MoveAroundTarget();
             else
