@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: C1_JannaSparkls
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Janna
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 1
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 3156eec9c813c4346b2f1db006442281, type: 2}
   <Quest>k__BackingField: {fileID: 11400000, guid: 3e0e635c0d8c7034c96bf2599baa14c2, type: 2}
-  <Visual>k__BackingField: {fileID: 21300000, guid: 14af128359bf03843af5c83e1d47bf88, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 82ec530d762d9754abcd5a29bbd935a8, type: 3}

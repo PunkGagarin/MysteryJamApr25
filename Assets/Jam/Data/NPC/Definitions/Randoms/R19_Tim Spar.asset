@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6521bb0669d46a399b01e9cb9cd38f7, type: 3}
-  m_Name: R12_The Nameless Wizard
+  m_Name: R19_Tim Spar
   m_EditorClassIdentifier: 
   <Name>k__BackingField: '-'
   <LocalizeId>k__BackingField: 
-  <Id>k__BackingField: 1012
-  <Dialogue>k__BackingField: {fileID: 11400000, guid: 4f66ae61b698b674cb2b8648f0f484dc, type: 2}
-  <Quest>k__BackingField: {fileID: 11400000, guid: 834ca1e9897ee2f438d8ca9426956a5c, type: 2}
-  <Visual>k__BackingField: {fileID: 21300000, guid: 28fa35488656ec94d9f21eb8ad10f4d1, type: 3}
+  <Id>k__BackingField: 1019
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: c4969627833d96a46b6444d14f3c4585, type: 2}
+  <Quest>k__BackingField: {fileID: 11400000, guid: b2de387f5d7706e4d8d3ec84398d5b4d, type: 2}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 82ec530d762d9754abcd5a29bbd935a8, type: 3}
