@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: "\u04215_ElizabethArm"
   m_EditorClassIdentifier: 
   <Name>k__BackingField: 
-  <Id>k__BackingField: 4
+  <LocalizeId>k__BackingField: 
+  <Id>k__BackingField: 5
   <SexType>k__BackingField: 2
   <AgeType>k__BackingField: 1
   <RaceType>k__BackingField: 3
