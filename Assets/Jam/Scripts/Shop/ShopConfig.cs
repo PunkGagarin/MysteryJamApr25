@@ -6,6 +6,5 @@ namespace Jam.Scripts.Shop
     public class ShopConfig : ScriptableObject
     {
         [field: SerializeField] public int RandomItemsInShop { get; private set; }
-        [field: SerializeField] public int MirrorAppearDay { get; private set; }
     }
 }

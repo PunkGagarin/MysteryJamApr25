@@ -50,10 +50,10 @@ namespace Jam.Scripts.Dialogue.UI
             var currentText = _textFactory.CreateAnimatedText(isGhost, _contentContainer);
             _dialogueObjects.Add(currentText.gameObject);
             _currentText = currentText;
-            ScrollContent();
             _currentText.ResetTextVisibility();
             _currentText.SetText(text);
             _currentText.ShowText(onComplete);
+            ScrollContentTo(currentText.gameObject);
         }
 
         public void SetButtons(List<DialogueButtonContainer> buttonContainers)
@@ -112,14 +112,23 @@ namespace Jam.Scripts.Dialogue.UI
             var answerButtonHistory = _textFactory.CreateHistoryButton(_contentContainer);
             _dialogueObjects.Add(answerButtonHistory.gameObject);
             answerButtonHistory.SetText(text);
-            ScrollContent();
+            ScrollContentTo(answerButtonHistory.gameObject);
         }
 
-        private void ScrollContent()
+        private void ScrollContentTo(GameObject target)
         {
             Canvas.ForceUpdateCanvases();
 
-            _scrollRect.DONormalizedPos(Vector2.zero, .3f);
+            if (target == null) return;
+
+            RectTransform targetRect = target.GetComponent<RectTransform>();
+
+            Vector2 localPosition = _contentContainer.InverseTransformPoint(targetRect.position);
+
+            float contentHeight = _contentContainer.GetComponent<RectTransform>().rect.height;
+            float normalizedY = Mathf.Clamp01(localPosition.y / contentHeight);
+
+            _scrollRect.DONormalizedPos(new Vector2(0, normalizedY), 0.3f);
         }
 
         public void HideButtons() =>

@@ -24,3 +24,4 @@ MonoBehaviour:
   - RitualFailedByRace
   - RitualFailedByDeath
   - RitualFailedByExcludedReagent
+  - Tool

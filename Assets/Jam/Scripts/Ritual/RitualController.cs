@@ -44,6 +44,8 @@ namespace Jam.Scripts.Ritual
 
         public int Attempt { get; private set; }
 
+        public bool CanCheckByMagnifier => _reagentRooms.Count(room => !room.IsFree) > 2;
+
         public bool TryAddComponent(ReagentDefinition reagentToAdd, out ReagentRoom reagentRoom)
         {
             reagentRoom = null;
@@ -202,6 +204,14 @@ namespace Jam.Scripts.Ritual
                 }
             }
             return true;
+        }
+
+        public bool CheckForExcludedReagents()
+        {
+            List<ReagentDefinition> selectedComponents =
+                _reagentRooms.Where(component => !component.IsFree).Select(component => component.ReagentInside).ToList();
+
+            return CheckForExcludedReagents(selectedComponents, false);
         }
 
         private bool CheckForExcludedReagents(List<ReagentDefinition> selectedReagents, bool withSignal = true)

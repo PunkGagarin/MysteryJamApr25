@@ -21,7 +21,7 @@ namespace Jam.Scripts.Quests
                 return true;
             }
 
-            Debug.LogError($"No active quest!");
+            Debug.LogWarning($"Trying to remove quest, but there is no active quest!");
             return false;
         }
 
@@ -30,7 +30,7 @@ namespace Jam.Scripts.Quests
             if (_activeQuest != null)
                 _activeQuest.IsComplete = true;
             else
-                Debug.LogError($"No active quest!");
+                Debug.LogError($"Trying to set quest complete, but there is no active quest!");
         }
         
         public void SetIncomplete()
@@ -38,7 +38,7 @@ namespace Jam.Scripts.Quests
             if (_activeQuest != null)
                 _activeQuest.IsComplete = false;
             else
-                Debug.LogError($"No active quest!");
+                Debug.LogError($"Trying to set quest incomplete, but there is no active quest!");
         }
 
         
@@ -47,7 +47,7 @@ namespace Jam.Scripts.Quests
             if (_activeQuest != null)
                 _activeQuest.IsFailed = true;
             else
-                Debug.LogError($"No active quest!");
+                Debug.LogError($"Trying to set quest fail, but there is no active quest!");
         }
         
         public bool IsComplete()
@@ -55,7 +55,7 @@ namespace Jam.Scripts.Quests
             if (_activeQuest != null)
                 return _activeQuest.IsComplete;
 
-            Debug.LogError($"No active quest!");
+            Debug.LogError($"Trying to check quest completion, but there is no active quest!");
             return false;
         }
         
@@ -64,7 +64,7 @@ namespace Jam.Scripts.Quests
             if (_activeQuest != null)
                 return _activeQuest.IsFailed;
 
-            Debug.LogError($"No active quest!");
+            Debug.LogError($"Trying to check quest fail, but there is no active quest!");
             return false;
         }
 

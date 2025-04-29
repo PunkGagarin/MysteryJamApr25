@@ -8,6 +8,7 @@ using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Ritual.Inventory.Reagents;
+using Jam.Scripts.Ritual.Tools;
 using Jam.Scripts.Utils.String_Tool;
 using UnityEngine;
 using Zenject;
@@ -29,12 +30,14 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _ritualFailedByRaceEvent;
         [SerializeField, StringEvent] private string _ritualFailedByDeathEvent;
         [SerializeField, StringEvent] private string _ritualFailedByExcludedEvent;
+        [SerializeField, StringEvent] private string _addToolEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private RitualController _ritualController;
         [Inject] private InventorySystem _inventorySystem;
         [Inject] private InventoryConfig _inventoryConfig;
+        [Inject] private ToolController _toolController;
  
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
@@ -64,6 +67,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _reagentEvent, HandleReagent },
                 { _reputationEvent, HandleReputation },
                 { _moneyEvent, HandleMoney },
+                { _addToolEvent, AddTool }
             };
 
             _conditionHandlers = new Dictionary<string, StringEventCondition>
@@ -232,6 +236,12 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
 
             Debug.LogError($"Wrong condition type for quests: {conditionType}!");
             return false;
+        }
+
+        private void AddTool(float toolId, StringEventModifierType eventModifier)
+        {
+            if (eventModifier == StringEventModifierType.Add) 
+                _toolController.UnlockTool((int)toolId);
         }
 
         public void RunEvent(DialogueEventSO itemDialogueEventSo)
