@@ -4,6 +4,7 @@ using System.IO;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.Dialogue.Runtime.SO;
 using Jam.Scripts.Dialogue.Runtime.SO.Dialogue;
+using UnityEditor;
 using UnityEngine;
 
 namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
@@ -42,6 +43,7 @@ namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
                     });
 
                     dialogueContainer.ChoiceData.ForEach(nodeData => { LoadIntoChoiceNode(table, headers, nodeData); });
+                    EditorUtility.SetDirty(dialogueContainer);
                 });
                 return true;
             }
