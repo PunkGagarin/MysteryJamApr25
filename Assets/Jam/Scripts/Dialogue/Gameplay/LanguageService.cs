@@ -1,21 +1,22 @@
 ﻿using System;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using UnityEngine;
+using Zenject;
 
 namespace Jam.Scripts.Dialogue.Gameplay
 {
     public class LanguageService : MonoBehaviour
     {
         public event Action OnSwitchLanguage;
-
-        [SerializeField] private LanguageType _currentLanguage;
-
+        
+        [Inject] private LanguageModel _languageModel;
+        
         public LanguageType CurrentLanguage
         {
-            get => _currentLanguage;
+            get => _languageModel.Language;
             set
             {
-                _currentLanguage = value;
+                _languageModel.SaveLanguage(value);
                 OnSwitchLanguage?.Invoke();
             }
         }

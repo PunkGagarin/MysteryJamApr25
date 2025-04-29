@@ -12,6 +12,7 @@ namespace Jam.Scripts.Audio.View
         [SerializeField] private Slider _masterVolumeSlider, _musicVolumeSlider, _soundVolumeSlider;
         [SerializeField] private Button _closeButton, _applyButton;
         [SerializeField] private Toggle _enToggle, _ruToggle;
+        [SerializeField] private ToggleGroup _toggleGroup;
 
         [Inject] private AudioSettingsPresenter _audioSettingsPresenter;
         [Inject] private AudioService _audioService;
@@ -99,10 +100,16 @@ namespace Jam.Scripts.Audio.View
         public void SetMusicVolume(float musicVolume) =>
             _musicVolumeSlider.value = musicVolume;
 
-        public void EnableRuToggle(bool isOn) => 
-            _ruToggle.isOn = isOn;
+        public void EnableRuToggle(bool isOn)
+        {
+            _ruToggle.SetIsOnWithoutNotify(isOn);
+            _toggleGroup.allowSwitchOff = false;
+        }
 
-        public void EnableEnToggle(bool isOn) => 
-            _enToggle.isOn = isOn;
+        public void EnableEnToggle(bool isOn)
+        {
+            _enToggle.SetIsOnWithoutNotify(isOn);
+            _toggleGroup.allowSwitchOff = false;
+        }
     }
 }

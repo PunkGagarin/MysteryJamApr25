@@ -1,19 +1,25 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
-using TextAsset = UnityEngine.TextAsset;
 
 namespace Jam.Scripts.Dialogue.Gameplay
 {
     public class LanguageServiceInstaller : MonoInstaller
     {
         [SerializeField] private LanguageService languageServicePrefab;
-        [SerializeField] private List<TextAsset> _localizationTextAssets;
 
         public override void InstallBindings()
         {
+            InstallLanguageModel();
             InstallLanguageService();
             InstallLocalization();
+        }
+
+        private void InstallLanguageModel()
+        {
+            Container.Bind<LanguageModel>()
+                .FromNew()
+                .AsSingle()
+                .NonLazy();
         }
 
         private void InstallLanguageService()
@@ -28,7 +34,6 @@ namespace Jam.Scripts.Dialogue.Gameplay
         {
             Container.Bind<Localization>()
                 .AsSingle()
-                .WithArguments(_localizationTextAssets)
                 .NonLazy();
         }
     }

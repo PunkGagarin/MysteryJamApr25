@@ -15,3 +15,4 @@ MonoBehaviour:
   _dayConfig: {fileID: 11400000, guid: 6c6e71658f88c7c4d8d61a371240a3b6, type: 2}
   _inventoryConfig: {fileID: 11400000, guid: 5fb9518a30bd20c46b5a3553f9632e42, type: 2}
   _shopConfig: {fileID: 11400000, guid: 93818b15e1c6aa74cb70ab455098e51c, type: 2}
+  _languageConfig: {fileID: 11400000, guid: c64e57ed246ff48c1bc2f5c5e2a006fc, type: 2}

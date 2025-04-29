@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 0
+  m_AllowSwitchOff: 1
 --- !u!1 &8182372056790821505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,6 +3001,7 @@ MonoBehaviour:
   _applyButton: {fileID: 3351133073229383565}
   _enToggle: {fileID: 1445850889455619061}
   _ruToggle: {fileID: 5171006432055190667}
+  _toggleGroup: {fileID: 8077045177995783282}
 --- !u!1 &8537279577652415884
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,13 +14,20 @@ namespace Jam.Scripts.Dialogue.Gameplay
         private const string ID = "ID";
         private const string KEY = "key";
 
-
         [Inject] private LanguageService _languageService;
+        private LanguageConfig _languageConfig;
 
         private readonly Dictionary<int, Language> _languages = new();
         private int _currentLanguageID => (int)_languageService.CurrentLanguage;
 
-        public Localization(List<TextAsset> languageFiles)
+        [Inject]
+        public Localization(LanguageConfig languageConfig)
+        {
+            _languageConfig = languageConfig;
+            Initialize(_languageConfig.LocalizationTextAssets);
+        }
+
+        private void Initialize(List<TextAsset> languageFiles)
         {
             foreach (TextAsset languageFile in languageFiles)
             {
