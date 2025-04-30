@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,13 +6,14 @@ namespace Jam.Scripts.VFX
 {
     public class PointerFirefly : MonoBehaviour
     {
-        [SerializeField] private List<Transform> _targets;
+        [SerializeField] private List<TargetData> _targets;
         [SerializeField] private float _radius = 1.0f;
-        [SerializeField] private float _speed = 1.0f;
+        [SerializeField] private float _movingArounSpeed = 1.0f;
+        [SerializeField] private float _movingToTargetSpeed = 1.0f;
         [SerializeField] private float _noiseAmount = 0.2f;
 
         private float _angle;
-        private int _currentTarget = 0;
+        public int CurrentTarget { get; private set; } = (int)TargetType.Rope;
         private bool _isMovingToTarget = false;
 
         private void Update()
@@ -26,7 +28,7 @@ namespace Jam.Scripts.VFX
 
         private void MoveAroundTarget()
         {
-            _angle += _speed * Time.deltaTime;
+            _angle += _movingArounSpeed * Time.deltaTime;
             float x = Mathf.Cos(_angle) * _radius;
             float y = Mathf.Sin(_angle) * _radius;
 
@@ -35,23 +37,30 @@ namespace Jam.Scripts.VFX
                 Mathf.PerlinNoise(0, Time.time * 2) - 0.5f
             ) * _noiseAmount;
 
-            transform.position = _targets[_currentTarget].position + new Vector3(x, y, 0) + (Vector3)noise;
+            transform.position = _targets[CurrentTarget].Target.position + new Vector3(x, y, 0) + (Vector3)noise;
         }
 
-        private void ChangeTarget()
+        public void ChangeTargetTo(TargetType target)
         {
-            _isMovingToTarget = true;
-            _currentTarget += 1;
-
-            if (_currentTarget >= _targets.Count)
+            if (target == TargetType.None || CurrentTarget == (int)TargetType.None)
             {
-                _currentTarget = 0;
+                gameObject.SetActive(false);
+                return;
+            }
+
+            _isMovingToTarget = true;
+            var targetData = _targets.Find(x => x.Type == target);
+            CurrentTarget = (int)targetData.Type;
+
+            if (CurrentTarget >= _targets.Count)
+            {
+                CurrentTarget = 0;
             }
         }
 
         private void MoveToNextTarget()
         {
-            Transform newTarget = _targets[_currentTarget];
+            Transform newTarget = _targets[CurrentTarget].Target;
 
             Vector2 noise = new Vector2(
                 Mathf.PerlinNoise(Time.time * 2, 0) - 0.5f,
@@ -61,7 +70,8 @@ namespace Jam.Scripts.VFX
             float x = newTarget.position.x + noise.x;
             float y = newTarget.position.y + noise.y;
 
-            transform.position = Vector2.Lerp(transform.position, new Vector2(x, y), _speed * Time.deltaTime);
+            transform.position =
+                Vector2.Lerp(transform.position, new Vector2(x, y), _movingToTargetSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, newTarget.position) < 0.1f)
             {
@@ -69,4 +79,24 @@ namespace Jam.Scripts.VFX
             }
         }
     }
+}
+
+public enum TargetType
+{
+    None = 0,
+    Rope = 1,
+    Character = 2,
+    Book = 3,
+    Reagents = 4,
+    Table = 5
+}
+
+[Serializable]
+public class TargetData
+{
+    [SerializeField] private TargetType type;
+    [SerializeField] private Transform target;
+
+    public TargetType Type => type;
+    public Transform Target => target;
 }

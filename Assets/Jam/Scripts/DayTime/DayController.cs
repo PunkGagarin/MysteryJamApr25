@@ -3,10 +3,13 @@ using Jam.Scripts.DayTime.Results;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Npc.Data;
+using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual.Tools;
 using Jam.Scripts.Shop;
+using Jam.Scripts.UI;
 using Jam.Scripts.Utils.Pause;
 using Jam.Scripts.Utils.UI;
+using Jam.Scripts.VFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -18,7 +21,6 @@ namespace Jam.Scripts.DayTime
         [SerializeField] private WagonCurtains _curtains;
         [SerializeField] private CharacterResultWriter _characterResultWriter;
         [SerializeField] private RandomNpcController _randomNpcController;
-        [SerializeField] private GameplayOverlayUI _gameplayOverlayUI;
 
         [Inject] private Character _characterController;
         [Inject] private DayConfig _dayConfig;
@@ -28,6 +30,9 @@ namespace Jam.Scripts.DayTime
         [Inject] private AudioService _audioService;
         [Inject] private ShopSystem _shopSystem;
         [Inject] private ToolController _toolController;
+        [Inject] private PointerFirefly _pointerFirefly;
+        [Inject] private GameplayOverlayUI _gameplayOverlayUI;
+        [Inject] private QuestPresenter _questPresenter;
 
         private int _currentDay = 0;
         private int _currentClient = 0;
@@ -48,6 +53,9 @@ namespace Jam.Scripts.DayTime
             NPCDefinition npcDefinition = GetNpcFromConfig();
             _characterController.SetCharacter(npcDefinition);
             _currentClient++;
+
+            if (!_questPresenter.HaveAnyCompletedQuest())
+                _pointerFirefly.ChangeTargetTo(TargetType.Character);
 
             _curtains.OpenCurtains();
         }

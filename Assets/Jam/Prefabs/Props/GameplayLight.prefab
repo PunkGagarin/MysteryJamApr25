@@ -296,3 +296,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _curtainsLight: {fileID: 471818569982559586}
+  _maxCurtainsIntensity: 4.37

@@ -7,6 +7,7 @@ using Jam.Scripts.Quests;
 using Jam.Scripts.Quests.Data;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Ritual.Inventory.Reagents;
+using Jam.Scripts.VFX;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -29,6 +30,7 @@ namespace Jam.Scripts.Ritual
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private InventorySystem _inventorySystem;
         [Inject] private GhostResponseEffect _ghostResponseEffect;
+        [Inject] private PointerFirefly _pointerFirefly;
         
         private List<ReagentRoom> _reagentRooms = new ();
 
@@ -61,6 +63,7 @@ namespace Jam.Scripts.Ritual
             UpdateButtons();
 
             reagentRoom.SetReagent(reagentToAdd);
+            _pointerFirefly.ChangeTargetTo(TargetType.Table);
             return true;
         }
 
@@ -81,10 +84,12 @@ namespace Jam.Scripts.Ritual
                 componentRoom.ReleaseReagent(consumeReagents);
 
             UpdateButtons();
+            _pointerFirefly.ChangeTargetTo(TargetType.None);
         }
         
         private void StartRitual()
         {
+            _pointerFirefly.ChangeTargetTo(TargetType.None);
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
             RitualFailedByExcludedReagents = false;

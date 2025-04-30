@@ -91,27 +91,15 @@ MonoBehaviour:
     TargetPortGuid: Input
   - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetNodeGuid: 6540ab75-53ed-4483-a67a-83b2e573c8ba
     TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+  - BaseNodeGuid: 6540ab75-53ed-4483-a67a-83b2e573c8ba
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
     TargetNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
-    TargetPortGuid: Input
-  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
-    BasePortGuid: Continue
-    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     TargetPortGuid: Input
   - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
     BasePortGuid: 67ccf52e-6314-4bd2-8788-72628cd51953
@@ -132,6 +120,10 @@ MonoBehaviour:
   - BaseNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
     BasePortGuid: Continue
     TargetNodeGuid: 229f12fb-7f13-4f3c-8888-aaaca8e39bef
+    TargetPortGuid: Input
+  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
+    BasePortGuid: Continue
+    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -339,11 +331,17 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 1b55aac0825c5904384fb105ca0a81c5, type: 2}
+  - NodeGuid: 6540ab75-53ed-4483-a67a-83b2e573c8ba
+    Position: {x: 1567, y: -1168}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 1
+      StringEventModifierType:
+        Value: 4
+    ContainerDialogueEventSOs: []
   EndData:
-  - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    Position: {x: 1556, y: -1168}
-    EndNodeType:
-      Value: 4
   - NodeGuid: d56ceb67-689b-4865-b437-dcab9ec3a925
     Position: {x: -678, y: -346}
     EndNodeType:
@@ -352,6 +350,10 @@ MonoBehaviour:
     Position: {x: 498, y: -696}
     EndNodeType:
       Value: 1
+  - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    Position: {x: 2063.5, y: -1162}
+    EndNodeType:
+      Value: 4
   BranchData:
   - NodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
     Position: {x: -1458, y: -879}

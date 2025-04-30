@@ -6,6 +6,7 @@ namespace Jam.Scripts.Quests
     public class QuestModel
     {
         private Quest _activeQuest;
+        private bool _haveAnyCompletedQuest = false;
 
         public void AddQuest(Quest quest) =>
             _activeQuest = quest;
@@ -28,11 +29,16 @@ namespace Jam.Scripts.Quests
         public void SetComplete()
         {
             if (_activeQuest != null)
+            {
                 _activeQuest.IsComplete = true;
+                _haveAnyCompletedQuest = true;
+            }
             else
+            {
                 Debug.LogError($"Trying to set quest complete, but there is no active quest!");
+            }
         }
-        
+
         public void SetIncomplete()
         {
             if (_activeQuest != null)
@@ -41,7 +47,7 @@ namespace Jam.Scripts.Quests
                 Debug.LogError($"Trying to set quest incomplete, but there is no active quest!");
         }
 
-        
+
         public void SetFail()
         {
             if (_activeQuest != null)
@@ -49,7 +55,7 @@ namespace Jam.Scripts.Quests
             else
                 Debug.LogError($"Trying to set quest fail, but there is no active quest!");
         }
-        
+
         public bool IsComplete()
         {
             if (_activeQuest != null)
@@ -58,7 +64,7 @@ namespace Jam.Scripts.Quests
             Debug.LogError($"Trying to check quest completion, but there is no active quest!");
             return false;
         }
-        
+
         public bool IsFailed()
         {
             if (_activeQuest != null)
@@ -68,7 +74,10 @@ namespace Jam.Scripts.Quests
             return false;
         }
 
-        public bool HaveAnyQuest() => 
+        public bool HaveAnyQuest() =>
             _activeQuest != null;
+
+        public bool HaveAnyCompletedQuest() =>
+            _haveAnyCompletedQuest;
     }
 }
