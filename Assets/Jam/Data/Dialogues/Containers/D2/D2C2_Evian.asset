@@ -103,7 +103,7 @@ MonoBehaviour:
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
-    Position: {x: -1889, y: -116}
+    Position: {x: -1863, y: -271}
   DialogueData:
   - NodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     Position: {x: -1106, y: -75}
@@ -310,16 +310,6 @@ MonoBehaviour:
     DialogueDataPorts: []
     SkipContinue: 0
   EventData:
-  - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
-    Position: {x: -155, y: -375}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Quest
-      Number:
-        Value: 7
-      StringEventModifierType:
-        Value: 3
-    ContainerDialogueEventSOs: []
   - NodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     Position: {x: 1430, y: -1052}
     EventDataStringModifiers:
@@ -340,6 +330,16 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
+    Position: {x: -277, y: -330}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 7
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: c970bc39-a3fd-49b7-b927-9b32b9e90179
     Position: {x: 618, y: -554}
@@ -361,17 +361,6 @@ MonoBehaviour:
         Value: 0
       StringEventConditionType:
         Value: 2
-  - NodeGuid: 7b0fee2d-ac11-41a5-9625-b6f36a36fd4b
-    Position: {x: -1662, y: -126}
-    TrueGuidNode: 934da4f9-f6e0-4f49-87a9-ecb89ee37859
-    FalseGuidNode: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    EventDataStringConditions:
-    - StringEventText:
-        Value: Ritual
-      Number:
-        Value: 0
-      StringEventConditionType:
-        Value: 1
   - NodeGuid: 934da4f9-f6e0-4f49-87a9-ecb89ee37859
     Position: {x: -1181, y: -1105}
     TrueGuidNode: 7044de6f-57ef-4e7f-81af-fb651d90a534
@@ -392,6 +381,17 @@ MonoBehaviour:
         Value: Atempts
       Number:
         Value: 1
+      StringEventConditionType:
+        Value: 3
+  - NodeGuid: 7b0fee2d-ac11-41a5-9625-b6f36a36fd4b
+    Position: {x: -1636, y: -281}
+    TrueGuidNode: 934da4f9-f6e0-4f49-87a9-ecb89ee37859
+    FalseGuidNode: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    EventDataStringConditions:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 0
       StringEventConditionType:
         Value: 3
   ChoiceData:
