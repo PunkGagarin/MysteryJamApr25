@@ -30,19 +30,57 @@ MonoBehaviour:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 15fc4b8d9c1b0da4eb8e6397004b21c7, type: 2}
     - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 5f40268130a6d9e4b93e981876c75ad2, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
-    - <IsRandomNpc>k__BackingField: 1
-      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: fe038a089ef5ec7469545a9b56186115, type: 2}
   - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: 7f9a1240f8f86144281e007a0f34802b, type: 2}
-    - <IsRandomNpc>k__BackingField: 1
-      <Npc>k__BackingField: {fileID: 11400000, guid: 15fc4b8d9c1b0da4eb8e6397004b21c7, type: 2}
-    - <IsRandomNpc>k__BackingField: 1
-      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: a713af67802139341818da53ccae6323, type: 2}
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 1f3f3e1a308a15442b85350e17cd99c4, type: 2}
+  - <Npcs>k__BackingField:
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: a713af67802139341818da53ccae6323, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 7bbb9241cc1edfa478747f26db60ded3, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: c7d7e34e50189b34984890513efd6772, type: 2}
+  - <Npcs>k__BackingField:
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 0478f3e56f06ca6439aba5f514df800b, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: 7bbb9241cc1edfa478747f26db60ded3, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
+  - <Npcs>k__BackingField:
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: 0478f3e56f06ca6439aba5f514df800b, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: 7bbb9241cc1edfa478747f26db60ded3, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
+  - <Npcs>k__BackingField:
+    - <IsRandomNpc>k__BackingField: 1
+      <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
