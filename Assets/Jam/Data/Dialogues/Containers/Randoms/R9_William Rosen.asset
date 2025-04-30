@@ -73,10 +73,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     TargetPortGuid: Input
-  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    BasePortGuid: Output
-    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
-    TargetPortGuid: Input
   - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     BasePortGuid: Output
     TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
@@ -84,6 +80,10 @@ MonoBehaviour:
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
     TargetNodeGuid: 23821228-09df-44bc-be01-104735c8af1b
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    BasePortGuid: Output
+    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
   - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     BasePortGuid: Output
@@ -105,10 +105,6 @@ MonoBehaviour:
     BasePortGuid: Continue
     TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     TargetPortGuid: Input
-  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    BasePortGuid: Continue
-    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    TargetPortGuid: Input
   - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
     TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
@@ -116,6 +112,10 @@ MonoBehaviour:
   - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
     BasePortGuid: Continue
     TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    TargetPortGuid: Input
+  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    BasePortGuid: Continue
+    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -195,7 +195,7 @@ MonoBehaviour:
       PortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
       InputGuid: ce233715-8543-41cf-9a34-ce7491221a7e
       OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    SkipContinue: 1
+    SkipContinue: 0
   - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     Position: {x: 2550, y: -701}
     DialogueDataNames: []

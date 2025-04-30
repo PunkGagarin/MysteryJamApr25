@@ -224,7 +224,7 @@ MonoBehaviour:
       PortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
       InputGuid: ce233715-8543-41cf-9a34-ce7491221a7e
       OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    SkipContinue: 1
+    SkipContinue: 0
   - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     Position: {x: 2550, y: -701}
     DialogueDataNames: []
