@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041E\u0434\u0443\u0432\u0430\u043D\u0447\u0438\u043A\u043E\u0432\u044B\u0439
     \u043F\u043E\u0440\u043E\u0448\u043E\u043A"
-  <LocalizeId>k__BackingField: REAGENT_DANDELION_POWDER_NAME
+  <LocalizeId>k__BackingField: REAGENT_DANDELION_FLUFF
   <Id>k__BackingField: 5
   <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
   <ClickClip>k__BackingField: 11
@@ -23,7 +23,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 5
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  - {fileID: 11400000, guid: 420c3ca5bf8fb234da7acf99c08981d6, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0

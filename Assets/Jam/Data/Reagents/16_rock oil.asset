@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 16_rock oil
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0433\u043E\u0440\u043D\u043E\u0435 \u043C\u0430\u0441\u043B\u043E"
-  <LocalizeId>k__BackingField: REAGENT_ROCK_OIL_NAME
+  <LocalizeId>k__BackingField: REAGENT_ROCK_OIL
   <Id>k__BackingField: 16
   <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
   <ClickClip>k__BackingField: 12
@@ -22,7 +22,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 3
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: 23bbfc883b94d1d4dab99549cb27f1cf, type: 2}
+  - {fileID: 11400000, guid: b2865ce8700a7254991904032725dc7e, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0

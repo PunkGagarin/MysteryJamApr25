@@ -1,0 +1,56 @@
+Ключ,Russian,English
+MAIN_MENU_TITLE,The Dead%Truth,The Dead%Truth
+MAIN_MENU_PLAY,Играть,Play
+MAIN_MENU_SETTINGS,Настройки,Settings
+MAIN_MENU_CREDITS,Титры,Credits
+SETTINGS_AUDIO,Звук,Audio
+SETTINGS_LANGUAGE,Язык,Language
+SETTINGS_MASTER,Мастер,Master
+SETTINGS_SFX,Звуки,SFX
+SETTINGS_MUSIC,Музыка,Music
+SETTINGS_LANG_RU,Русский,Русский
+SETTINGS_LANG_EN,English,English
+SETTINGS_CANCEL,Отмена,Cancel
+SETTINGS_APPLY,Ок,Ok
+CREDITS_TITLE,Господа создатели,Who created this
+CREDITS_CLOSE,Закрыть,Close
+CREDITS_DESC,"ГД - PunkGagarim%ГД - ccor3xx%Нарратив - Kudgine_Solis%Разработка - Fenneig%Разработка - Madgine_Solis%Нарратив, Арт - Leit%Арт - NyaKawaii","Game design - PunkGagarim%Game design - ccor3xx%Narrative - Kudgine_Solis%Developer - Fenneig%Developer - Madgine_Solis%Narrative, Art - Leit%Art - NyaKawaii"
+PAUSE_TITLE,Пауза,Paused
+PAUSE_SETTINGS,Настройки,Settings
+PAUSE_RETURN,Вернуться,Return
+PAUSE_TO_MAIN_MENU,В главное меню,To main menu
+RITUAL_START,Начать ритуал,Start ritual
+RITUAL_CLEAR,Очистить стол,Clear table
+MANUAL_PAGE_0_TITLE,Что это за книга?,What is this book about?
+MANUAL_PAGE_0_DESC,"Внутри находится описание рецептов смешивания ингредиентов для ритуала призыва призрака, конфликты, которые могут возникать в процессе и то, как работают интсрументы","Inside is a description of the recipes for mixing ingredients for the ghost summoning ritual, conflicts that may arise during the process, and how the tools work."
+MANUAL_PAGE_0_SEX,Пол,Sex
+MANUAL_PAGE_1_AGE,Возраст,Age
+MANUAL_PAGE_1_RACE,Раса,Race
+MANUAL_PAGE_1_MIRROR_TITLE,Зеркало,Mirror
+MANUAL_PAGE_1_MIRROR_DESC,Этот инструмент позволяет вам обнаружить конфликты в реагентах. Но используйте с осторожностью. Зеркало не может выдержать всей потусторонней мощи,This tool allows you to detect conflicts in reagents. But use with caution. The mirror cannot withstand all the otherworldly power
+MANUAL_PAGE_1_MAGNIFIER_TITLE,Лупа,Magnifier
+MANUAL_PAGE_1_MAGNIFIER_DESC,"Очевидно приближать что то, но я не знаю что ","Obviously something needs to be brought closer, but I don't know what."
+MANUAL_PAGE_2_PENDULUM_TITLE,Маятник,Pendulum
+MANUAL_PAGE_2_PENDULUM_DESC,Раскачивайте маятник в такт пульсу. Промахи ухудшают связь с душами,Swing the pendulum in time with your pulse. Misses worsen the connection with souls
+REAGENT_AGATE_BEADS,агатовые бусины,agate beads
+REAGENT_SALAMANDER_EGGS,яйца саламандры,salamander eggs
+REAGENT_PINK_PEARL,розовый жемчуг,pink pearl
+REAGENT_COOLED_SPARKS,застывшие искринки,cooled sparks
+REAGENT_DANDELION_FLUFF,одуванчиковый пух,dandelion fluff
+REAGENT_FAIRY_DUST,пыльца фей,fairy dust
+REAGENT_WITCH_SALT,ведьмина соль,witch salt
+REAGENT_ROSE_POWDER,пудра из роз,rose powder
+REAGENT_DESERT_SAND,песок пустыни,desert sand
+REAGENT_BOOK_ASHES,книжный пепел,book ashes
+REAGENT_SPRING_WATER,родниковая вода,spring water
+REAGENT_EVERMILK_,вечное молоко,evermilk
+REAGENT_OLIVE_OIL,оливковое масло,olive oil
+REAGENT_GREEN_TEA,зеленый чай,green tea
+REAGENT_HOP_EXTRACT,экстракт хмеля,hop extract
+REAGENT_ROCK_OIL,горное масло,rock oil
+DAY_RESULT_NUM,День,Day
+GOLD_AMOUNT_KEY,Золото,Gold
+DAY_RESULT_MONEY_EARNED,Денег%заработано,Money%earned
+DAY_RESULT_REPUTATION,Репутация,Reputation
+DAY_RESULT_MONEY_TOTAL,Всего%денег,Total%money
+DAY_RESULT_CONTINUE,Продолжить,Continue

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6_fairy dust
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041F\u044B\u043B\u044C\u0446\u0430 \u0444\u0435\u0439"
-  <LocalizeId>k__BackingField: REAGENT_FAIRY_DUST_NAME
+  <LocalizeId>k__BackingField: REAGENT_FAIRY_DUST
   <Id>k__BackingField: 6
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ClickClip>k__BackingField: 11
@@ -22,7 +22,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 2
   <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  - {fileID: 11400000, guid: d85ddaedadbee5f4cabe695ae9bd9054, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 1
   <IsAgeExcluded>k__BackingField: 0

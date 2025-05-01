@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u041E\u043B\u0438\u0432\u043A\u043E\u0432\u043E\u0435
     \u043C\u0430\u0441\u043B\u043E"
-  <LocalizeId>k__BackingField: REAGENT_OLIVE_OIL_NAME
+  <LocalizeId>k__BackingField: REAGENT_OLIVE_OIL
   <Id>k__BackingField: 13
   <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
   <ClickClip>k__BackingField: 12
@@ -23,7 +23,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 2
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  - {fileID: 11400000, guid: bdf137b077359d44b85e70fc22cd48d1, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0

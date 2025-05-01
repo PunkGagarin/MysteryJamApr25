@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 14_green tea
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u0417\u0435\u043B\u0435\u043D\u044B\u0439 \u0447\u0430\u0439"
-  <LocalizeId>k__BackingField: REAGENT_GREEN_TEA_NAME
+  <LocalizeId>k__BackingField: REAGENT_GREEN_TEA
   <Id>k__BackingField: 14
   <Visual>k__BackingField: {fileID: 21300000, guid: faf2513e3236c2d4c937427f2c6b1bbf, type: 3}
   <ClickClip>k__BackingField: 12
@@ -22,7 +22,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 0
   <RaceType>k__BackingField: 2
   <DeathType>k__BackingField: 2
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: 210d2be073d86d24ab4ca731444e6fab, type: 2}
+  - {fileID: 11400000, guid: 5f0b5841575ccef439e42f7495f5cd18, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0
