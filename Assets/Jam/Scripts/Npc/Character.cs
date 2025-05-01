@@ -11,7 +11,6 @@ namespace Jam.Scripts.Npc
 {
     public class Character : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private PointerShower _pointerShower;
         [SerializeField] private NpcTalk _talk;
         [SerializeField] private SpriteRenderer _visual;
 
@@ -37,12 +36,9 @@ namespace Jam.Scripts.Npc
         private void Talk() => 
             _talk.Talk(_definition.Dialogue, CharacterLeave);
 
-        private void CharacterArrived()
-        {
+        private void CharacterArrived() => 
             _canInteract = true;
-            _pointerShower.Show();
-        }
-        
+
         private void CharacterLeave()
         {
             OnCharacterLeave?.Invoke();
@@ -57,7 +53,6 @@ namespace Jam.Scripts.Npc
             {
                 _canInteract = false;
                 _audioService.PlaySound(Sounds.buttonClick.ToString());
-                _pointerShower.Hide();
                 Talk();
             }
         }
