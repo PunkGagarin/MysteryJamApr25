@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7289113510998660876}
   - component: {fileID: 3814426495655385918}
-  - component: {fileID: 251204455090055498}
+  - component: {fileID: 3803237439573944519}
   m_Layer: 0
   m_Name: PointerFirefly
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &251204455090055498
+--- !u!114 &3803237439573944519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5603318524221096322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ca9701837584a86a31f96617c83a61, type: 3}
+  m_Script: {fileID: 11500000, guid: be8772571053e4df6ba5c23e26113efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
+  _targets: []
   _radius: 1
-  _speed: 2.2
-  _noiseAmount: 0.2
+  _movingArounSpeed: 2.2
+  _movingToTargetSpeed: 0.8
+  _noiseAmount: 0.4
