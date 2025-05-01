@@ -24,7 +24,13 @@ namespace Jam.Scripts.MainMenuPopups
         {
             _settingsButton.onClick.AddListener(OnSettingsButtonClick);
             _mainMenuButton.onClick.AddListener(OnMainMenuButtonClick);
-            _playButton.onClick.AddListener(Close);
+            _playButton.onClick.AddListener(OnPlayButtonClick);
+        }
+
+        private void OnPlayButtonClick()
+        {
+            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            Close();
         }
 
         private void OnSettingsButtonClick()
@@ -44,7 +50,7 @@ namespace Jam.Scripts.MainMenuPopups
         {
             _settingsButton.onClick.RemoveListener(OnSettingsButtonClick);
             _mainMenuButton.onClick.RemoveListener(OnMainMenuButtonClick);
-            _playButton.onClick.RemoveListener(Close);
+            _playButton.onClick.RemoveListener(OnPlayButtonClick);
         }
     }
 }

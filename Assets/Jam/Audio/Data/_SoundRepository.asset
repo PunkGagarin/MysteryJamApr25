@@ -51,10 +51,6 @@ MonoBehaviour:
       _clip: {fileID: 8300000, guid: c08d3aa5dfa334d6688361d6e7c161db, type: 3}
     - _volume: 1
       _clip: {fileID: 8300000, guid: cf84e50c5ae0b40ee99fcddcc97fb2c0, type: 3}
-  - _name: woodCreak2
-    _clips:
-    - _volume: 1
-      _clip: {fileID: 8300000, guid: cf84e50c5ae0b40ee99fcddcc97fb2c0, type: 3}
   - _name: foundConflict
     _clips:
     - _volume: 1
@@ -63,10 +59,6 @@ MonoBehaviour:
     _clips:
     - _volume: 1
       _clip: {fileID: 8300000, guid: cf29818e1368c4d4e9d1d6c65f52411f, type: 3}
-  - _name: bottleOnTable2
-    _clips:
-    - _volume: 1
-      _clip: {fileID: 8300000, guid: fd0629857c7f14299bef05cf497c4071, type: 3}
   - _name: bottleOnTable
     _clips:
     - _volume: 1
@@ -79,14 +71,6 @@ MonoBehaviour:
     _clips:
     - _volume: 1
       _clip: {fileID: 8300000, guid: f13524c6a718a49e29fe9da723e18caf, type: 3}
-  - _name: error
-    _clips:
-    - _volume: 1
-      _clip: {fileID: 8300000, guid: 24a0ed76cad7a4ba684a62e9cfffea3f, type: 3}
-  - _name: bottleOnTable3
-    _clips:
-    - _volume: 1
-      _clip: {fileID: 8300000, guid: 8e1b960c069864277b30ac5d846b0926, type: 3}
   - _name: ritualFailed
     _clips:
     - _volume: 1
@@ -95,10 +79,12 @@ MonoBehaviour:
     _clips:
     - _volume: 1
       _clip: {fileID: 8300000, guid: a9a115be1ec46424d9b76005b88f736f, type: 3}
-  - _name: bookFlip2
+  - _name: cameraMove
     _clips:
-    - _volume: 1
-      _clip: {fileID: 8300000, guid: 7446e974f0c4a4648bb58fa236501526, type: 3}
+    - _volume: 0.236
+      _clip: {fileID: 8300000, guid: d09f48f539fdb4323b7076e0760ab08c, type: 3}
+    - _volume: 0.236
+      _clip: {fileID: 8300000, guid: ac218af11fa274056b06b4c5f8be6c34, type: 3}
   <Music>k__BackingField:
   - _name: mainMenuBgm
     _clips:

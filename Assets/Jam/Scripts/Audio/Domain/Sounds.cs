@@ -18,6 +18,7 @@ namespace Jam.Scripts.Audio.Domain
         whisperingGhosts,
         error,
         ritualFailed,
-        ritualSuccess
+        ritualSuccess,
+        cameraMove
     }
 }
