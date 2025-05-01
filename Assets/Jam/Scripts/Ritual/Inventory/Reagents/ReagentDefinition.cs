@@ -18,10 +18,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         [field: SerializeField, ShowIf(nameof(ReagentType), ReagentType.Race)] public RaceType RaceType {get; private set; }
         [field: SerializeField, ShowIf(nameof(ReagentType), ReagentType.Death)] public DeathType DeathType {get; private set; }
         [field: SerializeField] public List<ReagentDefinition> ExcludedReagents { get; private set; }
-        [field: SerializeField] public bool IsDeathReasonExcluded { get; private set; }
-        [field: SerializeField, ShowIf("IsDeathReasonExcluded")] public DeathType ExcludedDeathReasonType { get; private set;}
-        [field: SerializeField] public bool IsAgeExcluded { get; private set; }
-        [field: SerializeField, ShowIf("IsAgeExcluded")] public AgeType ExcludedAgeType { get; private set;}
+
         [field: SerializeField] public int Cost { get; private set; }
 
         public Sprite GetExcludedSprite(int reagentExclusionExcludedReagentId)

@@ -131,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7117677, y: 5.7030954}
+  m_Size: {x: 1.5, y: 5.7030954}
   m_EdgeRadius: 0
 --- !u!114 &1509002843743714631
 MonoBehaviour:
@@ -148,6 +148,7 @@ MonoBehaviour:
   _curtains: {fileID: 0}
   _characterResultWriter: {fileID: 2062879932128762500}
   _randomNpcController: {fileID: 8992599113389208612}
+  _gameplayOverlayUI: {fileID: 0}
 --- !u!114 &2062879932128762500
 MonoBehaviour:
   m_ObjectHideFlags: 0

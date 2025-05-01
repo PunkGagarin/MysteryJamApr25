@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zenject;
@@ -21,10 +22,16 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             }
         }
         
-        public void PlayAnimation(ReagentDefinition reagentDefinition, Vector3 componentPosition, ReagentRoom reagentRoom)
+        public void PlayAnimationFromInventory(ReagentDefinition reagentDefinition, Vector3 componentPosition, ReagentRoom reagentRoom)
         {
             _animations.FirstOrDefault(anim => !anim.IsPlaying)
                 ?.StartAnimation(componentPosition, reagentRoom.Position, reagentDefinition.Visual, reagentRoom.ActivateRoom);
+        }
+        
+        public void PlayAnimationFromPosition(Vector3 startPosition, Vector3 endPosition, Sprite visual, Action action)
+        {
+            _animations.FirstOrDefault(anim => !anim.IsPlaying)
+                ?.StartAnimation(startPosition, endPosition, visual, action);
         }
     }
 }

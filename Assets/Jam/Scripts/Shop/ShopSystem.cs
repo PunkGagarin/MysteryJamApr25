@@ -20,13 +20,14 @@ namespace Jam.Scripts.Shop
         [Inject] private ReagentRepository _reagentRepository;
         [Inject] private ShopConfig _shopConfig;
         [Inject] private DayController _dayController;
-        [Inject] private ToolController _toolController;
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private InventorySystem _inventorySystem;
 
         private ShopView _shopView;
         private List<ShopItem> _reagentsShopItems = new();
         private List<ShopItem> _toolsShopItems = new();
+
+        public event Action<int> ItemAppear;
 
         public void OpenShop(Action closeEvent = null)
         {
@@ -53,7 +54,7 @@ namespace Jam.Scripts.Shop
         private void PopulatePoolWithTools(List<ToolDefinition> toolsInShopPool)
         {
             toolsInShopPool.Clear();
-            toolsInShopPool.AddRange(_toolController.GetUnlockedTools());
+            toolsInShopPool.AddRange(_inventorySystem.GetUnlockedTools());
             UpdateContainerRooms(toolsInShopPool.Count, _toolsShopItems);
         }
 
@@ -74,7 +75,7 @@ namespace Jam.Scripts.Shop
                 {
                     if (_playerStats.CanSpend(toolInSlot.Cost))
                     {
-                        _toolController.BuyTool(toolInSlot);
+                        _inventorySystem.BuyTool(toolInSlot);
                         shopItem.gameObject.SetActive(false);
                     }
                     else
@@ -99,6 +100,7 @@ namespace Jam.Scripts.Shop
             for (int i = 0; i < reagentsInShopPool.Count; i++)
             {
                 ReagentDefinition reagentInSlot = reagentsInShopPool[i];
+                ItemAppear?.Invoke(reagentInSlot.Id);
                 ShopItem shopItem = _reagentsShopItems[i];
                 shopItem.SetReagent(reagentInSlot);
                 shopItem.gameObject.SetActive(true);

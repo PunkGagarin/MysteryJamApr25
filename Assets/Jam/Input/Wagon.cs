@@ -44,6 +44,24 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drag"",
+                    ""type"": ""Value"",
+                    ""id"": ""b13969db-d4dd-4c62-87aa-57aaa033216c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""EndDrag"",
+                    ""type"": ""Button"",
+                    ""id"": ""134146ff-a823-4a62-949d-c15a2e4d467b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -88,6 +106,28 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2fb7395a-314b-4888-84cc-25fab50bf784"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drag"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f92607cf-0431-4b59-9942-753c72dd48fa"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""EndDrag"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -170,6 +210,8 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
         m_Wagon = asset.FindActionMap("Wagon", throwIfNotFound: true);
         m_Wagon_Left = m_Wagon.FindAction("Left", throwIfNotFound: true);
         m_Wagon_Right = m_Wagon.FindAction("Right", throwIfNotFound: true);
+        m_Wagon_Drag = m_Wagon.FindAction("Drag", throwIfNotFound: true);
+        m_Wagon_EndDrag = m_Wagon.FindAction("EndDrag", throwIfNotFound: true);
         // Manual
         m_Manual = asset.FindActionMap("Manual", throwIfNotFound: true);
         m_Manual_NextPage = m_Manual.FindAction("NextPage", throwIfNotFound: true);
@@ -243,12 +285,16 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
     private List<IWagonActions> m_WagonActionsCallbackInterfaces = new List<IWagonActions>();
     private readonly InputAction m_Wagon_Left;
     private readonly InputAction m_Wagon_Right;
+    private readonly InputAction m_Wagon_Drag;
+    private readonly InputAction m_Wagon_EndDrag;
     public struct WagonActions
     {
         private @WagonInput m_Wrapper;
         public WagonActions(@WagonInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Left => m_Wrapper.m_Wagon_Left;
         public InputAction @Right => m_Wrapper.m_Wagon_Right;
+        public InputAction @Drag => m_Wrapper.m_Wagon_Drag;
+        public InputAction @EndDrag => m_Wrapper.m_Wagon_EndDrag;
         public InputActionMap Get() { return m_Wrapper.m_Wagon; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -264,6 +310,12 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
             @Right.started += instance.OnRight;
             @Right.performed += instance.OnRight;
             @Right.canceled += instance.OnRight;
+            @Drag.started += instance.OnDrag;
+            @Drag.performed += instance.OnDrag;
+            @Drag.canceled += instance.OnDrag;
+            @EndDrag.started += instance.OnEndDrag;
+            @EndDrag.performed += instance.OnEndDrag;
+            @EndDrag.canceled += instance.OnEndDrag;
         }
 
         private void UnregisterCallbacks(IWagonActions instance)
@@ -274,6 +326,12 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
             @Right.started -= instance.OnRight;
             @Right.performed -= instance.OnRight;
             @Right.canceled -= instance.OnRight;
+            @Drag.started -= instance.OnDrag;
+            @Drag.performed -= instance.OnDrag;
+            @Drag.canceled -= instance.OnDrag;
+            @EndDrag.started -= instance.OnEndDrag;
+            @EndDrag.performed -= instance.OnEndDrag;
+            @EndDrag.canceled -= instance.OnEndDrag;
         }
 
         public void RemoveCallbacks(IWagonActions instance)
@@ -349,6 +407,8 @@ public partial class @WagonInput: IInputActionCollection2, IDisposable
     {
         void OnLeft(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
+        void OnDrag(InputAction.CallbackContext context);
+        void OnEndDrag(InputAction.CallbackContext context);
     }
     public interface IManualActions
     {

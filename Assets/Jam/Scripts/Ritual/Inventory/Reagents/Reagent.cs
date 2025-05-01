@@ -78,7 +78,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             if (_ritualController.TryAddComponent(_reagentDefinition, out ReagentRoom room))
             {
                 _audioService.PlaySound(_reagentDefinition.ClickClip.ToString());
-                _reagentAnimationController.PlayAnimation(_reagentDefinition, transform.position, room);
+                _reagentAnimationController.PlayAnimationFromInventory(_reagentDefinition, transform.position, room);
                 RemoveReagent();
             }
             else

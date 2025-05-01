@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
 
@@ -10,6 +11,10 @@ namespace Jam.Scripts.Input
 
         public event Action OnLeft, OnRight;
         public event Action OnNextPage, OnPreviousPage;
+        public event Action<Vector2> OnMouseDrag;
+        public event Action OnMouseEndDrag;
+        
+        public Vector2 MousePosition { get; private set; }
         
         public void Initialize()
         {
@@ -20,6 +25,9 @@ namespace Jam.Scripts.Input
             
             WagonInput.Wagon.Left.started += Left;
             WagonInput.Wagon.Right.started += Right;
+            WagonInput.Wagon.Drag.performed += Drag;
+            WagonInput.Wagon.EndDrag.canceled += EndDrag;
+            
             WagonInput.Manual.NextPage.started += NextPage;
             WagonInput.Manual.PrevPage.started += PreviousPage;
         }
@@ -42,11 +50,18 @@ namespace Jam.Scripts.Input
 
             WagonInput.Wagon.Left.started -= Left;
             WagonInput.Wagon.Right.started -= Right;
+            WagonInput.Wagon.Drag.performed -= Drag;
             
             WagonInput.Manual.NextPage.started -= NextPage;
             WagonInput.Manual.PrevPage.started -= PreviousPage;
         }
         
+        private void Drag(InputAction.CallbackContext context)
+        {
+            MousePosition = context.ReadValue<Vector2>();
+            OnMouseDrag?.Invoke(MousePosition);
+        }
+
         private void Left(InputAction.CallbackContext context) => 
             OnLeft?.Invoke();
         
@@ -58,5 +73,8 @@ namespace Jam.Scripts.Input
 
         private void NextPage(InputAction.CallbackContext context) => 
             OnNextPage?.Invoke();
+
+        private void EndDrag(InputAction.CallbackContext obj) => 
+            OnMouseEndDrag?.Invoke();
     }
 }

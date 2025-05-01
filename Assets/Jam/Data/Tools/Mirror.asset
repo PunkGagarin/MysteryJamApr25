@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mirror
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Mirror
-  <LocalizeId>k__BackingField: 
+  <LocalizeId>k__BackingField: TOOL_MIRROR
+  <Id>k__BackingField: 0
   <Charges>k__BackingField: 3
   <Cost>k__BackingField: 150
   <Visual>k__BackingField: {fileID: 21300000, guid: 4087a3163c212ae438e23da8a23b6748, type: 3}

@@ -46,6 +46,7 @@ namespace Jam.Scripts.DayTime
 
             _canCallNextClient = false;
             NPCDefinition npcDefinition = GetNpcFromConfig();
+            Debug.Log($"Npc arrived : {npcDefinition.name}");
             _characterController.SetCharacter(npcDefinition);
             _currentClient++;
 

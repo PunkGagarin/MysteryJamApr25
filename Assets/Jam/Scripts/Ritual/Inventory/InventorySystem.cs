@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Ritual.Tools;
+using Jam.Scripts.Shop;
 using UnityEngine;
 using Zenject;
 
@@ -14,6 +15,7 @@ namespace Jam.Scripts.Ritual.Inventory
         [Inject] private ReagentRepository _reagentRepository;
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private ToolController _toolController;
+        [Inject] private ShopSystem _shopSystem;
         public event Action<int> OnReagentSeen;
 
         public void BuyReagent(int id) => 
@@ -36,12 +38,19 @@ namespace Jam.Scripts.Ritual.Inventory
             SeenReagent(id);
         }
 
-        public void SeenReagent(int id) => 
+        private void SeenReagent(int id) => 
             OnReagentSeen?.Invoke(id);
 
-        public void BuyTool(ToolDefinition unlockedTool)
-        {
+        public void BuyTool(ToolDefinition unlockedTool) => 
             _toolController.BuyTool(unlockedTool);
-        }
+
+        private void Awake() => 
+            _shopSystem.ItemAppear += SeenReagent;
+
+        private void OnDestroy() =>
+            _shopSystem.ItemAppear -= SeenReagent;
+
+        public List<ToolDefinition> GetUnlockedTools() =>
+            _toolController.GetUnlockedTools();
     }
 }

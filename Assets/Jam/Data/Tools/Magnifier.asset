@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Magnifier
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Mirror
-  <LocalizeId>k__BackingField: 
+  <LocalizeId>k__BackingField: TOOL_MAGNIFIER
   <Id>k__BackingField: 1
   <Charges>k__BackingField: 10
   <Cost>k__BackingField: 50

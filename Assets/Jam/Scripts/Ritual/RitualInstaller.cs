@@ -10,13 +10,23 @@ namespace Jam.Scripts.Ritual
         [SerializeField] private RitualController _ritualController;
         [SerializeField] private ReagentAnimationController _reagentAnimationControllerPrefab;
         [SerializeField] private InventorySystem _inventorySystem;
+        [SerializeField] private ReagentDragger _reagentDragger;
         public override void InstallBindings()
         {
-            RitualControllerInstall();
             ComponentsAnimationControllerInstall();
+            DraggerInstall();
+            RitualControllerInstall();
             InventoryInstall();
         }
-        
+
+        private void DraggerInstall()
+        {
+            Container.Bind<ReagentDragger>()
+                .FromInstance(_reagentDragger)
+                .AsSingle()
+                .NonLazy();
+        }
+
         private void ComponentsAnimationControllerInstall()
         {
             Container.Bind<ReagentAnimationController>()

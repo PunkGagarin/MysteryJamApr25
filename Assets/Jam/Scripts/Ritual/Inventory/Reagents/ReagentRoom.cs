@@ -1,35 +1,28 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using Zenject;
 
 namespace Jam.Scripts.Ritual.Inventory.Reagents
 {
-    public class ReagentRoom : MonoBehaviour, IPointerClickHandler
+    public class ReagentRoom : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler
     {
-        [SerializeField] private Image _reagentImage;
+        [SerializeField] private SpriteRenderer _reagentImage;
         [field: SerializeField] public ReagentDefinition ReagentInside { get; private set; }
 
-        public event Action OnRoomChanged;
+        [Inject] private ReagentDragger _reagentDragger;
+        [Inject] private InventorySystem _inventorySystem;
         
-        private InventorySystem _inventorySystem;
-        public bool IsFree => ReagentInside == null;
         public Vector3 Position => transform.position;
 
-        public void Initialize(InventorySystem inventorySystem) => 
-            _inventorySystem = inventorySystem;
-        
         public void SetReagent(ReagentDefinition reagent)
         {
             ReagentInside = reagent;
             _reagentImage.sprite = reagent.Visual;
         }
 
-        public void ActivateRoom()
-        {
+        public void ActivateRoom() => 
             _reagentImage.enabled = true;
-            OnRoomChanged?.Invoke();
-        }
+
         public void ReleaseReagent(bool consumeReagents)
         {
             if (!consumeReagents)
@@ -37,7 +30,11 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             
             _reagentImage.enabled = false;
             ReagentInside = null;
-            OnRoomChanged?.Invoke();
+        }
+
+        public void AppearReagent()
+        {
+            _reagentImage.enabled = true;
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -45,8 +42,23 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
             
-            if (!IsFree)
+            if (ReagentInside != null)
                 ReleaseReagent(false);
         }
+
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+                return;
+
+            if (ReagentInside != null)
+            {
+                _reagentDragger.StartDrag(this, ReagentInside);
+                _reagentImage.enabled = false;
+            }
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        { }
     }
 }
