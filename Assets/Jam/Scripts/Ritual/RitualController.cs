@@ -56,7 +56,18 @@ namespace Jam.Scripts.Ritual
                 return false;
             
             _reagentFitter.SetReagent(reagentToAdd, out reagentRoom);
-            _pointerFirefly.ChangeTargetTo(TargetType.Table);
+            switch (_pointerFirefly.CurrentTarget)
+            {
+                case (int)TargetType.FirstReagent:
+                    _pointerFirefly.ChangeTargetTo(TargetType.SecondReagent);
+                    break;
+                case (int)TargetType.SecondReagent:
+                    _pointerFirefly.ChangeTargetTo(TargetType.ThirdReagent);
+                    break;
+                default:
+                    _pointerFirefly.ChangeTargetTo(TargetType.Table);
+                    break;
+            }
 
             UpdateButtons();
 
@@ -81,12 +92,12 @@ namespace Jam.Scripts.Ritual
 
             UpdateButtons();
             _desk.ClearTable();
-            _pointerFirefly.ChangeTargetTo(TargetType.None);
+            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
         }
         
         private void StartRitual()
         {
-            _pointerFirefly.ChangeTargetTo(TargetType.None);
+            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
             RitualFailedByExcludedReagents = false;

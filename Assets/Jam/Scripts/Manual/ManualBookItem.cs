@@ -54,7 +54,7 @@ namespace Jam.Scripts.Manual
             var manualPopup = _popupManager.OpenPopup<ManualPopup>(closeEvent: () =>
             {
                 if (_pointerFirefly.CurrentTarget == (int)TargetType.Book)
-                    _pointerFirefly.ChangeTargetTo(TargetType.Reagents);
+                    _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
             });
             manualPopup.Initialize(_unlockedReagents, _reagentExclusions);
         }
