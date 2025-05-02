@@ -33,9 +33,9 @@ MonoBehaviour:
       <Npc>k__BackingField: {fileID: 11400000, guid: 5f40268130a6d9e4b93e981876c75ad2, type: 2}
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
-    - <IsRandomNpc>k__BackingField: 1
-      <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
     - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: fe038a089ef5ec7469545a9b56186115, type: 2}
+    - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: fe038a089ef5ec7469545a9b56186115, type: 2}
   - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 1
@@ -48,6 +48,8 @@ MonoBehaviour:
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 1f3f3e1a308a15442b85350e17cd99c4, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: ee44e6289ff4ebc41805e6be134e5412, type: 2}
   - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
@@ -81,6 +83,5 @@ MonoBehaviour:
       <Npc>k__BackingField: {fileID: 11400000, guid: ffd0f6e78cd21bc4c992e781ffc2a530, type: 2}
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
-  - <Npcs>k__BackingField:
-    - <IsRandomNpc>k__BackingField: 1
-      <Npc>k__BackingField: {fileID: 11400000, guid: c5e629aa395f2604687a82e6c1954366, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
