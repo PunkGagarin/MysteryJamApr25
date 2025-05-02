@@ -6,6 +6,7 @@ using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Ritual.Tools;
+using Jam.Scripts.UI;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using Zenject;
@@ -22,6 +23,7 @@ namespace Jam.Scripts.Shop
         [Inject] private DayController _dayController;
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private InventorySystem _inventorySystem;
+        [Inject] private GameplayOverlayUI _gameplayOverlayUI;
 
         private ShopView _shopView;
         private List<ShopItem> _reagentsShopItems = new();
@@ -31,9 +33,18 @@ namespace Jam.Scripts.Shop
 
         public void OpenShop(Action closeEvent = null)
         {
-            _shopView = _popupManager.OpenPopup<ShopView>(closeEvent);
+            _shopView = _popupManager.OpenPopup<ShopView>(OnOpenShop, closeEvent: () =>
+            {
+                _gameplayOverlayUI.gameObject.SetActive(true);
+                closeEvent?.Invoke();
+            });
             PopulateShop();
             UpdateMoney(_playerStats.Money, 0);
+        }
+
+        private void OnOpenShop()
+        {
+            _gameplayOverlayUI.gameObject.SetActive(false);
         }
 
         private void PopulateShop()

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
-  m_Name: 2_tobacco leaves
+  m_Name: 2_salamander eggs
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u043B\u0438\u0441\u0442\u044C\u044F \u0442\u0430\u0431\u0430\u043A\u0430"
-  <LocalizeId>k__BackingField: REAGENT_TOBACCO_LEAVES_NAME
+  <Name>k__BackingField: "\u044F\u0439\u0446\u0430 \u0441\u0430\u043B\u0430\u043C\u0430\u043D\u0434\u0440\u044B"
+  <LocalizeId>k__BackingField: REAGENT_SALAMANDER_EGGS
   <Id>k__BackingField: 2
   <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
   <ClickClip>k__BackingField: 11
@@ -22,7 +22,9 @@ MonoBehaviour:
   <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 4
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: bdf137b077359d44b85e70fc22cd48d1, type: 2}
+  - {fileID: 11400000, guid: b04dc7bfc8557ae478ecf4db4556c4b8, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
   <ExcludedDeathReasonType>k__BackingField: 0
   <IsAgeExcluded>k__BackingField: 0

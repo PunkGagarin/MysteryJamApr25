@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4738912107004787304}
   - component: {fileID: 8085748004152121692}
   - component: {fileID: 7253602654985113065}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3303163565603651161}
   - component: {fileID: 2494504139250916379}
   - component: {fileID: 4757954223608245127}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6505415821393387755}
   - component: {fileID: 8888801488586580046}
   - component: {fileID: 252715678982485937}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8960759236288312233}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4451142384304779297}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DiaoguePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 805293361752007461}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fixer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 6308459808031957336}
   - component: {fileID: 1032846205406095638}
   - component: {fileID: 8852814935089295973}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 5095218843734702046}
   - component: {fileID: 609275787841122920}
   - component: {fileID: 3498666307096396720}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DialogueRunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645209225064801144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 9145627425163307476}
   - component: {fileID: 5478505455302888450}
   - component: {fileID: 5424793089111773030}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Answer Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 2720292851234663433}
   - component: {fileID: 8737032631394366271}
   - component: {fileID: 1727264509166477113}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scrollbar Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 3514388335480565400}
   - component: {fileID: 8035933715901021277}
   - component: {fileID: 8243932683813816674}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

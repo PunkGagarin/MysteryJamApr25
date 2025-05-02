@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 9_Desert sand
   m_EditorClassIdentifier: 
   <Name>k__BackingField: "\u043F\u0435\u0441\u043E\u043A \u043F\u0443\u0441\u0442\u044B\u043D\u0438"
-  <LocalizeId>k__BackingField: REAGENT_DESERT_SAND_NAME
+  <LocalizeId>k__BackingField: REAGENT_DESERT_SAND
   <Id>k__BackingField: 9
   <Visual>k__BackingField: {fileID: 21300000, guid: dc3e01ed930b4ee4ea683f06c06c7350, type: 3}
   <ClickClip>k__BackingField: 11
@@ -22,9 +22,7 @@ MonoBehaviour:
   <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 2
-  <ExcludedReagents>k__BackingField: []
-  <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 0
-  <IsAgeExcluded>k__BackingField: 0
-  <ExcludedAgeType>k__BackingField: 0
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: 210d2be073d86d24ab4ca731444e6fab, type: 2}
+  - {fileID: 11400000, guid: b04dc7bfc8557ae478ecf4db4556c4b8, type: 2}
   <Cost>k__BackingField: 50

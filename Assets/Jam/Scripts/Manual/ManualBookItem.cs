@@ -3,6 +3,7 @@ using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Utils.UI;
+using Jam.Scripts.VFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -14,6 +15,8 @@ namespace Jam.Scripts.Manual
         [Inject] private PopupManager _popupManager;
         [Inject] private AudioService _audioService;
         [Inject] private InventorySystem _inventorySystem;
+        [Inject] private PointerFirefly _pointerFirefly;
+
         private HashSet<ReagentExclusion> _reagentExclusions = new();
         private HashSet<int> _unlockedReagents = new();
 
@@ -48,7 +51,11 @@ namespace Jam.Scripts.Manual
         private void OpenPopup()
         {
             _audioService.PlaySound(Sounds.manualOpening.ToString());
-            var manualPopup = _popupManager.OpenPopup<ManualPopup>();
+            var manualPopup = _popupManager.OpenPopup<ManualPopup>(closeEvent: () =>
+            {
+                if (_pointerFirefly.CurrentTarget == (int)TargetType.Book)
+                    _pointerFirefly.ChangeTargetTo(TargetType.Reagents);
+            });
             manualPopup.Initialize(_unlockedReagents, _reagentExclusions);
         }
 

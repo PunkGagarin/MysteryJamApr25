@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc9c5f00a01142648039cef6ccfe2718, type: 3}
-  m_Name: 1_hot paprika
+  m_Name: 7_witch salt
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: "\u0416\u0433\u0443\u0447\u0430\u044F \u043F\u0430\u043F\u0440\u0438\u043A\u0430"
-  <LocalizeId>k__BackingField: REAGENT_HOT_PAPRIKA_NAME
-  <Id>k__BackingField: 1
-  <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
+  <Name>k__BackingField: "\u0432\u0435\u0434\u044C\u043C\u0438\u043D\u0430 \u0441\u043E\u043B\u044C"
+  <LocalizeId>k__BackingField: REAGENT_WITCH_SALT
+  <Id>k__BackingField: 7
+  <Visual>k__BackingField: {fileID: 21300000, guid: 9e6059a31d4e102498a3b32fcc9361f7, type: 3}
   <ClickClip>k__BackingField: 11
-  <ReagentType>k__BackingField: 2
+  <ReagentType>k__BackingField: 1
   <AgeType>k__BackingField: 2
-  <SexType>k__BackingField: 1
-  <RaceType>k__BackingField: 0
+  <SexType>k__BackingField: 0
+  <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: ca0bf6021c36a92408770b5aca9a3c37, type: 2}
+  - {fileID: 11400000, guid: 751df97f07a9c9f44905216b400bebd3, type: 2}
   <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 2
+  <ExcludedDeathReasonType>k__BackingField: 3
   <IsAgeExcluded>k__BackingField: 0
   <ExcludedAgeType>k__BackingField: 0
   <Cost>k__BackingField: 50

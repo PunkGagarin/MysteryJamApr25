@@ -56,7 +56,7 @@ namespace Jam.Scripts.Camera
                 return;
             }
             
-            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            _audioService.PlaySound(Sounds.cameraMove.ToString());
 
             UpdateButtons();
             MoveTarget();
@@ -71,7 +71,7 @@ namespace Jam.Scripts.Camera
                 return;
             }
             
-            _audioService.PlaySound(Sounds.buttonClick.ToString());
+            _audioService.PlaySound(Sounds.cameraMove.ToString());
 
             UpdateButtons();
             MoveTarget();
