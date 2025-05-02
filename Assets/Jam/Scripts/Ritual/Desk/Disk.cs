@@ -20,6 +20,7 @@ namespace Jam.Scripts.Ritual.Desk
         private ReagentRoom _startingReagentRoom;
         
         public event Action OnDiskChanged;
+        public bool IsLocked { get; set; }
         
         public ReagentDefinition ReagentInside => _reagentDefinition;
         
@@ -39,7 +40,7 @@ namespace Jam.Scripts.Ritual.Desk
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            if (_reagentDefinition == null)
+            if (_reagentDefinition == null || IsLocked)
                 return;
 
             _animationController.PlayAnimationFromPosition(transform.position, _startingReagentRoom.Position, _reagentVisual.sprite, _startingReagentRoom.AppearReagent);

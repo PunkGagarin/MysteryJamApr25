@@ -21,7 +21,7 @@ namespace Jam.Scripts.Ritual
         
         [SerializeField] private Canvas _canvas;
         [SerializeField] private ReagentFitter _reagentFitter;
-        [SerializeField] private Button _startRitual;
+        //[SerializeField] private Button _startRitual;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
         
@@ -98,32 +98,42 @@ namespace Jam.Scripts.Ritual
 
             List<ReagentDefinition> selectedComponents = _desk.GetReagents();
             
-            bool areComplete = CheckRitualState(selectedComponents);
+            bool isComplete = CheckRitualState(selectedComponents);
             
-            if (areComplete)
-            {
-                Debug.Log($"Ritual OK");
-                _audioService.PlaySound(Sounds.whisperingGhosts.ToString());
-                _ghostResponseEffect.ToggleEffect();
-                _questPresenter.SetComplete();
-            }
-            else
-            {
-                Debug.Log($"Ritual failed");
-                _audioService.PlaySound(Sounds.ritualFailed.ToString());
-                if (Attempt >= _inventoryConfig.RitualAttemptsToFail)
-                {
-                    Debug.Log("Quest failed");
-                    _questPresenter.SetFail();
-                }
-            }
-
-            OnRitual?.Invoke();
-
-            ClearTable(true);
-            UpdateButtons();
+            _desk.ShowRitualResult(isComplete, isComplete ? RitualComplete : RitualFailed);
         }
-        
+
+        private void RitualFailed()
+        {
+            Debug.Log($"Ritual failed");
+            _audioService.PlaySound(Sounds.ritualFailed.ToString());
+            if (Attempt >= _inventoryConfig.RitualAttemptsToFail)
+            {
+                Debug.Log("Quest failed");
+                _questPresenter.SetFail();
+            }
+            
+            RitualEnds();
+        }
+
+        private void RitualEnds()
+        {
+            UpdateButtons();
+            ClearTable(true);
+            _desk.HideResults();
+            OnRitual?.Invoke();
+        }
+
+        private void RitualComplete()
+        {
+            Debug.Log($"Ritual OK");
+            _audioService.PlaySound(Sounds.whisperingGhosts.ToString());
+            _ghostResponseEffect.ToggleEffect();
+            _questPresenter.SetComplete();
+
+            RitualEnds();
+        }
+
         private bool CheckRitualState(List<ReagentDefinition> selectedComponents) => 
             !CheckForExcludedReagents(selectedComponents) && CheckReagentsMatches(selectedComponents);
 
@@ -228,12 +238,18 @@ namespace Jam.Scripts.Ritual
 
             return haveExcludedReagents;
         }
+
+        private void OnDisksChanged()
+        {
+            if (_desk.IsAllDiskOccupied)
+                StartRitual();
+            
+            UpdateButtons();
+        }
         
         private void UpdateButtons()
         {
-            _clearTable.gameObject.SetActive(_reagentFitter.OccupiedRooms > 0);
-            Debug.Log($"occupied disks: {_desk.OccupiedDisks}");
-            _startRitual.gameObject.SetActive(_desk.OccupiedDisks > 1);
+            _clearTable.gameObject.SetActive(_reagentFitter.OccupiedRooms > 0 && !_desk.IsAllDiskOccupied);
         }
 
         private void Awake()
@@ -242,17 +258,17 @@ namespace Jam.Scripts.Ritual
             
             UpdateButtons();
             _clearTable.onClick.AddListener(OnClearTableButton);
-            _startRitual.onClick.AddListener(StartRitual);
+            //_startRitual.onClick.AddListener(StartRitual);
             _questPresenter.OnQuestAdded += SetQuest;
-            _desk.OnAnyDiskChanged += UpdateButtons;
+            _desk.OnAnyDiskChanged += OnDisksChanged;
         }
 
         private void OnDestroy()
         {
             _clearTable.onClick.RemoveListener(OnClearTableButton);
-            _startRitual.onClick.RemoveListener(StartRitual);
+            //_startRitual.onClick.RemoveListener(StartRitual);
             _questPresenter.OnQuestAdded -= SetQuest;
-            _desk.OnAnyDiskChanged -= UpdateButtons;
+            _desk.OnAnyDiskChanged -= OnDisksChanged;
         }
     }
 
@@ -277,10 +293,8 @@ namespace Jam.Scripts.Ritual
             return false;
         }
 
-        protected bool Equals(ReagentExclusion other)
-        {
-            return ReagentId == other.ReagentId && ExcludedReagentId == other.ExcludedReagentId;
-        }
+        protected bool Equals(ReagentExclusion other) => 
+            ReagentId == other.ReagentId && ExcludedReagentId == other.ExcludedReagentId;
 
         public override int GetHashCode()
         {
