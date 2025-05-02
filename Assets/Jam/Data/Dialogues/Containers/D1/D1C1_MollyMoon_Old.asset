@@ -351,7 +351,7 @@ MonoBehaviour:
     EndNodeType:
       Value: 1
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    Position: {x: 2063.5, y: -1162}
+    Position: {x: 2064, y: -1162}
     EndNodeType:
       Value: 4
   BranchData:
