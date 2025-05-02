@@ -77,7 +77,7 @@ namespace Jam.Scripts.DayTime.Results
         {
             _shopSystem.ShowShop();
             var dayResult = _characterResultWriter.DayInfo;
-            _dayNumber.text = $"{_localization.GetText(DAY_LOCALIZE_KEY)} {dayResult.DayNumber}";
+            _dayNumber.text = $"{_localization.GetText(DAY_LOCALIZE_KEY)} {dayResult.DayNumber + 1}";
             _thoughts.text = "тут должны были быть мысли но у меня их нет (";
             _earnedMoney.text = dayResult.TotalEarnMoney.ToString();
             UpdateTotalMoney(_playerStats.Money, 0);

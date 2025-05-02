@@ -82,6 +82,7 @@ namespace Jam.Scripts.Shop
                     if (_playerStats.CanSpend(toolInSlot.Cost))
                     {
                         _inventorySystem.BuyTool(toolInSlot);
+                        _playerStats.RemoveMoney(toolInSlot.Cost);
                         shopItem.gameObject.SetActive(false);
                         _audioService.PlaySound(Sounds.buttonClick);
                     }
