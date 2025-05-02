@@ -293,11 +293,6 @@ MonoBehaviour:
       PortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
       InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
       OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    - ID:
-        Value: 0
-      PortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
-      InputGuid: 
-      OutputGuid: 
     SkipContinue: 0
   - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     Position: {x: -365, y: -727}
