@@ -34,7 +34,8 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         public void AppearReagent()
         {
-            _reagentImage.enabled = true;
+            if (ReagentInside != null)
+                _reagentImage.enabled = true;
         }
 
         public void OnPointerClick(PointerEventData eventData)
