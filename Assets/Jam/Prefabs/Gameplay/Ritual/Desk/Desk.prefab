@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7360333854435508499}
   - component: {fileID: 9095436760180278933}
   - component: {fileID: 6970494478398283606}
+  - component: {fileID: 6312059081771190905}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776225568639375744}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -112,6 +113,22 @@ MonoBehaviour:
   _patternMask: {fileID: 8680074634660382568}
   _patternShowAnimationTime: 2
   _patternScale: 3
+--- !u!114 &6312059081771190905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776225568639375744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf50b862bd0496286e417bdfdfa3797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _disks:
+  - {fileID: 5858953133063825020}
+  - {fileID: 7203869255910875746}
+  - {fileID: 1247157003895925601}
 --- !u!1 &2159022246859548768
 GameObject:
   m_ObjectHideFlags: 0

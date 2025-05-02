@@ -24,6 +24,7 @@ namespace Jam.Scripts.Ritual
         //[SerializeField] private Button _startRitual;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
+        [SerializeField] private Memory _memory;
         
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
@@ -99,8 +100,12 @@ namespace Jam.Scripts.Ritual
             List<ReagentDefinition> selectedComponents = _desk.GetReagents();
             
             bool isComplete = CheckRitualState(selectedComponents);
-            
-            _desk.ShowRitualResult(isComplete, isComplete ? RitualComplete : RitualFailed);
+
+            if (isComplete)
+                _desk.ShowRitualResult(true, () => _memory.StartMemoryGame(RitualComplete, RitualFailed));
+            else
+                _desk.ShowRitualResult(false, RitualFailed);
+
         }
 
         private void RitualFailed()

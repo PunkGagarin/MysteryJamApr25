@@ -20,10 +20,12 @@ namespace Jam.Scripts.Ritual.Desk
         private ReagentRoom _startingReagentRoom;
         
         public event Action OnDiskChanged;
+        public event Action<Disk> DiskClicked;
         public bool IsLocked { get; set; }
-        
         public ReagentDefinition ReagentInside => _reagentDefinition;
-        
+
+        public SpriteRenderer ReagentVisual => _reagentVisual;
+
         public bool TryInsertReagent(ReagentDefinition reagentDefinition, ReagentRoom startingReagentRoom)
         {
             if (_reagentDefinition != null || _diskType != reagentDefinition.ReagentType)
@@ -40,6 +42,7 @@ namespace Jam.Scripts.Ritual.Desk
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            DiskClicked?.Invoke(this);
             if (_reagentDefinition == null || IsLocked)
                 return;
 
