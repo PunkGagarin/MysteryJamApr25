@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.DayTime;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Ritual.Tools;
-using Jam.Scripts.UI;
 using Jam.Scripts.Utils.UI;
 using UnityEngine;
 using Zenject;
@@ -16,6 +16,7 @@ namespace Jam.Scripts.Shop
 {
     public class ShopSystem : MonoBehaviour
     {
+        
         [SerializeField] private ShopItem _shopItemPrefab;
         [Inject] private PopupManager _popupManager;
         [Inject] private ReagentRepository _reagentRepository;
@@ -23,28 +24,22 @@ namespace Jam.Scripts.Shop
         [Inject] private DayController _dayController;
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private InventorySystem _inventorySystem;
-        [Inject] private GameplayOverlayUI _gameplayOverlayUI;
+        [Inject] private AudioService _audioService;
 
         private ShopView _shopView;
         private List<ShopItem> _reagentsShopItems = new();
         private List<ShopItem> _toolsShopItems = new();
 
         public event Action<int> ItemAppear;
+        public event Action CantBuy;
 
-        public void OpenShop(Action closeEvent = null)
+        public void SetShopView(ShopView shopView) => 
+            _shopView = shopView;
+
+        public void ShowShop()
         {
-            _shopView = _popupManager.OpenPopup<ShopView>(OnOpenShop, closeEvent: () =>
-            {
-                _gameplayOverlayUI.gameObject.SetActive(true);
-                closeEvent?.Invoke();
-            });
+            _shopView.gameObject.SetActive(!_dayController.IsFirstDay && !_dayController.IsLastDay);
             PopulateShop();
-            UpdateMoney(_playerStats.Money, 0);
-        }
-
-        private void OnOpenShop()
-        {
-            _gameplayOverlayUI.gameObject.SetActive(false);
         }
 
         private void PopulateShop()
@@ -88,10 +83,11 @@ namespace Jam.Scripts.Shop
                     {
                         _inventorySystem.BuyTool(toolInSlot);
                         shopItem.gameObject.SetActive(false);
+                        _audioService.PlaySound(Sounds.buttonClick);
                     }
                     else
                     {
-                        _shopView.ShowCantBuyAnimation();
+                        CantBuy?.Invoke();
                     }
                 }
             }
@@ -127,10 +123,11 @@ namespace Jam.Scripts.Shop
                         _inventorySystem.BuyReagent(reagentInSlot.Id);
                         _playerStats.RemoveMoney(reagentInSlot.Cost);
                         shopItem.gameObject.SetActive(false);
+                        _audioService.PlaySound(Sounds.buttonClick);
                     }
                     else
                     {
-                        _shopView.ShowCantBuyAnimation();
+                        CantBuy?.Invoke();
                     }
                 }
             }
@@ -170,22 +167,6 @@ namespace Jam.Scripts.Shop
                 notSexReagents.Remove(randomReagent);
             }
         }
-
-        private void UpdateMoney(int value, int oldValue)
-        {
-            if (_shopView != null) 
-                _shopView.UpdateMoney(value);
-        }
-
-        private void Awake()
-        {
-            _playerStats.OnMoneyChanged += UpdateMoney;
-        }
-
-        private void OnDestroy()
-        {
-            _playerStats.OnMoneyChanged -= UpdateMoney;
-            _popupManager.ResetPopup<ShopView>();
-        }
+        
     }
 }

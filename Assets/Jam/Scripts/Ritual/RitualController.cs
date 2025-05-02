@@ -24,6 +24,7 @@ namespace Jam.Scripts.Ritual
         //[SerializeField] private Button _startRitual;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
+        [SerializeField] private GameObject _fireflies;
         
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
@@ -113,6 +114,9 @@ namespace Jam.Scripts.Ritual
             bool isComplete = CheckRitualState(selectedComponents);
             
             _desk.ShowRitualResult(isComplete, isComplete ? RitualComplete : RitualFailed);
+            if (isComplete && _currentQuest.Id == 1)
+                _fireflies.SetActive(true);
+                
         }
 
         private void RitualFailed()

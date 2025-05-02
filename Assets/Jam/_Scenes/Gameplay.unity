@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32925840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4262898479537361191, guid: bab1a15bae92a46ab9bc4ad608e3963c, type: 3}
+  m_PrefabInstance: {fileID: 5534113696075967195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &32925843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8570642325908150398, guid: bab1a15bae92a46ab9bc4ad608e3963c, type: 3}
@@ -1521,7 +1526,7 @@ MonoBehaviour:
   _ritualController: {fileID: 1941479728}
   _reagentAnimationControllerPrefab: {fileID: 597553128}
   _inventorySystem: {fileID: 1026228284}
-  _reagentDragger: {fileID: 0}
+  _reagentDragger: {fileID: 2132636615}
 --- !u!4 &1222234292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7164006687879323146, guid: b1ccff5ff36c19a479b95bfa2384f898, type: 3}
@@ -2982,6 +2987,10 @@ PrefabInstance:
       propertyPath: _desk
       value: 
       objectReference: {fileID: 691046572}
+    - target: {fileID: 3156154512136467143, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
+      propertyPath: _fireflies
+      value: 
+      objectReference: {fileID: 32925840}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3343,6 +3352,10 @@ PrefabInstance:
     - target: {fileID: 4262898479537361191, guid: bab1a15bae92a46ab9bc4ad608e3963c, type: 3}
       propertyPath: m_Name
       value: Fireflies
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262898479537361191, guid: bab1a15bae92a46ab9bc4ad608e3963c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8570642325908150398, guid: bab1a15bae92a46ab9bc4ad608e3963c, type: 3}
       propertyPath: m_LocalPosition.x
