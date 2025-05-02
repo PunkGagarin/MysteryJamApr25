@@ -92,7 +92,8 @@ namespace Jam.Scripts.Ritual
 
             UpdateButtons();
             _desk.ClearTable();
-            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
+            if (_pointerFirefly.CurrentTarget == (int) TargetType.Table)
+                _pointerFirefly.ChangeTargetTo(TargetType.Finish);
         }
         
         private void StartRitual()
