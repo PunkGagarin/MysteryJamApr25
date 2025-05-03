@@ -30,11 +30,12 @@ namespace Jam.Scripts.DayTime.Results
         private void FinalizeWrite() => 
             _currentCharacterResult = null;
 
-        private void UpdateCharacter(int characterId)
+        private void UpdateCharacter(int characterId, string characterName)
         {
             CharacterResult characterResult = new CharacterResult
             {
                 CharacterId = characterId,
+                CharacterName = characterName,
                 EarnReputation = 0,
                 EarnMoney = 0
             };

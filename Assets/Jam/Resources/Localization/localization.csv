@@ -21,8 +21,8 @@ PAUSE_RETURN,Вернуться,Return
 PAUSE_TO_MAIN_MENU,В главное меню,To main menu
 RITUAL_START,Начать ритуал,Start ritual
 RITUAL_CLEAR,Очистить стол,Clear table
-MANUAL_PAGE_0_TITLE,Что это за книга?,What is this book about?
-MANUAL_PAGE_0_DESC,"Внутри находится описание рецептов смешивания ингредиентов для ритуала призыва призрака, конфликты, которые могут возникать в процессе и то, как работают интсрументы","Inside is a description of the recipes for mixing ingredients for the ghost summoning ritual, conflicts that may arise during the process, and how the tools work."
+MANUAL_PAGE_0_TITLE,Три правила связи с мертвыми:,Three rules for speaking with souls:
+MANUAL_PAGE_0_DESC,Призраки приходят ночью.%Призраки не могут говорить много.%Призраки не могут лгать.,Souls come at night.%Souls cannot speak much.%Souls cannot lie.
 MANUAL_PAGE_0_SEX,Пол,Sex
 MANUAL_PAGE_1_AGE,Возраст,Age
 MANUAL_PAGE_1_RACE,Раса,Race
@@ -47,7 +47,7 @@ REAGENT_EVERMILK_,вечное молоко,evermilk
 REAGENT_OLIVE_OIL,оливковое масло,olive oil
 REAGENT_GREEN_TEA,зеленый чай,green tea
 REAGENT_HOP_EXTRACT,экстракт хмеля,hop extract
-,горное масло,rock oil
+REAGENT_ROCK_OIL,горное масло,rock oil
 DAY_RESULT_NUM,День,Day
 GOLD_AMOUNT_KEY,Золото,Gold
 DAY_RESULT_MONEY_EARNED,Денег%заработано,Money%earned
@@ -55,3 +55,10 @@ DAY_RESULT_REPUTATION,Репутация,Reputation
 DAY_RESULT_MONEY_TOTAL,Всего денег,Total money
 DAY_RESULT_CONTINUE,Продолжить,Continue
 TO_MAIN_KEY,На главную,To main menu
+DAY_RESULT_REPUTATION_KEY,Реп,Rep
+DAY_RESULT_MONEY_KEY,Ден,Mon
+PAGE_3_DESC,"Не забывай, какой путь ты прошла.%Богиня Смерти И Луны дает дар говорить с призраками лишь тем, кто бывал в ее темных чертогах и вернулся живым.%Не забывай, какой путь проходят они.%Призракам трудно найти путь к медиуму. Для этого нужны ориентиры - ингредиенты. Они помогают звать нужного призрака, и тому легче прийти на зов.%Не забывай, зачем ты здесь.%Это единственный способ связаться с тем, кто много для тебя сделал. Найди его.","Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way to reach someone who once meant so much to you. Find them."
+PAGE_4_TITLE,Изогнутый Странник,The Crooked Wanderer
+PAGE_4_DESC,"У него была светлая улыбка. Он любил гренки. Он всегда помогал окружающим. Он пропал неожиданно. Я не знаю, что произошло. Всех проклятых сжигают. От него не осталось следа.",He had a bright smile. He loved toast. He always helped those around him. He disappeared without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.
+PAGE_5_AGE,Возраст:,Age:
+PAGE_5_RACE,Раса:,Race:
