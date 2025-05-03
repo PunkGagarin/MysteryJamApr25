@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u0440\u043E\u0437\u043E\u0432\u044B\u0439 \u0436\u0435\u043C\u0447\u0443\u0433"
   <LocalizeId>k__BackingField: REAGENT_PINK_PEARL
   <Id>k__BackingField: 3
-  <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 112bfc544791bc74e8c29163df7464d4, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 7693813f97fd8204fb9cfd3025853abe, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 2
   <AgeType>k__BackingField: 0
@@ -25,8 +26,4 @@ MonoBehaviour:
   <ExcludedReagents>k__BackingField:
   - {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
   - {fileID: 11400000, guid: 751df97f07a9c9f44905216b400bebd3, type: 2}
-  <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 0
-  <IsAgeExcluded>k__BackingField: 0
-  <ExcludedAgeType>k__BackingField: 0
   <Cost>k__BackingField: 50

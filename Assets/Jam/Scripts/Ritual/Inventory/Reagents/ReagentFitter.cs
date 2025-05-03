@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         [SerializeField] private List<ReagentRoom> _rooms;
         public int OccupiedRooms => _rooms.Count(room => room.ReagentInside != null);
         public bool HaveFreeRooms => _rooms.Any(room => room.ReagentInside == null);
+
+        public event Action OnAnyRoomChanged;
 
         public void SetReagent(ReagentDefinition reagentToAdd, out ReagentRoom reagentRoom)
         {
@@ -26,6 +29,19 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         {
             foreach (var room in _rooms.Where(room => room.ReagentInside != null)) 
                 room.ReleaseReagent(consumeReagents);
+        }
+
+        private void RoomChanged() => 
+            OnAnyRoomChanged?.Invoke();
+
+        private void Awake()
+        {
+            foreach (var reagentRoom in _rooms) reagentRoom.OnRoomChanged += RoomChanged;
+        }
+
+        private void OnDestroy()
+        {
+            foreach (var reagentRoom in _rooms) reagentRoom.OnRoomChanged -= RoomChanged;
         }
     }
 }

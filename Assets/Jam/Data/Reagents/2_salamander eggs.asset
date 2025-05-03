@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u044F\u0439\u0446\u0430 \u0441\u0430\u043B\u0430\u043C\u0430\u043D\u0434\u0440\u044B"
   <LocalizeId>k__BackingField: REAGENT_SALAMANDER_EGGS
   <Id>k__BackingField: 2
-  <Visual>k__BackingField: {fileID: 21300000, guid: 562ef0751363cec4ca1b7c5860a96101, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 6d98fb81b57ec7d448de38bbee0022ec, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 7092d1a22f3dd5049bf7bdebf037672b, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 2
   <AgeType>k__BackingField: 0
@@ -25,8 +26,4 @@ MonoBehaviour:
   <ExcludedReagents>k__BackingField:
   - {fileID: 11400000, guid: bdf137b077359d44b85e70fc22cd48d1, type: 2}
   - {fileID: 11400000, guid: b04dc7bfc8557ae478ecf4db4556c4b8, type: 2}
-  <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 0
-  <IsAgeExcluded>k__BackingField: 0
-  <ExcludedAgeType>k__BackingField: 0
   <Cost>k__BackingField: 50

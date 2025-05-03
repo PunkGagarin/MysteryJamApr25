@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u043F\u0435\u0441\u043E\u043A \u043F\u0443\u0441\u0442\u044B\u043D\u0438"
   <LocalizeId>k__BackingField: REAGENT_DESERT_SAND
   <Id>k__BackingField: 9
-  <Visual>k__BackingField: {fileID: 21300000, guid: dc3e01ed930b4ee4ea683f06c06c7350, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: d91c45ddac17e154aa95a2e51c594167, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 50a67cfc2b633524487242b1d5031d17, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 1
   <AgeType>k__BackingField: 3

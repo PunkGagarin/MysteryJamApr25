@@ -35,6 +35,7 @@ namespace Jam.Scripts.Ritual.Desk
             _startingReagentRoom = startingReagentRoom;
             _reagentVisual.enabled = true;
             _reagentVisual.sprite = reagentDefinition.Visual;
+            _reagentVisual.size = Vector2.one;
             OnDiskChanged?.Invoke();
             
             return true;

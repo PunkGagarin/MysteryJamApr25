@@ -18,9 +18,6 @@ namespace Jam.Scripts.Ritual.Desk
 
         public event Action OnAnyDiskChanged;
 
-        public int OccupiedDisks => 
-            _disks.Count(disk => disk.ReagentInside != null);
-
         public bool IsAllDiskOccupied => _disks.All(disk => disk.ReagentInside != null);
 
         public void ClearTable()

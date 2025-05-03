@@ -22,6 +22,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             _isDragging = true;
             UpdatePosition(_inputService.MousePosition);
             _reagentVisual.sprite = reagentInside.Visual;
+            _reagentVisual.size = Vector2.one;
             _draggingReagent = reagentInside;
             _startingReagentRoom = reagentRoom;
             _reagentVisual.enabled = true;
@@ -40,7 +41,6 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.name);
                 var disk = hit.collider.GetComponent<IDisk>();
                 if (disk != null)
                 {

@@ -266,6 +266,7 @@ namespace Jam.Scripts.Ritual
             //_startRitual.onClick.AddListener(StartRitual);
             _questPresenter.OnQuestAdded += SetQuest;
             _desk.OnAnyDiskChanged += OnDisksChanged;
+            _reagentFitter.OnAnyRoomChanged += UpdateButtons;
         }
 
         private void OnDestroy()
@@ -274,6 +275,7 @@ namespace Jam.Scripts.Ritual
             //_startRitual.onClick.RemoveListener(StartRitual);
             _questPresenter.OnQuestAdded -= SetQuest;
             _desk.OnAnyDiskChanged -= OnDisksChanged;
+            _reagentFitter.OnAnyRoomChanged -= UpdateButtons;
         }
     }
 

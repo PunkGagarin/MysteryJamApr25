@@ -1,50 +1,33 @@
-using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using Zenject;
 
 namespace Jam.Scripts.Ritual.Inventory.Reagents
 {
-    public class Reagent : MonoBehaviour, IPointerClickHandler
+    public abstract class Reagent : MonoBehaviour, IPointerClickHandler
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private TMP_Text _name;
-        [SerializeField] private Image _fill;
+        [SerializeField] private ReagentDefinition _reagentDefinition;
+
         [Inject] private RitualController _ritualController;
         [Inject] private ReagentAnimationController _reagentAnimationController;
         [Inject] private AudioService _audioService;
-        [Inject] private InventoryConfig _inventoryConfig;
-        
-        private ReagentDefinition _reagentDefinition;
-        [SerializeField] private int _amount;
-        public bool IsEmpty => _reagentDefinition == null;
+        [Inject] protected InventoryConfig InventoryConfig;
 
-        public void SetReagent(ReagentDefinition reagentDefinition)
-        {
-            _reagentDefinition = reagentDefinition;
-
-            _spriteRenderer.gameObject.SetActive(true);
-            _spriteRenderer.sprite = reagentDefinition.Visual;
-
-            _name.gameObject.SetActive(true);
-            _name.text = reagentDefinition.Name;
-        }
+        protected int CurrentAmount;
+        public ReagentDefinition ReagentDefinition => _reagentDefinition;
 
         public void AddReagent(int amount = 1)
         {
-            _amount += amount;
-            if (_amount > _inventoryConfig.MaxReagentAmount)
-                _amount = _inventoryConfig.MaxReagentAmount;
-            FillAnimation();
+            int oldValue = CurrentAmount;
+            CurrentAmount += amount;
+            if (CurrentAmount > InventoryConfig.MaxReagentAmount)
+                CurrentAmount = InventoryConfig.MaxReagentAmount;
+            UpdateVisual(CurrentAmount, oldValue);
         }
 
-        private void FillAnimation() =>
-            _fill.DOFillAmount((float)_amount / _inventoryConfig.MaxReagentAmount,
-                _inventoryConfig.ReagentAnimationTime).SetEase(Ease.Linear);
-
+        protected abstract void UpdateVisual(int newValue, int oldValue);
+        
         private void RemoveReagent()
         {
             if (_reagentDefinition == null)
@@ -53,23 +36,15 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
                 return;
             }
 
-            _amount--;
-            if (_amount == 0)
-            {
-                _fill.DOKill();
-                _reagentDefinition = null;
-                _spriteRenderer.gameObject.SetActive(false);
-                _name.gameObject.SetActive(false);
-            }
-            else
-            {
-                FillAnimation();
-            }
+            int oldAmount = CurrentAmount;
+            CurrentAmount--;
+            
+            UpdateVisual(CurrentAmount, oldAmount);
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (_reagentDefinition == null)
+            if (_reagentDefinition == null || CurrentAmount == 0)
                 return;
 
             if (!EventSystem.current.IsPointerOverGameObject())
@@ -87,10 +62,9 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             }
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
-            _spriteRenderer.gameObject.SetActive(false);
-            _name.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

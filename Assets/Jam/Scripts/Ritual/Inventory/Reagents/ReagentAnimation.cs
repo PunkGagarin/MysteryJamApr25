@@ -18,6 +18,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         {
             IsPlaying = true;
             _componentSprite.sprite = componentToShow;
+            _componentSprite.size = Vector2.one;
             _componentSprite.gameObject.SetActive(true);
             transform.position = startPosition;
             transform.DOMove(endPosition, _inventoryConfig.ReagentAnimationTime)

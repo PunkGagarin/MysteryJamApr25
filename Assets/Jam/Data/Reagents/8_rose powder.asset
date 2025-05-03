@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u043F\u0443\u0434\u0440\u0430 \u0438\u0437 \u0440\u043E\u0437"
   <LocalizeId>k__BackingField: REAGENT_ROSE_POWDER
   <Id>k__BackingField: 8
-  <Visual>k__BackingField: {fileID: 21300000, guid: 7744b083d5588414a8f7c155a49945c4, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: 0fef35d853e8c4e44adc20d946ff6fc7, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 23837e19d86174e40bad2560878b7179, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 1
   <AgeType>k__BackingField: 2
@@ -25,8 +26,4 @@ MonoBehaviour:
   <ExcludedReagents>k__BackingField:
   - {fileID: 11400000, guid: 210d2be073d86d24ab4ca731444e6fab, type: 2}
   - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
-  <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 0
-  <IsAgeExcluded>k__BackingField: 0
-  <ExcludedAgeType>k__BackingField: 0
   <Cost>k__BackingField: 50

@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u044D\u043A\u0441\u0442\u0440\u0430\u043A\u0442 \u0445\u043C\u0435\u043B\u044F"
   <LocalizeId>k__BackingField: REAGENT_HOP_EXTRACT
   <Id>k__BackingField: 15
-  <Visual>k__BackingField: {fileID: 21300000, guid: dc3e01ed930b4ee4ea683f06c06c7350, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: fec80bda98cbaf048bb0406637de0af4, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 09d995ba4ef0a5946a6ece47c37393bb, type: 3}
   <ClickClip>k__BackingField: 12
   <ReagentType>k__BackingField: 3
   <AgeType>k__BackingField: 0
@@ -25,8 +26,4 @@ MonoBehaviour:
   <ExcludedReagents>k__BackingField:
   - {fileID: 11400000, guid: ca0bf6021c36a92408770b5aca9a3c37, type: 2}
   - {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
-  <IsDeathReasonExcluded>k__BackingField: 0
-  <ExcludedDeathReasonType>k__BackingField: 0
-  <IsAgeExcluded>k__BackingField: 0
-  <ExcludedAgeType>k__BackingField: 0
   <Cost>k__BackingField: 50
