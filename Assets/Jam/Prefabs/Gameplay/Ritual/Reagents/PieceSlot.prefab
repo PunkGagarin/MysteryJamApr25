@@ -504,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa87894f85914d088f9adbdf6c479680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reagentDefinition: {fileID: 0}
-  _piecePrefab: {fileID: 0}
+  _reagentDefinition: {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  _piecePrefab: {fileID: 944419891593582865, guid: faa9293482b5ba141a54baee7fb5a264, type: 3}
   _spawnPoints:
   - {fileID: 7145168891770675952}
   - {fileID: 8029432023486256349}
