@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: R1_Zach
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Detective Zach
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 101
   <SexType>k__BackingField: 2
   <AgeType>k__BackingField: 1
-  <RaceType>k__BackingField: 2
+  <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0

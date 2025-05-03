@@ -20,6 +20,9 @@ namespace Jam.Scripts.Audio.Domain
         private SoundElement _nextMusicClip;
         private SoundElement _nextSfxLoopClip;
 
+        public void PlaySound(Sounds sound) =>
+            PlaySound(sound.ToString());
+        
         public void PlaySound(string clipName)
         {
             SoundElement clip = FindClip(clipName, SoundType.Effect);

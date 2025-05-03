@@ -44,6 +44,9 @@ namespace Jam.Scripts.DayTime
         public bool IsLastDay =>
             _currentDay >= _dayConfig.DayNpcs.Count;
 
+        public bool IsFirstDay =>
+            _currentDay == 1;
+
         private void CallNextClient()
         {
             if (!_canCallNextClient)
@@ -101,7 +104,7 @@ namespace Jam.Scripts.DayTime
         private void ShowDayDetails()
         {
             var dayResultView = _popupManager.OpenPopup<DayResultView>(OnOpenDayResultView, OnCloseDayResultView);
-            dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter);
+            dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter, _shopSystem);
         }
 
         private void OnOpenDayResultView() => 
@@ -110,18 +113,8 @@ namespace Jam.Scripts.DayTime
         private void OnCloseDayResultView()
         {
             _gameplayOverlayUI.gameObject.SetActive(true);
-            if (_currentDay != 1 && !IsLastDay)
-            {
-                ShowShop();
-            }
-            else
-            {
-                ResetDayValues();
-            }
+            ResetDayValues();
         }
-
-        private void ShowShop() =>
-            _shopSystem.OpenShop(ResetDayValues);
 
         private void Awake()
         {

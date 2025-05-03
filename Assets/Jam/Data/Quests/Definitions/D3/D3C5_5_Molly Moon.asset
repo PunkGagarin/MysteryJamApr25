@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
-  m_Name: D2C5_Twisted Warrior
+  m_Name: D3C5_5_Molly Moon
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Tutorial
   <LocalizeId>k__BackingField: 
-  <Id>k__BackingField: 10
-  <SexType>k__BackingField: 1
-  <AgeType>k__BackingField: 2
-  <RaceType>k__BackingField: 3
+  <Id>k__BackingField: 710
+  <SexType>k__BackingField: 2
+  <AgeType>k__BackingField: 1
+  <RaceType>k__BackingField: 2
   <DeathType>k__BackingField: 0

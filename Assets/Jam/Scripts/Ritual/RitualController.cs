@@ -21,10 +21,10 @@ namespace Jam.Scripts.Ritual
         
         [SerializeField] private Canvas _canvas;
         [SerializeField] private ReagentFitter _reagentFitter;
-        //[SerializeField] private Button _startRitual;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
         [SerializeField] private Memory _memory;
+        [SerializeField] private GameObject _fireflies;
         
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
@@ -57,7 +57,18 @@ namespace Jam.Scripts.Ritual
                 return false;
             
             _reagentFitter.SetReagent(reagentToAdd, out reagentRoom);
-            _pointerFirefly.ChangeTargetTo(TargetType.Table);
+            switch (_pointerFirefly.CurrentTarget)
+            {
+                case (int)TargetType.FirstReagent:
+                    _pointerFirefly.ChangeTargetTo(TargetType.SecondReagent);
+                    break;
+                case (int)TargetType.SecondReagent:
+                    _pointerFirefly.ChangeTargetTo(TargetType.ThirdReagent);
+                    break;
+                default:
+                    _pointerFirefly.ChangeTargetTo(TargetType.Table);
+                    break;
+            }
 
             UpdateButtons();
 
@@ -82,12 +93,13 @@ namespace Jam.Scripts.Ritual
 
             UpdateButtons();
             _desk.ClearTable();
-            _pointerFirefly.ChangeTargetTo(TargetType.None);
+            if (_pointerFirefly.CurrentTarget == (int) TargetType.Table)
+                _pointerFirefly.ChangeTargetTo(TargetType.Finish);
         }
         
         private void StartRitual()
         {
-            _pointerFirefly.ChangeTargetTo(TargetType.None);
+            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
             RitualFailedByExcludedReagents = false;
@@ -106,6 +118,9 @@ namespace Jam.Scripts.Ritual
             else
                 _desk.ShowRitualResult(false, RitualFailed);
 
+            
+            if (isComplete && _currentQuest.Id == 0)
+                _fireflies.SetActive(true);
         }
 
         private void RitualFailed()

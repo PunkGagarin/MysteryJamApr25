@@ -6,14 +6,16 @@ namespace Jam.Scripts.VFX
 {
     public class PointerFirefly : MonoBehaviour
     {
-        [SerializeField] private List<TargetData> _targets;
+        [SerializeField, Tooltip("Порядок должен совпадать с (int)TargetType")]
+        private List<TargetData> _targets;
         [SerializeField] private float _radius = 1.0f;
         [SerializeField] private float _movingArounSpeed = 1.0f;
         [SerializeField] private float _movingToTargetSpeed = 1.0f;
         [SerializeField] private float _noiseAmount = 0.2f;
 
-        private float _angle;
         public int CurrentTarget { get; private set; } = (int)TargetType.Rope;
+
+        private float _angle;
         private bool _isMovingToTarget = false;
 
         private void Update()
@@ -42,7 +44,7 @@ namespace Jam.Scripts.VFX
 
         public void ChangeTargetTo(TargetType target)
         {
-            if (target == TargetType.None || CurrentTarget == (int)TargetType.None)
+            if (target == TargetType.Finish || CurrentTarget == (int)TargetType.Finish)
             {
                 gameObject.SetActive(false);
                 return;
@@ -83,12 +85,14 @@ namespace Jam.Scripts.VFX
 
 public enum TargetType
 {
-    None = 0,
+    Finish = 0,
     Rope = 1,
     Character = 2,
     Book = 3,
-    Reagents = 4,
-    Table = 5
+    FirstReagent = 4,
+    SecondReagent = 5,
+    ThirdReagent = 6,
+    Table = 7
 }
 
 [Serializable]

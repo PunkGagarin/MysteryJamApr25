@@ -23,7 +23,5 @@ MonoBehaviour:
   <SexType>k__BackingField: 2
   <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField:
-  - {fileID: 11400000, guid: 7aa201bf4e9489c43ad3c66c6b85d63e, type: 2}
-  - {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
+  <ExcludedReagents>k__BackingField: []
   <Cost>k__BackingField: 50

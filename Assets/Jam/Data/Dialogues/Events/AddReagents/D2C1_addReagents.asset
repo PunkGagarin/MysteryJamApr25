@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: D2C1_addReagents
   m_EditorClassIdentifier: 
   _reagentsToAdd:
-  - {fileID: 11400000, guid: 8695fff8d71769f4daecd66a798a1655, type: 2}
-  - {fileID: 11400000, guid: bdf137b077359d44b85e70fc22cd48d1, type: 2}
-  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  - {fileID: 11400000, guid: ca0bf6021c36a92408770b5aca9a3c37, type: 2}
+  - {fileID: 11400000, guid: 23bbfc883b94d1d4dab99549cb27f1cf, type: 2}
+  - {fileID: 11400000, guid: 7aa201bf4e9489c43ad3c66c6b85d63e, type: 2}
+  - {fileID: 11400000, guid: 5f0b5841575ccef439e42f7495f5cd18, type: 2}
+  - {fileID: 11400000, guid: b2865ce8700a7254991904032725dc7e, type: 2}
+  - {fileID: 11400000, guid: d85ddaedadbee5f4cabe695ae9bd9054, type: 2}
+  - {fileID: 11400000, guid: 279c2fae1e848fe4f9de00de32a63952, type: 2}
+  - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
