@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911ce0e8aa074e65b17285c4bd7d9eda, type: 3}
   m_Name: D1C2_addReagents
   m_EditorClassIdentifier: 
-  _reagentsToAdd:
-  - {fileID: 11400000, guid: b04dc7bfc8557ae478ecf4db4556c4b8, type: 2}
-  - {fileID: 11400000, guid: 751df97f07a9c9f44905216b400bebd3, type: 2}
+  _reagentsToAdd: []
