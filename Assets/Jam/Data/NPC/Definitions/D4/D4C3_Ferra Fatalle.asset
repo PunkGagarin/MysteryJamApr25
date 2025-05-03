@@ -16,5 +16,4 @@ MonoBehaviour:
   <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 18
   <Dialogue>k__BackingField: {fileID: 11400000, guid: b6f81e40622d7c0479c759f55a7bbc6f, type: 2}
-  <Quest>k__BackingField: {fileID: 11400000, guid: e2cd727c486dbdf409926a42cedc0d0d, type: 2}
-  <Visual>k__BackingField: {fileID: 21300000, guid: 4458c2837d5a3b14caa204cd8275ce66, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: aafe2cbc62c5d224ca2fb191964bb29c, type: 3}

@@ -15,6 +15,5 @@ MonoBehaviour:
   <Name>k__BackingField: Dandelion
   <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 25
-  <Dialogue>k__BackingField: {fileID: 11400000, guid: 4b7f09191cbcce642a70f82da4938c19, type: 2}
-  <Quest>k__BackingField: {fileID: 11400000, guid: 514d3ac8e4c6b8f469b1d810b6958f42, type: 2}
-  <Visual>k__BackingField: {fileID: 21300000, guid: 4458c2837d5a3b14caa204cd8275ce66, type: 3}
+  <Dialogue>k__BackingField: {fileID: 11400000, guid: 5cf45a6ed017247428b4d14fadd06375, type: 2}
+  <Visual>k__BackingField: {fileID: 21300000, guid: c249b7c23593c7445bfa909e91117391, type: 3}
