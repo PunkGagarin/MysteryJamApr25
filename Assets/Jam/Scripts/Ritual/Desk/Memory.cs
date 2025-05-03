@@ -53,13 +53,19 @@ namespace Jam.Scripts.Ritual.Desk
                 _inputIndex++;
                 if (_inputIndex >= _sequence.Count)
                 {
-                    _onWin?.Invoke();
+                    EndGameEvent(_onWin);
                 }
             }
             else
             {
-                _onLose?.Invoke();
+                EndGameEvent(_onLose);
             }
+        }
+
+        private void EndGameEvent(Action endEvent)
+        {
+            _canInput = false;
+            endEvent?.Invoke();
         }
 
         private void HighlightButton(int sequenceIndex)
