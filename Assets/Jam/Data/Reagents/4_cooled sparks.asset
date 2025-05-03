@@ -25,4 +25,4 @@ MonoBehaviour:
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 5
   <ExcludedReagents>k__BackingField: []
-  <Cost>k__BackingField: 50
+  <Cost>k__BackingField: 10

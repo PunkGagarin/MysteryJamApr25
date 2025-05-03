@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ded28a0376424dbc15c8a0b5684ad8, type: 3}
   m_Name: StandartReward
   m_EditorClassIdentifier: 
-  _moneyReward: 50
+  _moneyReward: 10
   _reputationReward: 5
   _reagentsReward: []

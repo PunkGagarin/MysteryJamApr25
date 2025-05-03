@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: StandartPenalty
   m_EditorClassIdentifier: 
   _moneyPenalty: 0
-  _reputationPenalty: 5
+  _reputationPenalty: 15

@@ -26,4 +26,4 @@ MonoBehaviour:
   <ExcludedReagents>k__BackingField:
   - {fileID: 11400000, guid: 5f0b5841575ccef439e42f7495f5cd18, type: 2}
   - {fileID: 11400000, guid: daadb256c686dab4ebcde2708ade88df, type: 2}
-  <Cost>k__BackingField: 50
+  <Cost>k__BackingField: 10
