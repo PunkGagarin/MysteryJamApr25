@@ -690,7 +690,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 87
+    m_Bits: 215
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1189,6 +1189,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6a9e5b642414fa5a36971600dffa6b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &691046573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6312059081771190905, guid: 73c9c1251930f574a907b178f2c6f130, type: 3}
+  m_PrefabInstance: {fileID: 691046570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf50b862bd0496286e417bdfdfa3797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &755186023 stripped
@@ -2086,7 +2097,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2111,11 +2122,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1941479724 stripped
@@ -2899,6 +2910,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 869953317}
     m_Modifications:
+    - target: {fileID: 1354891579198367871, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354891579198367871, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1623022676368732954, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
       propertyPath: m_Name
       value: RitualController
@@ -2988,9 +3007,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 691046572}
     - target: {fileID: 3156154512136467143, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
+      propertyPath: _memory
+      value: 
+      objectReference: {fileID: 691046573}
+    - target: {fileID: 3156154512136467143, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
       propertyPath: _fireflies
       value: 
       objectReference: {fileID: 32925840}
+    - target: {fileID: 7868842160321578451, guid: 015ca032643059a44a688e8d5f4e9bc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3873,7 +3900,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

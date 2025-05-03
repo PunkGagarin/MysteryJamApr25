@@ -21,9 +21,9 @@ namespace Jam.Scripts.Ritual
         
         [SerializeField] private Canvas _canvas;
         [SerializeField] private ReagentFitter _reagentFitter;
-        //[SerializeField] private Button _startRitual;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
+        [SerializeField] private Memory _memory;
         [SerializeField] private GameObject _fireflies;
         
         [Inject] private QuestPresenter _questPresenter;
@@ -112,11 +112,15 @@ namespace Jam.Scripts.Ritual
             List<ReagentDefinition> selectedComponents = _desk.GetReagents();
             
             bool isComplete = CheckRitualState(selectedComponents);
+
+            if (isComplete)
+                _desk.ShowRitualResult(true, () => _memory.StartMemoryGame(RitualComplete, RitualFailed));
+            else
+                _desk.ShowRitualResult(false, RitualFailed);
+
             
-            _desk.ShowRitualResult(isComplete, isComplete ? RitualComplete : RitualFailed);
-            if (isComplete && _currentQuest.Id == 1)
+            if (isComplete && _currentQuest.Id == 0)
                 _fireflies.SetActive(true);
-                
         }
 
         private void RitualFailed()
@@ -277,6 +281,7 @@ namespace Jam.Scripts.Ritual
             //_startRitual.onClick.AddListener(StartRitual);
             _questPresenter.OnQuestAdded += SetQuest;
             _desk.OnAnyDiskChanged += OnDisksChanged;
+            _reagentFitter.OnAnyRoomChanged += UpdateButtons;
         }
 
         private void OnDestroy()
@@ -285,6 +290,7 @@ namespace Jam.Scripts.Ritual
             //_startRitual.onClick.RemoveListener(StartRitual);
             _questPresenter.OnQuestAdded -= SetQuest;
             _desk.OnAnyDiskChanged -= OnDisksChanged;
+            _reagentFitter.OnAnyRoomChanged -= UpdateButtons;
         }
     }
 

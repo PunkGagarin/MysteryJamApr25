@@ -16,7 +16,8 @@ MonoBehaviour:
     \u043C\u0430\u0441\u043B\u043E"
   <LocalizeId>k__BackingField: REAGENT_OLIVE_OIL
   <Id>k__BackingField: 13
-  <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: fc14e25045941ea4a82f5518e0fb66a2, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: 5b574072fa3aaad4c87cffe683e65359, type: 3}
   <ClickClip>k__BackingField: 12
   <ReagentType>k__BackingField: 3
   <AgeType>k__BackingField: 0

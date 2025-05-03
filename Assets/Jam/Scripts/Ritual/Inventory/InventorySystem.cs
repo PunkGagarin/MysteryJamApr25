@@ -23,16 +23,16 @@ namespace Jam.Scripts.Ritual.Inventory
 
         public void AddReagent(int id, int amount)
         {
-            if (_slots.All(slot => !slot.IsEmpty))
-            {
-                Debug.LogError("No free slots");
-                return;
-            }
-            
             var reagentDefinition = _reagentRepository.GetDefinition(id);
 
-            var slot = _slots[reagentDefinition.Id - 1];
-            slot.SetReagent(reagentDefinition);
+            var slot = _slots.FirstOrDefault(slot => slot != null && slot.ReagentDefinition == reagentDefinition);
+            if (slot == null)
+            {
+                Debug.LogError($"Trying to add reagent with id:{id}, but it isn't in a inventorySystem!");
+                return;
+            }
+
+            slot.gameObject.SetActive(true);
             slot.AddReagent(amount);
 
             SeenReagent(id);

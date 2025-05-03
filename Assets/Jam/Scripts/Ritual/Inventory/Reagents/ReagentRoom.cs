@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
@@ -11,13 +12,17 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         [Inject] private ReagentDragger _reagentDragger;
         [Inject] private InventorySystem _inventorySystem;
-        
+
+        public event Action OnRoomChanged;
+
         public Vector3 Position => transform.position;
 
         public void SetReagent(ReagentDefinition reagent)
         {
             ReagentInside = reagent;
             _reagentImage.sprite = reagent.Visual;
+            _reagentImage.size = Vector2.one;
+            OnRoomChanged?.Invoke();
         }
 
         public void ActivateRoom() => 
@@ -30,6 +35,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             
             _reagentImage.enabled = false;
             ReagentInside = null;
+            OnRoomChanged?.Invoke();
         }
 
         public void AppearReagent()

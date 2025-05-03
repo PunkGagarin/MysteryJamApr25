@@ -28,7 +28,7 @@ namespace Jam.Scripts.Manual
                     (from reagentExclusion 
                             in reagentExclusions 
                         where reagentExclusion.ReagentId == reagent.Definition.Id 
-                        select reagent.Definition.GetExcludedSprite(reagentExclusion.ExcludedReagentId))
+                        select reagent.Definition.GetManualExcludedIcon(reagentExclusion.ExcludedReagentId))
                     .ToList();
 
                 reagent.InitData(excludedReagentSprites);

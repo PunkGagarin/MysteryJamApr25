@@ -11,6 +11,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
     {
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public Sprite Visual { get; private set; }
+        [field: SerializeField] public Sprite ManualIcon { get; private set; }
         [field: SerializeField] public Sounds ClickClip { get; private set; }
         [field: SerializeField] public ReagentType ReagentType {get; private set; }
         [field: SerializeField, ShowIf(nameof(ReagentType), ReagentType.Age)] public AgeType AgeType {get; private set; }
@@ -21,12 +22,12 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         [field: SerializeField] public int Cost { get; private set; }
 
-        public Sprite GetExcludedSprite(int reagentExclusionExcludedReagentId)
+        public Sprite GetManualExcludedIcon(int reagentExclusionExcludedReagentId)
         {
             foreach (var excludedReagent in ExcludedReagents)
             {
                 if (excludedReagent.Id == reagentExclusionExcludedReagentId)
-                    return excludedReagent.Visual;
+                    return excludedReagent.ManualIcon;
             }
 
             Debug.LogError($"Trying to get sprite for excluded reagent with id {reagentExclusionExcludedReagentId}, but it doesn't exist in excluded reagents");

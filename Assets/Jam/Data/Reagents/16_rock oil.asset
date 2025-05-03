@@ -15,7 +15,8 @@ MonoBehaviour:
   <Name>k__BackingField: "\u0433\u043E\u0440\u043D\u043E\u0435 \u043C\u0430\u0441\u043B\u043E"
   <LocalizeId>k__BackingField: REAGENT_ROCK_OIL
   <Id>k__BackingField: 16
-  <Visual>k__BackingField: {fileID: 21300000, guid: 47213f7a4e59507479ea2399ce730047, type: 3}
+  <Visual>k__BackingField: {fileID: 21300000, guid: f69574e1a020afe4eaf6ba45e6cd9d73, type: 3}
+  <ManualIcon>k__BackingField: {fileID: 21300000, guid: f54693fa9cefa3e4bbcfac2cebeea86d, type: 3}
   <ClickClip>k__BackingField: 12
   <ReagentType>k__BackingField: 3
   <AgeType>k__BackingField: 3

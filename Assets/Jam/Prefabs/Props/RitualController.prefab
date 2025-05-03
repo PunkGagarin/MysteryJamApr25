@@ -48,8 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 739870166350934135}
   _reagentFitter: {fileID: 4889034370766352029}
-  _startRitual: {fileID: 542670159854537441}
   _clearTable: {fileID: 6032184739654104919}
+  _desk: {fileID: 0}
+  _memory: {fileID: 0}
 --- !u!1 &1675901798881290344
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReagentRoom (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2042122439337870310, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4625029311921246645, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -829,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReagentRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 2042122439337870310, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4625029311921246645, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -901,6 +910,10 @@ PrefabInstance:
     - target: {fileID: 2042122439337870310, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
       propertyPath: m_Name
       value: ReagentRoom (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042122439337870310, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4625029311921246645, guid: 6ca8ad26651da314b81b60bf8971250a, type: 3}
       propertyPath: m_LocalPosition.x
