@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: C2_LarsVesh
   m_EditorClassIdentifier: 
   <Name>k__BackingField: 
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 2
   <SexType>k__BackingField: 2
   <AgeType>k__BackingField: 1
-  <RaceType>k__BackingField: 0
+  <RaceType>k__BackingField: 1
   <DeathType>k__BackingField: 0

@@ -15,6 +15,6 @@ MonoBehaviour:
   <Name>k__BackingField: Mirror
   <LocalizeId>k__BackingField: TOOL_MAGNIFIER
   <Id>k__BackingField: 1
-  <Charges>k__BackingField: 10
-  <Cost>k__BackingField: 50
+  <Charges>k__BackingField: 3
+  <Cost>k__BackingField: 20
   <Visual>k__BackingField: {fileID: 21300000, guid: 6b579cfce4a849340a776cad99963d22, type: 3}
