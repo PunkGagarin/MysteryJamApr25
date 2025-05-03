@@ -22,10 +22,12 @@ namespace Jam.Scripts.Camera
         [Inject] private PopupManager _popupManager;
         
         private CameraPosition _position;
+        private bool _canMove = false;
         public event Action OnMoveLeft, OnMoveRight, OnMoveCenter;
 
         public void UnlockCamera()
         {
+            _canMove = true;
             _leftButton.gameObject.SetActive(true);
             _rightButton.gameObject.SetActive(true);
         }
@@ -58,6 +60,9 @@ namespace Jam.Scripts.Camera
 
         private void MoveLeft()
         {
+            if (!_canMove)
+                return;
+            
             if (_popupManager.IsPopupOpen(out ManualPopup popup))
             {
                 popup.Close();
@@ -75,6 +80,9 @@ namespace Jam.Scripts.Camera
         }
         private void MoveRight()
         {
+            if (!_canMove)
+                return;
+
             _position++;
 
             if (_position > CameraPosition.Right)
