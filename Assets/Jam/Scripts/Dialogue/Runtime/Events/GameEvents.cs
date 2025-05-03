@@ -9,6 +9,7 @@ using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Ritual.Tools;
+using Jam.Scripts.Tutorial;
 using Jam.Scripts.Utils.String_Tool;
 using UnityEngine;
 using Zenject;
@@ -31,6 +32,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _ritualFailedByDeathEvent;
         [SerializeField, StringEvent] private string _ritualFailedByExcludedEvent;
         [SerializeField, StringEvent] private string _addToolEvent;
+        [SerializeField, StringEvent] private string _tutorialStepEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
@@ -38,6 +40,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [Inject] private InventorySystem _inventorySystem;
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private ToolController _toolController;
+        [Inject] private TutorialService _tutorialService;
  
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
@@ -67,7 +70,8 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _reagentEvent, HandleReagent },
                 { _reputationEvent, HandleReputation },
                 { _moneyEvent, HandleMoney },
-                { _addToolEvent, AddTool }
+                { _addToolEvent, AddTool },
+                { _tutorialStepEvent, HandleTutorialEvent },
             };
 
             _conditionHandlers = new Dictionary<string, StringEventCondition>
@@ -81,7 +85,50 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _ritualFailedByRaceEvent, CheckRitualFailedByRace },
                 { _ritualFailedByDeathEvent, CheckRitualFailedByDeath },
                 { _ritualFailedByExcludedEvent, CheckRitualFailedByExcludedReagent },
+                { _tutorialStepEvent, CheckTutorial },
             };
+        }
+
+        private bool CheckTutorial(float value, StringEventConditionType conditionType)
+        {
+            int checkValue = (int)value;
+            switch (conditionType)
+            {
+                case StringEventConditionType.Equals:
+                    return _tutorialService.TutorialStep == checkValue;
+                case StringEventConditionType.EqualsOrBigger:
+                    return _tutorialService.TutorialStep >= checkValue;
+                case StringEventConditionType.EqualsOrSmaller:
+                    return _tutorialService.TutorialStep <= checkValue;
+                case StringEventConditionType.Bigger:
+                    return _tutorialService.TutorialStep > checkValue;
+                case StringEventConditionType.Smaller:
+                    return _tutorialService.TutorialStep < checkValue;
+                case StringEventConditionType.True:
+                case StringEventConditionType.False:
+                default:
+                    return false;
+            }
+        }
+
+        private void HandleTutorialEvent(float value, StringEventModifierType modifierType)
+        {
+            int intValue = (int)value;
+            switch (modifierType)
+            {
+                case StringEventModifierType.Add:
+                    _tutorialService.TutorialStep += intValue;
+                    break;
+                case StringEventModifierType.Remove:
+                    _tutorialService.TutorialStep -= intValue;
+                    break;
+                case StringEventModifierType.SetFalse:
+                case StringEventModifierType.SetTrue:
+                    _tutorialService.TutorialEvent(intValue);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(modifierType), modifierType, null);
+            }
         }
 
         private bool CheckRitualFailedByExcludedReagent(float value, StringEventConditionType conditionType)

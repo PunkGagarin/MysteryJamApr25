@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Inventory Config
   m_EditorClassIdentifier: 
   <ReagentAnimationTime>k__BackingField: 0.5
-  <RoomsForRitual>k__BackingField: 6
+  <RoomsForRitual>k__BackingField: 3
   <MaxReagentAmount>k__BackingField: 8
   <StartReagents>k__BackingField:
   - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}

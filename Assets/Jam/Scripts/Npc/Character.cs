@@ -33,17 +33,15 @@ namespace Jam.Scripts.Npc
             _questPresenter.SetCharacter(definition.Id);
         }
 
-        private void Talk() => 
+        public void Talk() => 
             _talk.Talk(_definition.Dialogue, CharacterLeave);
 
         private void CharacterArrived() => 
             _canInteract = true;
 
-        private void CharacterLeave()
-        {
+        private void CharacterLeave() => 
             OnCharacterLeave?.Invoke();
-        }
-        
+
         public void OnPointerClick(PointerEventData eventData)
         {
             if (!EventSystem.current.IsPointerOverGameObject() )

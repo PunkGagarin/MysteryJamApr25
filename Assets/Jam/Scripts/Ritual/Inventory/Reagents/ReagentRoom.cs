@@ -1,4 +1,5 @@
 ﻿using System;
+using Jam.Scripts.Dialogue.Gameplay;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -12,6 +13,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         [Inject] private ReagentDragger _reagentDragger;
         [Inject] private InventorySystem _inventorySystem;
+        [Inject] private DialogueRunner _dialogueRunner;
 
         public event Action OnRoomChanged;
 
@@ -46,7 +48,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!EventSystem.current.IsPointerOverGameObject() || !_reagentImage.enabled)
                 return;
             
             if (ReagentInside != null)
@@ -55,7 +57,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!EventSystem.current.IsPointerOverGameObject() || _dialogueRunner.IsDialogueActive || !_reagentImage.enabled)
                 return;
 
             if (ReagentInside != null)

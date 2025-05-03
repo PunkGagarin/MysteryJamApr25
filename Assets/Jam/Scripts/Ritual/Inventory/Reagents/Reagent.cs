@@ -50,7 +50,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            if (_ritualController.TryAddComponent(_reagentDefinition, out ReagentRoom room))
+            if (_ritualController.TryAddReagent(_reagentDefinition, out ReagentRoom room))
             {
                 _audioService.PlaySound(_reagentDefinition.ClickClip.ToString());
                 _reagentAnimationController.PlayAnimationFromInventory(_reagentDefinition, transform.position, room);

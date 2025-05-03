@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.PostProcessing;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Quests.Data;
@@ -31,10 +32,12 @@ namespace Jam.Scripts.Ritual
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private GhostResponseEffect _ghostResponseEffect;
         [Inject] private PointerFirefly _pointerFirefly;
+        [Inject] private DialogueRunner _dialogueRunner;
         
         private Quest _currentQuest;
         public event Action OnRitual;
         public event ExcludedReagentsFound OnExcludedReagentsFound;
+        public event Action OnAddReagent;
         public bool RitualFailedByExcludedReagents { get; private set; }
         public bool RitualFailedByMissingSexReagent { get; private set; }
         public bool RitualFailedByMissingAgeReagent { get; private set; }
@@ -45,10 +48,14 @@ namespace Jam.Scripts.Ritual
         public int Attempt { get; private set; }
 
         public bool CanCheckByMagnifier => _reagentFitter.OccupiedRooms >= 2;
+        public bool IsAllReagentsOnTable => !_reagentFitter.HaveFreeRooms;
 
-        public bool TryAddComponent(ReagentDefinition reagentToAdd, out ReagentRoom reagentRoom)
+        public bool TryAddReagent(ReagentDefinition reagentToAdd, out ReagentRoom reagentRoom)
         {
             reagentRoom = null;
+
+            if (_dialogueRunner.IsDialogueActive)
+                return false;
             
             if (!_questPresenter.HaveAnyQuest() || _questPresenter.IsQuestComplete() || _questPresenter.IsQuestFailed())
                 return false;
@@ -71,6 +78,7 @@ namespace Jam.Scripts.Ritual
             }
 
             UpdateButtons();
+            OnAddReagent?.Invoke();
 
             return true;
         }
@@ -109,9 +117,9 @@ namespace Jam.Scripts.Ritual
             RitualFailedByMissingDeathReagent = false;
             ExcludedReagents = new List<ReagentExclusion>();
 
-            List<ReagentDefinition> selectedComponents = _desk.GetReagents();
+            List<ReagentDefinition> selectedReagents = _desk.GetReagents();
             
-            bool isComplete = CheckRitualState(selectedComponents);
+            bool isComplete = CheckRitualState(selectedReagents);
 
             if (isComplete)
                 _desk.ShowRitualResult(true, () => _memory.StartMemoryGame(RitualComplete, RitualFailed));
@@ -154,14 +162,14 @@ namespace Jam.Scripts.Ritual
             RitualEnds();
         }
 
-        private bool CheckRitualState(List<ReagentDefinition> selectedComponents) => 
-            !CheckForExcludedReagents(selectedComponents) && CheckReagentsMatches(selectedComponents);
+        private bool CheckRitualState(List<ReagentDefinition> selectedReagents) => 
+            !CheckForExcludedReagents(selectedReagents) && CheckReagentsMatches(selectedReagents);
 
-        private bool CheckReagentsMatches(List<ReagentDefinition> selectedComponents)
+        private bool CheckReagentsMatches(List<ReagentDefinition> selectedReagents)
         {
             bool isRitualComplete = true;
             if (!CheckForReagents(
-                    selectedComponents,
+                    selectedReagents,
                     _currentQuest.AgeType,
                     reagent => reagent.AgeType,
                     AgeType.None,
@@ -172,7 +180,7 @@ namespace Jam.Scripts.Ritual
             }
 
             if (!CheckForReagents(
-                    selectedComponents,
+                    selectedReagents,
                     _currentQuest.SexType,
                     reagent => reagent.SexType,
                     SexType.None,
@@ -183,7 +191,7 @@ namespace Jam.Scripts.Ritual
             }
 
             if (!CheckForReagents(
-                    selectedComponents,
+                    selectedReagents,
                     _currentQuest.RaceType,
                     reagent => reagent.RaceType,
                     RaceType.None,
@@ -194,7 +202,7 @@ namespace Jam.Scripts.Ritual
             }
 
             if (!CheckForReagents(
-                    selectedComponents,
+                    selectedReagents,
                     _currentQuest.DeathType,
                     reagent => reagent.DeathType,
                     DeathType.None,
@@ -218,7 +226,7 @@ namespace Jam.Scripts.Ritual
             {
                 if (reagents.All(reagent => !selector(reagent).Equals(currentQuestValue)))
                 {
-                    Debug.Log($"No {typeName} component");
+                    Debug.Log($"No {typeName} reagent");
                     return false;
                 }
             }
@@ -227,10 +235,10 @@ namespace Jam.Scripts.Ritual
 
         public bool CheckForExcludedReagents()
         {
-            List<ReagentDefinition> selectedComponents =
+            List<ReagentDefinition> selectedReagents =
                 _reagentFitter.GetOccupiedRooms().Select(room => room.ReagentInside).ToList();
 
-            return CheckForExcludedReagents(selectedComponents, false);
+            return CheckForExcludedReagents(selectedReagents, false);
         }
 
         private bool CheckForExcludedReagents(List<ReagentDefinition> selectedReagents, bool withSignal = true)
@@ -246,7 +254,7 @@ namespace Jam.Scripts.Ritual
                     if (selectedReagents[i].ExcludedReagents.Contains(selectedReagents[j]))
                     {
                         ExcludedReagents.Add(new ReagentExclusion (selectedReagents[i].Id, selectedReagents[j].Id));
-                        Debug.Log($"Component {selectedReagents[i].Name} have excluded component: {selectedReagents[j].Name}");
+                        Debug.Log($"Reagent {selectedReagents[i].Name} have excluded reagent: {selectedReagents[j].Name}");
                         haveExcludedReagents = true;
                         RitualFailedByExcludedReagents = true;
                     }
