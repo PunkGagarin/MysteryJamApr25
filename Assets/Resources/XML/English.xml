@@ -56,4 +56,6 @@
   <text key="DAY_RESULT_MONEY_TOTAL">Total money</text>
   <text key="DAY_RESULT_CONTINUE">Continue</text>
   <text key="TO_MAIN_KEY">To main menu</text>
+  <text key="DAY_RESULT_REPUTATION_KEY">Rep</text>
+  <text key="DAY_RESULT_MONEY_KEY">Mon</text>
 </Language>

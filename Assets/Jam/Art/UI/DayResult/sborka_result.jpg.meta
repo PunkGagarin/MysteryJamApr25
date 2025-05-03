@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 391d1bcccb94845a0917e3e469673c50
+guid: 4912770a0136e4bcfb30ed2569d67ce2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,49 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: svodka_icon_shop_0
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 36
-        width: 88
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81b76c327d5504b3fb089d564c9316a3
-      internalID: 1649113000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: svodka_icon_shop_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 3
-        width: 84
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bca4b3eb00bce47d69f9302c37aa5436
-      internalID: -1487997854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -148,9 +106,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      svodka_icon_shop_0: 1649113000
-      svodka_icon_shop_1: -1487997854
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

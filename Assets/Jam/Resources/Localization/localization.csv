@@ -47,7 +47,7 @@ REAGENT_EVERMILK_,вечное молоко,evermilk
 REAGENT_OLIVE_OIL,оливковое масло,olive oil
 REAGENT_GREEN_TEA,зеленый чай,green tea
 REAGENT_HOP_EXTRACT,экстракт хмеля,hop extract
-,горное масло,rock oil
+REAGENT_ROCK_OIL,горное масло,rock oil
 DAY_RESULT_NUM,День,Day
 GOLD_AMOUNT_KEY,Золото,Gold
 DAY_RESULT_MONEY_EARNED,Денег%заработано,Money%earned
@@ -55,3 +55,5 @@ DAY_RESULT_REPUTATION,Репутация,Reputation
 DAY_RESULT_MONEY_TOTAL,Всего денег,Total money
 DAY_RESULT_CONTINUE,Продолжить,Continue
 TO_MAIN_KEY,На главную,To main menu
+DAY_RESULT_REPUTATION_KEY,Реп,Rep
+DAY_RESULT_MONEY_KEY,Ден,Mon

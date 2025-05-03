@@ -17,7 +17,6 @@ namespace Jam.Scripts.DayTime.Results
     public class DayResultView : Popup
     {
         [SerializeField] private TMP_Text _dayNumber;
-        [SerializeField] private TMP_Text _thoughts;
         [SerializeField] private TMP_Text _earnedMoney;
         [SerializeField] private TMP_Text _totalReputation;
         [SerializeField] private TMP_Text _totalMoney;
@@ -28,12 +27,14 @@ namespace Jam.Scripts.DayTime.Results
         [SerializeField] private ShopView _shopView;
         [SerializeField] private Color _errorColor;
         [SerializeField] private Color _normalColor;
+        [SerializeField] private Color _successColor;
 
         [Inject] private SceneLoader _sceneLoader;
         [Inject] private CoroutineHelper _coroutineHelper;
         [Inject] private LanguageService _languageService;
         [Inject] private Localization _localization;
         [Inject] private AudioService _audioService;
+        [Inject] private CharacterResultFactory _characterResultFactory;
 
         private List<CharacterResultView> _charactersResults;
         private CharacterResultWriter _characterResultWriter;
@@ -78,8 +79,8 @@ namespace Jam.Scripts.DayTime.Results
             _shopSystem.ShowShop();
             var dayResult = _characterResultWriter.DayInfo;
             _dayNumber.text = $"{_localization.GetText(DAY_LOCALIZE_KEY)} {dayResult.DayNumber + 1}";
-            _thoughts.text = "тут должны были быть мысли но у меня их нет (";
-            _earnedMoney.text = dayResult.TotalEarnMoney.ToString();
+            _earnedMoney.text = $"{dayResult.TotalEarnMoney:+0;-0;0}";
+            _earnedMoney.color = dayResult.TotalEarnMoney > 0 ?_successColor : _errorColor;
             UpdateTotalMoney(_playerStats.Money, 0);
             _totalReputation.text = _playerStats.Reputation.ToString();
 
@@ -116,7 +117,7 @@ namespace Jam.Scripts.DayTime.Results
             int resultsToCreate = charactersResultsCount - _charactersResults.Count;
             for (int i = 0; i < resultsToCreate; i++)
             {
-                var characterResultView = Instantiate(_characterResultViewPrefab, _charactersResultsContainer);
+                var characterResultView = _characterResultFactory.Create(_characterResultViewPrefab, _charactersResultsContainer);
                 characterResultView.gameObject.SetActive(false);
                 _charactersResults.Add(characterResultView);
             }

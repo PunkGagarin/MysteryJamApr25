@@ -3,6 +3,7 @@
     public class CharacterResult
     {
         public int CharacterId;
+        public string CharacterName;
         public int EarnMoney;
         public int EarnReputation;
     }

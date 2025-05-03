@@ -56,4 +56,6 @@
   <text key="DAY_RESULT_MONEY_TOTAL">Всего денег</text>
   <text key="DAY_RESULT_CONTINUE">Продолжить</text>
   <text key="TO_MAIN_KEY">На главную</text>
+  <text key="DAY_RESULT_REPUTATION_KEY">Реп</text>
+  <text key="DAY_RESULT_MONEY_KEY">Ден</text>
 </Language>
