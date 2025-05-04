@@ -340,17 +340,7 @@ MonoBehaviour:
       - LanguageType: 1
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
-    DialogueDataPorts:
-    - ID:
-        Value: 0
-      PortGuid: 6fd64142-02b2-40b4-baba-41466865f1c1
-      InputGuid: 
-      OutputGuid: 
-    - ID:
-        Value: 0
-      PortGuid: ea0de2bc-5e7e-4145-8dc9-35a34bf07ec4
-      InputGuid: 
-      OutputGuid: 
+    DialogueDataPorts: []
     SkipContinue: 0
   - NodeGuid: 834915ca-816f-483c-bb02-884ee8241b36
     Position: {x: 558, y: 769}
