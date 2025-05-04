@@ -1,4 +1,5 @@
-﻿using Jam.Scripts.Audio.Domain;
+﻿using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.DayTime.Results;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
@@ -53,6 +54,9 @@ namespace Jam.Scripts.DayTime
         {
             if (!_canCallNextClient)
                 return;
+
+            _audioService.PlaySound(Sounds.ropeBell.ToString());
+            PlayRopePullAnimation();
 
             _canCallNextClient = false;
             NPCDefinition npcDefinition = GetNpcFromConfig();
@@ -117,7 +121,7 @@ namespace Jam.Scripts.DayTime
             dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter, _shopSystem);
         }
 
-        private void OnOpenDayResultView() => 
+        private void OnOpenDayResultView() =>
             _gameplayOverlayUI.gameObject.SetActive(false);
 
         private void OnCloseDayResultView()
@@ -146,9 +150,26 @@ namespace Jam.Scripts.DayTime
             if (!EventSystem.current.IsPointerOverGameObject())
                 return;
 
-            _audioService.PlaySound(Sounds.ropeBell.ToString());
-
             CallNextClient();
+        }
+
+        private void PlayRopePullAnimation()
+        {
+            var pullAmount = 1.5f;
+            var pullTime = 0.2f;
+            var returnTime = 1f;
+
+            var originalPos = transform.localPosition;
+            Vector3 pulledPos = originalPos + Vector3.down * pullAmount;
+            transform
+                .DOLocalMoveY(pulledPos.y, pullTime)
+                .SetEase(Ease.InCubic)
+                .OnComplete(() =>
+                {
+                    transform
+                        .DOLocalMoveY(originalPos.y, returnTime)
+                        .SetEase(Ease.OutElastic);
+                });
         }
     }
 }

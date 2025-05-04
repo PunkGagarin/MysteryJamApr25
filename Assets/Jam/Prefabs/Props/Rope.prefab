@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 25
-  m_Sprite: {fileID: 21300000, guid: 166986160ded2044fb08c5ada607eb07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55f57200706f04d3cb6712d6bb5069dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,18 +120,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04014659, y: 0.26754534}
+  m_Offset: {x: -0.04014659, y: -0.20039976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 5.2}
+    oldSize: {x: 1.5, y: 7}
     newSize: {x: 2.05, y: 4.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 5.7030954}
+  m_Size: {x: 1.5, y: 6.6389856}
   m_EdgeRadius: 0
 --- !u!114 &1509002843743714631
 MonoBehaviour:
@@ -148,7 +148,6 @@ MonoBehaviour:
   _curtains: {fileID: 0}
   _characterResultWriter: {fileID: 2062879932128762500}
   _randomNpcController: {fileID: 8992599113389208612}
-  _gameplayOverlayUI: {fileID: 0}
 --- !u!114 &2062879932128762500
 MonoBehaviour:
   m_ObjectHideFlags: 0
