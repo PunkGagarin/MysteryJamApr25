@@ -28,10 +28,35 @@ namespace Jam.Scripts.Ritual.Desk
             _canInput = false;
             _sequence.Clear();
 
+            int lastIndex = -1;
+
             for (int i = 0; i < _memoryConfig.ClicksAmount; i++)
             {
-                int index = Random.Range(0, _disks.Count);
+                int index;
+
+                do
+                {
+                    index = Random.Range(0, _disks.Count);
+                }
+                while (index == lastIndex);
+
+                lastIndex = index;
                 _sequence.Add(index);
+            }
+
+            bool allSame = true;
+            for (int i = 1; i < _sequence.Count; i++)
+            {
+                if (_sequence[i] != _sequence[0])
+                {
+                    allSame = false;
+                    break;
+                }
+            }
+            if (allSame)
+            {
+                StartMemoryGame(_onWin, _onLose);
+                return;
             }
 
             HighlightButton(0);
