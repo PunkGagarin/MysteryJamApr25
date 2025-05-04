@@ -28,6 +28,8 @@ MonoBehaviour:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 7f9a1240f8f86144281e007a0f34802b, type: 2}
     - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 4d43c0cdc3dd13b4db7b4ed8c1d254ff, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 15fc4b8d9c1b0da4eb8e6397004b21c7, type: 2}
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 5f40268130a6d9e4b93e981876c75ad2, type: 2}
