@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: D2C1_FerraFatalle
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Tutorial
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 6
   <SexType>k__BackingField: 1
-  <AgeType>k__BackingField: 3
-  <RaceType>k__BackingField: 1
+  <AgeType>k__BackingField: 2
+  <RaceType>k__BackingField: 3
   <DeathType>k__BackingField: 0
