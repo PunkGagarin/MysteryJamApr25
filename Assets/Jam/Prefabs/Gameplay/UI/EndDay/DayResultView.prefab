@@ -92,9 +92,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9133870214402822516}
   - {fileID: 4576860315723860437}
   - {fileID: 7691323008237718196}
+  - {fileID: 9133870214402822516}
   m_Father: {fileID: 5060291616765883920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -201,7 +201,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 101.48, y: 74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2148200821342911369
 CanvasRenderer:
@@ -231,9 +231,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eb1e880f80b7b4db4920d91c2caeca5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd7ea8503f6f2428eb8e46255d4ce8c9, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2410,6 +2410,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 995504840095521990, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 995504840095521990, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2535193018727031449, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2524,7 +2532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3141940684154842616, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 374.1
       objectReference: {fileID: 0}
     - target: {fileID: 3141940684154842616, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2652,7 +2660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7767428321791122984, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 293.04706
       objectReference: {fileID: 0}
     - target: {fileID: 7767428321791122984, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2688,7 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 1
+  m_VerticalFit: 2
 --- !u!114 &7314974697762012614 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3816095512677274801, guid: e600f09a1a3d7594dae9a2942f7a4949, type: 3}
