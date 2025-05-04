@@ -90,3 +90,7 @@ MonoBehaviour:
     <MemoryConfig>k__BackingField: {fileID: 11400000, guid: a40eb660c2a655f47b93a6bf996a20b2, type: 2}
   - <StartDayNum>k__BackingField: 1
     <MemoryConfig>k__BackingField: {fileID: 11400000, guid: 8155733ff908d244f97545e34d07d99f, type: 2}
+  - <StartDayNum>k__BackingField: 2
+    <MemoryConfig>k__BackingField: {fileID: 11400000, guid: 3ca1ca35dcf4b1a44a4589f72f186145, type: 2}
+  - <StartDayNum>k__BackingField: 5
+    <MemoryConfig>k__BackingField: {fileID: 11400000, guid: 474ef492f5ef1ac409814bb55714be4c, type: 2}
