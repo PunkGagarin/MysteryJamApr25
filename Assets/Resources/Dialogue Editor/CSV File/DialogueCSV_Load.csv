@@ -1,30 +1,569 @@
-Dialogue name,Node Guid ID,Text Guid ID,English,Russian
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,5a5f606f-435b-4096-8d9d-15bbdb2e2a8b,good monin,хороший Монин
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,23d98286-ffde-41a9-b238-7a795419bafd,nice day for fishin aint it ?,"хороший день для рыбалки, не так ли?"
-Fisherman,fdaf1b52-b99d-4383-af02-ed17e72982a3,7bcd6291-3499-415f-8994-d4e3f1736b41,Fisherman,Рыбак
-Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,e2021d1c-2c87-4283-ba8b-1b335a1ab8c4,Ha-ha!,Ха-ха!
-Fisherman,a3c8b5b3-c72f-4486-8c79-c4031d1c2314,ee5f3054-e074-4732-a3f4-b04b74958f55,Fisherman,Рыбак
-Fisherman,f48f817e-ee9b-480f-ab4d-c61e7a7d8b59,Choice Dont have Text ID,nope,неа
-Fisherman,ef9258ed-f520-48e3-9157-c5da262ef43b,Choice Dont have Text ID,It sure is!,Это точно!
-Jack Niceguy,a714f06f-3d23-4e6c-b8ae-324315b54a50,5ef3b7db-3d3a-4d16-b559-66054b55ed68,Hello Alchemist!,Привет Алхимик!
-Jack Niceguy,a714f06f-3d23-4e6c-b8ae-324315b54a50,9fb54d78-b58a-4c66-98c1-1b248ec692c1,Adventurer,авантюрист
-Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,d7744ffc-f673-44cf-9d5f-e49c3955c59f,Hi my name is Jack Niceguy!,"Привет, меня зовут Джек Найсгай!"
-Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,4ef41c7a-6c8d-40cc-8f6f-a0de51b015d2,I going to clear dangerous dungeon,Я собираюсь очистить опасное подземелье
-Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,139ff30b-3df5-4ef6-b5f3-b533cc274097,So could you please make Health potion for me ?,Не могли бы вы приготовить для меня зелье здоровья?
-Jack Niceguy,d4338421-7158-40b2-bc71-fdc33484f091,2c660bc0-acf2-40a9-a05d-633e92679e43,Jack Niceguy,Джек Найсгай
-Jack Niceguy,6f917cc9-117a-4fe0-ab83-9a4c9204e1ca,Choice Dont have Text ID,Hello Adventurer! it's nice to meet you!,"Привет, авантюрист! Приятно познакомиться!"
-Jack Niceguy,8a301c1c-7799-42dd-b553-825f0d99a536,Choice Dont have Text ID,I don't serve people of your profession!,Я не обслуживаю людей вашей профессии!
-Jack Niceguy,6a2222b5-adff-44fa-9286-1d825f17ce12,Choice Dont have Text ID,Alright i'll make one!,"Хорошо, я сделаю один!"
-Jack Niceguy,dff78684-2af1-496f-b511-51ab87de15ae,Choice Dont have Text ID,i don't have time for this,у меня нет на это времени
-Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Hello arcanist!,Привет арканист!
-Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,55246742-f30b-471b-b737-ff71a3b4e7a1,"My <color=""blue"">father</color> died, and hide somewhere his blessed fishing rod!","Мой <color=""blue"">отец</color> умер, и спрятал где-нибудь свою благословенную удочку!"
-Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,12569bb6-a660-4c1a-936d-67041ef62b8b,Could you please find out where is rod?,"Не могли бы вы узнать, где находится стержень?"
-Tutorial,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,5c5fdc62-f572-4848-a232-eda32598f171,Fisherman,Рыбак
-Tutorial,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Did you realize where is my rod?,"Ты понял, где мой стержень?"
-Tutorial,51ef8acd-a853-4b0f-a413-7ad51e328041,89bb81f0-6be9-4cc1-9e4c-9e0f54ac517f,Fisherman,Рыбак
-Tutorial,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,I'm hardly disapointet in you!,Я почти не разочаровываюсь в тебе!
-Tutorial,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Fisherman,Рыбак
-Tutorial,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Okay, give me moment!","Хорошо, дай мне минутку!"
-Tutorial,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Sorry not today,"Извините, не сегодня"
-Tutorial,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Yes!,Да!
-Tutorial,a1b6bf1d-6875-4cf7-bb0e-b92bbd51792e,Choice Dont have Text ID,Still not!,Все еще нет!
+Dialogue name,Node Guid ID,Text Guid ID,Russian,English
+C2_Tim Spar,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи, тетя медиум! Мой <b>дедушка</b> умер, я хочу узнать, как он устроился... там.","Good evening, aunt Medium! My <b>grandfather</b> died, I want to know how he is doing... there."
+C2_Tim Spar,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Спасибо!.. Спасибо большое!!!,Thank you!.. Thank you very much!!!
+C2_Tim Spar,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Я... это... я не хочу больше... пока!..,I... it's... I don't want anymore... bye for now!..
+C2_Tim Spar,26818f90-2a7f-4ff8-a120-e4564d1bfcb9,1e087326-61c9-4e31-a690-4625a0cb8df9,Все… все хорошо? Что не так?,Everything... is everything okay? What's wrong?
+C2_Tim Spar,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Все хорошо, василек","Everything is fine, cornflower"
+C2_Tim Spar,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+C2_Tim Spar,2bdc4408-3df6-49bb-a810-b220e1d977dc,81e6e38f-5839-4ddc-a00c-0a3141e5ca26,Дедушка не хочет говорить?,Grandpa doesn't want to talk?
+C2_Tim Spar,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+C2_Tim Spar,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+C2_Tim Spar,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+C2_Tim Spar,82e091b2-a87b-49df-b8e1-5fdc97a17eb4,Choice Dont have Text ID,(продолжить работу),(continue working)
+C2_Tim Spar,b0604c90-cb64-4ded-93b2-360b0e30932b,Choice Dont have Text ID,Я не смогу сделать это (отказаться от работы),I can’t do this (refuse the work)
+C3_LarsVesh,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Вчера мы с женой потеряли <b>дочь</b>. Я не смогу уснуть, если...",Yesterday my wife and I lost our <b>daughter</b>. I won’t be able to sleep if I don’t know...
+C3_LarsVesh,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,cc4ca47d-e995-4ae8-8d48-0f14e7bb1be5,"Если не смогу убедиться, что она в порядке...",If I can't make sure that she's okay...
+C3_LarsVesh,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,35804dcc-3274-42ed-a19b-1d7431ffb99a,Хотя бы теперь...,At least now...
+C3_LarsVesh,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,6b5d1150-5322-430b-9b22-25f48206b2a6,"Моя жена против, но я не могу иначе...","My wife is against it, but I can't do otherwise..."
+C3_LarsVesh,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Она была такой светлой маленькой девочкой… никогда никого не обижала… как же так…,She was such a bright little girl... never hurt anyone... how could this happen...
+C3_LarsVesh,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Жена была права. Мне не стоило сюда приходить.,My wife was right. I shouldn't have come here.
+C3_LarsVesh,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Обними за меня маму,Hug mom for me
+C3_LarsVesh,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+C3_LarsVesh,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,Обязательно… Моя маленькая звездочка… Спасибо вам…,Of course... My little star... Thank you...
+C3_LarsVesh,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Что происходит? Что не так?,What’s going on? What’s wrong?
+C3_LarsVesh,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+C3_LarsVesh,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+C3_LarsVesh,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+C3_LarsVesh,d5d354c2-5b0a-4482-a492-4f013d266015,Choice Dont have Text ID,(продолжить работу),(continue working)
+C3_LarsVesh,459865e7-4091-439b-bbea-f87da1a07018,Choice Dont have Text ID,Я не смогу сделать это (отказаться от работы),I can’t do this (refuse the work)
+D1C1_MollyMoon,0c423495-06df-4b0d-9e36-022b68b9bb1a,10b790fb-5043-4dfd-9996-5ff058f354df,"Если все верно - поставь ингредиенты на символы. Каждый символ означает что-то свое: расу, пол или возраст. Загляни в записную книгу, если сомневаешься!","If everything is correct, place the ingredients on the symbols. Each symbol means something different: race, gender, or age. Check the notebook if you're unsure!"
+D1C1_MollyMoon,72803ef7-dd45-474c-ab2a-797ca6dc76ea,e44660fc-beb8-4f6d-abb3-721faac79216,"Если ошибся - не переживай, выбери ненужный ингредиент на столе, чтобы отправить его обратно на полку","If you made a mistake, don't worry, select the unnecessary ingredient on the table to send it back to the shelf."
+D1C1_MollyMoon,0b127ccb-9357-4e9d-a2cc-6bc13906b4dd,6225c535-e3b1-417c-9293-f800c6a0ba74,"Привет, начинающий медиум! Я рада, что ты наконец получила свою волшебную повозку и можешь приступать к работе!","Hello, novice Medium! I'm glad that you finally got your magical carriage and can start working!"
+D1C1_MollyMoon,0b127ccb-9357-4e9d-a2cc-6bc13906b4dd,d0d4ef45-c49c-430a-a60f-2a908ab6ebea,Я так рада за тебя! Путь к этой профессии нелегкий!,I'm so happy for you! The path to this profession is not easy!
+D1C1_MollyMoon,bbc77d11-ade2-4e21-b4df-a9b420e71604,6c55e3f1-4d67-446d-800a-7a2c56654f68,Осмотрись. Слева от тебя ингредиенты. Справа от тебя записная книжка.,Look around. To your left are the ingredients. To your right is the notebook.
+D1C1_MollyMoon,2c3f80b8-e9a6-414c-885e-8ebd8f2dec77,7f766f6f-49fc-4a62-aaf3-4c11a3bd951a,Запомни. К тебе будут приходить люди. С помощью ингредиентов ты будешь призывать призрака и говорить с ним.,"Remember. People will come to you. With the help of ingredients, you will summon a ghost and talk to it."
+D1C1_MollyMoon,2c3f80b8-e9a6-414c-885e-8ebd8f2dec77,33b1c59c-a7b3-4059-8010-91096baf1a77,"Тебе надо выслушать историю клиента и узнать, с <b>каким призраком</b> тебе предстоит связаться.",You need to listen to the client's story and find out <b>which ghost</b> you will have to deal with.
+D1C1_MollyMoon,2c3f80b8-e9a6-414c-885e-8ebd8f2dec77,3676e770-de12-403f-9aaa-6b34b63c0436,"Когда ты выслушаешь историю - на столе зажгутся знаки, на которые надо будет поставить ингредиенты! Готова начать?","When you listen to the story, symbols will light up on the table, and you will need to place the ingredients on them! Are you ready to start?"
+D1C1_MollyMoon,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Приветствую тебя, новый медиум","Greetings to you, new Medium"
+D1C1_MollyMoon,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D1C1_MollyMoon,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Эм... ну, ничего страшного! Не вышло и не вышло! Я дам тебе еще ингредиентов. Постарайся с настоящим клиентом не провалиться!","Um... well, it's no big deal! It didn't work out, and that's okay! I'll give you more ingredients. Try not to fail with a real customer!"
+D1C1_MollyMoon,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Попробуй снова. На этот раз хорошо запомни, в каком порядке светятся ингредиенты. И, конечно же, коснись их в этом порядке!","Try again. This time, make sure to remember well the order in which the ingredients light up. And, of course, touch them in that order!"
+D1C1_MollyMoon,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Попробуй еще раз!,Try again!
+D1C1_MollyMoon,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Отлично! Молодец, молодец, молодец! Я так довольна тобой! И мой друг тобой явно доволен тоже!","Excellent! Well done, well done, well done! I am so pleased with you! And my friend is clearly pleased with you too!"
+D1C1_MollyMoon,dda5610e-b260-406d-a411-7de950d7d63f,60fc6a09-df0e-40bc-8baf-ca91a6908e91,"Следующий клиент уже будет настоящим. Постарайся справиться. А я приду к тебе, чтобы узнать, как твои дела, попозже!",The next client will be a real one. Try to handle it. And I'll come to you later to see how you're doing!
+D1C1_MollyMoon,394d0d09-f175-48be-909e-2345779c99b4,a593dfed-dd8c-400e-b3d7-3d6a0c09b2a2,Cледуй за огнями!,Follow the lights!
+D1C1_MollyMoon,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,a047598d-034b-4a32-a551-d9fce1a04497,Итак. Мой друг был <b>мужчиной</b>. Он был <b>человеком</b>. Ему было <b>30</b> лет.,So. My friend was a <b>man</b>. He was a <b>human</b>. He was <b>30</b> years old.
+D1C1_MollyMoon,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,eaab94ef-84f6-4d97-9b49-5dc9d4650f8f,Теперь твой стол должен настроиться на призрака.,Now your table should be set for the ghost.
+D1C1_MollyMoon,72fa6ead-49bf-46aa-8616-1877a91afad4,647f66e0-740c-4c0b-add8-ccd7562aec27,"Посмотри в записную книжку, чтобы понять, какие ингредиенты тебе нужны и возьми их с полки.",Look in the notebook to understand which ingredients you need and take them from the shelf.
+D1C1_MollyMoon,c75c7ff2-c162-478b-b6b5-afdcf295c909,7677e3d4-eaff-4b29-96e6-77a6bbcbcf21,А теперь - начинай ритуал.,And now - begin the ritual.
+D1C1_MollyMoon,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,Да,Yes
+D1C1_MollyMoon,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+С4_RionGershe,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,Ч… что?! Она бы НИКОГДА так не сказала!,W... what?! She would NEVER say that!
+С4_RionGershe,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Пусть этот урод сгниет в бедности.,Let this freak rot in poverty.
+С4_RionGershe,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+С4_RionGershe,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,Нам нужно вызвать призрак <b>моей жены</b>.,We need to summon the ghost of <b>my wife</b>.
+С4_RionGershe,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,027fef62-8831-41ba-b328-28e41127a207,"Я хочу узнать у нее, как расколдовать замок на семейном хранилище.",I want to ask her how to break the spell on the family vault.
+С4_RionGershe,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,8acf45cf-afec-4fbc-a5c3-add66bee7c2f,Я без денег из-за нее! Не оставила никаких инструкций!,I'm out of money because of her! She didn't leave any instructions!
+С4_RionGershe,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Это… это фантастически плохо! Ты - ничтожество! Чтоб тебя духи прокляли!,This... this is fantastically bad! You are a wretch! May the spirits curse you!
+С4_RionGershe,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Вообще, моя жена была такой же <b>эльфийкой</b>, как и ты. И вот она, в отличие от тебя, в колдовстве не ошибалась.","Actually, my wife was just as much an <b>elf</b> as you are. And unlike you, she never made mistakes in magic."
+С4_RionGershe,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,"О, я зря доверился <b>остроухим!</b> Так и знал, что моя жена - исключение из правил…","Oh, I shouldn't have trusted the <b>pointy-eared ones!</b> I knew it, my wife is the exception to the rule…"
+С4_RionGershe,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+С4_RionGershe,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+С4_RionGershe,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+С4_RionGershe,8b471324-1450-484b-ac5a-9b2de84e65a4,Choice Dont have Text ID,Я не смогу сделать это (отказаться от работы),I can’t do this (refuse the work)
+С4_RionGershe,ed550102-d0ff-4853-8e31-efadc3cdad42,Choice Dont have Text ID,(продолжить работу),(continue working)
+С5_ElizabethArm,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Ах, моя маленькая Нора! Нора! Солнышко мое!.. Спасибо... спасибо вам… Я обязательно… буду сильной… Для нее.","Ah, my little Nora! Nora! My sunshine!.. Thank you... thank you... I will definitely... be strong... For her."
+С5_ElizabethArm,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Будь сильной, мамочка","Be strong, mommy"
+С5_ElizabethArm,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+С5_ElizabethArm,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Я… Из-за несчастного случая… так вышло, что… Простите, мне трудно не плакать…","I... Because of an accident... it happened that way... Sorry, it's hard for me not to cry..."
+С5_ElizabethArm,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,9604e459-3e00-4ada-8aff-1ebbd2681f45,"Простите… Было так тяжело вас найти и решиться, но… мне это нужно…","Sorry... It was so hard to find you and make up my mind, but... I need this..."
+С5_ElizabethArm,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,24f798c9-82c9-42d0-981c-2d0ca55e951f,"<b>Моя приемная дочурка</b>, мое солнышко…","<b>My adopted daughter</b>, my sunshine…"
+С5_ElizabethArm,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,f6948090-f562-4021-9c2d-9077d596b63b,"Она умерла и… мне важно знать, в обиде ли она на меня…",She died and… it’s important for me to know if she was upset with me…
+С5_ElizabethArm,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Вы… Неужели, она так зла на меня?.. Я была не лучшей матерью, но я взяла ее к себе, пусть она и <b>дворф</b>, и воспитывала ее, как свое собственное дитя…","You... Could it be that she is so angry with me?.. I wasn't the best mother, but I took her in, even though she is a <b>dwarf</b>, and raised her as my own child..."
+С5_ElizabethArm,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Я… я не верю… она не хочет меня видеть?...,I... I don't believe it... she doesn't want to see me?...
+С5_ElizabethArm,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Я не могу так. Вы… вы чудовище… Как вы можете так со мной поступать?! Я столько сделала, чтобы найти вас!... Провались пропадом!..",I can't do this. You... you are a monster... How can you treat me like this?! I did so much to find you!... Go to hell!...
+С5_ElizabethArm,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+С5_ElizabethArm,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+С5_ElizabethArm,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь,No. I can't help you.
+С5_ElizabethArm,e9e432ea-ce74-4df1-ab2f-3504a391eb42,Choice Dont have Text ID,(Продолжить работу),(Continue working)
+С5_ElizabethArm,9be8af31-6861-4fd6-927e-6df76c9fd44e,Choice Dont have Text ID,Я не смогу сделать это (отказаться от работы),I can’t do this (refuse the work)
+D2C1_FerraFatalle,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Это... дедушка не хочет говорить?,Is it... that grandpa doesn't want to talk?
+D2C1_FerraFatalle,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Ты что творишь?! Душка! Так нельзя! Ну кто мешает <b>ЭКСТРАКТ ХМЕЛЯ</b> и <b>ВЕДЬМИНУ СОЛЬ</b>? Так, как старшая младшей, дарю. Держи индигриенты и пробуй снова!","What are you doing?! Sweetie! You can't do that! Who mixes <b>HOPS EXTRACT</b> and <b>WITCH SALT</b>? So, as the elder to the younger, I give this to you. Here are the ingredients, try again!"
+D2C1_FerraFatalle,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Ах… как жаль, что призраки не могут говорить много… он писал такие стихи!.. М-м-м… спасибо за ностальгию, детонька. Пока.","Ah... what a pity that ghosts can't talk much... he wrote such poetry!.. M-m-m... thank you for the nostalgia, child. Goodbye."
+D2C1_FerraFatalle,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Я... это... я не хочу больше... пока!..,I... I just don’t want this anymore... bye for now!
+D2C1_FerraFatalle,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Ты все еще также красива, Ферра…","You are still just as beautiful, Ferra…"
+D2C1_FerraFatalle,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D2C1_FerraFatalle,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Так, смотри, какая ситуация. У меня был любовник. <b>Мужчинка</b> под смерть был еще <b>не старый</b>, но уже женатый, все такое. <b>Дворфик</b>, угум.","So, look, here's the situation. I had a lover. The <b>man</b> was not <b>old</b> yet, but already married, all that. A <b>dwarf</b>, yeah."
+D2C1_FerraFatalle,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,3d38715c-72bc-49cd-b9bd-e9897ee30159,"Серьезный такой, богатенький. Угум.
+Вот он так сладко флиртовал… хочется послушать!","So serious, so rich. Uh-huh.
+He was flirting so sweetly… I want to listen!"
+D2C1_FerraFatalle,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D2C1_FerraFatalle,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D2C2_2_Dandelion,bb34f68f-cbb5-481b-9b85-a3f56fee9c97,97322d93-2e3f-4d65-b5e5-ac8ba42e218a,"Но подожди. Зачем? Ты могла спокойно работать у нас в таверне. После всего, что случилось, мы бы никогда тебе не отказали…","But wait. Why? You could have easily worked with us at the tavern. After everything that happened, we would never have turned you away…"
+D2C2_2_Dandelion,cf968ff0-b5fe-43fe-9734-bbb971dba802,7c7e4b04-1141-4f77-94a5-e1abe92f8d51,Я постараюсь узнать что-то. Вернусь завтра ночью.,I will try to find out something. I’ll be back tomorrow night.
+D2C2_2_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,Ты? Это правда ты?,You? Is it really you?
+D2C2_2_Dandelion,bec9d105-6558-4314-97cf-b49ee3348794,ab2a4fb6-3480-45b7-bfdf-4b79cc97e062,"Я так рада!.. Я волновалась, не знала, что с тобой случилось, и… я так рада, что ты в порядке.  Но… зачем ты подалась в медиумы?","I'm so glad!.. I was worried, I didn't know what had happened to you, and... I'm so glad you're okay. But... why did you become a Medium?"
+D2C2_2_Dandelion,ce3f7ba0-2b61-481b-8ebd-f69875ab8911,62c16087-44f6-4626-9d69-3c136fd985e0,Ты о <b>Изогнутом Страннике</b>?.. Что ж… вы были близки. Я могу понять. Как мне помочь тебе?,Are you talking about the <b>Twisted Wanderer</b>?.. Well… you were close. I can understand. How can I help you?
+D2C2_2_Dandelion,dc4465c7-f1a4-4d4c-b407-11660a6fc132,2f9ad470-0ae4-48df-8a52-707625f8dfbd,"Я готова слушать. Я слышала, что для того, чтобы стать медиумом, нужно пройти через смерть… это так?","I am ready to listen. I heard that in order to become a Medium, one must go through death... is that true?"
+D2C2_2_Dandelion,7197519f-ae35-43a7-a988-fe3bb4f8d25d,Choice Dont have Text ID,Это долгая история…,It's a long story...
+D2C2_2_Dandelion,283c54d4-ebe8-44a1-8ea8-af3f2f223d5a,Choice Dont have Text ID,"...да. Я прошла сложный путь, чтобы обрести этот дар. И вот я здесь. ",...yes. I have gone through a difficult journey to acquire this gift. And here I am.
+D2C2_2_Dandelion,b7b3d52a-c498-41d0-aa74-0a25a0d192bc,Choice Dont have Text ID,Я хочу поговорить <b>с ним</b>. ,I want to talk <b>to him</b>.
+D2C2_2_Dandelion,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,Да,Yes
+D2C2_2_Dandelion,eca1488c-5437-4161-a69b-a8a4f90f3d0a,Choice Dont have Text ID,"Мне нужно узнать его <b>возраст, расу и пол</b>.","I need to know his <b>age, race, and gender</b>."
+D2C2_Evian,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Ничего… видимо, нам больше не суждено поговорить. Что ж. До свидания, милая леди.","Nothing... apparently, we are not destined to talk anymore. Well then. Goodbye, dear lady."
+D2C2_Evian,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Спасибо вам, капитан.","Thank you, Captain."
+D2C2_Evian,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D2C2_Evian,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Это… я плох в словах, милая леди. Но это… самое лучшее, что я мог услышать… И самое тяжелое одновременно. До свидания. Пусть у вас все будет хорошо.","This... I'm bad with words, dear lady. But this... is the best thing I could have heard... And the hardest at the same time. Goodbye. I wish you all the best."
+D2C2_Evian,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Понимаю. В любом деле… бывают провалы.,I understand. In any business... there are failures.
+D2C2_Evian,b1c2e9ca-14ec-49ad-9d7c-3a12759f8a3a,83601fb5-06a8-4d2c-887f-5dbc31051b7d,Что-то не так?,Is something wrong?
+D2C2_Evian,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Здравствуй, милая леди. Меня зовут Эвиан, я рад нашей встрече. Я… вел на войну наш отряд. И вы знаете, что случилось при южном скло..","Hello, dear lady. My name is Evian, I am glad to meet you. I... led our squad into war. And you know what happened at the southern slo..."
+D2C2_Evian,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,17297180-da79-4d4b-844b-1e4d9612684c,"Простите меня. Я хотел рассказать вам все, что может быть нужно. Но я плохо знаком с вашим делом.",Forgive me. I wanted to tell you everything that might be needed. But I am not well acquainted with your case.
+D2C2_Evian,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1febd8d9-739b-4a27-af27-39bcb4c14501,"Я хочу найти ее. Она была в наших рядах, боевым магом. <b>Юная эльфийка</b>… слишком<b>юная</b> для войны. У нее были прекрасные белые локоны и самая нежная улыбка на свете. И она… кое-что не успела сказать.","I want to find her. She was in our ranks, a battle mage. <b>A young elf girl</b>... far <b>too young</b> for war. She had beautiful white curls and the gentlest smile in the world. And she... didn't have time to say something."
+D2C2_Evian,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D2C2_Evian,866758df-3e2f-4e48-9e20-24e7c09fd796,Choice Dont have Text ID,(продолжить работу),(continue working)
+D2C2_Evian,a68ee1e3-df25-4c88-93f8-679682cba181,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D2C2_Evian,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D2C2_Evian,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D2C3_Melliel,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Доброй ночи. Мой <b>старший брат</b> погиб на войне. Сейчас мне очень, очень нужен его совет.","Good evening. My <b>older brother</b> died in the war. Right now I really, really need his advice."
+D2C3_Melliel,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Это… это… спасибо! Я так рада! Спасибо, братец! Я обязательно навещу твое дерево на свадьбе! И вам спасибо! Большое!","This... this... thank you! I'm so happy! Thank you, brother! I will definitely visit your tree at the wedding! And thank you too! Very much!"
+D2C3_Melliel,c95b4680-3cff-4274-9b83-ca065bd35cbb,7b2fbecb-6a82-4d10-812c-b04f1f04c148,Все в порядке?,Is everything okay?
+D2C3_Melliel,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Да, выходи за него.","Yes, marry him."
+D2C3_Melliel,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D2C3_Melliel,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Я… буду считать, что так он сказал мне “нет”? Или… ладно. У вас просто не вышло. Я поняла. Пока.","Should I... take it that this is his way of saying ""no"" to me? Or... okay. It just didn't work out for you. I understand. Bye."
+D2C3_Melliel,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D2C3_Melliel,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D2C3_Melliel,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака клиенту,Convey the ghost's answer
+D2C3_Melliel,59e3f7c2-8784-4c16-a97f-594f8601bdd9,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D2C3_Melliel,78a20663-354d-4ce5-81fe-6bf4f19ead34,Choice Dont have Text ID,(продолжить работу),(continue working)
+D2C4_Twisted Warrior,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Доброй ночи, медиум. Надеюсь, я не испугал тебе. Я убил <b>дворфа</b> недавно. <b>Он</b> напал на меня, испугавшись.","Good evening, Medium. I hope I didn't scare you. I killed a <b>dwarf</b> recently. <b>He</b> attacked me out of fear."
+D2C4_Twisted Warrior,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,d0decd66-b3c3-4f63-8a26-1476d18f8944,"Помоги мне, медиум. Он был <b>взрослым мужчиной</b>, у него могли остаться дети. Я хочу им помочь.","Help me, Medium. He was an <b>adult man</b>, he might have had children. I want to help them."
+D2C4_Twisted Warrior,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Мне ничего не надо от чудовища.,I don't need anything from the monster.
+D2C4_Twisted Warrior,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D2C4_Twisted Warrior,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Что ж. Его воля. До свидания, медиум.","Well. His will. Goodbye, Medium."
+D2C4_Twisted Warrior,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Не волнуйтесь, я умею ждать","Don't worry, I know how to wait."
+D2C4_Twisted Warrior,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Продолжайте.,Continue.
+D2C4_Twisted Warrior,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Что ж… не судьба. Жаль, узнаю иначе. До свидания, медиум.","Well... it wasn't meant to be. It's a pity, I'll find out another way. Goodbye, Medium."
+D2C4_Twisted Warrior,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D2C4_Twisted Warrior,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D2C4_Twisted Warrior,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D2C4_Twisted Warrior,e48c2b46-132c-4ef3-9d5f-5bf079f43f49,Choice Dont have Text ID,(продолжить работу),(continue working)
+D2C4_Twisted Warrior,fdc050f4-3987-4e89-9eb0-cc135f3b05ab,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D2C5_5_AddTools,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Вижу, ты хорошо освоилась! И, как я заметила, ты уже столкнулась с сложностями. Чтобы облегчить тебе работу, я даю тебе лупу и зеркало.","I see you've settled in well! And, as I noticed, you've already encountered some difficulties. To make your work easier, I'm giving you a magnifying glass and a mirror."
+D2C5_5_AddTools,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,d0decd66-b3c3-4f63-8a26-1476d18f8944,"Эти волшебные предметы помогут тебе с конфликтами ингредиентов. Как они работают ты можешь прочесть в записной книжке. 
+Ты молодец! Так держать!","These magical items will help you with ingredient conflicts. You can read about how they work in the notebook.
+Well done! Keep it up!"
+D2C5_5_AddTools,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,Спасибо!,Thank you!
+D3C2_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Я говорила со всеми, с кем могла. И я узнала вот что: у него была <b>подруга-эльфийка</b>, с которой он общался до нас!",I talked to everyone I could. And here's what I found out: he had an <b>elf girlfriend</b> whom he was seeing before us!
+D3C2_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,999d440e-1d68-4c56-8490-c661940190c7,"У меня с собой ее рисунок с его портретом! Возьми! Может, она что-то нам о нем расскажет?",I have her drawing with his portrait! Take it! Maybe she can tell us something about him?
+D3C2_Dandelion,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,Чтоб тебя!.. Я поищу еще… спасибо. И возьми немного монет. Работа у тебя тяжелая. А я пойду искать еще…,Damn you!.. I'll look some more... thank you. And take some coins. Your work is hard. And I'll go look some more...
+D3C2_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"</b>Он был мне, как брат</b>",</b>He was like a brother to me</b>
+D3C2_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D3C2_Dandelion,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Я в тебя верю! Не переставай пытаться!,I believe in you! Don't stop trying!
+D3C2_Dandelion,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Ну давай же! Ты сможешь!,Come on! You can do it!
+D3C2_Dandelion,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Нет! Сорвалось! Чтоб тебя!.. Я поищу еще,No! It fell through! Damn you!.. I'll keep looking.
+D3C2_Dandelion,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D3C2_Dandelion,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,Хорошо,Alright
+D3C2_Dandelion,27603d81-f04e-403b-995d-d3b63c2fdff4,Choice Dont have Text ID,"Нет необходимости, спасибо","No need, thank you."
+D3C2_Dandelion,f6aaed57-e8a7-4f2c-898b-c8206a82ee09,Choice Dont have Text ID,(продолжить работу),(continue working)
+D3C2_Dandelion,5a10fed0-a242-4069-ae5e-b0ee36b1bfca,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D3C5_5_Molly Moon,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Постарайся еще!,Try again!
+D3C5_5_Molly Moon,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Слушай, ну это даже обидно! Остальным можешь, а мне не можешь! Ну, ладненько.","Listen, well, that's even hurtful! You can do it for others, but not for me! Well, alright then."
+D3C5_5_Molly Moon,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"О, отлично! Что ж, спасибочки, родная! До завтра!","Oh, great! Well, thank you, dear! See you tomorrow!"
+D3C5_5_Molly Moon,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+D3C5_5_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Тайная дверь под белым дубом,The secret door under the white oak
+D3C5_5_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D3C5_5_Molly Moon,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Ух ты, какая ты уставшая! Тяжелая ночь? Знаешь, я немного присматриваю за тобой. И заметила, что ты начала собственное расследование! Это здорово. Но я хочу знать больше. Кого ты ищешь?","Wow, you look so tired! Rough night? You know, I keep an eye on you a little. And I noticed that you started your own investigation! That's great. But I want to know more. Who are you looking for?"
+D3C5_5_Molly Moon,070095c0-5aa9-4a68-9750-b8c59829071b,74fee0c3-f308-4d8d-a2bd-911862d0c9d1,Ого. И при этом ты не знаешь его <b>расы и возраста</b>? Уникально!,Wow. And you don't know his <b>race and age</b>? Unique!
+D3C5_5_Molly Moon,1a47da78-878e-42a1-a4d8-fcc0052849c9,8ea2b725-846d-40db-85c4-8f4c1fb2eeb3,"Ладно-ладно! Больше не лезу в душу! Я рада, что у тебя все хорошо. А теперь, пожалуйста, призови для меня <b>маленькую эльфийскую девочку</b>. Ее звали Натаниэль. Надо спросить ее, где ее мама хранила свои запасы зелий. ","Alright, alright! I won't pry anymore! I'm glad you're doing well. And now, please summon for me a <b>little elven girl</b>. Her name was Nathaniel. We need to ask her where her mother kept her potion supplies."
+D3C5_5_Molly Moon,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D3C5_5_Molly Moon,b5f93ebb-e79b-4112-ace1-7e23b5656b2f,Choice Dont have Text ID,"Он был <b>проклятым</b>… Ты сама знаешь, что возраст и расу у них определить сложно… а вопросы я не задавала…",He was <b>damned</b>... You know yourself that it's hard to determine their age and race... and I didn't ask any questions...
+D3C5_5_Molly Moon,e1b9ca2d-7c29-46dd-aaa0-a44337af6c43,Choice Dont have Text ID,Хорошо,Alright
+D3C5_5_Molly Moon,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Я ищу <b>Изогнутого странника</b>. Он был моим другом. Он… спас меня, когда моя жизнь стала совсем невыносимой. Он помог мне кровом и деньгами. Он познакомил меня с множеством людей. Он научил меня магии. ",I am looking for the <b>Twisted Wanderer</b>. He was my friend. He... saved me when my life became completely unbearable. He helped me with shelter and money. He introduced me to many people. He taught me magic.
+D3C5_Ursul,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Нет, я всегда боялась тебя.","No, I was always afraid of you."
+D3C5_Ursul,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D3C5_Ursul,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Ясно. ,Clear.
+D3C5_Ursul,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"…Я… Это оказалось больнее, чем я думала. Но я рада… что узнала. Прощай, медиум. Мне надо подумать.","...I... It turned out to be more painful than I thought. But I'm glad... that I found out. Farewell, Medium. I need to think."
+D3C5_Ursul,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Я не спешу. Давай еще раз.,I'm not in a hurry. Let's do it again.
+D3C5_Ursul,b0d518b7-ba84-4f65-a003-07a4c3f24957,0489825c-5fa4-4502-82c9-4b328be5b6c9,Попытайся опять,Try again
+D3C5_Ursul,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Здравствуй, медиум.  Почему твой взгляд такой удивленный?","Hello, Medium. Why do you look so surprised?"
+D3C5_Ursul,00473303-6d68-4c2c-9570-8e6a175402cf,c7c64976-c527-4d93-ab15-3f96267b1aae,"Да, мы бываем и дворфами","Yes, we are sometimes dwarves too."
+D3C5_Ursul,834915ca-816f-483c-bb02-884ee8241b36,340d7579-b6c7-4e62-95fd-2b8333daba0e,"Но вернемся к делу. Я любила одну <b>дворфийскую женщину</b>, но не успела признаться ей. Не решалась. Хочу… узнать ответ.","But let's get back to the matter at hand. I loved a <b>dwarven woman</b>, but I didn't have time to confess to her. I couldn't bring myself to do it. I want... to know the answer."
+D3C5_Ursul,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D3C5_Ursul,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D3C5_Ursul,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D3C5_Ursul,33e22f0d-5bea-41fe-b398-c43faa698f72,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D3C5_Ursul,1afb09e7-eda5-4219-af2d-a09d726eca2d,Choice Dont have Text ID,(продолжить работу),(continue working)
+D3C5_Ursul,fae83c4f-8720-4845-b9de-1cab547ecc1b,Choice Dont have Text ID,"Я… простите, не видела проклятых, похожих на вас…","I... sorry, I haven't seen any damned who look like you..."
+D4C1_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Он был старше моих родителей…,He was older than my parents…
+D4C1_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D4C1_Dandelion,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"О… ого, я бы никогда не подумала… Х-хорошо. Осталась раса… Знаешь, я…я, если честно, всегда немного завидовала тому, как вы с ним общались…","Oh... wow, I would never have thought... O-okay. The race is left... You know, I... I, to be honest, was always a little jealous of how you interacted with him..."
+D4C1_Dandelion,dda5610e-b260-406d-a411-7de950d7d63f,c461971b-c35c-4d3e-b3cd-563eb97fd82f,"Но вот, мы с тобой стоим тут… и ты тоже о нем ничего не знаешь, ха… Глупо как-то вышло…","But here we are, standing here… and you don't know anything about him either, ha… It turned out kind of silly…"
+D4C1_Dandelion,dda5610e-b260-406d-a411-7de950d7d63f,938c6a53-adc3-43f2-8e7f-4f3ee7651ce1,"Ладно, извини. У тебя еще вся рабочая ночь впереди.  Держись. А я приду послезавтра. Надеюсь, с ответами.","Alright, sorry. You still have the whole work night ahead of you. Hang in there. And I'll come the day after tomorrow. Hopefully, with answers."
+D4C1_Dandelion,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Так, не волнуйся! Все хорошо!","Yes, don't worry! Everything is fine!"
+D4C1_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Я нашла, смотри… я не знала ее, но вот, я нашла. Это была <b>старушка-эльфийка</b>, и <b>она</b> знала его! <b>Она</b> нам подскажет… хотя бы что-то? Ладно, ладно.","I found it, look… I didn’t know her, but here, I found her. She was an <b>old elf woman</b>, and <b>she</b> knew him! <b>She</b> will give us a hint… at least something? Alright, alright."
+D4C1_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,502464ba-98f5-4404-98c6-cba76d4086b4,"Нам надо спросить, как давно <b>она</b> его знает! Или из какой он семьи! Что-нибудь пусть расскажет!",We need to ask how long <b>she</b> has known him! Or what family he is from! Let her tell us something!
+D4C1_Dandelion,79093e23-49dc-4493-9149-f46732b10297,7cf77634-dedc-4027-8935-febcefa987b3,Попробуй еще раз,Try again.
+D4C1_Dandelion,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Я… я не знаю, что теперь делать…",I... I don't know what to do now...
+D4C1_Dandelion,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D4C1_Dandelion,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D4C1_Dandelion,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D4C1_Dandelion,b4cb70ed-1f98-44df-b8a0-b430bdd5785f,Choice Dont have Text ID,(продолжить работу),(continue working)
+D4C1_Dandelion,6d6bd5c1-c8a6-414c-8194-5c4e368ec321,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D4C3_Ferra Fatalle,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Ой, какой хороший мальчик! И ты, душенька, просто чудо! Спасибочки! Пока-пока!","Oh, what a good boy! And you, darling, are simply a wonder! Thank you! Bye-bye!"
+D4C3_Ferra Fatalle,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Завещание в синих часах,A will in blue hours
+D4C3_Ferra Fatalle,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D4C3_Ferra Fatalle,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Привет, дорогушенька. Я нашептала паре птичек, как ты хороша! Жди прилив девочек-ведьмочек! Хи-хи-хи… А, так. точно.","Hello, darling. I whispered to a couple of little birds how wonderful you are! Expect a tide of witchy girls! Hee-hee-hee... Ah, right. Exactly."
+D4C3_Ferra Fatalle,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,c9f207d0-c463-44b7-8e66-79d7b709873e,"Слушай, надо поворковать с одним <b>человечком</b>. Я чуточку перестаралась с ним недавно… Ну, <b>старички</b> они все такие. Но ты не волнуйся, <b>он</b> точно умер счастливым!","Listen, I need to have a little chat with one little <b>man</b>. I went a bit overboard with him recently... Well, <b>old folks</b> are all like that. But don't worry, <b>he</b> definitely died happy!"
+D4C3_Ferra Fatalle,ed05f2dd-c09a-4c88-89a3-88b21bd2ba36,92425787-4813-4bb2-9f27-0fa59e5a6bb8,Попробуй еще раз,Try again.
+D4C3_Ferra Fatalle,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Продолжай, продолжай","Go on, go on"
+D4C3_Ferra Fatalle,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Ух, придется потратиться посерьезнее, видимо. Ай-яй. Пока, душенька! Зайду еще!","Uh, it looks like I'll have to spend a lot more, apparently. Oh dear. Bye, darling! I'll drop by again!"
+D4C3_Ferra Fatalle,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D4C3_Ferra Fatalle,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D4C3_Ferra Fatalle,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D4C3_Ferra Fatalle,5d0845c0-6a82-4203-93a3-0c2cd856456b,Choice Dont have Text ID,(продолжить работу),(continue working)
+D4C3_Ferra Fatalle,5266f629-a844-487e-8dff-c025b0f170b3,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D4C5_Ragda Badstone,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Все еще больно.,It still hurts.
+D4C5_Ragda Badstone,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D4C5_Ragda Badstone,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"О, да! Да! Я была права! Да, да, да! Вот он, вкус настоящей победы!..","Oh, yes! Yes! I was right! Yes, yes, yes! This is the taste of true victory!.."
+D4C5_Ragda Badstone,dda5610e-b260-406d-a411-7de950d7d63f,a77602e9-8f04-4eba-91f7-536a1939abe6,"Что ж… то, что ты просила. <b>Изогнутый странник</b> из эльфийской семьи. Это безусловно. Его мать - Милиан из Голубого Леса. Его отец - Эвиаргаль с Черных Берегов. Ныне мертвы, как и все его братья и сестры. А теперь - я откланяюсь. ","Well... what you asked for. <b>Twisted Wanderer</b> from an elven family. That is certain. His mother is Milian from the Blue Forest. His father is Eviargal from the Black Shores. Now they are dead, as are all his brothers and sisters. And now—I shall take my leave."
+D4C5_Ragda Badstone,dda5610e-b260-406d-a411-7de950d7d63f,1fff2974-ea60-4f5c-9849-0a0668922ccf,"До свидания и помни: ты меня не видела, медиум.","Goodbye and remember: you never saw me, Medium."
+D4C5_Ragda Badstone,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+D4C5_Ragda Badstone,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Доброй ночи, медиум. Я темная ведьма Рагда. У меня к тебе дело…","Good evening, Medium. I am the dark witch Ragda. I have business with you..."
+D4C5_Ragda Badstone,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,a4789d05-dea4-4466-bff7-f22ad0503e59,"Вороны нашептали мне, что ты ищешь тайну происхождения <b>Изогнутого Странника</b>. Если справишься с моей задачей, то я расскажу тебе эту тайну. Но взамен ты никому не расскажешь о том, что я приходила.","The crows whispered to me that you are seeking the secret of the origin of the <b>Twisted Wanderer</b>. If you manage to complete my task, I will tell you this secret. But in return, you must not tell anyone that I came."
+D4C5_Ragda Badstone,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,dc04bca1-49d3-44bf-84ba-ca62e90d8288,"Я прокляла самой страшной моей запретной магией Амфиэль, <b>эльфийку</b> из Голубого Леса. Она и ее дети сделали кое-что непростительное… и я хочу узнать, как проклятие действует после смерти. Так что свяжись с ней.","I cursed Amfiel, the <b>elf</b> from the Blue Forest, with my most terrible forbidden magic. She and her children did something unforgivable... and I want to know how the curse works after death. So get in touch with her."
+D4C5_Ragda Badstone,272ca774-1176-4f07-8639-e3a778d620b0,a5a4ddfd-9996-406a-b9ea-8f71708c96dc,Попробуй еще раз,Try again.
+D4C5_Ragda Badstone,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,Какое разочарование.,What a disappointment.
+D4C5_Ragda Badstone,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D4C5_Ragda Badstone,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+D4C5_Ragda Badstone,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+D4C5_Ragda Badstone,ced845e1-ecbd-4caa-8439-058dfce90c3d,Choice Dont have Text ID,(продолжить работу),(continue working)
+D4C5_Ragda Badstone,1355c116-e7d6-4b0e-9dfe-bc049d79262d,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D5C2_Molly Moon,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Я… буду считать, что так он сказал мне “нет”? Или… ладно. У вас просто не вышло. Я поняла. Пока.","I... should I take it that this is his way of saying ""no"" to me? Or... fine. It just didn't work out for you. I understand. Bye."
+D5C2_Molly Moon,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Это… это… спасибо! Я так рада! Спасибо, братец! Я обязательно навещу твое дерево на свадьбе! И вам спасибо! Большое!","This... this... thank you! I'm so happy! Thank you, brother! I will definitely visit your tree at the wedding! And thank you! Very much!"
+D5C2_Molly Moon,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+D5C2_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Да, выходи за него.","Yes, marry him."
+D5C2_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D5C2_Molly Moon,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Как же я рада за тебя! Какая же ты молодец! Что ж, я пришла помочь тебе. Я знаю, как тебе важно узнать, что с <b>ним</b>. Давай-ка о нем поговорим… Я знаю, что он был близок тебе до ковена. Как наставник, верно? Что ж… Кто он?","How happy I am for you! You did such a great job! Well, I came to help you. I know how important it is for you to find out what happened to <b>him</b>. Let's talk about him... I know he was close to you before the coven. As a mentor, right? Well... Who is he?"
+D5C2_Molly Moon,478478ca-a722-4efc-b5d8-15af56f5d228,57c5634e-318d-4acd-8822-7e6612f70c55,"Отлично-отлично. Так, а насколько он старый?","Excellent-excellent. So, how old is it?"
+D5C2_Molly Moon,993d1f25-e5f4-4fb2-aa8a-805ebeb2cd7c,bab57c4e-fcfe-4d64-9df7-ae9d83929da1,"Ты меня не слушаешь?.. я о той твоей самой важной для тебя персоне на свете! Так, а насколько он старый?","You’re not listening to me?.. I’m talking about that person who is the most important to you in the world! So, how old is he?"
+D5C2_Molly Moon,9b0e4264-9d78-4b7e-b26a-a1df1f3b8bc9,106aef8b-a9eb-480a-bf6d-4d624b3b5c1e,"Хм… я думала он намного старше тебя… Но ладно, продолжим! Какой он расы?","Hmm... I thought he was much older than you... But okay, let's continue! What race is he?"
+D5C2_Molly Moon,44cfd79c-d0d6-4a1f-aa2f-a572e78751f5,03677bc4-1900-440e-a5ec-e1ecb2612c3a,Хорошо! А какой он расы?,Alright! And what race is he?
+D5C2_Molly Moon,902b0db5-a8f0-41b9-8227-8a320003fab4,c062df67-0159-4dc6-9c6c-2c808c498584,Отлично! Тогда попробуй провести ритуал! Все нужное ты знаешь! А я понаблюдаю.,Excellent! Then try to perform the ritual! You know everything you need! And I'll watch.
+D5C2_Molly Moon,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Ладно. Остановись. Так не получится. ,Alright. Stop. It won't work this way.
+D5C2_Molly Moon,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,2f43510a-7072-406c-9d0d-fd4355cea232,"Мы с тобой обе знаем, что он <b>не дворф, не эльф, и не человек</b>. Он <b>проклятый</b>. И тебе надо смириться с этим… <b>Их души нельзя призвать.</b>","We both know that he is <b>neither a dwarf, nor an elf, nor a human</b>. He is <b>damned</b>. And you need to come to terms with that… <b>Their souls cannot be summoned.</b>"
+D5C2_Molly Moon,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,202eac38-8acd-44a2-834f-9daa5ad0cf97,"Или, быть может… у тебя есть догадка… что Молли что-то зна-а-а-ает…","Or, maybe... you have a suspicion... that Molly kno-o-o-ows something..."
+D5C2_Molly Moon,a8a508be-d0a3-49d4-bc8e-1251dd6c6498,b28cd456-a6e5-4d4e-952e-c8d46ea3fa63,"Отличный вопрос! Итак, у меня есть теория, что <b>проклятые</b>, хоть и рождаются у любой другой расы, считаются в мире душ за расу отдельную...  В общем, нужен <b>другой ингредиент</b>!","Great question! So, I have a theory that the <b>damned</b>, although born to any other race, are considered a separate race in the world of souls... In short, a <b>different ingredient</b> is needed!"
+D5C2_Molly Moon,a8a508be-d0a3-49d4-bc8e-1251dd6c6498,f644cfe2-f6e7-4613-b762-ae39e26da7f0,Я вернусь с ним <b>послезавтра</b>. Но тебе придется заплатить мне <300 монет за него. Пока-а-а-а!,I will come back with him <b>the day after tomorrow</b>. But you will have to pay me <300 coins for him. Bye-e-e-e!
+D5C2_Molly Moon,652cc497-9ea2-4c5d-b554-ca634ca52037,9a66543c-aff3-4c78-8f1b-267d631a15f0,Ещё!,More!
+D5C2_Molly Moon,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D5C2_Molly Moon,1951f1ca-f531-45e1-8965-a045903ce4c3,Choice Dont have Text ID,Мужчина,Man
+D5C2_Molly Moon,9e3f120d-f0d2-4191-86d3-6657fa1c6f2e,Choice Dont have Text ID,Женщина,Woman
+D5C2_Molly Moon,bbc7d8ee-5ce4-4b02-8539-0c44c8158c85,Choice Dont have Text ID,Молодой,Young
+D5C2_Molly Moon,785e3524-1176-4583-9689-34c4effbe75a,Choice Dont have Text ID,Взрослый,Adult
+D5C2_Molly Moon,ddf8f69e-120f-4a95-9096-90f715e6f9fc,Choice Dont have Text ID,Старый,Old
+D5C2_Molly Moon,d162268f-e8e0-4b88-813c-5cc26386b206,Choice Dont have Text ID,Человек,Human
+D5C2_Molly Moon,458ad598-b425-4632-ac7d-9e5152390998,Choice Dont have Text ID,Эльф,Elf
+D5C2_Molly Moon,88dd67ea-0e2f-4f16-bc41-4b0b987a7f1e,Choice Dont have Text ID,Дворф,Dwarf
+D5C2_Molly Moon,ea2f2771-3e4a-40d7-b08b-5939d0375f83,Choice Dont have Text ID,Как призвать дух проклятого?,How to summon the spirit of the damned?
+D5C5_Dandelion,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,Что с тобой? На тебе лица нет!..,What's wrong with you? You look pale!
+D5C5_Dandelion,8769ac82-8070-48af-9e24-48cb6661f044,a26aeea9-2a26-401d-bfcd-1872cbc2627e,Это… это жутко! А если бы надо было призвать меня?! Я ведь только <b>полуэльф</b>!,This... this is creepy! What if you had to summon me?! I'm only a <b>half-elf</b>!
+D5C5_Dandelion,d648a0f2-c72e-4ebc-835b-5665c2b4a05a,e1f8550f-1597-41d3-a752-0e86cd43a7a6,"Ужасно. У меня нет денег, чтобы помочь тебе заплатить за это… мне жаль… Но, знаешь. Мне тоже нужна помощь.","Terrible. I don't have the money to help you pay for this... I'm sorry... But, you know. I need help too."
+D5C5_Dandelion,d648a0f2-c72e-4ebc-835b-5665c2b4a05a,55d5e0cb-7725-428e-935a-7b2c1a61f290,"Ты знаешь, матери я не знала. Но <b>мой отец - эльф</b>. Он бросил меня… И я хочу узнать, почему.","You know, I didn't know my mother. But <b>my father is an elf</b>. He abandoned me… And I want to know why."
+D5C5_Dandelion,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,…,…
+D5C5_Dandelion,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Значит, не вышло… Хорошо. Не страшно…","So, it didn't work out... Alright. It's not a big deal..."
+D5C5_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Мне не нужен ребенок-полукровка,I don't need a half-blood child.
+D5C5_Dandelion,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D5C5_Dandelion,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Он был не стариком! Забыла сказать… эм…,He was not an old man! Forgot to say... um...
+D5C5_Dandelion,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Пожалуйста, продолжай",Please continue
+D5C5_Dandelion,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+D5C5_Dandelion,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,Рассказать всё,Tell everything
+D5C5_Dandelion,00054556-99bc-4d87-919b-33c6aa709449,Choice Dont have Text ID,"Не знаю, Дандэлион.","I don't know, Dandelion."
+D5C5_Dandelion,060fbbc5-f17e-42f1-8683-d9a9367c38ad,Choice Dont have Text ID,Хорошо,Alright
+D5C5_Dandelion,db6c305b-4de2-47d4-a4cd-8a089fe7e387,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+D5C5_Dandelion,0ecb22e2-c706-4ef5-b8e4-b6161c241440,Choice Dont have Text ID,(продолжить работу),(continue working)
+D6C6_Molly Moon,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"нет… нет, нет, нет. НЕТ!","no… no, no, no. NO!"
+D6C6_Molly Moon,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Привет, медиум! Я принесла то, что обещала. Это он. Ингредиент, с помощью которого можно выйти на связь с проклятым. Но, прежде, чем я дам тебе эту вещь, я хочу узнать. Что ты хочешь спросить у <b>Изогнутого Странника</b>?","Hello, Medium! I brought what I promised. This is it. The ingredient that can be used to contact the damned. But before I give you this thing, I want to know. What do you want to ask the <b>Twisted Wanderer</b>?"
+D6C6_Molly Moon,b48d84b4-44bb-4d49-b178-5c7ca68d3c3b,8aadb8e4-c127-434e-86ba-a2a949eb3aec,"Стой! Стой, я поняла! Не волнуйся так. Держи. А я… уйду, пожалуй. Это твоя история. Подглядывать я не буду. Удачи, начинающий медиум.","Stop! Stop, I understand! Don't worry so much. Here you go. And I... I'll leave, I guess. This is your story. I won't peek. Good luck, novice Medium."
+D6C6_Molly Moon,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,у меня не так много попыток! Надо сосредоточиться!,I don't have that many attempts! I need to concentrate!
+D6C6_Molly Moon,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,Еще раз! Пока не получится!,Once again! Until it works!
+D6C6_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Я тоже люблю тебя,I love you too
+D6C6_Molly Moon,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+D6C6_Molly Moon,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Я хочу узнать, как он умер. Я хочу узнать, почему в тот день он ушел, не предупредив. Я хочу узнать, почему он меня оставил. Я хочу узнать, как он теперь. Я хочу его услышать…",I want to know how he died. I want to know why he left that day without warning. I want to know why he left me. I want to know how he is now. I want to hear him...
+D6C6_Molly Moon,240ed465-f62c-4c0d-88b9-f1ec3de9037c,Choice Dont have Text ID,Забрать,Pick up
+D6C6_Molly Moon,70ab7cf4-92aa-4b44-9d2a-27ac7e70720a,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R1_DetectiveZach,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Ночь, леди. Я детектив Зак. Вот уже несколько лет я расследую дело о <b>маленькой</b> Лизе Вебер. <b>Она</b> была… растерзана неизвестным убийцей.","Night, lady. I am Detective Zack. For several years now, I have been investigating the case of <b>little</b> Lisa Weber. <b>She</b> was... torn apart by an unknown killer."
+R1_DetectiveZach,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,1403ec9f-aedd-4a7a-8bf6-e4eeb11c8b3a,Я не уважаю ваше дело. Я не уважаю вас. Вы аморальны. Но выхода у меня больше нет.,I do not respect your business. I do not respect you. You are immoral. But I have no other way out.
+R1_DetectiveZach,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Продолжайте.,Continue.
+R1_DetectiveZach,347b1556-97cc-4367-9615-8ca1475822a7,82388275-56d2-465c-9f05-9f92efe19886,"…Я догадывался, но не мог до конца поверить. Боги… Это станет самым тяжелым делом за всю мою карьеру… Прощайте.","…I suspected, but couldn’t quite believe it. Gods… This will be the hardest case of my entire career… Farewell."
+R1_DetectiveZach,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Это был мой дядя,It was my uncle
+R1_DetectiveZach,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R1_DetectiveZach,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Что ж. Ваша деятельность не только аморальна, но и бесполезна. До свидания.","Well. Your activity is not only immoral, but also useless. Goodbye."
+R1_DetectiveZach,604077fd-369b-44a5-a2d3-a6de056b5346,95a48f62-629b-405d-9341-0fc564167cc7,Что происходит? Что не так?,What’s going on? What’s wrong?
+R1_DetectiveZach,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R1_DetectiveZach,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R1_DetectiveZach,ad618592-87d6-4519-99f4-709538dbf868,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R1_DetectiveZach,301cacd1-7593-49ef-9753-0b83e6134802,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R1_DetectiveZach,6e55ed33-768a-40a2-9f71-a349096d03a2,Choice Dont have Text ID,(продолжить работу),(continue working)
+R2_Ruviel,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Ее нет среди нас.,She is not among us.
+R2_Ruviel,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R2_Ruviel,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Продолжайте.,Continue.
+R2_Ruviel,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Что? Как здорово! О, духи, это так здорово! Спасибо тебе! Я так счастлива! Держи!","What? How wonderful! Oh, perfume, that's so great! Thank you! I'm so happy! Here you go!"
+R2_Ruviel,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Ладно, это явно того не стоит. Пока.","Alright, it's clearly not worth it. Bye."
+R2_Ruviel,6d5dd4dc-145c-4d46-9fb9-f9d142a2d044,322ed97f-bdfa-4b1e-9dac-e0c280c3a3c7,Что происходит? Что не так?,What’s going on? What’s wrong?
+R2_Ruviel,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи и сразу к делу. Пропала моя <b>сестра-близнец</b>, уже как несколько лет… Я хочу узнать, где она.","Good evening, and let's get straight to the point. My <b>twin sister</b> has disappeared, it's been several years now... I want to know where she is."
+R2_Ruviel,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R2_Ruviel,aa10da41-8ce0-4893-b1e1-6c927d9cc112,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R2_Ruviel,63947255-08a8-4b6d-8c22-25b37dc5df4b,Choice Dont have Text ID,(продолжить работу),(continue working)
+R2_Ruviel,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R2_Ruviel,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R3_AFourArmedFriend,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,Мой наставник погиб от <b>старости</b>… Мне так одиноко теперь… Остальные <b>люди</b> не любят меня… гонят меня… я так скучаю… мне так одиноко… Так одиноко…,My mentor died of <b>old age</b>... I feel so lonely now... The other <b>humans</b> don't like me... they drive me away... I miss so much... I feel so lonely... So lonely...
+R3_AFourArmedFriend,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Продолжайте.,Continue.
+R3_AFourArmedFriend,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,И вы… и вы мне не поможете… и вы…,And you... and you won't help me... and you...
+R3_AFourArmedFriend,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Сходи к Ульрику. Моим именем.,Go to Ulrik. In my name.
+R3_AFourArmedFriend,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R3_AFourArmedFriend,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Ульрих! Старый друг! Он поможет!.. Спасибо… Вот ваша плата…,Ulrich! Old friend! He will help!.. Thank you… Here is your payment…
+R3_AFourArmedFriend,d17dccfe-f8f8-474d-aae7-7744bc1afbb7,bce12339-55d8-454c-a0c0-642008bc6c7a,Что происходит? Что не так?,What’s going on? What’s wrong?
+R3_AFourArmedFriend,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R3_AFourArmedFriend,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R3_AFourArmedFriend,d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5,Choice Dont have Text ID,(продолжить работу),(continue working)
+R3_AFourArmedFriend,3f5028ce-3e24-41e2-ab01-776dd498fa8f,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R3_AFourArmedFriend,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R4_Ulrich Old,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Да, мой друг.","Yes, my friend."
+R4_Ulrich Old,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R4_Ulrich Old,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи, девочка. Мой друг умер от <b>старости</b>. Если я правильно помню, тебе для него нужно налить <b>воды с яйцами</b>. И что-то там сделать руками. А, точно, и мой вопрос… “Могу ли я откопать твое тело, друг?”","Good evening, girl. My friend died of <b>old age</b>. If I remember correctly, you need to pour <b>water with eggs</b> for him. And do something there with your hands. Oh, right, and my question... ""Can I dig up your body, friend?"""
+R4_Ulrich Old,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Так, хватит! Ты некомпетентна!",That's enough! You are incompetent!
+R4_Ulrich Old,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Спасибо.,Thank you.
+R4_Ulrich Old,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Или не яица…,Or not eggs…
+R4_Ulrich Old,9d9bf3fb-430e-44a3-8d70-a4186f7e26dc,4e405edf-b28b-430d-9673-12b58376895f,Или не воды…,Or not water...
+R4_Ulrich Old,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R4_Ulrich Old,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R4_Ulrich Old,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R4_Ulrich Old,cb7d7138-bb40-494e-b147-668d7a293237,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R4_Ulrich Old,1725c806-6db6-4bbe-b697-67e5257e2a88,Choice Dont have Text ID,(продолжить работу),(continue working)
+R5_Anastasia Enmay,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Какая наглость! Да как он посмел!.. Но что ж. Это его просьба. Я выполню ее. Великий род Энмэй пополнится простолюдинкой! Видят боги, я не просто так это делаю.","What audacity! How dare he!.. But well. This is his request. I will fulfill it. The great Enmei family will be joined by a commoner! Gods see, I am not doing this for nothing."
+R5_Anastasia Enmay,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Возьмите мою сестру в семью,Take my sister into the family
+R5_Anastasia Enmay,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R5_Anastasia Enmay,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Ночи, ночи. Я пришла сюда среди ночи, несмотря на опасности этой глуши, не для разговоров с челядью. Но раз ты полезная челядь, слушай внимательно.","Nights, nights. I came here in the middle of the night, despite the dangers of this wilderness, not to talk with the servants. But since you are a useful servant, listen carefully."
+R5_Anastasia Enmay,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,574d210c-6267-4f02-883a-e3d2389e735c,"Был у меня в услужению <b>мальчишка, 16 лет</b> от роду. И <b>он</b>… <b>Он</b> совершил, хорошо, признаю, неплохой поступок. Должный по его обязанностям телохранителя, конечно, но все же.","I had a <b>boy, 16 years old</b>, in my service. And <b>he</b>… <b>He</b> did, well, I admit, a good deed. Appropriate for his duties as a bodyguard, of course, but still."
+R5_Anastasia Enmay,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,1f02105b-1f77-4e15-bff5-306ad7b22a1a,"Что ты так смотришь на меня, словно не понимаешь? Я хочу… хочу послушать, чего он там хочет. Давай, призывай.","Why are you looking at me like that, as if you don't understand? I want... I want to listen to what he wants there. Go on, summon him."
+R5_Anastasia Enmay,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Быстрее.,Faster.
+R5_Anastasia Enmay,9d9bf3fb-430e-44a3-8d70-a4186f7e26dc,4e405edf-b28b-430d-9673-12b58376895f,Почему так долго?,Why is it taking so long?
+R5_Anastasia Enmay,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Бесполезная девчонка… Мы уходим. Да, мой лисеночек? Мой маленький хорошенький…","Useless girl... We're leaving. Yes, my little fox? My little cutie..."
+R5_Anastasia Enmay,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R5_Anastasia Enmay,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R5_Anastasia Enmay,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R5_Anastasia Enmay,724f7095-5f21-4a15-8d36-e05005fe7b88,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R5_Anastasia Enmay,3a0b4869-7acb-4cfd-b721-944e60a9a15c,Choice Dont have Text ID,(продолжить работу),(continue working)
+R6_Larka Strongbird,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Так, слушай! В общем смотри, мой жених одури странный. И у него была <b>жена</b>. Похожая на меня прям точь в точь! Рост, вес, грудь, волосы, глаза! Звали ее Шарлотта Серобород!","So, listen! Basically, look, my fiance is kind of weird. And he had a <b>wife</b>. She looked exactly like me! Height, weight, chest, hair, eyes! Her name was Charlotte Seroborod!"
+R6_Larka Strongbird,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Он убил меня. Беги.,He killed me. Run.
+R6_Larka Strongbird,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R6_Larka Strongbird,9d9bf3fb-430e-44a3-8d70-a4186f7e26dc,4e405edf-b28b-430d-9673-12b58376895f,Да твою мать!,Goddammit!
+R6_Larka Strongbird,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Времени нет! Я отбежала всего на четыре часа! Давай быстро! ,There is no time! I was only gone for four hours! Let's do it quickly!
+R6_Larka Strongbird,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Я так и знала что что-то не так! Спасибо!,I knew something was wrong! Thank you!
+R6_Larka Strongbird,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Да твою мать!,Goddammit!
+R6_Larka Strongbird,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R6_Larka Strongbird,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R6_Larka Strongbird,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R6_Larka Strongbird,1b303c50-5d34-4312-b7a3-f4ca6eb52782,Choice Dont have Text ID,(продолжить работу),(continue working)
+R6_Larka Strongbird,34f2b2af-9a70-4682-9fdc-e6904c3eea96,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R7_Eminoel,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Что?.. Это значит…  что он предатель. Убить другого эльфа… на поле боя… Я никогда этого не забуду. Я отомщу. Я искупаюсь в его крови. Помяни мое слово.,What?.. That means... that he is a traitor. To kill another elf... on the battlefield... I will never forget this. I will have my revenge. I will bathe in his blood. Mark my words.
+R7_Eminoel,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Здравствуй, сестра. Я вижу, что ты молода, и скорее всего застала войну ребенком… Я тоже была ребенком.","Hello, sister. I see that you are young, and most likely experienced the war as a child... I was a child too."
+R7_Eminoel,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,106b5e6f-b4ac-4d85-a595-d511fcf24c8d,"Зато <b>мой брат</b> - нет. Я хотела бы поговорить о нем… Но… вижу по твоим глазам, что тебе это не нужно. Просто… спроси имя того, кто убил его.",But <b>my brother</b> is not. I would like to talk about him… But… I can see in your eyes that you don't need that. Just… ask the name of the one who killed him.
+R7_Eminoel,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Разочарование.,Disappointment.
+R7_Eminoel,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Что происходит? Что не так?,What’s going on? What’s wrong?
+R7_Eminoel,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Митраниаэль,Mitraniael
+R7_Eminoel,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R7_Eminoel,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R7_Eminoel,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R7_Eminoel,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R7_Eminoel,2b90da9d-65e7-435d-b1a4-50d9efdce719,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R7_Eminoel,26e73b38-45a7-44b4-a530-e93c37dbd61c,Choice Dont have Text ID,(продолжить работу),(continue working)
+R8_Gon Krasnodub,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Привет. Какая же ты малышка! Не знал, что пускают в такое опасное дело таких молодых!",Hi. What a little one you are! I didn't know they let someone so young into such a dangerous business!
+R8_Gon Krasnodub,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,f2ace75c-2ec7-4bff-bf20-371cd8c35257,"Пришел я поговорить со своим <b>отцом</b>, не дожившим до старости. Я бы хотел знать секрет его мастерства в нашем деле…","I came to talk to my <b>father</b>, who did not live to old age. I would like to know the secret of his mastery in our craft…"
+R8_Gon Krasnodub,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Ого?! Это я должен узнать подробнее!,Wow?! I need to find out more about this!
+R8_Gon Krasnodub,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Ищи под второй половицей на кухне,Look under the second floorboard in the kitchen.
+R8_Gon Krasnodub,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R8_Gon Krasnodub,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Мда...,Yeah...
+R8_Gon Krasnodub,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Э… ну, это не то чего я ожидал...","Uh... well, this is not what I expected..."
+R8_Gon Krasnodub,9d9bf3fb-430e-44a3-8d70-a4186f7e26dc,4e405edf-b28b-430d-9673-12b58376895f,Жаль...,What a pity...
+R8_Gon Krasnodub,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R8_Gon Krasnodub,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R8_Gon Krasnodub,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R8_Gon Krasnodub,598869eb-f8f3-43a7-9a1f-97db2b108831,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R8_Gon Krasnodub,4f092c8a-b25f-4082-9edf-96148c24ba69,Choice Dont have Text ID,(продолжить работу),(continue working)
+R9_William Rosen,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи. Я пришел поговорить со своей <b>женой</b>…  А, да.. вам же надо узнать, кто она…","Good evening. I came to talk to my <b>wife</b>... Ah, yes... you need to know who she is..."
+R9_William Rosen,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,f2ace75c-2ec7-4bff-bf20-371cd8c35257,"Она умерла неделю назад, при родах. Она… была эльфом… Чудесной <b>женщиной</b>… и мне нужен ее совет…","She died a week ago, during childbirth. She... was an elf... A wonderful <b>woman</b>... and I need her advice..."
+R9_William Rosen,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Она… хочет, чтобы я заботился об этом маленьком убийце?.. Хорошо… Хорошо… Хорошо…",She... wants me to take care of this little killer?.. Fine... Fine... Fine...
+R9_William Rosen,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Позаботься о нем,Take care of him.
+R9_William Rosen,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R9_William Rosen,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,…,…
+R9_William Rosen,9d9bf3fb-430e-44a3-8d70-a4186f7e26dc,4e405edf-b28b-430d-9673-12b58376895f,Жаль...,What a pity...
+R9_William Rosen,f5480104-3031-4a5b-9d3a-02ea4bbc9190,aeaeb4a8-54b2-4498-86b6-6ab637f22623,Мда...,Yeah...
+R9_William Rosen,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R9_William Rosen,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R9_William Rosen,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R9_William Rosen,55d7b0ad-f661-4f89-9bad-9f22812f6524,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R9_William Rosen,0f700558-bcf6-48b4-b4ba-ac243380214a,Choice Dont have Text ID,(продолжить работу),(continue working)
+R10_Magda Serobor,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Э?! Они что, они же обязаны говорить правду?! И он мне это говорит?!","Eh?! What, aren't they supposed to tell the truth?! And he's telling me this?!"
+R10_Magda Serobor,43d1a048-65b9-4282-89d0-eb89be8807cc,f598213d-1bdc-41f2-8592-89f82de5056b,"После всех лет вместе?! Да пошел он! Всегда был козлом, и после смерти им остался!","After all those years together?! To hell with him! He was always a bastard, and he stayed one even after death!"
+R10_Magda Serobor,80bc9528-cb06-4a0e-97da-12c7d7d50581,9f0daf2a-fc55-4482-a826-e9e937687067,Что происходит? Что не так?,What’s going on? What’s wrong?
+R10_Magda Serobor,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Короче, короче! Слушай! Я знаю, что призраки не умеют врать! Ну это вроде как правило, да?","In short, in short! Listen! I know that ghosts can't lie! Well, that's kind of a rule, right?"
+R10_Magda Serobor,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,36370603-1439-4892-9a7b-434056649b9e,"Так вот! Умер тут мой дружок, и я уверена, что этот старый <b>дворф</b> мне при жизни изменял! А еще <b>он</b> тайно пил и много говорил обо мне гадостей. И, конечно, не любил мою мать! Пусть все это расскажет!","So there! My friend died here, and I am sure that this old <b>dwarf</b> cheated on me while he was alive! And <b>he</b> also secretly drank and said a lot of nasty things about me. And, of course, he didn't love my mother! Let him tell all of this!"
+R10_Magda Serobor,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Жена, отстань.","Wife, leave me alone."
+R10_Magda Serobor,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R10_Magda Serobor,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,…Да пошла ты!,...Go to hell!
+R10_Magda Serobor,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R10_Magda Serobor,5e57c846-36d0-4e96-acb0-faef9027cd42,Choice Dont have Text ID,(продолжить работу),(continue working)
+R10_Magda Serobor,d30dd01f-86d5-4444-bac4-5b39cc9503d1,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R10_Magda Serobor,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R10_Magda Serobor,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R11_Kelumian,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Никогда! Остроухий урод!,Never! Pointy-eared freak!
+R11_Kelumian,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R11_Kelumian,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи, красавица. У меня случилась глупейшая история… Я влюбился в прекрасную <b>дворфийку</b>.","Good evening, beautiful. I had the silliest thing happen to me… I fell in love with a beautiful <b>dwarven woman</b>."
+R11_Kelumian,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,f42a4fb0-3e37-4024-acae-3e9a53581a25,"Она хороша, как крепкий хмельный мед. И я хочу спросить у ее покойной <b>бабушки</b> разрешение на брак.",She is as good as strong mead. And I want to ask her late <b>grandmother</b> for permission to marry.
+R11_Kelumian,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,51906a43-5d2c-4e29-b578-05a4a50f5b7d,"Я знаю, что это может быть тяжело, ведь мы разных культур, разных стран происхождения. Но мое сердце трепещет от радости при виде нее. И я не вижу своей жизни ни с кем другим.","I know that it can be hard, since we are from different cultures, different countries of origin. But my heart trembles with joy when I see her. And I can't imagine my life with anyone else."
+R11_Kelumian,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"…Что ж. Жаль, что не вышло. До свидания.",...Well. It's a pity it didn't work out. Goodbye.
+R11_Kelumian,481e2084-9c63-4772-87d2-44581951256e,95eed826-0b43-417d-b75e-e6edebb75d35,Что происходит? Что не так?,What’s going on? What’s wrong?
+R11_Kelumian,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Ого… Так, что ж, моей дорогой и прекрасно леди знать об этом не следует! Пожалуй, я все равно сделаю предложение.","Oh... Well, my dear and wonderful lady shouldn't know about this! Still, I think I'll propose anyway."
+R11_Kelumian,43d1a048-65b9-4282-89d0-eb89be8807cc,fffba80d-b838-42ec-930b-97df6d1e3b90,"А ты этот ответ придержи в секрете, медиум, если кто-то спросит! Пока!","And keep this answer a secret, Medium, if someone asks! Bye!"
+R11_Kelumian,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R11_Kelumian,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R11_Kelumian,364cf539-20b5-43bd-a84e-c13e8489b311,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R11_Kelumian,c9b46ddf-da18-474c-9998-e18b4384494b,Choice Dont have Text ID,(продолжить работу),(continue working)
+R11_Kelumian,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R12_The Nameless Wizard,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Доброй ночи, сестра по духу. Это был долгий путь для меня, но время не ждет. Говорим коротко.","Good evening, kindred spirit. It has been a long journey for me, but time waits for no one. Let's keep it brief."
+R12_The Nameless Wizard,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,0ede49e9-2259-4155-bae0-4e242ef4ea5d,"Мой <b>юный</b> протеже умер во время эксперимента с реагентами. Был взрыв. И мне надо знать, что именно <b>он</b> смешал.",My <b>young</b> protege died during an experiment with reagents. There was an explosion. And I need to know exactly what <b>he</b> mixed.
+R12_The Nameless Wizard,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Интересно… Значит, они дают яркий фиолетовый мощный взрыв… Спасибо.","Interesting... So, they produce a bright, powerful purple explosion... Thank you."
+R12_The Nameless Wizard,b9019d26-a521-41a5-8b65-0dfd3d7ec8b3,b2dcd691-b066-4445-a24c-12a2b1c0e530,"Сестра по духу, я забыл уточнить. Юноша был человеком.","Sister in spirit, I forgot to clarify. The young man was human."
+R12_The Nameless Wizard,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Дыхание саламандры и йод,The breath of the salamander and iodine
+R12_The Nameless Wizard,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R12_The Nameless Wizard,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Сестра по духу, это полный провал. Прощай.","Soul sister, this is a complete failure. Goodbye."
+R12_The Nameless Wizard,6830de6d-e9f4-4e95-a0cc-b88d3d057c80,5598978e-8330-46e4-b047-15a6799c3fc8,Что происходит? Что не так?,What’s going on? What’s wrong?
+R12_The Nameless Wizard,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R12_The Nameless Wizard,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R12_The Nameless Wizard,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R12_The Nameless Wizard,e05f6997-71a0-47fa-b814-a43537c30e84,Choice Dont have Text ID,(продолжить работу),(continue working)
+R12_The Nameless Wizard,cd6ff816-f468-4579-9d99-602bbdb79ac2,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R13_Gerda Strongwave,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Ах!.. Прости… прости, что смела подумать… Я люблю тебя, Рагнар","Ah!.. Forgive me… forgive me for daring to think… I love you, Ragnar"
+R13_Gerda Strongwave,b38d9555-f106-434d-8f0c-1653640e3c63,00cfcd11-e269-4e10-8c9c-c7e315fb3795,Что происходит? Что не так?,What’s going on? What’s wrong?
+R13_Gerda Strongwave,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Привет. <b>Мой муж</b> храбро сражался за <b>дворфийскую</b> землю, но сгинул. Он настоящий герой. Рагнар Стронгвэйв. И много лет…","Hello. <b>My husband</b> bravely fought for the <b>dwarven</b> land, but perished. He is a true hero. Ragnar Strongwave. And for many years..."
+R13_Gerda Strongwave,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,2f070dd8-b91b-4393-8694-fae67bd9e151,Я растила наших детей. И много лет… я была одна. И я наконец нашла нового мужчину. Но я…,I raised our children. And for many years... I was alone. And I finally found a new man. But I...
+R13_Gerda Strongwave,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,78acbf9e-2975-400c-b4ac-673ecddf5799,Всегда хранила верность. И я хочу узнать… Милый. Дорогой и любимый муж. Могу ли я вновь полюбить после тебя?,I have always remained faithful. And I want to know… Darling. Dear and beloved husband. Can I love again after you?
+R13_Gerda Strongwave,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Наверное… он сердится и не хочет отвечать? Я… мне надо подумать.,Probably... he's angry and doesn't want to answer? I... I need to think.
+R13_Gerda Strongwave,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Нет. Не смей мне изменять.,No. Don't you dare cheat on me.
+R13_Gerda Strongwave,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R13_Gerda Strongwave,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R13_Gerda Strongwave,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R13_Gerda Strongwave,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R13_Gerda Strongwave,23615f63-d2fe-4dad-af81-16d449a571c4,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R13_Gerda Strongwave,5f6f08a8-6b4d-4456-9637-fc301a7cf69b,Choice Dont have Text ID,(продолжить работу),(continue working)
+R14_Hock Bigboosh,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Я… я не смог спасти одну девушку, она утонула в реке… <b>Она</b> была <b>моего возраста</b>, из моей деревни… Я… я хочу узнать у нее... как мне искупить свою вину…","I... I couldn't save a girl, she drowned in the river... <b>She</b> was <b>my age</b>, from my village... I... I want to ask her... how can I atone for my guilt..."
+R14_Hock Bigboosh,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Я прощаю тебя,I forgive you
+R14_Hock Bigboosh,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R14_Hock Bigboosh,7835ab1a-50a1-4ec1-b841-c752d71568ba,2b4db24f-ee5b-4c16-827d-4bd1c929399b,Что происходит? Что не так?,What’s going on? What’s wrong?
+R14_Hock Bigboosh,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Не хочет со мной говорить… как же так…,Doesn't want to talk to me... how come...
+R14_Hock Bigboosh,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Я… Я… спасибо… спасибо…,I... I... thank you... thank you...
+R14_Hock Bigboosh,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R14_Hock Bigboosh,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R14_Hock Bigboosh,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R14_Hock Bigboosh,d013f0e2-5049-481c-8d08-0d3ad8418c7a,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R14_Hock Bigboosh,d86c27a9-1e05-4d78-a37f-fa1fd6469484,Choice Dont have Text ID,(продолжить работу),(continue working)
+R15_Babiaks,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,Помогите! Наш <b>муж</b> не оставил нам ни копейки! Он точно должен был где-то спрятать хоть какие-то деньги!,Help! Our <b>husband</b> didn't leave us a single penny! He must have hidden at least some money somewhere!
+R15_Babiaks,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,Что… Мы… Что мне теперь делать?..,What... We... What am I supposed to do now?..
+R15_Babiaks,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Прости, дорогая. Денег нет.","Sorry, dear. There's no money."
+R15_Babiaks,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R15_Babiaks,13fcb5df-4c7e-4cca-bfb9-079c332a2996,0a743c53-655b-4aa9-b6ff-8e5af8d9afe0,Что происходит? Что не так?,What’s going on? What’s wrong?
+R15_Babiaks,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Да как же так!..,How can this be!..
+R15_Babiaks,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R15_Babiaks,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R15_Babiaks,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R15_Babiaks,b8c7759f-845f-4621-a392-b6dcab97bf44,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R15_Babiaks,f104ea50-4aef-434d-bf40-16ce353cbd48,Choice Dont have Text ID,(продолжить работу),(continue working)
+R16_Shkadira Karatau,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"О, хорошо! Теперь понятно, как заканчивать книгу!","Oh, good! Now it's clear how to finish the book!"
+R16_Shkadira Karatau,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Плохо в этих краях с говорящими с духами… поищу еще…,It's hard to find people who speak with spirits in these parts... I'll keep looking...
+R16_Shkadira Karatau,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Амелия должна стать птицей,Amelia must become a bird
+R16_Shkadira Karatau,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R16_Shkadira Karatau,d84d4321-c59e-497a-b492-49f3e29c2b7a,520ffd52-a733-494e-933e-4f9fd5a6d2f5,Что происходит? Что не так?,What’s going on? What’s wrong?
+R16_Shkadira Karatau,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Здравствуйте, говорящая с духами! Мой начальник почил от переработки давече… Было ему <b>89 лет</b>, был он <b>дворфом</b>, был он писателем.","Hello, spirit-talker! My boss passed away from overwork the other day... He was <b>89 years old</b>, he was a <b>dwarf</b>, he was a writer."
+R16_Shkadira Karatau,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,aa78f233-28a4-43c6-b9a9-23db295f69b6,"И мне надо за ним дописать последние две страницы! Пусть подскажет, убить Амелию?","And I have to finish writing the last two pages for him! Let him suggest, should I kill Amelia?"
+R16_Shkadira Karatau,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R16_Shkadira Karatau,e3af219a-982f-4fa1-9357-cb0549190285,Choice Dont have Text ID,(продолжить работу),(continue working)
+R16_Shkadira Karatau,46cb2226-55c9-4fc3-927c-0f033364c4bb,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R16_Shkadira Karatau,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R16_Shkadira Karatau,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R17_Yuri Green,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Недавно в пожаре сгорела все моя семья. И я знаю, что мой <b>младший сын</b>, Иван, скорее всего видел, что случилось. Я хочу узнать, что произошло.","Recently, my entire family died in a fire. And I know that my <b>younger son</b>, Ivan, most likely saw what happened. I want to find out what happened."
+R17_Yuri Green,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"О, хорошо! Теперь понятно, как заканчивать книгу!","Oh, good! Now it's clear how to finish the book!"
+R17_Yuri Green,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Я играл со спичками.,I was playing with matches.
+R17_Yuri Green,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R17_Yuri Green,167859c8-6440-4f65-acc0-e2d68e20004d,c58deaf3-17b7-43f8-9005-e8a136a13483,Что происходит? Что не так?,What’s going on? What’s wrong?
+R17_Yuri Green,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Безнадежно.,Hopeless.
+R17_Yuri Green,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R17_Yuri Green,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R17_Yuri Green,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R17_Yuri Green,715fa9f2-4f80-48e0-b130-b35f8bf27695,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R17_Yuri Green,6aefb087-9ad7-4626-8313-ee3e06b41ad7,Choice Dont have Text ID,(продолжить работу),(continue working)
+R18_Katrialin,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Привет, сестра по духу. Я попробовала наложить любовное заклинание, но моя жертва умерла… надо проверить, эффект-то сработал или нет?","Hello, soul sister. I tried to cast a love spell, but my victim died... I need to check whether the effect worked or not?"
+R18_Katrialin,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,cd81c83e-a9d5-4fb1-bc04-15c55cd45db4,"Так, по рецепту… <b>мужчина</b>, среднего возраста, <b>эльф</b>. Ну, давай.","So, according to the recipe… <b>man</b>, middle-aged, <b>elf</b>. Well, go ahead."
+R18_Katrialin,2bdc4408-3df6-49bb-a810-b220e1d977dc,81e6e38f-5839-4ddc-a00c-0a3141e5ca26,"Попробуй табак, может?",Why don't you try some tobacco?
+R18_Katrialin,26818f90-2a7f-4ff8-a120-e4564d1bfcb9,1e087326-61c9-4e31-a690-4625a0cb8df9,"Хм, может добавить немного ведьминой соли?","Hmm, maybe add a little witch's salt?"
+R18_Katrialin,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Ой-ёй! Это плохо! Ничего не сработало! Так еще и схлопотала проклятие! Мда-а-а-а! Ну, пока!","Oh no! That's bad! Nothing worked! And on top of that, I got cursed! Well, well, well! Well, bye!"
+R18_Katrialin,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,Убийца. Я проклинаю твой род.,Murderer. I curse your family.
+R18_Katrialin,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R18_Katrialin,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Ну, возможно тебе стоило слушать меня.","Well, maybe you should have listened to me."
+R18_Katrialin,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R18_Katrialin,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R18_Katrialin,765e96b5-aba6-4a95-be0a-e0895ea3f2fe,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R18_Katrialin,d0786b25-8259-4951-aec1-a18f9a52489e,Choice Dont have Text ID,(продолжить работу),(continue working)
+R18_Katrialin,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R19_Michael Brown,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Здравствуйте. Умерла моя <b>матушка</b>, и оставила завещание. У нее было семь детей, но в завещании она отметила только трех. Меня в том числе…","Hello. My <b>mother</b> has died and left a will. She had seven children, but in the will she mentioned only three. Including me…"
+R19_Michael Brown,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,147d8990-492d-4ccd-a6a0-d250b92c60d3,"Я бы хотел узнать, так надо? Или она не успела что-то дописать?","I would like to know, is that how it should be? Or did she not have time to finish writing something?"
+R19_Michael Brown,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Ого… я не ожидал этого… Ну, раз такова ее воля, значит, я сделаю все так, как она написала.","Wow... I didn't expect that... Well, if that's her will, then I'll do everything just as she wrote."
+R19_Michael Brown,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Все верно, Михаил","That's right, Mikhail."
+R19_Michael Brown,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R19_Michael Brown,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,"Ничего страшного, провалы случаются. Я поищу другого медиума. До свидания, удачи вам.","It's okay, failures happen. I will look for another Medium. Goodbye, good luck to you."
+R19_Michael Brown,2bdc4408-3df6-49bb-a810-b220e1d977dc,81e6e38f-5839-4ddc-a00c-0a3141e5ca26,"<b>Матушка</b> была уже <b>старой</b>, когда умерла. Она умерла во сне, без боли, после долгой болезни. Признаться, я ожидал этого, но я скучаю по ней.","<b>Mother</b> was already <b>old</b> when she died. She died in her sleep, without pain, after a long illness. To be honest, I expected it, but I miss her."
+R19_Michael Brown,26818f90-2a7f-4ff8-a120-e4564d1bfcb9,1e087326-61c9-4e31-a690-4625a0cb8df9,"За свою <b>долгую жизнь</b> мама нажила много имущества. Удивительно, что она решила одарить не всех своих детей.","During her <b>long life</b>, my mother acquired a lot of property. It is surprising that she decided not to give gifts to all of her children."
+R19_Michael Brown,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R19_Michael Brown,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R19_Michael Brown,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R19_Michael Brown,97c17be3-8f5e-4eb3-bcaa-183a0a8c915d,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R19_Michael Brown,edb67da4-0ded-47cc-816e-c2f15148b532,Choice Dont have Text ID,(продолжить работу),(continue working)
+R20_Bin Bigshield,43d1a048-65b9-4282-89d0-eb89be8807cc,5a93e724-b467-44fa-ab0f-fbdb5948c53d,"Что?.. Обычный… пьянчуга? Просто… алкоголик-дворф с соседней улицы?.. Держи деньги, девочка… Мне надо подумать.","What?.. An ordinary... drunkard? Just... an alcoholic dwarf from the next street?.. Here’s the money, girl... I need to think."
+R20_Bin Bigshield,2bdc4408-3df6-49bb-a810-b220e1d977dc,81e6e38f-5839-4ddc-a00c-0a3141e5ca26,Пытайтесь еще. Это важно.,Keep trying. This is important.
+R20_Bin Bigshield,f3736d88-3d95-4627-b550-938c6211a9c4,e4bfd18b-5ad5-4f42-bd83-1c8c4eb8f30a,"Боб Кородуб. Прости, сынок.","Bob Korodub. Forgive me, son."
+R20_Bin Bigshield,f3736d88-3d95-4627-b550-938c6211a9c4,1aa33b5c-72f5-4c14-b6be-3b818d426b5e,Ghost,Ghost
+R20_Bin Bigshield,29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9,c06aee08-08f7-4f4d-b571-8c51b2d5177e,"Здравствуй, девочка. Свяжись, пожалуйста, с <b>моей пожилой мамой</b>. Спроси у нее, кем был мой отец. Я хочу знать его имя.","Hello, girl. Please get in touch with <b>my elderly mother</b>. Ask her who my father was. I want to know his name."
+R20_Bin Bigshield,26818f90-2a7f-4ff8-a120-e4564d1bfcb9,1e087326-61c9-4e31-a690-4625a0cb8df9,"Пожалуйста. Она скрывала это до самой смерти. Это очень, очень важно для меня.","Please. She hid it until her death. This is very, very important to me."
+R20_Bin Bigshield,46359059-d57a-4736-a187-d921f6807214,1ac331a5-0594-4f2c-bbfa-0de2aedfdb39,Она и после смерти не хочет мне признаться…  А я-то надеялся… Чтоб его…,She doesn't want to confess to me even after death... And I was hoping... Damn it...
+R20_Bin Bigshield,db7feba6-29bd-42a1-9e1d-e48c74e05232,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R20_Bin Bigshield,ce233715-8543-41cf-9a34-ce7491221a7e,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R20_Bin Bigshield,dbf01e41-a03e-4bc9-b256-c2669a85855b,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R20_Bin Bigshield,b9fe0372-c3db-415d-a744-886dd5be9c54,Choice Dont have Text ID,(продолжить работу),(continue working)
+R20_Bin Bigshield,388a0d67-3a2a-4f89-8a24-c473d51c8359,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R21_Daerelian,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Мне нужна могила товарища. Другие <b>дворфы</b> отказываются говорить мне, где это находится. Так что... время задать вопрос.",I need a comrade's grave. The other <b>dwarves</b> refuse to tell me where it is. So... time to ask a question.
+R21_Daerelian,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Долина красного камня,Valley of the Red Stone
+R21_Daerelian,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+R21_Daerelian,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Долина красного камня?! Они даже не унесли ее с поля боя?! Это… не то, чего я ожидал… Но спасибо.",The Valley of the Red Stone?! They didn't even take it from the battlefield?! This... is not what I expected... But thank you.
+R21_Daerelian,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+R21_Daerelian,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,"О, да! Так я и думал! Эта <b>старушка</b> всегда была с норовом! Ничего, пытайтесь еще!","Oh, yes! That's what I thought! This <b>old lady</b> has always been feisty! It's okay, keep trying!"
+R21_Daerelian,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Может, я что-то важное не рассказал? Вообще, мы с <b>ней</b> познакомились еще до войны, и нашей дружбе не мешало то, что она гораздо <b>старше меня</b>.","Maybe I haven't told you something important? Actually, she and I met even before the war, and the fact that she is much older than me did not interfere with our friendship."
+R21_Daerelian,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Да… Кажется, мне стоит поискать медиума получше. Но ты не волнуйся, однажды у тебя что-то да получится.","Yeah... It seems I should look for a better Medium. But don't worry, one day you'll manage to do something."
+R21_Daerelian,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R21_Daerelian,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R21_Daerelian,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R21_Daerelian,b9ed591f-5021-4eab-98ba-747a7f2a1597,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R21_Daerelian,d8555b73-827c-478f-95c8-d995c0ba5dcb,Choice Dont have Text ID,(продолжить работу),(continue working)
+R22_Hara Beerfoot,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Здравствуйте, тетя медиум. <b>Моя бабушка</b> умерла пару недель назад… А тут… наша кошечка родила… А бабушка так ждала этого! И… и… пусть она назовет котенка!..","Hello, Medium aunt. <b>My grandmother</b> died a couple of weeks ago... And now... our cat gave birth... And grandmother was looking forward to this so much! And... and... let her name the kitten!.."
+R22_Hara Beerfoot,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Взрослые говорили мне не приходить к вам. Но я решила, что <b>моя бабушка</b> имеет право назвать котенка.",Adults told me not to come to you. But I decided that <b>my grandmother</b> has the right to name the kitten.
+R22_Hara Beerfoot,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,Долина красного камня,Valley of the Red Stone
+R22_Hara Beerfoot,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+R22_Hara Beerfoot,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Долина красного камня?! Они даже не унесли ее с поля боя?! Это… не то, чего я ожидал… Но спасибо.",The Valley of the Red Stone?! They didn't even take it from the battlefield?! This... is not what I expected... But thank you.
+R22_Hara Beerfoot,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+R22_Hara Beerfoot,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Что происходит? Что не так?,What’s going on? What’s wrong?
+R22_Hara Beerfoot,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"…Да ну вас. Ничего вы не умеете, тетя.","...Oh, come on. You can't do anything, aunt."
+R22_Hara Beerfoot,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+R22_Hara Beerfoot,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+R22_Hara Beerfoot,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer
+R22_Hara Beerfoot,42db9e08-c248-47ef-a150-c9153bf34472,Choice Dont have Text ID,Я не смогу выполнить эту задачу (отказаться от работы),I can’t do this (refuse the work)
+R22_Hara Beerfoot,2dca1b5b-e68a-4793-8c6d-56a34def0f60,Choice Dont have Text ID,(продолжить работу),(continue working)
+Template,4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78,e06ac053-52ed-4c4e-b425-aa39b28ede0c,"Вы… Неужели, она так зла на меня?.. Я была не лучшей матерью, но я взяла ее к себе, пусть она и <b>дворф</b>, и воспитывала ее, как свое собственное дитя…","You... Is she really that angry with me?.. I wasn't the best mother, but I took her in, even though she is a <b>dwarf</b>, and raised her as my own child..."
+Template,51ef8acd-a853-4b0f-a413-7ad51e328041,28403139-9d50-43bd-9cb2-4233fbf3074f,"Я… буду считать, что так он сказал мне “нет”? Или… ладно. У вас просто не вышло. Я поняла. Пока.","I... should I take it that this is his way of saying ""no"" to me? Or... fine. It just didn't work out for you. I understand. Bye."
+Template,dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4,1b922cec-a73e-447d-af20-e5a26c142e59,"Доброй ночи. Мой <b>старший брат</b> погиб на войне. Сейчас мне очень, очень нужен его совет. ","Good evening. My <b>older brother</b> died in the war. Right now I really, really need his advice."
+Template,dda5610e-b260-406d-a411-7de950d7d63f,a9be781f-44d5-4311-9d07-5c1fc9497502,"Это… это… спасибо! Я так рада! Спасибо, братец! Я обязательно навещу твое дерево на свадьбе! И вам спасибо! Большое!","This... this... thank you! I'm so happy! Thank you, brother! I will definitely visit your tree at the wedding! And thank you! Very much!"
+Template,dda5610e-b260-406d-a411-7de950d7d63f,fc64f175-8a79-4c2c-88c9-dbd3def52fd6,Клиент,Client
+Template,7044de6f-57ef-4e7f-81af-fb651d90a534,9596277b-7a40-47db-92ca-51b451985c71,"Да, выходи за него.","Yes, marry him."
+Template,7044de6f-57ef-4e7f-81af-fb651d90a534,fefc9d66-4fdc-4ff4-b6ab-f5e90404f722,Ghost,Ghost
+Template,91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9,66a0ce7b-fbb1-470e-8aac-bf6b953adf7e,Я… я не верю… она не хочет меня видеть?...,I... I don't believe it... she doesn't want to see me?...
+Template,5c3d61de-49b2-40ca-a11a-2a2cb3c74875,Choice Dont have Text ID,Нет. Вам я не могу помочь.,No. I can't help you.
+Template,8059b07f-64d1-45ab-bb6b-d9f52af3deeb,Choice Dont have Text ID,"Хорошо, я вам помогу","Alright, I will help you."
+Template,52521e1a-3e5d-46a5-94fe-797bcfc06bd0,Choice Dont have Text ID,Передать ответ призрака,Convey the ghost's answer

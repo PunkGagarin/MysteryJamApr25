@@ -29,20 +29,22 @@ namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
 
                 dialogueContainers.ForEach(dialogueContainer =>
                 {
+                    string containerName = dialogueContainer.name;
+
                     dialogueContainer.DialogueData.ForEach(nodeData =>
                     {
                         nodeData.DialogueDataTexts.ForEach(textData =>
                         {
-                            LoadIntoDialogueNodeText(table, headers, textData);
+                            LoadIntoDialogueNodeText(table, headers, textData, containerName);
                         });
                         
                         nodeData.DialogueDataNames.ForEach(nameData =>
                         {
-                            LoadIntoNameNodeText(table, headers, nameData);
+                            LoadIntoNameNodeText(table, headers, nameData, containerName);
                         });
                     });
 
-                    dialogueContainer.ChoiceData.ForEach(nodeData => { LoadIntoChoiceNode(table, headers, nodeData); });
+                    dialogueContainer.ChoiceData.ForEach(nodeData => LoadIntoChoiceNode(table, headers, nodeData, containerName));
                     EditorUtility.SetDirty(dialogueContainer);
                 });
                 return true;
@@ -54,11 +56,11 @@ namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
             }
         }
 
-        private void LoadIntoDialogueNodeText(List<List<string>> table, List<string> headers, DialogueDataText textData)
+        private void LoadIntoDialogueNodeText(List<List<string>> table, List<string> headers, DialogueDataText textData, string containerName)
         {
             table.ForEach(line =>
             {
-                if (line[2] == textData.GuidID.Value)
+                if (line[0] == containerName && line[2] == textData.GuidID.Value)
                 {
                     for (int i = 0; i < line.Count; i++)
                     {
@@ -74,11 +76,11 @@ namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
             });
         }
 
-        private void LoadIntoNameNodeText(List<List<string>> table, List<string> headers, DialogueDataName nameData)
+        private void LoadIntoNameNodeText(List<List<string>> table, List<string> headers, DialogueDataName nameData, string containerName)
         {
             table.ForEach(line =>
             {
-                if (line[2] == nameData.GuidID.Value)
+                if (line[0] == containerName && line[2] == nameData.GuidID.Value)
                 {
                     for (int i = 0; i < line.Count; i++)
                     {
@@ -94,11 +96,11 @@ namespace Jam.Scripts.Dialogue.Editor.CSV_Tool
             });
         }
 
-        private void LoadIntoChoiceNode(List<List<string>> result, List<string> headers, ChoiceData nodeData)
+        private void LoadIntoChoiceNode(List<List<string>> result, List<string> headers, ChoiceData nodeData, string containerName)
         {
             result.ForEach(line =>
             {
-                if (line[1] == nodeData.NodeGuid)
+                if (line[0] == containerName && line[1] == nodeData.NodeGuid)
                 {
                     for (int i = 0; i < line.Count; i++)
                     {
