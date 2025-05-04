@@ -103,7 +103,7 @@ MonoBehaviour:
       Number:
         Value: 1
       StringEventModifierType:
-        Value: 1
+        Value: 3
     ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
