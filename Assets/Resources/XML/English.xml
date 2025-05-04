@@ -61,6 +61,12 @@
   <text key="PAGE_3_DESC">Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way to reach someone who once meant so much to you. Find them.</text>
   <text key="PAGE_4_TITLE">The Crooked Wanderer</text>
   <text key="PAGE_4_DESC">He had a bright smile. He loved toast. He always helped those around him. He disappeared without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.</text>
-  <text key="PAGE_5_AGE">Age:</text>
-  <text key="PAGE_5_RACE">Race:</text>
+  <text key="PAGE_5_AGE_0">Age: kid, adult, old</text>
+  <text key="PAGE_5_AGE_1">Age: &amp;lt;s&amp;gt;kid&amp;lt;/s&amp;gt;, adult, old</text>
+  <text key="PAGE_5_AGE_2">Age: kid, &amp;lt;s&amp;gt;adult&amp;lt;/s&amp;gt;, old</text>
+  <text key="PAGE_5_AGE_3">Age: kid, adult, &amp;lt;s&amp;gt;old&amp;lt;/s&amp;gt;</text>
+  <text key="PAGE_5_RACE_0">Race: elf, human, dwarf</text>
+  <text key="PAGE_5_RACE_1">Race: &amp;lt;s&amp;gt;elf&amp;lt;/s&amp;gt;, human, dwarf</text>
+  <text key="PAGE_5_RACE_2">Race: elf, &amp;lt;s&amp;gt;human&amp;lt;/s&amp;gt;, dwarf</text>
+  <text key="PAGE_5_RACE_3">Race: elf, human, &amp;lt;s&amp;gt;dwarf&amp;lt;/s&amp;gt;</text>
 </Language>
