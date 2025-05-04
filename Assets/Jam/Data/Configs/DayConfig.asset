@@ -15,9 +15,20 @@ MonoBehaviour:
   <DayNpcs>k__BackingField:
   - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 0
-      <Npc>k__BackingField: {fileID: 11400000, guid: 4d43c0cdc3dd13b4db7b4ed8c1d254ff, type: 2}
+      <Npc>k__BackingField: {fileID: 11400000, guid: 54a67b704ffba084aa9b99688642285d, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 9d675a409307a7147becb44815a9b846, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 5152d6bd09232264a8eea54c28454554, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: c7404a9cd1bf8784983a52574f0ccb76, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: dd4604f0ffa87b447bc09f796448e15e, type: 2}
+  - <Npcs>k__BackingField:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 7f9a1240f8f86144281e007a0f34802b, type: 2}
+    - <IsRandomNpc>k__BackingField: 0
+      <Npc>k__BackingField: {fileID: 11400000, guid: 4d43c0cdc3dd13b4db7b4ed8c1d254ff, type: 2}
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 15fc4b8d9c1b0da4eb8e6397004b21c7, type: 2}
     - <IsRandomNpc>k__BackingField: 0
