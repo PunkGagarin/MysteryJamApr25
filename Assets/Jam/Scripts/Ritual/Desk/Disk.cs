@@ -79,6 +79,7 @@ namespace Jam.Scripts.Ritual.Desk
 
         public void HighLight(Action onHighLightEnds, float lightDuration)
         {
+            ReagentVisual.transform.DOShakePosition(lightDuration, .15f);
             DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 20f, lightDuration / 2f)
                 .OnComplete(() => DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 0, lightDuration / 2f)
                     .OnComplete(() => onHighLightEnds?.Invoke()));
