@@ -21,6 +21,8 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
         [field: SerializeField] public List<ReagentDefinition> ExcludedReagents { get; private set; }
 
         [field: SerializeField] public int Cost { get; private set; }
+        
+        public int CurrentAmount { get; set; }
 
         public Sprite GetManualExcludedIcon(int reagentExclusionExcludedReagentId)
         {

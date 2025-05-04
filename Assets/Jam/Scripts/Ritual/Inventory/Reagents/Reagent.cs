@@ -23,6 +23,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             CurrentAmount += amount;
             if (CurrentAmount > InventoryConfig.MaxReagentAmount)
                 CurrentAmount = InventoryConfig.MaxReagentAmount;
+            _reagentDefinition.CurrentAmount = CurrentAmount;
             UpdateVisual(CurrentAmount, oldValue);
         }
 
@@ -39,6 +40,7 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
             int oldAmount = CurrentAmount;
             CurrentAmount--;
             
+            _reagentDefinition.CurrentAmount = CurrentAmount;
             UpdateVisual(CurrentAmount, oldAmount);
         }
 

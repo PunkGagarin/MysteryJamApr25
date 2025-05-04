@@ -25,6 +25,7 @@ namespace Jam.Scripts.Shop
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private InventorySystem _inventorySystem;
         [Inject] private AudioService _audioService;
+        [Inject] private InventoryConfig _inventoryConfig;
 
         private ShopView _shopView;
         private List<ShopItem> _reagentsShopItems = new();
@@ -110,7 +111,7 @@ namespace Jam.Scripts.Shop
                 ReagentDefinition reagentInSlot = reagentsInShopPool[i];
                 ItemAppear?.Invoke(reagentInSlot.Id);
                 ShopItem shopItem = _reagentsShopItems[i];
-                shopItem.SetReagent(reagentInSlot);
+                shopItem.SetReagent(reagentInSlot, reagentInSlot.CurrentAmount, _inventoryConfig.MaxReagentAmount);
                 shopItem.gameObject.SetActive(true);
                 shopItem.BuyButton.onClick.RemoveAllListeners();
 
