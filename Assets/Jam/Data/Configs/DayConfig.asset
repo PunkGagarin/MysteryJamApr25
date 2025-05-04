@@ -17,9 +17,9 @@ MonoBehaviour:
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: 54a67b704ffba084aa9b99688642285d, type: 2}
     - <IsRandomNpc>k__BackingField: 0
-      <Npc>k__BackingField: {fileID: 11400000, guid: 5152d6bd09232264a8eea54c28454554, type: 2}
+      <Npc>k__BackingField: {fileID: 11400000, guid: 9d675a409307a7147becb44815a9b846, type: 2}
     - <IsRandomNpc>k__BackingField: 0
-      <Npc>k__BackingField: {fileID: 11400000, guid: 12a055f0b55e8f940a25fa335c56e3bc, type: 2}
+      <Npc>k__BackingField: {fileID: 11400000, guid: 5152d6bd09232264a8eea54c28454554, type: 2}
     - <IsRandomNpc>k__BackingField: 0
       <Npc>k__BackingField: {fileID: 11400000, guid: c7404a9cd1bf8784983a52574f0ccb76, type: 2}
     - <IsRandomNpc>k__BackingField: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
     - <IsRandomNpc>k__BackingField: 1
       <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
     - <IsRandomNpc>k__BackingField: 0
-      <Npc>k__BackingField: {fileID: 11400000, guid: d980583d54de5374cbf3c0ae0ae5d57b, type: 2}
+      <Npc>k__BackingField: {fileID: 11400000, guid: ba2b0143fccc35449b0cff7f5d96917c, type: 2}
   <MemoryDifficultByDays>k__BackingField:
   - <StartDayNum>k__BackingField: 0
     <MemoryConfig>k__BackingField: {fileID: 11400000, guid: a40eb660c2a655f47b93a6bf996a20b2, type: 2}

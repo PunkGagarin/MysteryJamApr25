@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ShopConfig
   m_EditorClassIdentifier: 
   <RandomItemsInShop>k__BackingField: 4
+  <ExcludeReagent>k__BackingField: {fileID: 11400000, guid: 0e14fafdb5e2a2c4fbfa97816e07b814, type: 2}

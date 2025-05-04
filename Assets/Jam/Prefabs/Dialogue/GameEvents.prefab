@@ -57,3 +57,4 @@ MonoBehaviour:
   _ritualFailedByExcludedEvent: RitualFailedByExcludedReagent
   _addToolEvent: Tool
   _tutorialStepEvent: TutorialState
+  _manualEvent: ManualUpdate

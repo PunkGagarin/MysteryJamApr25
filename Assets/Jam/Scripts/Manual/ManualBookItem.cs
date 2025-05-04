@@ -5,6 +5,7 @@ using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Utils.UI;
 using Jam.Scripts.VFX;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.EventSystems;
 using Zenject;
 
@@ -67,6 +68,11 @@ namespace Jam.Scripts.Manual
         private void OnDestroy()
         {
             _inventorySystem.OnReagentSeen -= UnlockReagent;
+        }
+
+        public void UpdatePage(int pageIndex, int pageState)
+        {
+            //TODO: открытие страниц
         }
     }
 }
