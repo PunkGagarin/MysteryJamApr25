@@ -12,12 +12,14 @@ namespace Jam.Scripts.Manual
         [SerializeField] private ToLocalize _name;
         [SerializeField] private Sprite _undefinedSprite;
         [SerializeField] private List<Image> _conflictImages;
+        [SerializeField] private Image _reagentImage;
 
         public ReagentDefinition Definition => _reagent;
 
         public void InitData(List<Sprite> conflictSprites)
         {
             _name.SetKey(_reagent.LocalizeId);
+            _reagentImage.sprite = _reagent.ManualIcon;
             for (int i = 0; i < _conflictImages.Count; i++)
             {
                 if (conflictSprites.Count <= i)
