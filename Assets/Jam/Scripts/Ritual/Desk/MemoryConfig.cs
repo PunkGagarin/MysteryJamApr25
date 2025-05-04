@@ -6,6 +6,6 @@ namespace Jam.Scripts.Ritual.Desk
     public class MemoryConfig : ScriptableObject
     {
         [field: SerializeField] public int ClicksAmount;
-        [field: SerializeField] public float TimeToShowClick;
+        [field: SerializeField] public float HighLightTime;
     }
 }

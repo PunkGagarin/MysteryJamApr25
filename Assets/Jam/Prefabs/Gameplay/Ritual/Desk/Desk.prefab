@@ -506,9 +506,9 @@ PrefabInstance:
       value: RightDisk
       objectReference: {fileID: 0}
     - target: {fileID: 5186960173462790446, guid: ee787f089ec26b747841928c28c795e2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 16d7413780d77b846bec4e5d7984809c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6379558365019419878, guid: ee787f089ec26b747841928c28c795e2, type: 3}
       propertyPath: _diskType
       value: 3
@@ -599,9 +599,9 @@ PrefabInstance:
       value: TopDisk
       objectReference: {fileID: 0}
     - target: {fileID: 5186960173462790446, guid: ee787f089ec26b747841928c28c795e2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 885cdfe4dc350164495fd25f84790efa, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6379558365019419878, guid: ee787f089ec26b747841928c28c795e2, type: 3}
       propertyPath: _diskType
       value: 2

@@ -3,6 +3,7 @@ using DG.Tweening;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.Universal;
 using Zenject;
 
 namespace Jam.Scripts.Ritual.Desk
@@ -13,6 +14,7 @@ namespace Jam.Scripts.Ritual.Desk
         [SerializeField] private ReagentType _diskType;
         [SerializeField] private SpriteRenderer _reagentVisual;
         [SerializeField] private Sprite _sexVisual, _ageVisual, _raceVisual;
+        [SerializeField] private Light2D _highLight;
 
         [Inject] private ReagentAnimationController _animationController;
 
@@ -73,6 +75,13 @@ namespace Jam.Scripts.Ritual.Desk
                 };
                 _visual.DOColor(Color.white, .5f);
             });
+        }
+
+        public void HighLight(Action onHighLightEnds, float lightDuration)
+        {
+            DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 20f, lightDuration / 2f)
+                .OnComplete(() => DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 0, lightDuration / 2f)
+                    .OnComplete(() => onHighLightEnds?.Invoke()));
         }
     }
 }

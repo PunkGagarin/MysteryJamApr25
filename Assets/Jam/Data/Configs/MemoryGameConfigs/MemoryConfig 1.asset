@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 732968666b854c6e9ea771edf33e0040, type: 3}
-  m_Name: MemoryConfig
+  m_Name: MemoryConfig 1
   m_EditorClassIdentifier: 
-  ClicksAmount: 4
-  TimeToShowClick: 0.8
+  ClicksAmount: 5
+  HighLightTime: 0.8

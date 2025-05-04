@@ -1,5 +1,4 @@
 ﻿using Jam.Scripts.DayTime;
-using Jam.Scripts.Ritual.Desk;
 using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Shop;
 using UnityEngine;
@@ -13,22 +12,12 @@ namespace Jam.Scripts.GameplayData
         [SerializeField] private DayConfig _dayConfig;
         [SerializeField] private InventoryConfig _inventoryConfig;
         [SerializeField] private ShopConfig _shopConfig;
-        [SerializeField] private MemoryConfig _memoryConfig;
 
         public override void InstallBindings()
         {
             DayInstall();
             InventoryInstall();
             ShopInstall();
-            MemoryInstall();
-        }
-
-        private void MemoryInstall()
-        {
-            Container
-                .Bind<MemoryConfig>()
-                .FromInstance(_memoryConfig)
-                .AsSingle();
         }
 
         private void ShopInstall()

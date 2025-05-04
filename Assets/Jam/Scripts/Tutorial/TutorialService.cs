@@ -22,6 +22,9 @@ namespace Jam.Scripts.Tutorial
                 case 0:
                     _cameraMover.UnlockCamera();
                     break;
+                case 1:
+                    _ritualController.StartMemoryGame();
+                    break;
                 default:
                     Debug.LogError($"не верный туториальный ивент {intValue}");
                     break;
@@ -67,6 +70,13 @@ namespace Jam.Scripts.Tutorial
             _cameraMover.OnMoveRight  += SeenRight;
             _cameraMover.OnMoveCenter += SeenCenter;
             _ritualController.OnAddReagent += CheckReagents;
+            _ritualController.TutorialRitual += TutorialRitual;
+        }
+
+        private void TutorialRitual()
+        {
+            _ritualController.TutorialRitual -= TutorialRitual;
+            _characterController.Talk();
         }
 
         private void OnDestroy()
@@ -75,6 +85,7 @@ namespace Jam.Scripts.Tutorial
             _cameraMover.OnMoveRight  -= SeenRight;
             _cameraMover.OnMoveCenter -= SeenCenter;
             _ritualController.OnAddReagent -= CheckReagents;
+            _ritualController.TutorialRitual -= TutorialRitual;
         }
     }
 }

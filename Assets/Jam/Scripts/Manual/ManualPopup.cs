@@ -148,7 +148,10 @@ namespace Jam.Scripts.Manual
         private void PrevPageClick()
         {
             if (_currentPageIndex == 0)
+            {
+                Close();
                 return;
+            }
             
             _audioService.PlaySound(Sounds.bookFlip.ToString());
             HideCurrentPages();

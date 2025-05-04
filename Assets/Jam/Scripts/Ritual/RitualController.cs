@@ -24,38 +24,35 @@ namespace Jam.Scripts.Ritual
         [SerializeField] private ReagentFitter _reagentFitter;
         [SerializeField] private Button _clearTable;
         [SerializeField] private MainDesk _desk;
-        [SerializeField] private Memory _memory;
         [SerializeField] private GameObject _fireflies;
-        
+
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private GhostResponseEffect _ghostResponseEffect;
         [Inject] private PointerFirefly _pointerFirefly;
         [Inject] private DialogueRunner _dialogueRunner;
-        
+        [Inject] private Memory _memory;
+
         private Quest _currentQuest;
         public event Action OnRitual;
         public event ExcludedReagentsFound OnExcludedReagentsFound;
         public event Action OnAddReagent;
+        public event Action TutorialRitual;
         public bool RitualFailedByExcludedReagents { get; private set; }
         public bool RitualFailedByMissingSexReagent { get; private set; }
         public bool RitualFailedByMissingAgeReagent { get; private set; }
         public bool RitualFailedByMissingRaceReagent { get; private set; }
         public bool RitualFailedByMissingDeathReagent { get; private set; }
         public List<ReagentExclusion> ExcludedReagents { get; private set; }
-
         public int Attempt { get; private set; }
-
         public bool CanCheckByMagnifier => _reagentFitter.OccupiedRooms >= 2;
         public bool IsAllReagentsOnTable => !_reagentFitter.HaveFreeRooms;
+        private bool _isTutorialComplete;
 
         public bool TryAddReagent(ReagentDefinition reagentToAdd, out ReagentRoom reagentRoom)
         {
             reagentRoom = null;
-
-            if (_dialogueRunner.IsDialogueActive)
-                return false;
             
             if (!_questPresenter.HaveAnyQuest() || _questPresenter.IsQuestComplete() || _questPresenter.IsQuestFailed())
                 return false;
@@ -122,15 +119,24 @@ namespace Jam.Scripts.Ritual
             bool isComplete = CheckRitualState(selectedReagents);
 
             if (isComplete)
-                _desk.ShowRitualResult(true, () => _memory.StartMemoryGame(RitualComplete, RitualFailed));
+            {
+                _desk.ShowRitualResult(true, _isTutorialComplete ? StartMemoryGame : () => TutorialRitual?.Invoke());
+            }
             else
+            {
                 _desk.ShowRitualResult(false, RitualFailed);
+            }
 
             
             if (isComplete && _currentQuest.Id == 0)
                 _fireflies.SetActive(true);
         }
 
+        public void StartMemoryGame()
+        {
+            _isTutorialComplete = true;
+            _memory.StartMemoryGame(RitualComplete, RitualFailed);
+        }
         private void RitualFailed()
         {
             Debug.Log($"Ritual failed");

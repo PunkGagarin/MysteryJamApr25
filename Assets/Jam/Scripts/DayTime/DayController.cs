@@ -4,6 +4,7 @@ using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests;
+using Jam.Scripts.Ritual.Desk;
 using Jam.Scripts.Ritual.Tools;
 using Jam.Scripts.Shop;
 using Jam.Scripts.UI;
@@ -33,6 +34,7 @@ namespace Jam.Scripts.DayTime
         [Inject] private PointerFirefly _pointerFirefly;
         [Inject] private GameplayOverlayUI _gameplayOverlayUI;
         [Inject] private QuestPresenter _questPresenter;
+        [Inject] private Memory _memory;
 
         private int _currentDay = 0;
         private int _currentClient = 0;
@@ -80,9 +82,17 @@ namespace Jam.Scripts.DayTime
         private void EndDay()
         {
             _currentDay++;
+            SetMemory();
             _currentClient = 0;
             _canCallNextClient = false;
             ShowDayDetails();
+        }
+
+        private void SetMemory()
+        {
+            var memoryConfig = _dayConfig.GetMemoryConfig(_currentDay);
+            if (memoryConfig != null)
+                _memory.SetMemoryConfig(memoryConfig);
         }
 
         private void OnCharacterLeave() =>
@@ -121,6 +131,7 @@ namespace Jam.Scripts.DayTime
             _characterController.OnCharacterLeave += OnCharacterLeave;
             _curtains.OnCurtainsClosed += ReactOnClosedCurtains;
             ResetDayValues();
+            SetMemory();
         }
 
         private void OnDestroy()

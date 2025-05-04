@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Jam.Scripts.Ritual.Desk
@@ -10,14 +9,17 @@ namespace Jam.Scripts.Ritual.Desk
     public class Memory : MonoBehaviour
     {
         [SerializeField] private List<Disk> _disks;
-        [Inject] private MemoryConfig _memoryConfig;
         
+        private MemoryConfig _memoryConfig;
         private List<int> _sequence = new List<int>();
         private int _inputIndex = 0;
         private bool _canInput = false;
 
         private Action _onWin, _onLose;
-        
+
+        public void SetMemoryConfig(MemoryConfig memoryConfig) => 
+            _memoryConfig = memoryConfig;
+
         public void StartMemoryGame(Action onWin, Action onLose)
         {
             _onWin = onWin;
@@ -78,9 +80,7 @@ namespace Jam.Scripts.Ritual.Desk
             
             int diskIndex = _sequence[sequenceIndex];
 
-            _disks[diskIndex].ReagentVisual.transform
-                .DOShakePosition(_memoryConfig.TimeToShowClick, .5f)
-                .OnComplete(() => HighlightButton(sequenceIndex + 1));
+            _disks[diskIndex].HighLight(() => HighlightButton(sequenceIndex + 1), _memoryConfig.HighLightTime);
         }
 
         private void Awake()
