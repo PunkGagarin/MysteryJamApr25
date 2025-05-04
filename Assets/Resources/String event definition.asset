@@ -26,3 +26,4 @@ MonoBehaviour:
   - RitualFailedByExcludedReagent
   - Tool
   - TutorialState
+  - ManualUpdate

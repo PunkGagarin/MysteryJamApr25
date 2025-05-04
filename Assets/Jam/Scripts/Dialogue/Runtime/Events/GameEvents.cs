@@ -4,6 +4,7 @@ using System.Globalization;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.Dialogue.Runtime.Events.SO;
 using Jam.Scripts.GameplayData.Player;
+using Jam.Scripts.Manual;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
@@ -33,6 +34,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _ritualFailedByExcludedEvent;
         [SerializeField, StringEvent] private string _addToolEvent;
         [SerializeField, StringEvent] private string _tutorialStepEvent;
+        [SerializeField, StringEvent] private string _manualEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
@@ -41,6 +43,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [Inject] private InventoryConfig _inventoryConfig;
         [Inject] private ToolController _toolController;
         [Inject] private TutorialService _tutorialService;
+        [Inject] private ManualBookItem _manualBookItem;
  
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
@@ -72,6 +75,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _moneyEvent, HandleMoney },
                 { _addToolEvent, AddTool },
                 { _tutorialStepEvent, HandleTutorialEvent },
+                { _manualEvent, HandleManual }
             };
 
             _conditionHandlers = new Dictionary<string, StringEventCondition>
@@ -87,6 +91,15 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _ritualFailedByExcludedEvent, CheckRitualFailedByExcludedReagent },
                 { _tutorialStepEvent, CheckTutorial },
             };
+        }
+
+        private void HandleManual(float manualPage, StringEventModifierType argument)
+        {
+            var matchReagent = manualPage.ToString(CultureInfo.InvariantCulture).Split(".");
+            int pageIndex = int.Parse(matchReagent[0]);
+            int pageState = int.Parse(matchReagent[1]);
+
+            _manualBookItem.UpdatePage(pageIndex, pageState);
         }
 
         private bool CheckTutorial(float value, StringEventConditionType conditionType)

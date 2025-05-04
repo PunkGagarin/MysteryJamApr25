@@ -160,7 +160,7 @@ namespace Jam.Scripts.Shop
 
         private void PopulatePoolWithNonSexReagents(List<ReagentDefinition> reagentsInShopPool)
         {
-            var notSexReagents = _reagentRepository.Definitions.Where(def => def.ReagentType != ReagentType.Sex).ToList();
+            var notSexReagents = _reagentRepository.Definitions.Where(def => def.ReagentType != ReagentType.Sex && def != _shopConfig.ExcludeReagent).ToList();
             for (int i = 0; i < _shopConfig.RandomItemsInShop; i++)
             {
                 var randomReagent = notSexReagents[Random.Range(0, notSexReagents.Count)];
