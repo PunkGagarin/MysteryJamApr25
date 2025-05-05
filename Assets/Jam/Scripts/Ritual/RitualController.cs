@@ -177,7 +177,7 @@ namespace Jam.Scripts.Ritual
                     _currentQuest.AgeType,
                     reagent => reagent.AgeType,
                     AgeType.None,
-                    "age"))
+                    "Age"))
             {
                 isRitualComplete = false;
                 RitualFailedByMissingAgeReagent = true;
@@ -188,7 +188,7 @@ namespace Jam.Scripts.Ritual
                     _currentQuest.SexType,
                     reagent => reagent.SexType,
                     SexType.None,
-                    "sex"))
+                    "Sex"))
             {
                 isRitualComplete = false;
                 RitualFailedByMissingSexReagent = true;
@@ -199,7 +199,7 @@ namespace Jam.Scripts.Ritual
                     _currentQuest.RaceType,
                     reagent => reagent.RaceType,
                     RaceType.None,
-                    "race"))
+                    "Race"))
             {
                 isRitualComplete = false;
                 RitualFailedByMissingRaceReagent = true;
@@ -210,7 +210,7 @@ namespace Jam.Scripts.Ritual
                     _currentQuest.DeathType,
                     reagent => reagent.DeathType,
                     DeathType.None,
-                    "death"))
+                    "Death"))
             {
                 isRitualComplete = false;
                 RitualFailedByMissingDeathReagent = true;
@@ -228,11 +228,14 @@ namespace Jam.Scripts.Ritual
         {
             if (!currentQuestValue.Equals(noneValue))
             {
-                if (reagents.All(reagent => !selector(reagent).Equals(currentQuestValue)))
+                foreach (var reagent in reagents)
                 {
-                    Debug.Log($"No {typeName} reagent");
-                    return false;
+                    if (reagent.ReagentType.ToString().Equals(typeName, StringComparison.InvariantCultureIgnoreCase)
+                        && selector(reagent).Equals(currentQuestValue))
+                        return true;
                 }
+                Debug.Log($"No {typeName} reagent");
+                return false;
             }
             return true;
         }

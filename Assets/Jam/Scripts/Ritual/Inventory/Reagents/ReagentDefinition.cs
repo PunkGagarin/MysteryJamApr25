@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.GameplayData.Definitions;
 using NaughtyAttributes;
@@ -34,6 +35,39 @@ namespace Jam.Scripts.Ritual.Inventory.Reagents
 
             Debug.LogError($"Trying to get sprite for excluded reagent with id {reagentExclusionExcludedReagentId}, but it doesn't exist in excluded reagents");
             return null;
+        }
+
+        private void OnValidate()
+        {
+            switch (ReagentType)
+            {
+                case ReagentType.None:
+                    AgeType = AgeType.None;
+                    SexType = SexType.None;
+                    RaceType = RaceType.None;
+                    DeathType = DeathType.None;
+                    break;
+                case ReagentType.Age:
+                    SexType = SexType.None;
+                    RaceType = RaceType.None;
+                    DeathType = DeathType.None;
+                    break;
+                case ReagentType.Sex:
+                    AgeType = AgeType.None;
+                    RaceType = RaceType.None;
+                    DeathType = DeathType.None;
+                    break;
+                case ReagentType.Race:
+                    AgeType = AgeType.None;
+                    SexType = SexType.None;
+                    DeathType = DeathType.None;
+                    break;
+                case ReagentType.Death:
+                    AgeType = AgeType.None;
+                    SexType = SexType.None;
+                    RaceType = RaceType.None;
+                    break;
+            }
         }
     }
 }

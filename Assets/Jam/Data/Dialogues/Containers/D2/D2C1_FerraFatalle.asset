@@ -17,37 +17,13 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 307502a2-3e49-4a5f-979f-74c7870974b1
     TargetPortGuid: Input
-  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    BasePortGuid: False
-    TargetNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    TargetPortGuid: Input
-  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    BasePortGuid: True
-    TargetNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
-    TargetPortGuid: Input
-  - BaseNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    BasePortGuid: True
-    TargetNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
-    TargetPortGuid: Input
-  - BaseNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    BasePortGuid: False
-    TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
-    TargetPortGuid: Input
   - BaseNodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
     BasePortGuid: True
     TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     TargetPortGuid: Input
   - BaseNodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
     BasePortGuid: False
-    TargetNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    TargetPortGuid: Input
-  - BaseNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
-    BasePortGuid: True
-    TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    TargetPortGuid: Input
-  - BaseNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
-    BasePortGuid: False
-    TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
+    TargetNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
     TargetPortGuid: Input
   - BaseNodeGuid: 005906b3-b58c-4655-8877-f3c436f14170
     BasePortGuid: True
@@ -64,6 +40,14 @@ MonoBehaviour:
   - BaseNodeGuid: 307502a2-3e49-4a5f-979f-74c7870974b1
     BasePortGuid: True
     TargetNodeGuid: 005906b3-b58c-4655-8877-f3c436f14170
+    TargetPortGuid: Input
+  - BaseNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
+    BasePortGuid: True
+    TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    TargetPortGuid: Input
+  - BaseNodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
+    BasePortGuid: False
+    TargetNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
     TargetPortGuid: Input
   - BaseNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
     BasePortGuid: Output
@@ -97,10 +81,6 @@ MonoBehaviour:
     BasePortGuid: Continue
     TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
     TargetPortGuid: Input
-  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    BasePortGuid: Continue
-    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    TargetPortGuid: Input
   - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
     BasePortGuid: Continue
     TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
@@ -116,6 +96,10 @@ MonoBehaviour:
   - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     BasePortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
     TargetNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    BasePortGuid: Continue
+    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -143,36 +127,6 @@ MonoBehaviour:
     DialogueDataImages: []
     DialogueDataPorts: []
     SkipContinue: 1
-  - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    Position: {x: 932, y: -941}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0422\u044B \u0447\u0442\u043E \u0442\u0432\u043E\u0440\u0438\u0448\u044C?!
-          \u0414\u0443\u0448\u043A\u0430! \u0422\u0430\u043A \u043D\u0435\u043B\u044C\u0437\u044F!
-          \u041D\u0443 \u043A\u0442\u043E \u043C\u0435\u0448\u0430\u0435\u0442 <b>\u042D\u041A\u0421\u0422\u0420\u0410\u041A\u0422
-          \u0425\u041C\u0415\u041B\u042F</b> \u0438 <b>\u0412\u0415\u0414\u042C\u041C\u0418\u041D\u0423
-          \u0421\u041E\u041B\u042C</b>? \u0422\u0430\u043A, \u043A\u0430\u043A \u0441\u0442\u0430\u0440\u0448\u0430\u044F
-          \u043C\u043B\u0430\u0434\u0448\u0435\u0439, \u0434\u0430\u0440\u044E. \u0414\u0435\u0440\u0436\u0438
-          \u0438\u043D\u0434\u0438\u0433\u0440\u0438\u0435\u043D\u0442\u044B \u0438
-          \u043F\u0440\u043E\u0431\u0443\u0439 \u0441\u043D\u043E\u0432\u0430!"
-      - LanguageType: 1
-        LanguageGenericType: What are you doing?! Sweetie! You can't do that! Who
-          mixes <b>HOPS EXTRACT</b> and <b>WITCH SALT</b>? So, as the elder to the
-          younger, I give this to you. Here are the ingredients, try again!
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 0
   - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
     Position: {x: 510, y: -1470}
     DialogueDataNames: []
@@ -282,7 +236,7 @@ MonoBehaviour:
           \u0443\u0433\u0443\u043C."
       - LanguageType: 1
         LanguageGenericType: So, look, here's the situation. I had a lover. The <b>man</b>
-          was not <b>old</b> yet, but already married, all that. A <b>dwarf</b>,
+          was <b>not old</b> yet, but already married, all that. A <b>dwarf</b>,
           yeah.
       AudioClips:
       - LanguageType: 0
@@ -315,6 +269,50 @@ MonoBehaviour:
       PortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
       InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
       OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    SkipContinue: 0
+  - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    Position: {x: 716, y: -941}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0422\u044B \u0447\u0442\u043E \u0442\u0432\u043E\u0440\u0438\u0448\u044C?!
+          \u0414\u0443\u0448\u043A\u0430! \u0422\u0430\u043A \u043D\u0435\u043B\u044C\u0437\u044F!"
+      - LanguageType: 1
+        LanguageGenericType: What are you doing?! Sweetie! You can't do that!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 7704b267-c7e7-4775-98ca-ec70ca8537af
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041D\u0443 \u043A\u0442\u043E \u043C\u0435\u0448\u0430\u0435\u0442
+          <b>\u042D\u041A\u0421\u0422\u0420\u0410\u041A\u0422 \u0425\u041C\u0415\u041B\u042F</b>
+          \u0438 <b>\u0412\u0415\u0414\u042C\u041C\u0418\u041D\u0423 \u0421\u041E\u041B\u042C</b>?
+          \u0422\u0430\u043A, \u043A\u0430\u043A \u0441\u0442\u0430\u0440\u0448\u0430\u044F
+          \u043C\u043B\u0430\u0434\u0448\u0435\u0439, \u0434\u0430\u0440\u044E. \u0414\u0435\u0440\u0436\u0438
+          \u0438\u043D\u0434\u0438\u0433\u0440\u0438\u0435\u043D\u0442\u044B \u0438
+          \u043F\u0440\u043E\u0431\u0443\u0439 \u0441\u043D\u043E\u0432\u0430!"
+      - LanguageType: 1
+        LanguageGenericType: Who mixes <b>HOPS EXTRACT</b> and <b>WITCH SALT</b>?
+          So, as the elder to the younger, I give this to you. Here are the ingredients,
+          try again!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
     SkipContinue: 0
   EventData:
   - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
@@ -377,32 +375,10 @@ MonoBehaviour:
     EndNodeType:
       Value: 4
   BranchData:
-  - NodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    Position: {x: -144, y: -603}
-    TrueGuidNode: e2c136f7-f658-4adf-80f2-6497271738e5
-    FalseGuidNode: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    EventDataStringConditions:
-    - StringEventText:
-        Value: Atempts
-      Number:
-        Value: 1
-      StringEventConditionType:
-        Value: 3
-  - NodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    Position: {x: 351, y: -420}
-    TrueGuidNode: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
-    FalseGuidNode: a5bdf027-c096-4f01-a710-7ec7007cc56f
-    EventDataStringConditions:
-    - StringEventText:
-        Value: Atempts
-      Number:
-        Value: 2
-      StringEventConditionType:
-        Value: 3
   - NodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
     Position: {x: -610, y: -724}
     TrueGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
-    FalseGuidNode: d05615b3-ae22-44ff-86d5-58d4132f3d60
+    FalseGuidNode: e2c136f7-f658-4adf-80f2-6497271738e5
     EventDataStringConditions:
     - StringEventText:
         Value: Quest
@@ -410,17 +386,6 @@ MonoBehaviour:
         Value: 0
       StringEventConditionType:
         Value: 2
-  - NodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
-    Position: {x: 338, y: -778}
-    TrueGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    FalseGuidNode: a5bdf027-c096-4f01-a710-7ec7007cc56f
-    EventDataStringConditions:
-    - StringEventText:
-        Value: RitualFailedByExcludedReagent
-      Number:
-        Value: 15.7
-      StringEventConditionType:
-        Value: 1
   - NodeGuid: 005906b3-b58c-4655-8877-f3c436f14170
     Position: {x: -1093, y: -953}
     TrueGuidNode: 7044de6f-57ef-4e7f-81af-fb651d90a534
@@ -443,6 +408,17 @@ MonoBehaviour:
         Value: 0
       StringEventConditionType:
         Value: 3
+  - NodeGuid: e2c136f7-f658-4adf-80f2-6497271738e5
+    Position: {x: 34, y: -730}
+    TrueGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    FalseGuidNode: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
+    EventDataStringConditions:
+    - StringEventText:
+        Value: RitualFailedByExcludedReagent
+      Number:
+        Value: 15.7
+      StringEventConditionType:
+        Value: 1
   ChoiceData:
   - NodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
     Position: {x: -1049, y: -530}
