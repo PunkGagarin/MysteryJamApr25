@@ -113,11 +113,19 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
 
         private void HandleManual(float manualPage, StringEventModifierType argument)
         {
-            var matchReagent = manualPage.ToString(CultureInfo.InvariantCulture).Split(".");
-            int pageIndex = int.Parse(matchReagent[0]);
-            int pageState = int.Parse(matchReagent[1]);
-
-            _manualBookItem.UpdatePage(pageIndex, pageState);
+            var arguments = manualPage.ToString(CultureInfo.InvariantCulture).Split(".");
+            int argument1 = int.Parse(arguments[0]);
+            int argument2 = int.Parse(arguments[1]);
+            if (argument == StringEventModifierType.Add)
+            {
+                _manualBookItem.UpdatePage(argument1, argument2);
+            }
+            else if (argument == StringEventModifierType.SetTrue)
+            {
+                ReagentExclusion reagentExclusion = new ReagentExclusion(argument1, argument2);
+                
+                _manualBookItem.AddReagentExclusion(reagentExclusion);
+            }
         }
 
         private bool CheckTutorial(float value, StringEventConditionType conditionType)
