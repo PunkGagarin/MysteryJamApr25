@@ -1,5 +1,6 @@
 using System.Collections;
 using Jam.Scripts.Npc;
+using Jam.Scripts.Npc.Data;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using Zenject;
@@ -20,7 +21,7 @@ namespace Jam.Scripts.VFX
 
         private void HideLight() => ChangeIntensity(0, 0.5f);
 
-        private void ShowLight(int obj, string name) => ChangeIntensity(_maxCurtainsIntensity, 0.5f);
+        private void ShowLight(NPCDefinition _) => ChangeIntensity(_maxCurtainsIntensity, 0.5f);
 
         private void ChangeIntensity(float targetIntensity, float duration)
         {

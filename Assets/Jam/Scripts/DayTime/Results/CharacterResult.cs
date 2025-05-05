@@ -1,4 +1,6 @@
-﻿namespace Jam.Scripts.DayTime.Results
+﻿using UnityEngine;
+
+namespace Jam.Scripts.DayTime.Results
 {
     public class CharacterResult
     {
@@ -6,5 +8,6 @@
         public string CharacterName;
         public int EarnMoney;
         public int EarnReputation;
+        public Sprite Icon;
     }
 }

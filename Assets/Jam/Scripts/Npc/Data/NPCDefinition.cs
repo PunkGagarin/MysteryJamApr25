@@ -10,5 +10,6 @@ namespace Jam.Scripts.Npc.Data
         [field: SerializeField] public int Id { get; private set; }
         [field: SerializeField] public DialogueContainerSO Dialogue { get; private set; }
         [field: SerializeField] public Sprite Visual { get; private set; } 
+        [field: SerializeField] public Sprite ShopIcon { get; private set; }
     }
 }

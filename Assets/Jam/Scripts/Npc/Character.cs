@@ -23,14 +23,14 @@ namespace Jam.Scripts.Npc
         private NPCDefinition _definition;
         private bool _canInteract;
 
-        public event Action<int, string> OnCharacterArrived;
+        public event Action<NPCDefinition> OnCharacterArrived;
         public event Action OnCharacterLeave;
 
         public void SetCharacter(NPCDefinition definition)
         {
             _definition = definition;
             CharacterArrived();
-            OnCharacterArrived?.Invoke(definition.Id, definition.Name);
+            OnCharacterArrived?.Invoke(definition);
             _visual.sprite = definition.Visual;
             _questPresenter.SetCharacter(definition.Id);
         }
