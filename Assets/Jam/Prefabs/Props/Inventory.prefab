@@ -1437,6 +1437,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: LiquidSlot_2_4
       objectReference: {fileID: 0}
+    - target: {fileID: 188375650747273927, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e2c4c23a526fef14f8154b583cb37728, type: 3}
+    - target: {fileID: 2694015558310162694, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1954509
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694015558310162694, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4657644
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694015558310162694, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694015558310162694, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6824
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671600595552371664, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a67c3e02dcf15484b9b9f311ac5eb4ac, type: 3}
+    - target: {fileID: 6183899712899726571, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
+      propertyPath: _reagentDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 5f0b5841575ccef439e42f7495f5cd18, type: 2}
     - target: {fileID: 8120152121863436807, guid: 5b1f42c7dabf0ea4db50633051e658d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
@@ -1583,6 +1611,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: LiquidSlot_2_5
       objectReference: {fileID: 0}
+    - target: {fileID: 1113777847076927793, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d84bf9d3df5d3c4cbd6ec28e5f8784b, type: 3}
+    - target: {fileID: 2921359812326595312, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35342664
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921359812326595312, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.72021323
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921359812326595312, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2921359812326595312, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3979
+      objectReference: {fileID: 0}
+    - target: {fileID: 4853828252439734310, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44ca7bce7ba5eb9409a1a70be1fcba0f, type: 3}
+    - target: {fileID: 6356955820883760925, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
+      propertyPath: _reagentDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 042562fee4f39d640bdc42872691793c, type: 2}
     - target: {fileID: 9032324126754869745, guid: 2ec25f47848fa7f4892fc501820e6ced, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.5
