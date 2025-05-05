@@ -1,78 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Language LANG="English" ID="1">
-  <text key="MAIN_MENU_TITLE">The Dead%Truth</text>
-  <text key="MAIN_MENU_PLAY">Play</text>
-  <text key="MAIN_MENU_SETTINGS">Settings</text>
-  <text key="MAIN_MENU_CREDITS">Credits</text>
-  <text key="SETTINGS_AUDIO">Audio</text>
-  <text key="SETTINGS_LANGUAGE">Language</text>
-  <text key="SETTINGS_MASTER">Master</text>
-  <text key="SETTINGS_SFX">SFX</text>
-  <text key="SETTINGS_MUSIC">Music</text>
-  <text key="SETTINGS_LANG_RU">Русский</text>
-  <text key="SETTINGS_LANG_EN">English</text>
-  <text key="SETTINGS_CANCEL">Cancel</text>
-  <text key="SETTINGS_APPLY">Ok</text>
-  <text key="CREDITS_TITLE">Who created this</text>
-  <text key="CREDITS_CLOSE">Close</text>
-  <text key="CREDITS_DESC">Game design - PunkGagarim%Game design - ccor3xx%Narrative - Kudgine_Solis%Developer - Fenneig%Developer - Madgine_Solis%Narrative, Art - Leit%Art - NyaKawaii</text>
-  <text key="PAUSE_TITLE">Paused</text>
-  <text key="PAUSE_SETTINGS">Settings</text>
-  <text key="PAUSE_RETURN">Return</text>
-  <text key="PAUSE_TO_MAIN_MENU">To main menu</text>
-  <text key="RITUAL_START">Start ritual</text>
-  <text key="RITUAL_CLEAR">Clear table</text>
-  <text key="MANUAL_PAGE_0_TITLE">Three rules for speaking with souls:</text>
-  <text key="MANUAL_PAGE_0_DESC">Souls come at night.%Souls cannot speak much.%Souls cannot lie.</text>
-  <text key="MANUAL_PAGE_0_SEX">Sex</text>
-  <text key="MANUAL_PAGE_1_AGE">Age</text>
-  <text key="MANUAL_PAGE_1_RACE">Race</text>
-  <text key="MANUAL_PAGE_1_MIRROR_TITLE">Mirror</text>
-  <text key="MANUAL_PAGE_1_MIRROR_DESC">If two incompatible ingredients appear within its field of view, it lights up and conflict information is added to the notebook. However, the mirror is not limitless – it needs to be recharged with magical energy.</text>
-  <text key="MANUAL_PAGE_1_MAGNIFIER_TITLE">Magnifier</text>
-  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">The magnifying glass helps you detect conflicts on the table. Point it at ingredients that may be incompatible, and it will show whether everything is fine.</text>
-  <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Pendulum</text>
-  <text key="MANUAL_PAGE_2_PENDULUM_DESC">Swing the pendulum in time with your pulse. Misses worsen the connection with souls</text>
-  <text key="REAGENT_AGATE_BEADS">Agate beads</text>
-  <text key="REAGENT_SALAMANDER_EGGS">Salamander eggs</text>
-  <text key="REAGENT_PINK_PEARL">Pink pearl</text>
-  <text key="REAGENT_COOLED_SPARKS">Cooled sparks</text>
-  <text key="REAGENT_DANDELION_FLUFF">Dandelion fluff</text>
-  <text key="REAGENT_FAIRY_DUST">Fairy dust</text>
-  <text key="REAGENT_WITCH_SALT">Witch salt</text>
-  <text key="REAGENT_ROSE_POWDER">Rose powder</text>
-  <text key="REAGENT_DESERT_SAND">Desert sand</text>
-  <text key="REAGENT_BOOK_ASHES">Book ashes</text>
-  <text key="REAGENT_SPRING_WATER">Spring water</text>
-  <text key="REAGENT_EVERMILK">Evermilk</text>
-  <text key="REAGENT_OLIVE_OIL">Olive oil</text>
-  <text key="REAGENT_GREEN_TEA">Green tea</text>
-  <text key="REAGENT_HOP_EXTRACT">Hop extract</text>
-  <text key="REAGENT_ROCK_OIL">Rock oil</text>
-  <text key="DAY_RESULT_NUM">Day</text>
-  <text key="GOLD_AMOUNT_KEY">Gold</text>
-  <text key="DAY_RESULT_MONEY_EARNED">Money%earned</text>
-  <text key="DAY_RESULT_REPUTATION">Reputation</text>
-  <text key="DAY_RESULT_MONEY_TOTAL">Total money</text>
-  <text key="DAY_RESULT_CONTINUE">Continue</text>
-  <text key="TO_MAIN_KEY">To main menu</text>
-  <text key="DAY_RESULT_REPUTATION_KEY">Rep</text>
-  <text key="DAY_RESULT_MONEY_KEY">Mon</text>
-  <text key="PAGE_3_DESC">Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way to reach someone who once meant so much to you. Find them.</text>
-  <text key="PAGE_4_TITLE">The Crooked Wanderer</text>
-  <text key="PAGE_4_DESC">He had a bright smile. He loved toast. He always helped those around him. He disappeared without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.</text>
-  <text key="PAGE_4_AGE">Age:</text>
-  <text key="PAGE_4_RACE">Race:</text> 
-  <text key="PAGE_4_YOUNG">Young</text>
-  <text key="PAGE_4_ADULT">Adult</text>
-  <text key="PAGE_4_OLD">Old</text>
-  <text key="PAGE_4_ELF">Elf</text>
-  <text key="PAGE_4_HUMAN">Human</text>
-  <text key="PAGE_4_DWARF">Dwarf</text>
-  <text key="IN_GAME_CREDITS">Credits</text>
-  <text key="IN_GAME_EXIT">Main menu</text>
-  <text key="RESULT">You results:</text>
-  <text key="TOTAL_EARNED">Total money earned:</text>
-  <text key="LAST_QUEST_FAILED">Contact The Crooked Wanderer: failure</text>
-  <text key="LAST_QUEST_SUCCESS">Contact The Crooked Wanderer: success</text>
+    <text key="MAIN_MENU_TITLE">The Dead%Truth</text>
+    <text key="MAIN_MENU_PLAY">Play</text>
+    <text key="MAIN_MENU_SETTINGS">Settings</text>
+    <text key="MAIN_MENU_CREDITS">Credits</text>
+    <text key="SETTINGS_AUDIO">Audio</text>
+    <text key="SETTINGS_LANGUAGE">Language</text>
+    <text key="SETTINGS_MASTER">Master</text>
+    <text key="SETTINGS_SFX">SFX</text>
+    <text key="SETTINGS_MUSIC">Music</text>
+    <text key="SETTINGS_LANG_RU">Русский</text>
+    <text key="SETTINGS_LANG_EN">English</text>
+    <text key="SETTINGS_CANCEL">Cancel</text>
+    <text key="SETTINGS_APPLY">Ok</text>
+    <text key="CREDITS_TITLE">Who created this</text>
+    <text key="CREDITS_CLOSE">Close</text>
+    <text key="CREDITS_DESC">Game design - PunkGagarim%Game design - ccor3xx%Narrative - Kudgine_Solis%Developer -
+        Fenneig%Developer - Madgine_Solis%Narrative, Art - Leit%Art - NyaKawaii
+    </text>
+    <text key="PAUSE_TITLE">Paused</text>
+    <text key="PAUSE_SETTINGS">Settings</text>
+    <text key="PAUSE_RETURN">Return</text>
+    <text key="PAUSE_TO_MAIN_MENU">To main menu</text>
+    <text key="RITUAL_START">Start ritual</text>
+    <text key="RITUAL_CLEAR">Clear table</text>
+    <text key="MANUAL_PAGE_0_TITLE">Three rules for speaking with souls:</text>
+    <text key="MANUAL_PAGE_0_DESC">Souls come at night.%Souls cannot speak much.%Souls cannot lie.</text>
+    <text key="MANUAL_PAGE_0_SEX">Sex</text>
+    <text key="MANUAL_PAGE_1_AGE">Age</text>
+    <text key="MANUAL_PAGE_1_RACE">Race</text>
+    <text key="MANUAL_PAGE_1_MIRROR_TITLE">Mirror</text>
+    <text key="MANUAL_PAGE_1_MIRROR_DESC">If two incompatible ingredients appear within its field of view, it lights up
+        and conflict information is added to the notebook. However, the mirror is not limitless – it needs to be
+        recharged with magical energy.
+    </text>
+    <text key="MANUAL_PAGE_1_MAGNIFIER_TITLE">Magnifier</text>
+    <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">Put ingredients that may conflict on the table and touch the magnifying
+        glass. If there is a conflict, it will light up red. If not, it will light up green.
+    </text>
+    <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Pendulum</text>
+    <text key="MANUAL_PAGE_2_PENDULUM_DESC">Swing the pendulum in time with your pulse. Misses worsen the connection
+        with souls
+    </text>
+    <text key="REAGENT_AGATE_BEADS">Agate beads</text>
+    <text key="REAGENT_SALAMANDER_EGGS">Salamander eggs</text>
+    <text key="REAGENT_PINK_PEARL">Pink pearl</text>
+    <text key="REAGENT_COOLED_SPARKS">Cooled sparks</text>
+    <text key="REAGENT_DANDELION_FLUFF">Dandelion fluff</text>
+    <text key="REAGENT_FAIRY_DUST">Fairy dust</text>
+    <text key="REAGENT_WITCH_SALT">Witch salt</text>
+    <text key="REAGENT_ROSE_POWDER">Rose powder</text>
+    <text key="REAGENT_DESERT_SAND">Desert sand</text>
+    <text key="REAGENT_BOOK_ASHES">Book ashes</text>
+    <text key="REAGENT_SPRING_WATER">Spring water</text>
+    <text key="REAGENT_EVERMILK">Evermilk</text>
+    <text key="REAGENT_OLIVE_OIL">Olive oil</text>
+    <text key="REAGENT_GREEN_TEA">Green tea</text>
+    <text key="REAGENT_HOP_EXTRACT">Hop extract</text>
+    <text key="REAGENT_ROCK_OIL">Rock oil</text>
+    <text key="DAY_RESULT_NUM">Day</text>
+    <text key="GOLD_AMOUNT_KEY">Gold</text>
+    <text key="DAY_RESULT_MONEY_EARNED">Money%earned</text>
+    <text key="DAY_RESULT_REPUTATION">Reputation</text>
+    <text key="DAY_RESULT_MONEY_TOTAL">Total money</text>
+    <text key="DAY_RESULT_CONTINUE">Continue</text>
+    <text key="TO_MAIN_KEY">To main menu</text>
+    <text key="DAY_RESULT_REPUTATION_KEY">Rep</text>
+    <text key="DAY_RESULT_MONEY_KEY">Mon</text>
+    <text key="PAGE_3_DESC">Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of
+        speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path
+        they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help
+        call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way
+        to reach someone who once meant so much to you. Find them.
+    </text>
+    <text key="PAGE_4_TITLE">The Crooked Wanderer</text>
+    <text key="PAGE_4_DESC">He had a bright smile. He loved toast. He always helped those around him. He disappeared
+        without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.
+    </text>
+    <text key="PAGE_4_AGE">Age:</text>
+    <text key="PAGE_4_RACE">Race:</text>
+    <text key="PAGE_4_YOUNG">Young</text>
+    <text key="PAGE_4_ADULT">Adult</text>
+    <text key="PAGE_4_OLD">Old</text>
+    <text key="PAGE_4_ELF">Elf</text>
+    <text key="PAGE_4_HUMAN">Human</text>
+    <text key="PAGE_4_DWARF">Dwarf</text>
+    <text key="IN_GAME_CREDITS">Credits</text>
+    <text key="IN_GAME_EXIT">Main menu</text>
+    <text key="RESULT">You results:</text>
+    <text key="TOTAL_EARNED">Total money earned:</text>
+    <text key="LAST_QUEST_FAILED">Contact The Crooked Wanderer: failure</text>
+    <text key="LAST_QUEST_SUCCESS">Contact The Crooked Wanderer: success</text>
 </Language>
