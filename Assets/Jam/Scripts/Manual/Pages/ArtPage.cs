@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Jam.Scripts.Manual
+namespace Jam.Scripts.Manual.Pages
 {
     public class ArtPage : MonoBehaviour
     {

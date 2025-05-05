@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace Jam.Scripts.Manual
+namespace Jam.Scripts.Manual.Pages
 {
     public class CrookedWandererPage : MonoBehaviour
     {

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory;
+using Jam.Scripts.Ritual.Tools;
 using Jam.Scripts.Utils.UI;
 using Jam.Scripts.VFX;
 using UnityEngine;
@@ -58,7 +60,10 @@ namespace Jam.Scripts.Manual
                 if (_pointerFirefly.CurrentTarget == (int)TargetType.Book)
                     _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
             });
-            manualPopup.Initialize(_unlockedReagents, _reagentExclusions, _crookedWandererUnlocks, _artUnlocked);
+            var unlockedTools = _inventorySystem.GetUnlockedTools();
+            bool isMirrorUnlocked = unlockedTools.Any(tool => tool.Id == 0);
+            bool isMagnifierUnlocked = unlockedTools.Any(tool => tool.Id == 1);
+            manualPopup.Initialize(_unlockedReagents, _reagentExclusions, _crookedWandererUnlocks, _artUnlocked, isMirrorUnlocked, isMagnifierUnlocked);
         }
 
         private void Awake()

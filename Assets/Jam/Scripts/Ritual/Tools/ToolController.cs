@@ -1,12 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Jam.Scripts.Audio.Domain;
 using UnityEngine;
+using Zenject;
 
 namespace Jam.Scripts.Ritual.Tools
 {
     public class ToolController : MonoBehaviour
     {
         [SerializeField] private List<RitualTool> _tools;
+        [Inject] private AudioService _audioService;
 
         public List<ToolDefinition> GetUnlockedTools() => 
             (from tool in _tools where tool.IsUnlocked select tool.Definition).ToList();
@@ -28,6 +31,7 @@ namespace Jam.Scripts.Ritual.Tools
                 return;
             }
             
+            _audioService.PlaySound(Sounds.foundConflict);
             toolToUnlock.gameObject.SetActive(true);
             toolToUnlock.IsUnlocked = true;
             toolToUnlock.ResetCharges();

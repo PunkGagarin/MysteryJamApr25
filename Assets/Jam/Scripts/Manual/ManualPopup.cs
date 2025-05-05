@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Input;
+using Jam.Scripts.Manual.Pages;
 using Jam.Scripts.Ritual;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using Jam.Scripts.Utils.UI;
@@ -32,6 +33,7 @@ namespace Jam.Scripts.Manual
         private int _currentPageIndex = 0;
         private CrookedWandererPage _crookedWandererPage;
         private ArtPage _artPage;
+        private ToolsPage _toolsPage;
 
         private void Awake()
         {
@@ -64,12 +66,13 @@ namespace Jam.Scripts.Manual
             base.Close();
         }
 
-        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions, List<int> crookedWandererUnlocks, bool artUnlocked)
+        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions, List<int> crookedWandererUnlocks, bool artUnlocked, bool isMirrorUnlocked, bool isMagnifierUnlocked)
         {
             _pages.ForEach(page => page.Initialize(unlockedReagents, reagentExclusions));
             if (crookedWandererUnlocks.Count > 0)
                 _crookedWandererPage.SetUnlocks(crookedWandererUnlocks);
             _artPage.InitPage(artUnlocked);
+            _toolsPage.InitPage(isMirrorUnlocked, isMagnifierUnlocked);
         }
 
         private void InitPages()
@@ -83,6 +86,8 @@ namespace Jam.Scripts.Manual
                     _crookedWandererPage = crookedWandererPage;
                 if (pageObject.TryGetComponent(out ArtPage artPage))
                     _artPage = artPage;
+                if (pageObject.TryGetComponent(out ToolsPage toolsPage))
+                    _toolsPage = toolsPage;
                 
                 pageObject.gameObject.SetActive(false);
                 _pages.Add(pageObject);
