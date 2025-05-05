@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065054163479862070}
   - component: {fileID: 4617136094507307498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NotFound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2206581699371215141}
   - component: {fileID: 6116829766164840395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Found
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 21
-  m_Sprite: {fileID: 21300000, guid: 9373096d678a8174b9fbc8244d6bee06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6069f01b01bc854f81673b29fcc209b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 5372235320011241699}
   - component: {fileID: 421787616399836463}
   - component: {fileID: 865581863771656157}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 5867593232963211938}
   - component: {fileID: 287282112271599109}
   - component: {fileID: 2454997465573045970}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594585563406341031}
   - component: {fileID: 2933207651268180035}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CheckStateImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435887392055442404}
   - component: {fileID: 5049789256023655655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 759545501167852103}
   - component: {fileID: 8995250864215736689}
   - component: {fileID: 1252130908135662567}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magnifier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 5909300106327875274}
   - component: {fileID: 6426660617918409615}
   - component: {fileID: 8479595685866384552}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 7684213049339163950}
   - component: {fileID: 4448287665462934138}
   - component: {fileID: 4216520571886019621}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Substrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

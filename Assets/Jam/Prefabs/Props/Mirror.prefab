@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4565934690078645322}
   - component: {fileID: 9117965520547858098}
   - component: {fileID: 2459276830225015869}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 968849732856329596}
   - component: {fileID: 669913273805778988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179229416869584448}
   - component: {fileID: 3557786965143934799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384103745997849656}
   - component: {fileID: 1711970671291560464}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: foundExclusivVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 7841792073711175311}
   - component: {fileID: 8744688998804570604}
   - component: {fileID: 6053867072182992694}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Substrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 3186108258487023503}
   - component: {fileID: 9071025406937890037}
   - component: {fileID: 1087083536080598037}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 4464278629357477517}
   - component: {fileID: 262842071344339170}
   - component: {fileID: 4108421600992552502}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
