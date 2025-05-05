@@ -69,4 +69,10 @@
   <text key="PAGE_4_ELF">Эльф</text>
   <text key="PAGE_4_HUMAN">Человек</text>
   <text key="PAGE_4_DWARF">Дворф</text>
+  <text key="IN_GAME_CREDITS">Титры</text>
+  <text key="IN_GAME_EXIT">Главное меню</text>
+  <text key="RESULT">Результаты:</text>
+  <text key="TOTAL_EARNED">Всего заработано денег:</text>
+  <text key="LAST_QUEST_FAILED">Связаться с Изогнутый Странник : провал</text>
+  <text key="LAST_QUEST_SUCCESS">Связаться с Изогнутый Странник : успех</text>
 </Language>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Jam.Scripts.DayTime;
 using Jam.Scripts.Dialogue.Runtime.Enums;
 using Jam.Scripts.Dialogue.Runtime.Events.SO;
 using Jam.Scripts.GameplayData.Player;
@@ -35,6 +36,8 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [SerializeField, StringEvent] private string _addToolEvent;
         [SerializeField, StringEvent] private string _tutorialStepEvent;
         [SerializeField, StringEvent] private string _manualEvent;
+        [SerializeField, StringEvent] private string _lastQuestEvent;
+        [SerializeField, StringEvent] private string _closeCurtainsEvent;
 
         [Inject] private PlayerStatsPresenter _playerStats;
         [Inject] private QuestPresenter _questPresenter;
@@ -44,6 +47,7 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
         [Inject] private ToolController _toolController;
         [Inject] private TutorialService _tutorialService;
         [Inject] private ManualBookItem _manualBookItem;
+        [Inject] private DayController _dayController;
  
         private Dictionary<string, Action<float, StringEventModifierType>> _eventHandlers;
         private Dictionary<string, StringEventCondition> _conditionHandlers;
@@ -75,7 +79,9 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _moneyEvent, HandleMoney },
                 { _addToolEvent, AddTool },
                 { _tutorialStepEvent, HandleTutorialEvent },
-                { _manualEvent, HandleManual }
+                { _manualEvent, HandleManual },
+                { _lastQuestEvent, HandleLastQuest },
+                { _closeCurtainsEvent, HandleCloseCurtains }
             };
 
             _conditionHandlers = new Dictionary<string, StringEventCondition>
@@ -91,6 +97,18 @@ namespace Jam.Scripts.Dialogue.Runtime.Events
                 { _ritualFailedByExcludedEvent, CheckRitualFailedByExcludedReagent },
                 { _tutorialStepEvent, CheckTutorial },
             };
+        }
+
+        private void HandleCloseCurtains(float _, StringEventModifierType modifier)
+        {
+            if (modifier == StringEventModifierType.SetTrue)
+                _dayController.CloseCurtains();
+        }
+
+        private void HandleLastQuest(float _, StringEventModifierType modifierType)
+        {
+            if (modifierType == StringEventModifierType.SetTrue)
+                _playerStats.SetLastQuestComplete();    
         }
 
         private void HandleManual(float manualPage, StringEventModifierType argument)

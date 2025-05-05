@@ -13,6 +13,8 @@ namespace Jam.Scripts.GameplayData.Player
         
         public int Money => _playerStats.Money;
         public int Reputation => _playerStats.Reputation;
+        public int TotalMoneyEarned => _playerStats.TotalMoneyEarned;
+        public bool IsLastQuestComplete => _playerStats.IsLastQuestComplete;
 
         public PlayerStatsPresenter()
         {
@@ -23,6 +25,7 @@ namespace Jam.Scripts.GameplayData.Player
         {
             int oldValue = _playerStats.Money;
             _playerStats.Money += amount;
+            _playerStats.TotalMoneyEarned += amount;
             OnMoneyChanged?.Invoke(_playerStats.Money, oldValue);
         }
         
@@ -49,6 +52,9 @@ namespace Jam.Scripts.GameplayData.Player
             _playerStats.Reputation -= amount;
             OnReputationChanged?.Invoke(_playerStats.Reputation, oldValue);
         }
+
+        public void SetLastQuestComplete() => 
+            _playerStats.IsLastQuestComplete = true;
 
         public bool CheckMoney(int value, StringEventConditionType conditionType)
         {

@@ -69,4 +69,10 @@
   <text key="PAGE_4_ELF">Elf</text>
   <text key="PAGE_4_HUMAN">Human</text>
   <text key="PAGE_4_DWARF">Dwarf</text>
+  <text key="IN_GAME_CREDITS">Credits</text>
+  <text key="IN_GAME_EXIT">Main menu</text>
+  <text key="RESULT">You results:</text>
+  <text key="TOTAL_EARNED">Total money earned:</text>
+  <text key="LAST_QUEST_FAILED">Contact The Crooked Wanderer: failure</text>
+  <text key="LAST_QUEST_SUCCESS">Contact The Crooked Wanderer: success</text>
 </Language>

@@ -35,6 +35,18 @@ namespace Jam.Scripts.VFX
                             });
                     });
                 });
+        } 
+        
+        public void FadeOut(Action onComplete)
+        {
+            gameObject.SetActive(true);
+            targetImage.DOFade(1f, fadeDuration)
+                .SetEase(Ease.InOutSine)
+                .OnComplete(() =>
+                {
+                    gameObject.SetActive(false);
+                    onComplete?.Invoke();
+                });
         }
     }
 }

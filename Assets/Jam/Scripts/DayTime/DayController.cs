@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.DayTime.Results;
+using Jam.Scripts.End;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Npc.Data;
@@ -37,6 +38,7 @@ namespace Jam.Scripts.DayTime
         [Inject] private ImageFader _dayFader;
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private Memory _memory;
+        [Inject] private EndScreen _endScreen;
 
         private int _currentDay = 0;
         private int _currentClient = 0;
@@ -50,6 +52,8 @@ namespace Jam.Scripts.DayTime
 
         public bool IsFirstDay =>
             _currentDay == 1;
+
+        public void CloseCurtains() => _curtains.CloseCurtains();
 
         private void CallNextClient()
         {
@@ -90,7 +94,7 @@ namespace Jam.Scripts.DayTime
             SetMemory();
             _currentClient = 0;
             _canCallNextClient = false;
-            ShowDayDetails();
+            _dayFader.FadeOut(ShowDayDetails);
         }
 
         private void SetMemory()
@@ -119,7 +123,7 @@ namespace Jam.Scripts.DayTime
         private void ShowDayDetails()
         {
             var dayResultView = _popupManager.OpenPopup<DayResultView>(OnOpenDayResultView, OnCloseDayResultView);
-            dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter, _shopSystem);
+            dayResultView.Initialize(_characterResultWriter, _playerStatsPresenter, _shopSystem, _endScreen);
         }
 
         private void OnOpenDayResultView() =>

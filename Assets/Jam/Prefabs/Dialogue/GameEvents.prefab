@@ -58,3 +58,5 @@ MonoBehaviour:
   _addToolEvent: Tool
   _tutorialStepEvent: TutorialState
   _manualEvent: ManualUpdate
+  _lastQuestEvent: LastQuestComplete
+  _closeCurtainsEvent: CloseCurtain

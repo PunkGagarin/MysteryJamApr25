@@ -27,3 +27,5 @@ MonoBehaviour:
   - Tool
   - TutorialState
   - ManualUpdate
+  - LastQuestComplete
+  - CloseCurtain

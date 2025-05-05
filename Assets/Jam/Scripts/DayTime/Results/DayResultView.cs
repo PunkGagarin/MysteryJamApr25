@@ -2,6 +2,7 @@
 using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Dialogue.Gameplay;
+using Jam.Scripts.End;
 using Jam.Scripts.GameplayData.Player;
 using Jam.Scripts.SceneManagement;
 using Jam.Scripts.Shop;
@@ -29,13 +30,12 @@ namespace Jam.Scripts.DayTime.Results
         [SerializeField] private Color _normalColor;
         [SerializeField] private Color _successColor;
 
-        [Inject] private SceneLoader _sceneLoader;
-        [Inject] private CoroutineHelper _coroutineHelper;
         [Inject] private LanguageService _languageService;
         [Inject] private Localization _localization;
         [Inject] private AudioService _audioService;
         [Inject] private CharacterResultFactory _characterResultFactory;
-
+        
+        private EndScreen _endScreen;
         private List<CharacterResultView> _charactersResults;
         private CharacterResultWriter _characterResultWriter;
         private ShopSystem _shopSystem;
@@ -56,8 +56,7 @@ namespace Jam.Scripts.DayTime.Results
 
         public void Initialize(CharacterResultWriter characterResultWriter,
             PlayerStatsPresenter playerStatsPresenter,
-            ShopSystem shopSystem
-        )
+            ShopSystem shopSystem, EndScreen endScreen)
         {
             if (_isInitialized)
                 return;
@@ -70,6 +69,7 @@ namespace Jam.Scripts.DayTime.Results
             _shopSystem.SetShopView(_shopView);
             _shopSystem.CantBuy += ShowCantBuyAnimation;
             _playerStats.OnMoneyChanged += UpdateTotalMoney;
+            _endScreen = endScreen;
 
             ShowResult();
         }
@@ -95,7 +95,11 @@ namespace Jam.Scripts.DayTime.Results
 
             if (_characterResultWriter.IsLastDay)
             {
-                SetCloseEvent(LoadMainScene);
+                SetCloseEvent(() =>
+                {
+                    _endScreen.gameObject.SetActive(true);
+                    _endScreen.Show();
+                });
                 _nextDayButtonText.SetKey(TO_MAIN_KEY);
             }
         }
@@ -108,9 +112,6 @@ namespace Jam.Scripts.DayTime.Results
                 _totalMoney.text = oldvalue.ToString("N0");
             }, newvalue, 1f).SetEase(Ease.OutQuart);
         }
-
-        private void LoadMainScene() =>
-            _coroutineHelper.RunCoroutine(_sceneLoader.LoadScene(SceneEnum.MainMenu));
 
         private void AdjustCharactersResults(int charactersResultsCount)
         {
