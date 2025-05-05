@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using Jam.Scripts.Dialogue.Runtime.SO.Values.Enums;
 using Jam.Scripts.Dialogue.Runtime.SO.Values.Events;
+#if UNITY_EDITOR
 using UnityEditor.UIElements;
+#endif
 using UnityEngine;
 using UnityEngine.UIElements;
 
