@@ -198,7 +198,7 @@ MonoBehaviour:
           \u0438 \u0441\u0435\u0441\u0442\u0440\u044B. \u0410 \u0442\u0435\u043F\u0435\u0440\u044C
           - \u044F \u043E\u0442\u043A\u043B\u0430\u043D\u044F\u044E\u0441\u044C. "
       - LanguageType: 1
-        LanguageGenericType: "Well... what you asked for. <b>Twisted Wanderer</b>
+        LanguageGenericType: "Well... what you asked for. <b>Crooked Wanderer</b>
           from an elven family. That is certain. His mother is Milian from the Blue
           Forest. His father is Eviargal from the Black Shores. Now they are dead,
           as are all his brothers and sisters. And now\u2014I shall take my leave."
@@ -266,7 +266,7 @@ MonoBehaviour:
           \u043E \u0442\u043E\u043C, \u0447\u0442\u043E \u044F \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u0430."
       - LanguageType: 1
         LanguageGenericType: The crows whispered to me that you are seeking the secret
-          of the origin of the <b>Twisted Wanderer</b>. If you manage to complete
+          of the origin of the <b>Crooked Wanderer</b>. If you manage to complete
           my task, I will tell you this secret. But in return, you must not tell
           anyone that I came.
       AudioClips:

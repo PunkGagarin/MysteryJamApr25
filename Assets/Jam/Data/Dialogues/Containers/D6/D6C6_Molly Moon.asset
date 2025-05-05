@@ -77,10 +77,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: f6e85fcc-5bbf-4cf8-904d-8714529287dc
     TargetPortGuid: Input
-  - BaseNodeGuid: 0bf8f352-8b1f-443d-ab01-ae8ef445ea16
-    BasePortGuid: Output
-    TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
-    TargetPortGuid: Input
   - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
@@ -88,6 +84,10 @@ MonoBehaviour:
   - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     BasePortGuid: Output
     TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetPortGuid: Input
+  - BaseNodeGuid: 0bf8f352-8b1f-443d-ab01-ae8ef445ea16
+    BasePortGuid: Output
+    TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
@@ -165,7 +165,7 @@ MonoBehaviour:
       - LanguageType: 1
         LanguageGenericType: Hello, Medium! I brought what I promised. This is it.
           The ingredient that can be used to contact the damned. But before I give
-          you this thing, I want to know. What do you want to ask the <b>Twisted
+          you this thing, I want to know. What do you want to ask the <b>Crooked
           Wanderer</b>?
       AudioClips:
       - LanguageType: 0
