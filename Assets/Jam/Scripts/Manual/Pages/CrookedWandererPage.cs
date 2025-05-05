@@ -60,8 +60,8 @@ namespace Jam.Scripts.Manual.Pages
         private void UpdateText()
         {
             _youngText.text = _oldYoungCrossed ? $"<s>{_localization.GetText(YOUNG_KEY)}</s>" : _localization.GetText(YOUNG_KEY);
-            _adultText.text = _localization.GetText(ADULT_KEY);
-            _oldText.text = _oldYoungCrossed ? $"<s>{_localization.GetText(OLD_KEY)}</s>" : _localization.GetText(OLD_KEY);
+            _adultText.text = _oldYoungCrossed ? $"<s>{_localization.GetText(ADULT_KEY)}</s>" : _localization.GetText(ADULT_KEY);
+            _oldText.text = _localization.GetText(OLD_KEY);
             _elfText.text = _localization.GetText(ELF_KEY);
             _humanText.text = _humanCrossed ? $"<s>{_localization.GetText(HUMAN_KEY)}</s>" : _localization.GetText(HUMAN_KEY);
             _dwarfText.text = _dwarfCrossed ? $"<s>{_localization.GetText(DWARF_KEY)}</s>" : _localization.GetText(DWARF_KEY);

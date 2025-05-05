@@ -57,10 +57,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
     TargetPortGuid: Input
-  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    BasePortGuid: Output
-    TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
-    TargetPortGuid: Input
   - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     BasePortGuid: Output
     TargetNodeGuid: 3c7caf0f-9bc3-4898-9525-e9cdea715c6a
@@ -77,8 +73,8 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     TargetPortGuid: Input
-  - BaseNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
-    BasePortGuid: Continue
+  - BaseNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    BasePortGuid: Output
     TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
     TargetPortGuid: Input
   - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
@@ -93,40 +89,26 @@ MonoBehaviour:
     BasePortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
     TargetNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
     TargetPortGuid: Input
-  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    BasePortGuid: Continue
-    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    TargetPortGuid: Input
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
     TargetNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
+    TargetPortGuid: Input
+  - BaseNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
+    BasePortGuid: Continue
+    TargetNodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    BasePortGuid: Continue
+    TargetNodeGuid: 69092755-6681-48a4-ac38-94cda9ebbcf3
+    TargetPortGuid: Input
+  - BaseNodeGuid: 69092755-6681-48a4-ac38-94cda9ebbcf3
+    BasePortGuid: Continue
+    TargetNodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
     Position: {x: -2133, y: -576}
   DialogueData:
-  - NodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
-    Position: {x: 777, y: -578}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 66a0ce7b-fbb1-470e-8aac-bf6b953adf7e
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0414\u043E\u0440\u043E\u0433\u0443\u0448\u0430, \u043D\u0443
-          \u0442\u044B \u0441\u043B\u0435\u0434\u0438 \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0435\u0448\u044C!"
-      - LanguageType: 1
-        LanguageGenericType: Honey, watch what you're doing!
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 1
   - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
     Position: {x: 510, y: -1470}
     DialogueDataNames: []
@@ -247,50 +229,6 @@ MonoBehaviour:
       InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
       OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     SkipContinue: 0
-  - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    Position: {x: 716, y: -941}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0422\u044B \u0447\u0442\u043E \u0442\u0432\u043E\u0440\u0438\u0448\u044C?!
-          \u0414\u0443\u0448\u043A\u0430! \u0422\u0430\u043A \u043D\u0435\u043B\u044C\u0437\u044F!"
-      - LanguageType: 1
-        LanguageGenericType: What are you doing?! Sweetie! You can't do that!
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 1
-      GuidID:
-        Value: 7704b267-c7e7-4775-98ca-ec70ca8537af
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u041D\u0443 \u043A\u0442\u043E \u043C\u0435\u0448\u0430\u0435\u0442
-          <b>\u042D\u041A\u0421\u0422\u0420\u0410\u041A\u0422 \u0425\u041C\u0415\u041B\u042F</b>
-          \u0438 <b>\u0412\u0415\u0414\u042C\u041C\u0418\u041D\u0423 \u0421\u041E\u041B\u042C</b>?
-          \u0422\u0430\u043A, \u043A\u0430\u043A \u0441\u0442\u0430\u0440\u0448\u0430\u044F
-          \u043C\u043B\u0430\u0434\u0448\u0435\u0439, \u0434\u0430\u0440\u044E. \u0414\u0435\u0440\u0436\u0438
-          \u0438\u043D\u0434\u0438\u0433\u0440\u0438\u0435\u043D\u0442\u044B \u0438
-          \u043F\u0440\u043E\u0431\u0443\u0439 \u0441\u043D\u043E\u0432\u0430!"
-      - LanguageType: 1
-        LanguageGenericType: Who mixes <b>HOPS EXTRACT</b> and <b>WITCH SALT</b>?
-          So, as the elder to the younger, I give this to you. Here are the ingredients,
-          try again!
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 0
   - NodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     Position: {x: 12, y: -1171}
     DialogueDataNames: []
@@ -334,12 +272,92 @@ MonoBehaviour:
     DialogueDataImages: []
     DialogueDataPorts: []
     SkipContinue: 0
+  - NodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
+    Position: {x: 733, y: -578}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 66a0ce7b-fbb1-470e-8aac-bf6b953adf7e
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0414\u043E\u0440\u043E\u0433\u0443\u0448\u0430, \u043D\u0443
+          \u0442\u044B \u0441\u043B\u0435\u0434\u0438 \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0435\u0448\u044C!"
+      - LanguageType: 1
+        LanguageGenericType: Honey, watch what you're doing!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 1
+  - NodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    Position: {x: 578, y: -951}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0422\u044B \u0447\u0442\u043E \u0442\u0432\u043E\u0440\u0438\u0448\u044C?!
+          \u0414\u0443\u0448\u043A\u0430! \u0422\u0430\u043A \u043D\u0435\u043B\u044C\u0437\u044F!"
+      - LanguageType: 1
+        LanguageGenericType: What are you doing?! Sweetie! You can't do that!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 7704b267-c7e7-4775-98ca-ec70ca8537af
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041D\u0443 \u043A\u0442\u043E \u043C\u0435\u0448\u0430\u0435\u0442
+          <b>\u042D\u041A\u0421\u0422\u0420\u0410\u041A\u0422 \u0425\u041C\u0415\u041B\u042F</b>
+          \u0438 <b>\u0412\u0415\u0414\u042C\u041C\u0418\u041D\u0423 \u0421\u041E\u041B\u042C</b>?
+          \u0422\u0430\u043A, \u043A\u0430\u043A \u0441\u0442\u0430\u0440\u0448\u0430\u044F
+          \u043C\u043B\u0430\u0434\u0448\u0435\u0439, \u0434\u0430\u0440\u044E."
+      - LanguageType: 1
+        LanguageGenericType: Who mixes <b>HOPS EXTRACT</b> and <b>WITCH SALT</b>?
+          So, as the elder to the younger, I give this to you.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 0
+  - NodeGuid: 69092755-6681-48a4-ac38-94cda9ebbcf3
+    Position: {x: 920, y: -951}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: bf8032c8-3f68-44a9-b365-db3b0300abaf
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0414\u0435\u0440\u0436\u0438 \u0438\u043D\u0434\u0438\u0433\u0440\u0438\u0435\u043D\u0442\u044B
+          \u0438 \u043F\u0440\u043E\u0431\u0443\u0439 \u0441\u043D\u043E\u0432\u0430!"
+      - LanguageType: 1
+        LanguageGenericType: Here are the ingredients, try again!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 1
   EventData:
-  - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
-    Position: {x: 1257, y: -941}
-    EventDataStringModifiers: []
-    ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: 291fa55bf505d7343949686a0c1bdf4a, type: 2}
   - NodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     Position: {x: -721, y: -530}
     EventDataStringModifiers:
@@ -371,11 +389,18 @@ MonoBehaviour:
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
     - DialogueEventSO: {fileID: 11400000, guid: 291fa55bf505d7343949686a0c1bdf4a, type: 2}
+  - NodeGuid: c394d788-1e45-4e39-a156-12f0a6d9f3ac
+    Position: {x: 1283, y: -941}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: ManualUpdate
+      Number:
+        Value: 15.7
+      StringEventModifierType:
+        Value: 1
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: 291fa55bf505d7343949686a0c1bdf4a, type: 2}
   EndData:
-  - NodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
-    Position: {x: 1630, y: -578}
-    EndNodeType:
-      Value: 1
   - NodeGuid: 3c7caf0f-9bc3-4898-9525-e9cdea715c6a
     Position: {x: -324, y: -530}
     EndNodeType:
@@ -384,6 +409,10 @@ MonoBehaviour:
     Position: {x: 1794, y: -1352}
     EndNodeType:
       Value: 4
+  - NodeGuid: a5bdf027-c096-4f01-a710-7ec7007cc56f
+    Position: {x: 1760, y: -706}
+    EndNodeType:
+      Value: 1
   BranchData:
   - NodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
     Position: {x: -610, y: -724}

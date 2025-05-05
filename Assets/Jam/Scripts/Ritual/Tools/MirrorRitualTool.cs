@@ -36,7 +36,6 @@ namespace Jam.Scripts.Ritual.Tools
                     .OnComplete(() => Visual.DOColor(Color.white, 1f)
                         .OnComplete(() => Visual.DOColor(Color.clear, 1f)));
                 _manual.AddReagentExclusion(excludedReagentToAdd);
-                _audioService.PlaySound(Sounds.foundConflict.ToString());
             }
         }
     }
