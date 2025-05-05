@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
   m_Name: D2C1_FerraFatalle
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Tutorial
+  <Name>k__BackingField: Ferra Fatalle
   <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 6
   <SexType>k__BackingField: 1

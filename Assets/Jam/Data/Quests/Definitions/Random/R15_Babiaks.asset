@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
   m_Name: R15_Babiaks
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: '-'
+  <Name>k__BackingField: Babiaks
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 1015
   <SexType>k__BackingField: 1
   <AgeType>k__BackingField: 2

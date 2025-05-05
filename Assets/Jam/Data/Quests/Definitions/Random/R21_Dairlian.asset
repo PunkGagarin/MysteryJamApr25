@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
   m_Name: R21_Dairlian
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Dairlian
   <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 1021
   <SexType>k__BackingField: 2

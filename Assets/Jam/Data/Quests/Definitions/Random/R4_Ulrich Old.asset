@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
   m_Name: R4_Ulrich Old
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: A four-armed friend
+  <Name>k__BackingField: Ulrich Old
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 104
   <SexType>k__BackingField: 1
   <AgeType>k__BackingField: 3

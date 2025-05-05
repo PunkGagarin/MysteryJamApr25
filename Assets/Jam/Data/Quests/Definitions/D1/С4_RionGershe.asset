@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ee9d5daaa49dea7271181cf28b62c, type: 3}
   m_Name: "\u04214_RionGershe"
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: 
+  <Name>k__BackingField: Rion Gershe
+  <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 4
   <SexType>k__BackingField: 2
   <AgeType>k__BackingField: 2
