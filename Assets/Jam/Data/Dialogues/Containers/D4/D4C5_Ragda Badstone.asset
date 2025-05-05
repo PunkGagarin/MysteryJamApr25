@@ -85,18 +85,6 @@ MonoBehaviour:
     BasePortGuid: 67ccf52e-6314-4bd2-8788-72628cd51953
     TargetNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
     TargetPortGuid: Input
-  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
-    BasePortGuid: Continue
-    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
-    TargetPortGuid: Input
-  - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    BasePortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
-    TargetNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
-    TargetPortGuid: Input
-  - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    BasePortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
-    TargetNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
-    TargetPortGuid: Input
   - BaseNodeGuid: 272ca774-1176-4f07-8639-e3a778d620b0
     BasePortGuid: 4b52c3d3-187c-4cca-aa4c-e3aaa7752059
     TargetNodeGuid: ced845e1-ecbd-4caa-8439-058dfce90c3d
@@ -108,6 +96,18 @@ MonoBehaviour:
   - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
     BasePortGuid: Continue
     TargetNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
+    TargetPortGuid: Input
+  - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    BasePortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
+    TargetNodeGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+    TargetPortGuid: Input
+  - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    BasePortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
+    TargetNodeGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+    TargetPortGuid: Input
+  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
+    BasePortGuid: Continue
+    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -147,174 +147,6 @@ MonoBehaviour:
       PortGuid: 67ccf52e-6314-4bd2-8788-72628cd51953
       InputGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
       OutputGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
-    SkipContinue: 0
-  - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
-    Position: {x: 1287, y: -644}
-    DialogueDataNames:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: fc64f175-8a79-4c2c-88c9-dbd3def52fd6
-      CharacterName:
-      - LanguageType: 0
-        LanguageGenericType: "\u041A\u043B\u0438\u0435\u043D\u0442"
-      - LanguageType: 1
-        LanguageGenericType: Client
-    DialogueDataTexts:
-    - ID:
-        Value: 1
-      GuidID:
-        Value: a9be781f-44d5-4311-9d07-5c1fc9497502
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u041E, \u0434\u0430! \u0414\u0430! \u042F \u0431\u044B\u043B\u0430
-          \u043F\u0440\u0430\u0432\u0430! \u0414\u0430, \u0434\u0430, \u0434\u0430!
-          \u0412\u043E\u0442 \u043E\u043D, \u0432\u043A\u0443\u0441 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u0439
-          \u043F\u043E\u0431\u0435\u0434\u044B!.."
-      - LanguageType: 1
-        LanguageGenericType: Oh, yes! Yes! I was right! Yes, yes, yes! This is the
-          taste of true victory!..
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 2
-      GuidID:
-        Value: a77602e9-8f04-4eba-91f7-536a1939abe6
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0427\u0442\u043E \u0436\u2026 \u0442\u043E, \u0447\u0442\u043E
-          \u0442\u044B \u043F\u0440\u043E\u0441\u0438\u043B\u0430. <b>\u0418\u0437\u043E\u0433\u043D\u0443\u0442\u044B\u0439
-          \u0441\u0442\u0440\u0430\u043D\u043D\u0438\u043A</b> \u0438\u0437 \u044D\u043B\u044C\u0444\u0438\u0439\u0441\u043A\u043E\u0439
-          \u0441\u0435\u043C\u044C\u0438. \u042D\u0442\u043E \u0431\u0435\u0437\u0443\u0441\u043B\u043E\u0432\u043D\u043E.
-          \u0415\u0433\u043E \u043C\u0430\u0442\u044C - \u041C\u0438\u043B\u0438\u0430\u043D
-          \u0438\u0437 \u0413\u043E\u043B\u0443\u0431\u043E\u0433\u043E \u041B\u0435\u0441\u0430.
-          \u0415\u0433\u043E \u043E\u0442\u0435\u0446 - \u042D\u0432\u0438\u0430\u0440\u0433\u0430\u043B\u044C
-          \u0441 \u0427\u0435\u0440\u043D\u044B\u0445 \u0411\u0435\u0440\u0435\u0433\u043E\u0432.
-          \u041D\u044B\u043D\u0435 \u043C\u0435\u0440\u0442\u0432\u044B, \u043A\u0430\u043A
-          \u0438 \u0432\u0441\u0435 \u0435\u0433\u043E \u0431\u0440\u0430\u0442\u044C\u044F
-          \u0438 \u0441\u0435\u0441\u0442\u0440\u044B. \u0410 \u0442\u0435\u043F\u0435\u0440\u044C
-          - \u044F \u043E\u0442\u043A\u043B\u0430\u043D\u044F\u044E\u0441\u044C. "
-      - LanguageType: 1
-        LanguageGenericType: "Well... what you asked for. <b>Crooked Wanderer</b>
-          from an elven family. That is certain. His mother is Milian from the Blue
-          Forest. His father is Eviargal from the Black Shores. Now they are dead,
-          as are all his brothers and sisters. And now\u2014I shall take my leave."
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 3
-      GuidID:
-        Value: 1fff2974-ea60-4f5c-9849-0a0668922ccf
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0414\u043E \u0441\u0432\u0438\u0434\u0430\u043D\u0438\u044F
-          \u0438 \u043F\u043E\u043C\u043D\u0438: \u0442\u044B \u043C\u0435\u043D\u044F
-          \u043D\u0435 \u0432\u0438\u0434\u0435\u043B\u0430, \u043C\u0435\u0434\u0438\u0443\u043C."
-      - LanguageType: 1
-        LanguageGenericType: 'Goodbye and remember: you never saw me, Medium.'
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 0
-  - NodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    Position: {x: -496, y: 827}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 1b922cec-a73e-447d-af20-e5a26c142e59
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
-          \u043C\u0435\u0434\u0438\u0443\u043C. \u042F \u0442\u0435\u043C\u043D\u0430\u044F
-          \u0432\u0435\u0434\u044C\u043C\u0430 \u0420\u0430\u0433\u0434\u0430. \u0423
-          \u043C\u0435\u043D\u044F \u043A \u0442\u0435\u0431\u0435 \u0434\u0435\u043B\u043E\u2026"
-      - LanguageType: 1
-        LanguageGenericType: Good evening, Medium. I am the dark witch Ragda. I have
-          business with you...
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 1
-      GuidID:
-        Value: a4789d05-dea4-4466-bff7-f22ad0503e59
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0412\u043E\u0440\u043E\u043D\u044B \u043D\u0430\u0448\u0435\u043F\u0442\u0430\u043B\u0438
-          \u043C\u043D\u0435, \u0447\u0442\u043E \u0442\u044B \u0438\u0449\u0435\u0448\u044C
-          \u0442\u0430\u0439\u043D\u0443 \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
-          <b>\u0418\u0437\u043E\u0433\u043D\u0443\u0442\u043E\u0433\u043E \u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A\u0430</b>.
-          \u0415\u0441\u043B\u0438 \u0441\u043F\u0440\u0430\u0432\u0438\u0448\u044C\u0441\u044F
-          \u0441 \u043C\u043E\u0435\u0439 \u0437\u0430\u0434\u0430\u0447\u0435\u0439,
-          \u0442\u043E \u044F \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0443 \u0442\u0435\u0431\u0435
-          \u044D\u0442\u0443 \u0442\u0430\u0439\u043D\u0443. \u041D\u043E \u0432\u0437\u0430\u043C\u0435\u043D
-          \u0442\u044B \u043D\u0438\u043A\u043E\u043C\u0443 \u043D\u0435 \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0435\u0448\u044C
-          \u043E \u0442\u043E\u043C, \u0447\u0442\u043E \u044F \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u0430."
-      - LanguageType: 1
-        LanguageGenericType: The crows whispered to me that you are seeking the secret
-          of the origin of the <b>Crooked Wanderer</b>. If you manage to complete
-          my task, I will tell you this secret. But in return, you must not tell
-          anyone that I came.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 2
-      GuidID:
-        Value: dc04bca1-49d3-44bf-84ba-ca62e90d8288
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u042F \u043F\u0440\u043E\u043A\u043B\u044F\u043B\u0430
-          \u0441\u0430\u043C\u043E\u0439 \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u0439
-          \u043C\u043E\u0435\u0439 \u0437\u0430\u043F\u0440\u0435\u0442\u043D\u043E\u0439
-          \u043C\u0430\u0433\u0438\u0435\u0439 \u0410\u043C\u0444\u0438\u044D\u043B\u044C,
-          <b>\u044D\u043B\u044C\u0444\u0438\u0439\u043A\u0443</b> \u0438\u0437 \u0413\u043E\u043B\u0443\u0431\u043E\u0433\u043E
-          \u041B\u0435\u0441\u0430. \u041E\u043D\u0430 \u0438 \u0435\u0435 \u0434\u0435\u0442\u0438
-          \u0441\u0434\u0435\u043B\u0430\u043B\u0438 \u043A\u043E\u0435-\u0447\u0442\u043E
-          \u043D\u0435\u043F\u0440\u043E\u0441\u0442\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\u2026
-          \u0438 \u044F \u0445\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C,
-          \u043A\u0430\u043A \u043F\u0440\u043E\u043A\u043B\u044F\u0442\u0438\u0435
-          \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0441\u043B\u0435
-          \u0441\u043C\u0435\u0440\u0442\u0438. \u0422\u0430\u043A \u0447\u0442\u043E
-          \u0441\u0432\u044F\u0436\u0438\u0441\u044C \u0441 \u043D\u0435\u0439."
-      - LanguageType: 1
-        LanguageGenericType: I cursed Amfiel, the <b>elf</b> from the Blue Forest,
-          with my most terrible forbidden magic. She and her children did something
-          unforgivable... and I want to know how the curse works after death. So
-          get in touch with her.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts:
-    - ID:
-        Value: 0
-      PortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
-      InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
-      OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
-    - ID:
-        Value: 0
-      PortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
-      InputGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
-      OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     SkipContinue: 0
   - NodeGuid: 272ca774-1176-4f07-8639-e3a778d620b0
     Position: {x: 686, y: 182}
@@ -361,6 +193,212 @@ MonoBehaviour:
         LanguageGenericType: "\u041A\u0430\u043A\u043E\u0435 \u0440\u0430\u0437\u043E\u0447\u0430\u0440\u043E\u0432\u0430\u043D\u0438\u0435."
       - LanguageType: 1
         LanguageGenericType: What a disappointment.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 0
+  - NodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    Position: {x: -496, y: 827}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 1b922cec-a73e-447d-af20-e5a26c142e59
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
+          \u043C\u0435\u0434\u0438\u0443\u043C. \u042F \u0442\u0435\u043C\u043D\u0430\u044F
+          \u0432\u0435\u0434\u044C\u043C\u0430 \u0420\u0430\u0433\u0434\u0430. \u0423
+          \u043C\u0435\u043D\u044F \u043A \u0442\u0435\u0431\u0435 \u0434\u0435\u043B\u043E\u2026"
+      - LanguageType: 1
+        LanguageGenericType: Good evening, Medium. I am the dark witch Ragda. I have
+          business with you...
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: a4789d05-dea4-4466-bff7-f22ad0503e59
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0412\u043E\u0440\u043E\u043D\u044B \u043D\u0430\u0448\u0435\u043F\u0442\u0430\u043B\u0438
+          \u043C\u043D\u0435, \u0447\u0442\u043E \u0442\u044B \u0438\u0449\u0435\u0448\u044C
+          \u0442\u0430\u0439\u043D\u0443 \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F
+          <b>\u0418\u0437\u043E\u0433\u043D\u0443\u0442\u043E\u0433\u043E \u0421\u0442\u0440\u0430\u043D\u043D\u0438\u043A\u0430</b>."
+      - LanguageType: 1
+        LanguageGenericType: The crows whispered to me that you are seeking the secret
+          of the origin of the <b>Crooked Wanderer</b>. .
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: fb8355c8-8143-44c8-89c7-12bb92e57119
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0415\u0441\u043B\u0438 \u0441\u043F\u0440\u0430\u0432\u0438\u0448\u044C\u0441\u044F
+          \u0441 \u043C\u043E\u0435\u0439 \u0437\u0430\u0434\u0430\u0447\u0435\u0439,
+          \u0442\u043E \u044F \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0443 \u0442\u0435\u0431\u0435
+          \u044D\u0442\u0443 \u0442\u0430\u0439\u043D\u0443. \u041D\u043E \u0432\u0437\u0430\u043C\u0435\u043D
+          \u0442\u044B \u043D\u0438\u043A\u043E\u043C\u0443 \u043D\u0435 \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0435\u0448\u044C
+          \u043E \u0442\u043E\u043C, \u0447\u0442\u043E \u044F \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u043B\u0430."
+      - LanguageType: 1
+        LanguageGenericType: If you manage to complete my task, I will tell you this
+          secret. But in return, you must not tell anyone that I came
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 3
+      GuidID:
+        Value: dc04bca1-49d3-44bf-84ba-ca62e90d8288
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u042F \u043F\u0440\u043E\u043A\u043B\u044F\u043B\u0430
+          \u0441\u0430\u043C\u043E\u0439 \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u0439
+          \u043C\u043E\u0435\u0439 \u0437\u0430\u043F\u0440\u0435\u0442\u043D\u043E\u0439
+          \u043C\u0430\u0433\u0438\u0435\u0439 \u0410\u043C\u0444\u0438\u044D\u043B\u044C,
+          <b>\u044D\u043B\u044C\u0444\u0438\u0439\u043A\u0443</b> \u0438\u0437 \u0413\u043E\u043B\u0443\u0431\u043E\u0433\u043E
+          \u041B\u0435\u0441\u0430."
+      - LanguageType: 1
+        LanguageGenericType: 'I cursed Amfiel, the <b>elf</b> from the Blue Forest,
+          with my most terrible forbidden magic. '
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 4
+      GuidID:
+        Value: b912ef84-ced1-45b8-b641-fb83db029e57
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041E\u043D\u0430 \u0438 \u0435\u0435 \u0434\u0435\u0442\u0438
+          \u0441\u0434\u0435\u043B\u0430\u043B\u0438 \u043A\u043E\u0435-\u0447\u0442\u043E
+          \u043D\u0435\u043F\u0440\u043E\u0441\u0442\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435\u2026
+          \u0438 \u044F \u0445\u043E\u0447\u0443 \u0443\u0437\u043D\u0430\u0442\u044C,
+          \u043A\u0430\u043A \u043F\u0440\u043E\u043A\u043B\u044F\u0442\u0438\u0435
+          \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0441\u043B\u0435
+          \u0441\u043C\u0435\u0440\u0442\u0438. \u0422\u0430\u043A \u0447\u0442\u043E
+          \u0441\u0432\u044F\u0436\u0438\u0441\u044C \u0441 \u043D\u0435\u0439."
+      - LanguageType: 1
+        LanguageGenericType: She and her children did something unforgivable... and
+          I want to know how the curse works after death. So get in touch with her.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
+      InputGuid: 8059b07f-64d1-45ab-bb6b-d9f52af3deeb
+      OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    - ID:
+        Value: 0
+      PortGuid: f6cde81a-6622-4348-a444-6e97b3bd9e9c
+      InputGuid: 5c3d61de-49b2-40ca-a11a-2a2cb3c74875
+      OutputGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
+    SkipContinue: 0
+  - NodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
+    Position: {x: 1287, y: -643}
+    DialogueDataNames:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: fc64f175-8a79-4c2c-88c9-dbd3def52fd6
+      CharacterName:
+      - LanguageType: 0
+        LanguageGenericType: "\u041A\u043B\u0438\u0435\u043D\u0442"
+      - LanguageType: 1
+        LanguageGenericType: Client
+    DialogueDataTexts:
+    - ID:
+        Value: 1
+      GuidID:
+        Value: a9be781f-44d5-4311-9d07-5c1fc9497502
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041E, \u0434\u0430! \u0414\u0430! \u042F \u0431\u044B\u043B\u0430
+          \u043F\u0440\u0430\u0432\u0430! \u0414\u0430, \u0434\u0430, \u0434\u0430!
+          \u0412\u043E\u0442 \u043E\u043D, \u0432\u043A\u0443\u0441 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u0439
+          \u043F\u043E\u0431\u0435\u0434\u044B!.."
+      - LanguageType: 1
+        LanguageGenericType: Oh, yes! Yes! I was right! Yes, yes, yes! This is the
+          taste of true victory!..
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: a77602e9-8f04-4eba-91f7-536a1939abe6
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0427\u0442\u043E \u0436\u2026 \u0442\u043E, \u0447\u0442\u043E
+          \u0442\u044B \u043F\u0440\u043E\u0441\u0438\u043B\u0430. <b>\u0418\u0437\u043E\u0433\u043D\u0443\u0442\u044B\u0439
+          \u0441\u0442\u0440\u0430\u043D\u043D\u0438\u043A</b> \u0438\u0437 \u044D\u043B\u044C\u0444\u0438\u0439\u0441\u043A\u043E\u0439
+          \u0441\u0435\u043C\u044C\u0438. \u042D\u0442\u043E \u0431\u0435\u0437\u0443\u0441\u043B\u043E\u0432\u043D\u043E. "
+      - LanguageType: 1
+        LanguageGenericType: 'Well... what you asked for. <b>Crooked Wanderer</b>
+          from an elven family. That is certain. '
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 3
+      GuidID:
+        Value: 680ef94d-aa81-43ed-8e64-4b2cbf3d8d39
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0415\u0433\u043E \u043C\u0430\u0442\u044C - \u041C\u0438\u043B\u0438\u0430\u043D
+          \u0438\u0437 \u0413\u043E\u043B\u0443\u0431\u043E\u0433\u043E \u041B\u0435\u0441\u0430.
+          \u0415\u0433\u043E \u043E\u0442\u0435\u0446 - \u042D\u0432\u0438\u0430\u0440\u0433\u0430\u043B\u044C
+          \u0441 \u0427\u0435\u0440\u043D\u044B\u0445 \u0411\u0435\u0440\u0435\u0433\u043E\u0432.
+          \u041D\u044B\u043D\u0435 \u043C\u0435\u0440\u0442\u0432\u044B, \u043A\u0430\u043A
+          \u0438 \u0432\u0441\u0435 \u0435\u0433\u043E \u0431\u0440\u0430\u0442\u044C\u044F
+          \u0438 \u0441\u0435\u0441\u0442\u0440\u044B. \u0410 \u0442\u0435\u043F\u0435\u0440\u044C
+          - \u044F \u043E\u0442\u043A\u043B\u0430\u043D\u044F\u044E\u0441\u044C. "
+      - LanguageType: 1
+        LanguageGenericType: "His mother is Milian from the Blue Forest. His father
+          is Eviargal from the Black Shores. Now they are dead, as are all his brothers
+          and sisters. And now\u2014I shall take my leave."
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 4
+      GuidID:
+        Value: 1fff2974-ea60-4f5c-9849-0a0668922ccf
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0414\u043E \u0441\u0432\u0438\u0434\u0430\u043D\u0438\u044F
+          \u0438 \u043F\u043E\u043C\u043D\u0438: \u0442\u044B \u043C\u0435\u043D\u044F
+          \u043D\u0435 \u0432\u0438\u0434\u0435\u043B\u0430, \u043C\u0435\u0434\u0438\u0443\u043C."
+      - LanguageType: 1
+        LanguageGenericType: 'Goodbye and remember: you never saw me, Medium.'
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}

@@ -149,87 +149,6 @@ MonoBehaviour:
       InputGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
       OutputGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     SkipContinue: 0
-  - NodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    Position: {x: 1269, y: 497}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: c06aee08-08f7-4f4d-b571-8c51b2d5177e
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
-          \u043A\u0440\u0430\u0441\u0430\u0432\u0438\u0446\u0430. \u0423 \u043C\u0435\u043D\u044F
-          \u0441\u043B\u0443\u0447\u0438\u043B\u0430\u0441\u044C \u0433\u043B\u0443\u043F\u0435\u0439\u0448\u0430\u044F
-          \u0438\u0441\u0442\u043E\u0440\u0438\u044F\u2026 \u042F \u0432\u043B\u044E\u0431\u0438\u043B\u0441\u044F
-          \u0432 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u0443\u044E <b>\u0434\u0432\u043E\u0440\u0444\u0438\u0439\u043A\u0443</b>."
-      - LanguageType: 1
-        LanguageGenericType: "Good evening, beautiful. I had the silliest thing happen
-          to me\u2026 I fell in love with a beautiful <b>dwarven woman</b>."
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 1
-      GuidID:
-        Value: f42a4fb0-3e37-4024-acae-3e9a53581a25
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u041E\u043D\u0430 \u0445\u043E\u0440\u043E\u0448\u0430,
-          \u043A\u0430\u043A \u043A\u0440\u0435\u043F\u043A\u0438\u0439 \u0445\u043C\u0435\u043B\u044C\u043D\u044B\u0439
-          \u043C\u0435\u0434. \u0418 \u044F \u0445\u043E\u0447\u0443 \u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C
-          \u0443 \u0435\u0435 \u043F\u043E\u043A\u043E\u0439\u043D\u043E\u0439 <b>\u0431\u0430\u0431\u0443\u0448\u043A\u0438</b>
-          \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u043D\u0430
-          \u0431\u0440\u0430\u043A."
-      - LanguageType: 1
-        LanguageGenericType: She is as good as strong mead. And I want to ask her
-          late <b>grandmother</b> for permission to marry.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    - ID:
-        Value: 2
-      GuidID:
-        Value: 51906a43-5d2c-4e29-b578-05a4a50f5b7d
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u042F \u0437\u043D\u0430\u044E, \u0447\u0442\u043E
-          \u044D\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
-          \u0442\u044F\u0436\u0435\u043B\u043E, \u0432\u0435\u0434\u044C \u043C\u044B
-          \u0440\u0430\u0437\u043D\u044B\u0445 \u043A\u0443\u043B\u044C\u0442\u0443\u0440,
-          \u0440\u0430\u0437\u043D\u044B\u0445 \u0441\u0442\u0440\u0430\u043D \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F.
-          \u041D\u043E \u043C\u043E\u0435 \u0441\u0435\u0440\u0434\u0446\u0435 \u0442\u0440\u0435\u043F\u0435\u0449\u0435\u0442
-          \u043E\u0442 \u0440\u0430\u0434\u043E\u0441\u0442\u0438 \u043F\u0440\u0438
-          \u0432\u0438\u0434\u0435 \u043D\u0435\u0435. \u0418 \u044F \u043D\u0435
-          \u0432\u0438\u0436\u0443 \u0441\u0432\u043E\u0435\u0439 \u0436\u0438\u0437\u043D\u0438
-          \u043D\u0438 \u0441 \u043A\u0435\u043C \u0434\u0440\u0443\u0433\u0438\u043C."
-      - LanguageType: 1
-        LanguageGenericType: I know that it can be hard, since we are from different
-          cultures, different countries of origin. But my heart trembles with joy
-          when I see her. And I can't imagine my life with anyone else.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts:
-    - ID:
-        Value: 0
-      PortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
-      InputGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
-      OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    - ID:
-        Value: 0
-      PortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
-      InputGuid: ce233715-8543-41cf-9a34-ce7491221a7e
-      OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    SkipContinue: 0
   - NodeGuid: 46359059-d57a-4736-a187-d921f6807214
     Position: {x: 3168, y: -386}
     DialogueDataNames: []
@@ -285,8 +204,102 @@ MonoBehaviour:
       InputGuid: 364cf539-20b5-43bd-a84e-c13e8489b311
       OutputGuid: 481e2084-9c63-4772-87d2-44581951256e
     SkipContinue: 0
+  - NodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    Position: {x: 1269, y: 497}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: c06aee08-08f7-4f4d-b571-8c51b2d5177e
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0414\u043E\u0431\u0440\u043E\u0439 \u043D\u043E\u0447\u0438,
+          \u043A\u0440\u0430\u0441\u0430\u0432\u0438\u0446\u0430. \u0423 \u043C\u0435\u043D\u044F
+          \u0441\u043B\u0443\u0447\u0438\u043B\u0430\u0441\u044C \u0433\u043B\u0443\u043F\u0435\u0439\u0448\u0430\u044F
+          \u0438\u0441\u0442\u043E\u0440\u0438\u044F\u2026 \u042F \u0432\u043B\u044E\u0431\u0438\u043B\u0441\u044F
+          \u0432 \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u0443\u044E <b>\u0434\u0432\u043E\u0440\u0444\u0438\u0439\u043A\u0443</b>."
+      - LanguageType: 1
+        LanguageGenericType: "Good evening, beautiful. I had the silliest thing happen
+          to me\u2026 I fell in love with a beautiful <b>dwarven woman</b>."
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: f42a4fb0-3e37-4024-acae-3e9a53581a25
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041E\u043D\u0430 \u0445\u043E\u0440\u043E\u0448\u0430,
+          \u043A\u0430\u043A \u043A\u0440\u0435\u043F\u043A\u0438\u0439 \u0445\u043C\u0435\u043B\u044C\u043D\u044B\u0439
+          \u043C\u0435\u0434. \u0418 \u044F \u0445\u043E\u0447\u0443 \u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C
+          \u0443 \u0435\u0435 \u043F\u043E\u043A\u043E\u0439\u043D\u043E\u0439 <b>\u0431\u0430\u0431\u0443\u0448\u043A\u0438</b>
+          \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u043D\u0430
+          \u0431\u0440\u0430\u043A."
+      - LanguageType: 1
+        LanguageGenericType: She is as good as strong mead. And I want to ask her
+          late <b>grandmother</b> for permission to marry.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: 51906a43-5d2c-4e29-b578-05a4a50f5b7d
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u042F \u0437\u043D\u0430\u044E, \u0447\u0442\u043E
+          \u044D\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C
+          \u0442\u044F\u0436\u0435\u043B\u043E, \u0432\u0435\u0434\u044C \u043C\u044B
+          \u0440\u0430\u0437\u043D\u044B\u0445 \u043A\u0443\u043B\u044C\u0442\u0443\u0440,
+          \u0440\u0430\u0437\u043D\u044B\u0445 \u0441\u0442\u0440\u0430\u043D \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F."
+      - LanguageType: 1
+        LanguageGenericType: I know that it can be hard, since we are from different
+          cultures, different countries of origin.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 3
+      GuidID:
+        Value: efb00e36-5b62-4ba4-b2e1-5637a99a6fd1
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041D\u043E \u043C\u043E\u0435 \u0441\u0435\u0440\u0434\u0446\u0435
+          \u0442\u0440\u0435\u043F\u0435\u0449\u0435\u0442 \u043E\u0442 \u0440\u0430\u0434\u043E\u0441\u0442\u0438
+          \u043F\u0440\u0438 \u0432\u0438\u0434\u0435 \u043D\u0435\u0435. \u0418
+          \u044F \u043D\u0435 \u0432\u0438\u0436\u0443 \u0441\u0432\u043E\u0435\u0439
+          \u0436\u0438\u0437\u043D\u0438 \u043D\u0438 \u0441 \u043A\u0435\u043C \u0434\u0440\u0443\u0433\u0438\u043C."
+      - LanguageType: 1
+        LanguageGenericType: But my heart trembles with joy when I see her. And I
+          can't imagine my life with anyone else.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
+      InputGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
+      OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    - ID:
+        Value: 0
+      PortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
+      InputGuid: ce233715-8543-41cf-9a34-ce7491221a7e
+      OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    SkipContinue: 0
   - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    Position: {x: 2570, y: -723}
+    Position: {x: 2674, y: -679}
     DialogueDataNames: []
     DialogueDataTexts:
     - ID:
@@ -332,11 +345,6 @@ MonoBehaviour:
     DialogueDataPorts: []
     SkipContinue: 0
   EventData:
-  - NodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
-    Position: {x: 2871, y: -701}
-    EventDataStringModifiers: []
-    ContainerDialogueEventSOs:
-    - DialogueEventSO: {fileID: 11400000, guid: e0a55fb973b2c614e8464d055d2b3064, type: 2}
   - NodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
     Position: {x: 2012, y: 442}
     EventDataStringModifiers:
@@ -367,6 +375,11 @@ MonoBehaviour:
     EventDataStringModifiers: []
     ContainerDialogueEventSOs:
     - DialogueEventSO: {fileID: 11400000, guid: 527a52e980bb9cc44bfcb9eb22363000, type: 2}
+  - NodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+    Position: {x: 3044, y: -679}
+    EventDataStringModifiers: []
+    ContainerDialogueEventSOs:
+    - DialogueEventSO: {fileID: 11400000, guid: e0a55fb973b2c614e8464d055d2b3064, type: 2}
   EndData:
   - NodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
     Position: {x: 4304, y: -701}
@@ -435,22 +448,6 @@ MonoBehaviour:
     - LanguageType: 1
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
-  - NodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
-    Position: {x: 2233, y: -701}
-    ChoiceStateType:
-      Value: 1
-    Text:
-    - LanguageType: 0
-      LanguageGenericType: "\u041F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442
-        \u043F\u0440\u0438\u0437\u0440\u0430\u043A\u0430"
-    - LanguageType: 1
-      LanguageGenericType: Convey the ghost's answer
-    AudioClips:
-    - LanguageType: 0
-      LanguageGenericType: {fileID: 0}
-    - LanguageType: 1
-      LanguageGenericType: {fileID: 0}
-    EventDataStringConditions: []
   - NodeGuid: 364cf539-20b5-43bd-a84e-c13e8489b311
     Position: {x: 2756, y: -152}
     ChoiceStateType:
@@ -494,6 +491,22 @@ MonoBehaviour:
         \u043C\u043E\u0433\u0443 \u043F\u043E\u043C\u043E\u0447\u044C."
     - LanguageType: 1
       LanguageGenericType: No. I can't help you.
+    AudioClips:
+    - LanguageType: 0
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
+    Position: {x: 2308, y: -679}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 0
+      LanguageGenericType: "\u041F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442
+        \u043F\u0440\u0438\u0437\u0440\u0430\u043A\u0430"
+    - LanguageType: 1
+      LanguageGenericType: Convey the ghost's answer
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}

@@ -45,6 +45,10 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     TargetPortGuid: Input
+  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
+    BasePortGuid: False
+    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    TargetPortGuid: Input
   - BaseNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
     BasePortGuid: Output
     TargetNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
@@ -57,25 +61,33 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     TargetPortGuid: Input
-  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+  - BaseNodeGuid: 1b303c50-5d34-4312-b7a3-f4ca6eb52782
     BasePortGuid: Output
-    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetNodeGuid: e7e08a32-56a0-4703-a41a-b2dee37fffd3
+    TargetPortGuid: Input
+  - BaseNodeGuid: 34f2b2af-9a70-4682-9fdc-e6904c3eea96
+    BasePortGuid: Output
+    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    TargetPortGuid: Input
+  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
+    BasePortGuid: Output
+    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     TargetPortGuid: Input
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
     TargetNodeGuid: 23821228-09df-44bc-be01-104735c8af1b
     TargetPortGuid: Input
-  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    BasePortGuid: Output
-    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
-    TargetPortGuid: Input
   - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
-  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    BasePortGuid: Continue
-    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    BasePortGuid: Output
+    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    BasePortGuid: Output
+    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
   - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
     BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
@@ -85,25 +97,17 @@ MonoBehaviour:
     BasePortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
     TargetNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
     TargetPortGuid: Input
-  - BaseNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    BasePortGuid: Continue
-    TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
-    TargetPortGuid: Input
   - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
     TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
     TargetPortGuid: Input
-  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    BasePortGuid: Output
-    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    TargetPortGuid: Input
-  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
-    BasePortGuid: False
-    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    TargetPortGuid: Input
   - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
     BasePortGuid: 516ae46d-d004-4db0-b2c4-39026429b390
     TargetNodeGuid: 34f2b2af-9a70-4682-9fdc-e6904c3eea96
+    TargetPortGuid: Input
+  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    BasePortGuid: 95116fd0-a7da-4516-9b5b-2c11731286ea
+    TargetNodeGuid: 1b303c50-5d34-4312-b7a3-f4ca6eb52782
     TargetPortGuid: Input
   - BaseNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     BasePortGuid: f25aaa5c-f35b-42fb-8cfd-d2a778dd8fea
@@ -113,17 +117,13 @@ MonoBehaviour:
     BasePortGuid: 8a5fcab6-8360-4c43-aaa1-c84b148f5978
     TargetNodeGuid: 1b303c50-5d34-4312-b7a3-f4ca6eb52782
     TargetPortGuid: Input
-  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    BasePortGuid: 95116fd0-a7da-4516-9b5b-2c11731286ea
-    TargetNodeGuid: 1b303c50-5d34-4312-b7a3-f4ca6eb52782
+  - BaseNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
+    BasePortGuid: Continue
+    TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     TargetPortGuid: Input
-  - BaseNodeGuid: 34f2b2af-9a70-4682-9fdc-e6904c3eea96
-    BasePortGuid: Output
-    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    TargetPortGuid: Input
-  - BaseNodeGuid: 1b303c50-5d34-4312-b7a3-f4ca6eb52782
-    BasePortGuid: Output
-    TargetNodeGuid: e7e08a32-56a0-4703-a41a-b2dee37fffd3
+  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    BasePortGuid: Continue
+    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -143,16 +143,30 @@ MonoBehaviour:
           \u0412 \u043E\u0431\u0449\u0435\u043C \u0441\u043C\u043E\u0442\u0440\u0438,
           \u043C\u043E\u0439 \u0436\u0435\u043D\u0438\u0445 \u043E\u0434\u0443\u0440\u0438
           \u0441\u0442\u0440\u0430\u043D\u043D\u044B\u0439. \u0418 \u0443 \u043D\u0435\u0433\u043E
-          \u0431\u044B\u043B\u0430 <b>\u0436\u0435\u043D\u0430</b>. \u041F\u043E\u0445\u043E\u0436\u0430\u044F
-          \u043D\u0430 \u043C\u0435\u043D\u044F \u043F\u0440\u044F\u043C \u0442\u043E\u0447\u044C
+          \u0431\u044B\u043B\u0430 <b>\u0436\u0435\u043D\u0430</b>."
+      - LanguageType: 1
+        LanguageGenericType: So, listen! Basically, look, my fiance is kind of weird.
+          And he had a <b>wife</b>.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 578716b1-4cef-4b77-aaf9-4912f64d5fb5
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041F\u043E\u0445\u043E\u0436\u0430\u044F \u043D\u0430
+          \u043C\u0435\u043D\u044F \u043F\u0440\u044F\u043C \u0442\u043E\u0447\u044C
           \u0432 \u0442\u043E\u0447\u044C! \u0420\u043E\u0441\u0442, \u0432\u0435\u0441,
           \u0433\u0440\u0443\u0434\u044C, \u0432\u043E\u043B\u043E\u0441\u044B, \u0433\u043B\u0430\u0437\u0430!
           \u0417\u0432\u0430\u043B\u0438 \u0435\u0435 \u0428\u0430\u0440\u043B\u043E\u0442\u0442\u0430
           \u0421\u0435\u0440\u043E\u0431\u043E\u0440\u043E\u0434!"
       - LanguageType: 1
-        LanguageGenericType: So, listen! Basically, look, my fiance is kind of weird.
-          And he had a <b>wife</b>. She looked exactly like me! Height, weight, chest,
-          hair, eyes! Her name was Charlotte Seroborod!
+        LanguageGenericType: She looked exactly like me! Height, weight, chest, hair,
+          eyes! Her name was Charlotte Seroborod!
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}

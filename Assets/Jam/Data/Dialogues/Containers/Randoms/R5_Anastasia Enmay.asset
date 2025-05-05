@@ -45,6 +45,10 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     TargetPortGuid: Input
+  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
+    BasePortGuid: False
+    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    TargetPortGuid: Input
   - BaseNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
     BasePortGuid: Output
     TargetNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
@@ -57,25 +61,33 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     TargetPortGuid: Input
-  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+  - BaseNodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
     BasePortGuid: Output
-    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetNodeGuid: 87fe49b9-f8c8-4da6-a968-eec5c767b631
+    TargetPortGuid: Input
+  - BaseNodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
+    BasePortGuid: Output
+    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    TargetPortGuid: Input
+  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
+    BasePortGuid: Output
+    TargetNodeGuid: 81e0e389-7af5-4d21-9225-72b0a512a45d
     TargetPortGuid: Input
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
     TargetNodeGuid: 23821228-09df-44bc-be01-104735c8af1b
     TargetPortGuid: Input
-  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    BasePortGuid: Output
-    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
-    TargetPortGuid: Input
   - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
-  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    BasePortGuid: Continue
-    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    BasePortGuid: Output
+    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    BasePortGuid: Output
+    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
   - BaseNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     BasePortGuid: Continue
@@ -93,18 +105,6 @@ MonoBehaviour:
     BasePortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
     TargetNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
     TargetPortGuid: Input
-  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    BasePortGuid: Output
-    TargetNodeGuid: 81e0e389-7af5-4d21-9225-72b0a512a45d
-    TargetPortGuid: Input
-  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
-    BasePortGuid: False
-    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    TargetPortGuid: Input
-  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    BasePortGuid: 45b8b433-ba16-44c0-b7d1-bc8f1e18078f
-    TargetNodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
-    TargetPortGuid: Input
   - BaseNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     BasePortGuid: 02270e31-01aa-4865-ba14-35e3f8c2a0a4
     TargetNodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
@@ -114,16 +114,16 @@ MonoBehaviour:
     TargetNodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
     TargetPortGuid: Input
   - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    BasePortGuid: 45b8b433-ba16-44c0-b7d1-bc8f1e18078f
+    TargetNodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
+    TargetPortGuid: Input
+  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
     BasePortGuid: ba93c4e0-95cf-4005-832c-84ce4ece908d
     TargetNodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
     TargetPortGuid: Input
-  - BaseNodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
-    BasePortGuid: Output
-    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    TargetPortGuid: Input
-  - BaseNodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
-    BasePortGuid: Output
-    TargetNodeGuid: 87fe49b9-f8c8-4da6-a968-eec5c767b631
+  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    BasePortGuid: Continue
+    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -520,23 +520,6 @@ MonoBehaviour:
     - LanguageType: 1
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
-  - NodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
-    Position: {x: 3304, y: -210}
-    ChoiceStateType:
-      Value: 1
-    Text:
-    - LanguageType: 0
-      LanguageGenericType: "\u042F \u043D\u0435 \u0441\u043C\u043E\u0433\u0443 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C
-        \u044D\u0442\u0443 \u0437\u0430\u0434\u0430\u0447\u0443 (\u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
-        \u043E\u0442 \u0440\u0430\u0431\u043E\u0442\u044B)"
-    - LanguageType: 1
-      LanguageGenericType: "I can\u2019t do this (refuse the work)"
-    AudioClips:
-    - LanguageType: 0
-      LanguageGenericType: {fileID: 0}
-    - LanguageType: 1
-      LanguageGenericType: {fileID: 0}
-    EventDataStringConditions: []
   - NodeGuid: 3a0b4869-7acb-4cfd-b721-944e60a9a15c
     Position: {x: 3369, y: -15}
     ChoiceStateType:
@@ -547,6 +530,23 @@ MonoBehaviour:
         \u0440\u0430\u0431\u043E\u0442\u0443)"
     - LanguageType: 1
       LanguageGenericType: (continue working)
+    AudioClips:
+    - LanguageType: 0
+      LanguageGenericType: {fileID: 0}
+    - LanguageType: 1
+      LanguageGenericType: {fileID: 0}
+    EventDataStringConditions: []
+  - NodeGuid: 724f7095-5f21-4a15-8d36-e05005fe7b88
+    Position: {x: 3284, y: -210}
+    ChoiceStateType:
+      Value: 1
+    Text:
+    - LanguageType: 0
+      LanguageGenericType: "\u042F \u043D\u0435 \u0441\u043C\u043E\u0433\u0443 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C
+        \u044D\u0442\u0443 \u0437\u0430\u0434\u0430\u0447\u0443 (\u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
+        \u043E\u0442 \u0440\u0430\u0431\u043E\u0442\u044B)"
+    - LanguageType: 1
+      LanguageGenericType: "I can\u2019t do this (refuse the work)"
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}

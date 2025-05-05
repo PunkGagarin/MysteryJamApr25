@@ -230,7 +230,7 @@ MonoBehaviour:
       OutputGuid: d84d4321-c59e-497a-b492-49f3e29c2b7a
     SkipContinue: 0
   - NodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    Position: {x: 1084, y: 158}
+    Position: {x: 1083, y: 160}
     DialogueDataNames: []
     DialogueDataTexts:
     - ID:
@@ -243,13 +243,10 @@ MonoBehaviour:
           \u0433\u043E\u0432\u043E\u0440\u044F\u0449\u0430\u044F \u0441 \u0434\u0443\u0445\u0430\u043C\u0438!
           \u041C\u043E\u0439 \u043D\u0430\u0447\u0430\u043B\u044C\u043D\u0438\u043A
           \u043F\u043E\u0447\u0438\u043B \u043E\u0442 \u043F\u0435\u0440\u0435\u0440\u0430\u0431\u043E\u0442\u043A\u0438
-          \u0434\u0430\u0432\u0435\u0447\u0435\u2026 \u0411\u044B\u043B\u043E \u0435\u043C\u0443
-          <b>89 \u043B\u0435\u0442</b>, \u0431\u044B\u043B \u043E\u043D <b>\u0434\u0432\u043E\u0440\u0444\u043E\u043C</b>,
-          \u0431\u044B\u043B \u043E\u043D \u043F\u0438\u0441\u0430\u0442\u0435\u043B\u0435\u043C."
+          \u0434\u0430\u0432\u0435\u0447\u0435\u2026"
       - LanguageType: 1
         LanguageGenericType: Hello, spirit-talker! My boss passed away from overwork
-          the other day... He was <b>89 years old</b>, he was a <b>dwarf</b>, he
-          was a writer.
+          the other day...
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -257,6 +254,23 @@ MonoBehaviour:
         LanguageGenericType: {fileID: 0}
     - ID:
         Value: 1
+      GuidID:
+        Value: 2d09db8d-28b9-4b47-a4e4-8c26ebd6a8f1
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0411\u044B\u043B\u043E \u0435\u043C\u0443 <b>89 \u043B\u0435\u0442</b>,
+          \u0431\u044B\u043B \u043E\u043D <b>\u0434\u0432\u043E\u0440\u0444\u043E\u043C</b>,
+          \u0431\u044B\u043B \u043E\u043D \u043F\u0438\u0441\u0430\u0442\u0435\u043B\u0435\u043C."
+      - LanguageType: 1
+        LanguageGenericType: He was <b>89 years old</b>, he was a <b>dwarf</b>, he
+          was a writer.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
       GuidID:
         Value: aa78f233-28a4-43c6-b9a9-23db295f69b6
       Text:
