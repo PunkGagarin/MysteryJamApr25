@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -17,6 +18,7 @@ namespace Jam.Scripts.Ritual.Desk
         [SerializeField] private Light2D _highLight;
 
         [Inject] private ReagentAnimationController _animationController;
+        [Inject] private AudioService _audioService;
 
         private ReagentDefinition _reagentDefinition;
         private ReagentRoom _startingReagentRoom;
@@ -24,6 +26,8 @@ namespace Jam.Scripts.Ritual.Desk
         public event Action OnDiskChanged;
         public event Action<Disk> DiskClicked;
         public bool IsLocked { get; set; }
+        public ReagentType Type => _diskType;
+        
         public ReagentDefinition ReagentInside => _reagentDefinition;
 
         public SpriteRenderer ReagentVisual => _reagentVisual;
@@ -32,6 +36,8 @@ namespace Jam.Scripts.Ritual.Desk
         {
             if (_reagentDefinition != null || _diskType != reagentDefinition.ReagentType)
                 return false;
+            
+            _audioService.PlaySound(Sounds.placingDiskItem);
             
             _reagentDefinition = reagentDefinition;
             _startingReagentRoom = startingReagentRoom;
@@ -79,6 +85,18 @@ namespace Jam.Scripts.Ritual.Desk
 
         public void HighLight(Action onHighLightEnds, float lightDuration)
         {
+            switch (_diskType)
+            {
+                case ReagentType.Age:
+                    _audioService.PlaySound(Sounds.ageRitualItemHighlight);
+                    break;
+                case ReagentType.Sex:
+                    _audioService.PlaySound(Sounds.sexRitualItemHighlight);
+                    break;
+                default:
+                    _audioService.PlaySound(Sounds.raceRitualItemHighlight);
+                    break;
+            }
             ReagentVisual.transform.DOShakePosition(lightDuration, .15f);
             DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 20f, lightDuration / 2f)
                 .OnComplete(() => DOTween.To(() => _highLight.intensity, x => _highLight.intensity = x, 0, lightDuration / 2f)

@@ -89,6 +89,22 @@ MonoBehaviour:
     _clips:
     - _volume: 0.236
       _clip: {fileID: 8300000, guid: 24a0ed76cad7a4ba684a62e9cfffea3f, type: 3}
+  - _name: sexRitualItemHighlight
+    _clips:
+    - _volume: 0.5
+      _clip: {fileID: 8300000, guid: 8dc37bf212fb94961a2b1f21699fa2f7, type: 3}
+  - _name: raceRitualItemHighlight
+    _clips:
+    - _volume: 0.5
+      _clip: {fileID: 8300000, guid: d7d23458132e64784ba2f436628772b2, type: 3}
+  - _name: ageRitualItemHighlight
+    _clips:
+    - _volume: 0.5
+      _clip: {fileID: 8300000, guid: 6cc3d407b9b6646dcaf5e25d2791ad96, type: 3}
+  - _name: placingDiskItem
+    _clips:
+    - _volume: 1
+      _clip: {fileID: 8300000, guid: 1da0083ae4e7b41eea4ee1c40872d0c7, type: 3}
   <Music>k__BackingField:
   - _name: mainMenuBgm
     _clips:

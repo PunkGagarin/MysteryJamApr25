@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Jam.Scripts.Audio.Domain;
+using Jam.Scripts.Ritual.Inventory.Reagents;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 namespace Jam.Scripts.Ritual.Desk
@@ -9,6 +12,7 @@ namespace Jam.Scripts.Ritual.Desk
     public class Memory : MonoBehaviour
     {
         [SerializeField] private List<Disk> _disks;
+        [Inject] private AudioService _audioService;
         
         private MemoryConfig _memoryConfig;
         private List<int> _sequence = new List<int>();
@@ -73,6 +77,19 @@ namespace Jam.Scripts.Ritual.Desk
             if (!_canInput) 
                 return;
 
+            switch (disk.Type)
+            {
+                case ReagentType.Age:
+                    _audioService.PlaySound(Sounds.ageRitualItemHighlight);
+                    break;
+                case ReagentType.Sex:
+                    _audioService.PlaySound(Sounds.sexRitualItemHighlight);
+                    break;
+                default:
+                    _audioService.PlaySound(Sounds.raceRitualItemHighlight);
+                    break;
+            }
+            
             disk.ReagentVisual.transform.DOShakePosition(.2f, .5f);
             
             if (_sequence[_inputIndex] == _disks.IndexOf(disk))

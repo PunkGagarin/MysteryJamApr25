@@ -19,6 +19,10 @@ namespace Jam.Scripts.Audio.Domain
         error,
         ritualFailed,
         ritualSuccess,
-        cameraMove
+        cameraMove,
+        raceRitualItemHighlight,
+        sexRitualItemHighlight,
+        ageRitualItemHighlight,
+        placingDiskItem
     }
 }
