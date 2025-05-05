@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: _reagentDefinition
       value: 
       objectReference: {fileID: 11400000, guid: d85ddaedadbee5f4cabe695ae9bd9054, type: 2}
+    - target: {fileID: 5524004520609667105, guid: 46fd04237cad3bb43bca3797f18b7bf5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4978235
+      objectReference: {fileID: 0}
     - target: {fileID: 7541919408270315950, guid: 46fd04237cad3bb43bca3797f18b7bf5, type: 3}
       propertyPath: m_Name
       value: LiquidSlot_3_2 Variant

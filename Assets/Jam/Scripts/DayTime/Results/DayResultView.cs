@@ -4,9 +4,7 @@ using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Dialogue.Gameplay;
 using Jam.Scripts.End;
 using Jam.Scripts.GameplayData.Player;
-using Jam.Scripts.SceneManagement;
 using Jam.Scripts.Shop;
-using Jam.Scripts.Utils.Coroutine;
 using Jam.Scripts.Utils.UI;
 using TMPro;
 using UnityEngine;
@@ -54,6 +52,16 @@ namespace Jam.Scripts.DayTime.Results
                 ShowResult();
         }
 
+        public override void Close()
+        {
+            base.Close();
+            if (_characterResultWriter.IsLastDay)
+            {
+                _endScreen.gameObject.SetActive(true);
+                _endScreen.Show();
+            }
+        }
+
         public void Initialize(CharacterResultWriter characterResultWriter,
             PlayerStatsPresenter playerStatsPresenter,
             ShopSystem shopSystem, EndScreen endScreen)
@@ -95,11 +103,6 @@ namespace Jam.Scripts.DayTime.Results
 
             if (_characterResultWriter.IsLastDay)
             {
-                SetCloseEvent(() =>
-                {
-                    _endScreen.gameObject.SetActive(true);
-                    _endScreen.Show();
-                });
                 _nextDayButtonText.SetKey(TO_MAIN_KEY);
             }
         }

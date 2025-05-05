@@ -43,6 +43,7 @@ namespace Jam.Scripts.DayTime
         private int _currentDay = 0;
         private int _currentClient = 0;
         private bool _canCallNextClient;
+        private bool _lastRitual;
 
         private bool IsLastClient =>
             _currentClient == _dayConfig.DayNpcs[_currentDay].Npcs.Count;
@@ -53,8 +54,11 @@ namespace Jam.Scripts.DayTime
         public bool IsFirstDay =>
             _currentDay == 1;
 
-        public void CloseCurtains() => _curtains.CloseCurtains();
-
+        public void CloseCurtains()
+        {
+            _lastRitual = true;
+            _curtains.CloseCurtains();
+        }
         private void CallNextClient()
         {
             if (!_canCallNextClient)
@@ -104,11 +108,21 @@ namespace Jam.Scripts.DayTime
                 _memory.SetMemoryConfig(memoryConfig);
         }
 
-        private void OnCharacterLeave() =>
+        private void OnCharacterLeave()
+        {
+            if (_lastRitual)
+            {
+                EndDay();
+                return;
+            }
             _curtains.CloseCurtains();
+        }
 
         private void ReactOnClosedCurtains()
         {
+            if (_lastRitual)
+                return;
+            
             if (IsLastClient)
                 EndDay();
             else
