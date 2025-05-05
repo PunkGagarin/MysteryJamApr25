@@ -1595,6 +1595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb8771eec844cbab756b57f490d2430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1114972078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2531655537673388363, guid: 42f6cbe3b6b3a466ba795c03fdde28b7, type: 3}
+  m_PrefabInstance: {fileID: 6868212194809456806}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1153995639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3418,10 @@ PrefabInstance:
       propertyPath: _targets.Array.data[14]._target
       value: 
       objectReference: {fileID: 717719758}
+    - target: {fileID: 3803237439573944519, guid: 27c6ab832f19744d49c4f8dc803f8835, type: 3}
+      propertyPath: _targets.Array.data[15]._target
+      value: 
+      objectReference: {fileID: 1114972078}
     - target: {fileID: 5603318524221096322, guid: 27c6ab832f19744d49c4f8dc803f8835, type: 3}
       propertyPath: m_Name
       value: PointerFirefly

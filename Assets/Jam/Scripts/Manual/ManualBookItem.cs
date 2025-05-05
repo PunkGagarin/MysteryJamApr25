@@ -57,8 +57,15 @@ namespace Jam.Scripts.Manual
             _audioService.PlaySound(Sounds.manualOpening.ToString());
             var manualPopup = _popupManager.OpenPopup<ManualPopup>(closeEvent: () =>
             {
-                if (_pointerFirefly.CurrentTarget == (int)TargetType.Manual)
-                    _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
+                switch (_pointerFirefly.CurrentTarget)
+                {
+                    case (int)TargetType.Manual:
+                        _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
+                        break;
+                    case (int)TargetType.Manual2:
+                        _pointerFirefly.ChangeTargetTo(TargetType.Finish);
+                        break;
+                }
             });
             var unlockedTools = _inventorySystem.GetUnlockedTools();
             bool isMirrorUnlocked = unlockedTools.Any(tool => tool.Id == 0);
@@ -78,10 +85,17 @@ namespace Jam.Scripts.Manual
 
         public void UpdatePage(int pageIndex, int pageState)
         {
-            if (pageIndex == 4) 
-                _crookedWandererUnlocks.Add(pageState);
-            if (pageIndex == 5)
-                _artUnlocked = true;
+            switch (pageIndex)
+            {
+                case 4:
+                    _crookedWandererUnlocks.Add(pageState);
+                    break;
+                case 5:
+                    _pointerFirefly.ChangeTargetTo(TargetType.Manual2);
+                    _artUnlocked = true;
+                    break;
+            }
+
             _audioService.PlaySound(Sounds.foundConflict);
         }
     }

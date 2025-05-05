@@ -129,7 +129,8 @@ public enum TargetType
     Table = 12,
     DialogueBubble4 = 13,
     Rope2 = 14,
-    Finish = 15,
+    Manual2 = 15,
+    Finish = 16,
 }
 
 [Serializable]

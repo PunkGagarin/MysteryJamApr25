@@ -40,7 +40,7 @@ namespace Jam.Scripts.Npc
 
         private void CharacterArrived()
         {
-            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
+            _pointerFirefly.HideTillNextTarget();
             _canInteract = true;
         }
 

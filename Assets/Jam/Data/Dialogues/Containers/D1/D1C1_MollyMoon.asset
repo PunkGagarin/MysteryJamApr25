@@ -113,6 +113,14 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 72fa6ead-49bf-46aa-8616-1877a91afad4
     TargetPortGuid: Input
+  - BaseNodeGuid: 484f85f0-0883-461e-a812-4beaed7309ca
+    BasePortGuid: Output
+    TargetNodeGuid: 88ab9fbf-d904-49ed-974f-4f484d455bfb
+    TargetPortGuid: Input
+  - BaseNodeGuid: 88ab9fbf-d904-49ed-974f-4f484d455bfb
+    BasePortGuid: Output
+    TargetNodeGuid: b9ca2098-2e4f-46c3-8833-6aa478917e38
+    TargetPortGuid: Input
   - BaseNodeGuid: 0c423495-06df-4b0d-9e36-022b68b9bb1a
     BasePortGuid: Continue
     TargetNodeGuid: c75c7ff2-c162-478b-b6b5-afdcf295c909
@@ -168,14 +176,6 @@ MonoBehaviour:
   - BaseNodeGuid: c75c7ff2-c162-478b-b6b5-afdcf295c909
     BasePortGuid: Continue
     TargetNodeGuid: 484f85f0-0883-461e-a812-4beaed7309ca
-    TargetPortGuid: Input
-  - BaseNodeGuid: 484f85f0-0883-461e-a812-4beaed7309ca
-    BasePortGuid: Output
-    TargetNodeGuid: 88ab9fbf-d904-49ed-974f-4f484d455bfb
-    TargetPortGuid: Input
-  - BaseNodeGuid: 88ab9fbf-d904-49ed-974f-4f484d455bfb
-    BasePortGuid: Output
-    TargetNodeGuid: b9ca2098-2e4f-46c3-8833-6aa478917e38
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -296,12 +296,12 @@ MonoBehaviour:
       Text:
       - LanguageType: 0
         LanguageGenericType: "\u041E\u0441\u043C\u043E\u0442\u0440\u0438\u0441\u044C.
-          \u0421\u043B\u0435\u0432\u0430 \u043E\u0442 \u0442\u0435\u0431\u044F \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u044B.
           \u0421\u043F\u0440\u0430\u0432\u0430 \u043E\u0442 \u0442\u0435\u0431\u044F
-          \u0437\u0430\u043F\u0438\u0441\u043D\u0430\u044F \u043A\u043D\u0438\u0436\u043A\u0430."
+          \u0437\u0430\u043F\u0438\u0441\u043D\u0430\u044F \u043A\u043D\u0438\u0436\u043A\u0430.
+          \u0421\u043B\u0435\u0432\u0430 \u043E\u0442 \u0442\u0435\u0431\u044F \u0438\u043D\u0433\u0440\u0435\u0434\u0438\u0435\u043D\u0442\u044B."
       - LanguageType: 1
-        LanguageGenericType: Look around. To your left are the ingredients. To your
-          right is the notebook.
+        LanguageGenericType: Look around. To your right is the notebook. To your
+          left are the ingredients.
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
