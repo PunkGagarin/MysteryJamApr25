@@ -1,6 +1,7 @@
 ﻿using Jam.Scripts.Camera;
 using Jam.Scripts.Npc;
 using Jam.Scripts.Ritual;
+using Jam.Scripts.VFX;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,7 @@ namespace Jam.Scripts.Tutorial
         [Inject] private CameraMover _cameraMover;
         [Inject] private Character _characterController;
         [Inject] private RitualController _ritualController;
+        [Inject] private PointerFirefly _pointerFirefly;
         public int TutorialStep { get; set; } = 0;
 
         private bool _seenRight, _seenLeft;
@@ -21,9 +23,14 @@ namespace Jam.Scripts.Tutorial
             {
                 case 0:
                     _cameraMover.UnlockCamera();
+                    _pointerFirefly.ChangeTargetTo(TargetType.RightSideScreen);
                     break;
                 case 1:
                     _ritualController.StartMemoryGame();
+                    _pointerFirefly.HideTillNextTarget();
+                    break;
+                case 3:
+                    _pointerFirefly.ChangeTargetTo(TargetType.Table);   
                     break;
                 default:
                     Debug.LogError($"не верный туториальный ивент {intValue}");
@@ -46,12 +53,14 @@ namespace Jam.Scripts.Tutorial
         {
             _seenRight = true;
             _cameraMover.OnMoveRight -= SeenRight;
+            _pointerFirefly.ChangeTargetTo(TargetType.LeftSideScreen);
         }
 
         private void SeenLeft()
         {
             _seenLeft = true;
             _cameraMover.OnMoveLeft -= SeenLeft;
+            _pointerFirefly.ChangeTargetTo(TargetType.DialogueBubble2);
         }
 
         private void CheckReagents()
@@ -76,6 +85,7 @@ namespace Jam.Scripts.Tutorial
         private void TutorialRitual()
         {
             _ritualController.TutorialRitual -= TutorialRitual;
+            _pointerFirefly.ChangeTargetTo(TargetType.DialogueBubble4);
             _characterController.Talk();
         }
 

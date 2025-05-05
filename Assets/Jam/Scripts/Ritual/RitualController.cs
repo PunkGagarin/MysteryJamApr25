@@ -70,7 +70,7 @@ namespace Jam.Scripts.Ritual
                     _pointerFirefly.ChangeTargetTo(TargetType.ThirdReagent);
                     break;
                 default:
-                    _pointerFirefly.ChangeTargetTo(TargetType.Table);
+                    _pointerFirefly.ChangeTargetTo(TargetType.DialogueBubble3);
                     break;
             }
 
@@ -98,13 +98,11 @@ namespace Jam.Scripts.Ritual
 
             UpdateButtons();
             _desk.ClearTable();
-            if (_pointerFirefly.CurrentTarget == (int) TargetType.Table)
-                _pointerFirefly.ChangeTargetTo(TargetType.Finish);
         }
         
         private void StartRitual()
         {
-            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
+            _pointerFirefly.HideTillNextTarget();
             _audioService.PlaySound(Sounds.buttonClick.ToString());
             Attempt++;
             RitualFailedByExcludedReagents = false;

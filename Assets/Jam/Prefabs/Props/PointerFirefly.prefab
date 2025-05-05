@@ -251,19 +251,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targets:
-  - type: 0
-    target: {fileID: 0}
-  - type: 1
-    target: {fileID: 0}
-  - type: 2
-    target: {fileID: 0}
-  - type: 3
-    target: {fileID: 0}
-  - type: 4
-    target: {fileID: 0}
-  - type: 5
-    target: {fileID: 0}
-  _radius: 1
-  _movingArounSpeed: 2.2
-  _movingToTargetSpeed: 0.8
+  - _type: 0
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 1
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 2
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 3
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 4
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 5
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 6
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 7
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 8
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 9
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 10
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 11
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 12
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 13
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 14
+    _target: {fileID: 0}
+    _radius: 1
+  - _type: 15
+    _target: {fileID: 0}
+    _radius: 0
+  _movingAroundSpeed: 1
+  _movingToTargetSpeed: 8
   _noiseAmount: 0.4
+  circleUpdateInterval: 0.02

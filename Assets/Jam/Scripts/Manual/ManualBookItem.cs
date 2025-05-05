@@ -57,7 +57,7 @@ namespace Jam.Scripts.Manual
             _audioService.PlaySound(Sounds.manualOpening.ToString());
             var manualPopup = _popupManager.OpenPopup<ManualPopup>(closeEvent: () =>
             {
-                if (_pointerFirefly.CurrentTarget == (int)TargetType.Book)
+                if (_pointerFirefly.CurrentTarget == (int)TargetType.Manual)
                     _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
             });
             var unlockedTools = _inventorySystem.GetUnlockedTools();

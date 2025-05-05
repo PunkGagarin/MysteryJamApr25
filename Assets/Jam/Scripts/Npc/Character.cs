@@ -3,6 +3,7 @@ using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Npc.Data;
 using Jam.Scripts.Quests;
 using Jam.Scripts.Ritual;
+using Jam.Scripts.VFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
@@ -17,6 +18,7 @@ namespace Jam.Scripts.Npc
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private AudioService _audioService;
         [Inject] private RitualController _ritualController;
+        [Inject] private PointerFirefly _pointerFirefly;
 
         private NPCDefinition _definition;
         private bool _canInteract;
@@ -36,11 +38,17 @@ namespace Jam.Scripts.Npc
         public void Talk() => 
             _talk.Talk(_definition.Dialogue, CharacterLeave);
 
-        private void CharacterArrived() => 
+        private void CharacterArrived()
+        {
+            _pointerFirefly.ChangeTargetTo(TargetType.Finish);
             _canInteract = true;
+        }
 
-        private void CharacterLeave() => 
+        private void CharacterLeave()
+        {
+            _pointerFirefly.ChangeTargetTo(TargetType.Rope2);
             OnCharacterLeave?.Invoke();
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -49,6 +57,7 @@ namespace Jam.Scripts.Npc
             
             if (_canInteract && !_talk.IsDialogueActive)
             {
+                _pointerFirefly.ChangeTargetTo(TargetType.DialogueBubble1);
                 _canInteract = false;
                 _audioService.PlaySound(Sounds.buttonClick.ToString());
                 Talk();

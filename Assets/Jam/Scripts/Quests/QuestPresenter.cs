@@ -27,7 +27,7 @@ namespace Jam.Scripts.Quests
             _questModel.AddQuest(quest);
             Debug.Log($"added quest {quest.Id}");
             if (!_questModel.HaveAnyCompletedQuest())
-                _pointerFirefly.ChangeTargetTo(TargetType.Book);
+                _pointerFirefly.ChangeTargetTo(TargetType.Manual);
             OnQuestAdded?.Invoke(quest);
         }
 
@@ -39,8 +39,8 @@ namespace Jam.Scripts.Quests
             _questModel.TryRemoveQuest();
             _pointerFirefly.ChangeTargetTo(
                 _questModel.HaveAnyCompletedQuest() 
-                    ? TargetType.Book
-                    : TargetType.Rope
+                    ? TargetType.Manual
+                    : TargetType.Rope1
                 );
         }
 
