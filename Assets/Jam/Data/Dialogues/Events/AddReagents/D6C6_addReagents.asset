@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: D6C6_addReagents
   m_EditorClassIdentifier: 
   _reagentsToAdd:
-  - {fileID: 11400000, guid: 279c2fae1e848fe4f9de00de32a63952, type: 2}
+  - {fileID: 11400000, guid: 0e14fafdb5e2a2c4fbfa97816e07b814, type: 2}

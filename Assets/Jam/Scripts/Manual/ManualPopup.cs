@@ -30,6 +30,8 @@ namespace Jam.Scripts.Manual
 
         private List<Page> _pages;
         private int _currentPageIndex = 0;
+        private CrookedWandererPage _crookedWandererPage;
+        private ArtPage _artPage;
 
         private void Awake()
         {
@@ -62,8 +64,13 @@ namespace Jam.Scripts.Manual
             base.Close();
         }
 
-        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions) => 
+        public void Initialize(HashSet<int> unlockedReagents, HashSet<ReagentExclusion> reagentExclusions, List<int> crookedWandererUnlocks, bool artUnlocked)
+        {
             _pages.ForEach(page => page.Initialize(unlockedReagents, reagentExclusions));
+            if (crookedWandererUnlocks.Count > 0)
+                _crookedWandererPage.SetUnlocks(crookedWandererUnlocks);
+            _artPage.InitPage(artUnlocked);
+        }
 
         private void InitPages()
         {
@@ -71,6 +78,12 @@ namespace Jam.Scripts.Manual
             for (int i = 0; i < _pagesRepository.Definitions.Count; i++)
             {
                 Page pageObject = _manualPagesFactory.Create(_pagesRepository.Definitions[i], i % 2 == 0 ? _leftPageHolder : _rightPageHolder);
+                
+                if (pageObject.TryGetComponent(out CrookedWandererPage crookedWandererPage))
+                    _crookedWandererPage = crookedWandererPage;
+                if (pageObject.TryGetComponent(out ArtPage artPage))
+                    _artPage = artPage;
+                
                 pageObject.gameObject.SetActive(false);
                 _pages.Add(pageObject);
             }

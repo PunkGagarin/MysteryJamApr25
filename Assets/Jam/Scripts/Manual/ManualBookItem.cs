@@ -5,7 +5,6 @@ using Jam.Scripts.Ritual.Inventory;
 using Jam.Scripts.Utils.UI;
 using Jam.Scripts.VFX;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.EventSystems;
 using Zenject;
 
@@ -20,6 +19,8 @@ namespace Jam.Scripts.Manual
 
         private HashSet<ReagentExclusion> _reagentExclusions = new();
         private HashSet<int> _unlockedReagents = new();
+        private List<int> _crookedWandererUnlocks = new();
+        private bool _artUnlocked = false;
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -57,7 +58,7 @@ namespace Jam.Scripts.Manual
                 if (_pointerFirefly.CurrentTarget == (int)TargetType.Book)
                     _pointerFirefly.ChangeTargetTo(TargetType.FirstReagent);
             });
-            manualPopup.Initialize(_unlockedReagents, _reagentExclusions);
+            manualPopup.Initialize(_unlockedReagents, _reagentExclusions, _crookedWandererUnlocks, _artUnlocked);
         }
 
         private void Awake()
@@ -72,7 +73,11 @@ namespace Jam.Scripts.Manual
 
         public void UpdatePage(int pageIndex, int pageState)
         {
-            //TODO: открытие страниц
+            if (pageIndex == 4) 
+                _crookedWandererUnlocks.Add(pageState);
+            if (pageIndex == 5)
+                _artUnlocked = true;
+            _audioService.PlaySound(Sounds.foundConflict);
         }
     }
 }

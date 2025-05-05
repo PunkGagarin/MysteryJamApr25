@@ -61,6 +61,12 @@
   <text key="PAGE_3_DESC">Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way to reach someone who once meant so much to you. Find them.</text>
   <text key="PAGE_4_TITLE">The Crooked Wanderer</text>
   <text key="PAGE_4_DESC">He had a bright smile. He loved toast. He always helped those around him. He disappeared without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.</text>
-  <text key="PAGE_5_AGE">Age:</text>
-  <text key="PAGE_5_RACE">Race:</text>
+  <text key="PAGE_4_AGE">Age:</text>
+  <text key="PAGE_4_RACE">Race:</text> 
+  <text key="PAGE_4_YOUNG">Young</text>
+  <text key="PAGE_4_ADULT">Adult</text>
+  <text key="PAGE_4_OLD">Old</text>
+  <text key="PAGE_4_ELF">Elf</text>
+  <text key="PAGE_4_HUMAN">Human</text>
+  <text key="PAGE_4_DWARF">Dwarf</text>
 </Language>

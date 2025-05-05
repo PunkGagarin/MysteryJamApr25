@@ -7,9 +7,7 @@ namespace Jam.Scripts.Ritual.Tools
 {
     public class MagnifierRitualTool : RitualTool, IPointerClickHandler
     {
-        [SerializeField] private SpriteRenderer _checkStateImage;
-        [SerializeField] private Color _foundExclusionColor;
-        [SerializeField] private Color _clearColor;
+        [SerializeField] private SpriteRenderer _rightStateVisual;
         
         [Inject] private RitualController _ritualController;
 
@@ -21,11 +19,17 @@ namespace Jam.Scripts.Ritual.Tools
             Charges--;
             ShowUpdateCharges();
 
-            Color color = _ritualController.CheckForExcludedReagents() ? _foundExclusionColor : _clearColor;
-            Color transparentColor = color;
-            transparentColor.a = 0;
-            _checkStateImage.color = transparentColor;
-            _checkStateImage.DOColor(color, 1f).SetLoops(1, LoopType.Yoyo);
+            bool foundExcluded = _ritualController.CheckForExcludedReagents();
+
+            BlinkVisual(foundExcluded ? Visual : _rightStateVisual);
+        }
+
+        private void BlinkVisual(SpriteRenderer visual)
+        {
+            visual.DOColor(Color.white, 0.5f)
+                .SetLoops(6, LoopType.Yoyo)
+                .SetEase(Ease.Linear)
+                .OnComplete(() => Visual.color = Color.clear);
         }
 
         
