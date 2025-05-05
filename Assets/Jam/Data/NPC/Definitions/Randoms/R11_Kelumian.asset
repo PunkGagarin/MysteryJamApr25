@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6521bb0669d46a399b01e9cb9cd38f7, type: 3}
   m_Name: R11_Kelumian
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: '-'
+  <Name>k__BackingField: Kelumian
   <LocalizeId>k__BackingField: 
   <Id>k__BackingField: 1011
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 0a2ef1f55cbf7c144b6b7cb95584b596, type: 2}
