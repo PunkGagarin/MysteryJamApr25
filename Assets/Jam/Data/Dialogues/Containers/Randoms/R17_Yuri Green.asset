@@ -163,11 +163,10 @@ MonoBehaviour:
         Value: 5a93e724-b467-44fa-ab0f-fbdb5948c53d
       Text:
       - LanguageType: 0
-        LanguageGenericType: "\u041E, \u0445\u043E\u0440\u043E\u0448\u043E! \u0422\u0435\u043F\u0435\u0440\u044C
-          \u043F\u043E\u043D\u044F\u0442\u043D\u043E, \u043A\u0430\u043A \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u0442\u044C
-          \u043A\u043D\u0438\u0433\u0443!"
+        LanguageGenericType: "\u2026\u041C\u043D\u0435 \u043D\u0430\u0434\u043E \u043A\u043E\u0435-\u0447\u0442\u043E
+          \u0441\u0434\u0435\u043B\u0430\u0442\u044C. \u041F\u0440\u043E\u0449\u0430\u0439\u0442\u0435."
       - LanguageType: 1
-        LanguageGenericType: Oh, good! Now it's clear how to finish the book!
+        LanguageGenericType: "\u2026I have something I need to do. Goodbye."
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}

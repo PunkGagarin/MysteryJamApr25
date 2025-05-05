@@ -85,14 +85,6 @@ MonoBehaviour:
     BasePortGuid: Continue
     TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     TargetPortGuid: Input
-  - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
-    TargetNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
-    TargetPortGuid: Input
-  - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    BasePortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
-    TargetNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
-    TargetPortGuid: Input
   - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
     BasePortGuid: Continue
     TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
@@ -108,6 +100,14 @@ MonoBehaviour:
   - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
     TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
+    TargetPortGuid: Input
+  - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
+    TargetNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
+    TargetPortGuid: Input
+  - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    BasePortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
+    TargetNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -126,16 +126,43 @@ MonoBehaviour:
         LanguageGenericType: "\u0427\u0442\u043E?.. \u042D\u0442\u043E \u0437\u043D\u0430\u0447\u0438\u0442\u2026 
           \u0447\u0442\u043E \u043E\u043D \u043F\u0440\u0435\u0434\u0430\u0442\u0435\u043B\u044C.
           \u0423\u0431\u0438\u0442\u044C \u0434\u0440\u0443\u0433\u043E\u0433\u043E
-          \u044D\u043B\u044C\u0444\u0430\u2026 \u043D\u0430 \u043F\u043E\u043B\u0435
-          \u0431\u043E\u044F\u2026 \u042F \u043D\u0438\u043A\u043E\u0433\u0434\u0430
-          \u044D\u0442\u043E\u0433\u043E \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u0443.
-          \u042F \u043E\u0442\u043E\u043C\u0449\u0443. \u042F \u0438\u0441\u043A\u0443\u043F\u0430\u044E\u0441\u044C
-          \u0432 \u0435\u0433\u043E \u043A\u0440\u043E\u0432\u0438. \u041F\u043E\u043C\u044F\u043D\u0438
-          \u043C\u043E\u0435 \u0441\u043B\u043E\u0432\u043E."
+          \u044D\u043B\u044C\u0444\u0430\u2026 "
       - LanguageType: 1
-        LanguageGenericType: What?.. That means... that he is a traitor. To kill
-          another elf... on the battlefield... I will never forget this. I will have
-          my revenge. I will bathe in his blood. Mark my words.
+        LanguageGenericType: 'What?.. That means... that he is a traitor. To kill
+          another elf... '
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 78239521-d47a-4c90-abe5-7148ed79c798
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041D\u0430 \u043F\u043E\u043B\u0435 \u0431\u043E\u044F\u2026"
+      - LanguageType: 1
+        LanguageGenericType: 'On the battlefield... '
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: bbb394ce-e1c9-403c-b7ea-c7127d045b62
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u042F \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u044D\u0442\u043E\u0433\u043E
+          \u043D\u0435 \u0437\u0430\u0431\u0443\u0434\u0443. \u042F \u043E\u0442\u043E\u043C\u0449\u0443.
+          \u042F \u0438\u0441\u043A\u0443\u043F\u0430\u044E\u0441\u044C \u0432 \u0435\u0433\u043E
+          \u043A\u0440\u043E\u0432\u0438. \u041F\u043E\u043C\u044F\u043D\u0438 \u043C\u043E\u0435
+          \u0441\u043B\u043E\u0432\u043E."
+      - LanguageType: 1
+        LanguageGenericType: I will never forget this. I will have my revenge. I
+          will bathe in his blood. Mark my words.
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}

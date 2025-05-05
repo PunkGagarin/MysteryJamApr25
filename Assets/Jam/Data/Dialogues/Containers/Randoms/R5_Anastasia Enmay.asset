@@ -129,38 +129,6 @@ MonoBehaviour:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
     Position: {x: 461, y: 207}
   DialogueData:
-  - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    Position: {x: 2550, y: -701}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 5a93e724-b467-44fa-ab0f-fbdb5948c53d
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u041A\u0430\u043A\u0430\u044F \u043D\u0430\u0433\u043B\u043E\u0441\u0442\u044C!
-          \u0414\u0430 \u043A\u0430\u043A \u043E\u043D \u043F\u043E\u0441\u043C\u0435\u043B!..
-          \u041D\u043E \u0447\u0442\u043E \u0436. \u042D\u0442\u043E \u0435\u0433\u043E
-          \u043F\u0440\u043E\u0441\u044C\u0431\u0430. \u042F \u0432\u044B\u043F\u043E\u043B\u043D\u044E
-          \u0435\u0435. \u0412\u0435\u043B\u0438\u043A\u0438\u0439 \u0440\u043E\u0434
-          \u042D\u043D\u043C\u044D\u0439 \u043F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
-          \u043F\u0440\u043E\u0441\u0442\u043E\u043B\u044E\u0434\u0438\u043D\u043A\u043E\u0439!
-          \u0412\u0438\u0434\u044F\u0442 \u0431\u043E\u0433\u0438, \u044F \u043D\u0435
-          \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A \u044D\u0442\u043E
-          \u0434\u0435\u043B\u0430\u044E."
-      - LanguageType: 1
-        LanguageGenericType: What audacity! How dare he!.. But well. This is his
-          request. I will fulfill it. The great Enmei family will be joined by a
-          commoner! Gods see, I am not doing this for nothing.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
-    SkipContinue: 0
   - NodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     Position: {x: 1911, y: -719}
     DialogueDataNames:
@@ -365,6 +333,64 @@ MonoBehaviour:
       - LanguageType: 1
         LanguageGenericType: Useless girl... We're leaving. Yes, my little fox? My
           little cutie...
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 0
+  - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
+    Position: {x: 2550, y: -701}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 5a93e724-b467-44fa-ab0f-fbdb5948c53d
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041A\u0430\u043A\u0430\u044F \u043D\u0430\u0433\u043B\u043E\u0441\u0442\u044C!
+          \u0414\u0430 \u043A\u0430\u043A \u043E\u043D \u043F\u043E\u0441\u043C\u0435\u043B!.. "
+      - LanguageType: 1
+        LanguageGenericType: 'What audacity! How dare he!.. '
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 53f1f4d7-4952-4a6d-8d75-5440faa58901
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041D\u043E \u0447\u0442\u043E \u0436. \u042D\u0442\u043E
+          \u0435\u0433\u043E \u043F\u0440\u043E\u0441\u044C\u0431\u0430. \u042F \u0432\u044B\u043F\u043E\u043B\u043D\u044E
+          \u0435\u0435. "
+      - LanguageType: 1
+        LanguageGenericType: But well. This is his request. I will fulfill it.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 2
+      GuidID:
+        Value: 939102e9-14ac-4768-bc5d-4f29a1f60abb
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0412\u0435\u043B\u0438\u043A\u0438\u0439 \u0440\u043E\u0434
+          \u042D\u043D\u043C\u044D\u0439 \u043F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0441\u044F
+          \u043F\u0440\u043E\u0441\u0442\u043E\u043B\u044E\u0434\u0438\u043D\u043A\u043E\u0439!
+          \u0412\u0438\u0434\u044F\u0442 \u0431\u043E\u0433\u0438, \u044F \u043D\u0435
+          \u043F\u0440\u043E\u0441\u0442\u043E \u0442\u0430\u043A \u044D\u0442\u043E
+          \u0434\u0435\u043B\u0430\u044E."
+      - LanguageType: 1
+        LanguageGenericType: The great Enmei family will be joined by a commoner!
+          Gods see, I am not doing this for nothing.
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
