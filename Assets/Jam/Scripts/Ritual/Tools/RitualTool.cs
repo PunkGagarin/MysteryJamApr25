@@ -6,7 +6,7 @@ namespace Jam.Scripts.Ritual.Tools
 {
     public abstract class RitualTool : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _visual;
+        [SerializeField] private protected SpriteRenderer Visual;
         [SerializeField] private Image _fill;
         [SerializeField] private float _fillAnimationTime;
         [SerializeField] private Canvas _canvas;
@@ -29,7 +29,6 @@ namespace Jam.Scripts.Ritual.Tools
         private void Awake()
         {
             _canvas.worldCamera = UnityEngine.Camera.main;
-            _visual.sprite = _definition.Visual;
             Charges = 0;
         }
     }

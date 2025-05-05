@@ -16,8 +16,10 @@ namespace Jam.Scripts.Shop
 {
     public class ShopSystem : MonoBehaviour
     {
-        
-        [SerializeField] private ShopItem _shopItemPrefab;
+
+        [SerializeField]
+        private ShopItem _shopItemPrefab;
+
         [Inject] private PopupManager _popupManager;
         [Inject] private ReagentRepository _reagentRepository;
         [Inject] private ShopConfig _shopConfig;
@@ -34,7 +36,7 @@ namespace Jam.Scripts.Shop
         public event Action<int> ItemAppear;
         public event Action CantBuy;
 
-        public void SetShopView(ShopView shopView) => 
+        public void SetShopView(ShopView shopView) =>
             _shopView = shopView;
 
         public void ShowShop()
@@ -98,10 +100,18 @@ namespace Jam.Scripts.Shop
         private void SetupReagentsShopItems()
         {
             var reagentsInShopPool = new List<ReagentDefinition>();
-            PopulatePoolWithSexReagents(reagentsInShopPool);
-            PopulatePoolWithNonSexReagents(reagentsInShopPool);
+            AddAllReagentsToPool(reagentsInShopPool);
+            // PopulatePoolWithSexReagents(reagentsInShopPool);
+            // PopulatePoolWithNonSexReagents(reagentsInShopPool);
             UpdateContainerRooms(reagentsInShopPool.Count, _reagentsShopItems);
             SetUpReagentsShopItem(reagentsInShopPool);
+        }
+
+        private void AddAllReagentsToPool(List<ReagentDefinition> reagentsInShopPool)
+        {
+            var allReags = _reagentRepository.Definitions
+                .Where(def => def != _shopConfig.ExcludeReagent).ToList();
+            reagentsInShopPool.AddRange(allReags);
         }
 
         private void SetUpReagentsShopItem(List<ReagentDefinition> reagentsInShopPool)
@@ -161,7 +171,8 @@ namespace Jam.Scripts.Shop
 
         private void PopulatePoolWithNonSexReagents(List<ReagentDefinition> reagentsInShopPool)
         {
-            var notSexReagents = _reagentRepository.Definitions.Where(def => def.ReagentType != ReagentType.Sex && def != _shopConfig.ExcludeReagent).ToList();
+            var notSexReagents = _reagentRepository.Definitions
+                .Where(def => def.ReagentType != ReagentType.Sex && def != _shopConfig.ExcludeReagent).ToList();
             for (int i = 0; i < _shopConfig.RandomItemsInShop; i++)
             {
                 var randomReagent = notSexReagents[Random.Range(0, notSexReagents.Count)];
@@ -169,6 +180,6 @@ namespace Jam.Scripts.Shop
                 notSexReagents.Remove(randomReagent);
             }
         }
-        
+
     }
 }

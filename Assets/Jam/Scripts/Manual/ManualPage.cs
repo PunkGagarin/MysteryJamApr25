@@ -1,4 +1,5 @@
 using Jam.Scripts.GameplayData.Definitions;
+using Jam.Scripts.Manual.Pages;
 using UnityEngine;
 
 namespace Jam.Scripts.Manual

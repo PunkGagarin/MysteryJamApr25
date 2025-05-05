@@ -138,7 +138,7 @@ MonoBehaviour:
         Value: fefc9d66-4fdc-4ff4-b6ab-f5e90404f722
       CharacterName:
       - LanguageType: 0
-        LanguageGenericType: 
+        LanguageGenericType: Ghost
       - LanguageType: 1
         LanguageGenericType: Ghost
     DialogueDataTexts:
@@ -148,10 +148,10 @@ MonoBehaviour:
         Value: 9596277b-7a40-47db-92ca-51b451985c71
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041E\u043D \u0431\u044B\u043B \u0441\u0442\u0430\u0440\u0448\u0435
           \u043C\u043E\u0438\u0445 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439\u2026"
+      - LanguageType: 1
+        LanguageGenericType: "He was older than my parents\u2026"
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -175,8 +175,6 @@ MonoBehaviour:
         Value: a9be781f-44d5-4311-9d07-5c1fc9497502
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041E\u2026 \u043E\u0433\u043E, \u044F \u0431\u044B
           \u043D\u0438\u043A\u043E\u0433\u0434\u0430 \u043D\u0435 \u043F\u043E\u0434\u0443\u043C\u0430\u043B\u0430\u2026
           \u0425-\u0445\u043E\u0440\u043E\u0448\u043E. \u041E\u0441\u0442\u0430\u043B\u0430\u0441\u044C
@@ -185,6 +183,10 @@ MonoBehaviour:
           \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0432\u0438\u0434\u043E\u0432\u0430\u043B\u0430
           \u0442\u043E\u043C\u0443, \u043A\u0430\u043A \u0432\u044B \u0441 \u043D\u0438\u043C
           \u043E\u0431\u0449\u0430\u043B\u0438\u0441\u044C\u2026"
+      - LanguageType: 1
+        LanguageGenericType: Oh... wow, I would never have thought... O-okay. The
+          race is left... You know, I... I, to be honest, was always a little jealous
+          of how you interacted with him...
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -196,14 +198,15 @@ MonoBehaviour:
         Value: c461971b-c35c-4d3e-b3cd-563eb97fd82f
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041D\u043E \u0432\u043E\u0442, \u043C\u044B \u0441
           \u0442\u043E\u0431\u043E\u0439 \u0441\u0442\u043E\u0438\u043C \u0442\u0443\u0442\u2026
           \u0438 \u0442\u044B \u0442\u043E\u0436\u0435 \u043E \u043D\u0435\u043C
           \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0437\u043D\u0430\u0435\u0448\u044C,
           \u0445\u0430\u2026 \u0413\u043B\u0443\u043F\u043E \u043A\u0430\u043A-\u0442\u043E
           \u0432\u044B\u0448\u043B\u043E\u2026"
+      - LanguageType: 1
+        LanguageGenericType: "But here we are, standing here\u2026 and you don't
+          know anything about him either, ha\u2026 It turned out kind of silly\u2026"
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -215,13 +218,15 @@ MonoBehaviour:
         Value: 938c6a53-adc3-43f2-8e7f-4f3ee7651ce1
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041B\u0430\u0434\u043D\u043E, \u0438\u0437\u0432\u0438\u043D\u0438.
           \u0423 \u0442\u0435\u0431\u044F \u0435\u0449\u0435 \u0432\u0441\u044F \u0440\u0430\u0431\u043E\u0447\u0430\u044F
           \u043D\u043E\u0447\u044C \u0432\u043F\u0435\u0440\u0435\u0434\u0438.  \u0414\u0435\u0440\u0436\u0438\u0441\u044C.
           \u0410 \u044F \u043F\u0440\u0438\u0434\u0443 \u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430.
           \u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u0441 \u043E\u0442\u0432\u0435\u0442\u0430\u043C\u0438."
+      - LanguageType: 1
+        LanguageGenericType: Alright, sorry. You still have the whole work night
+          ahead of you. Hang in there. And I'll come the day after tomorrow. Hopefully,
+          with answers.
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -240,10 +245,10 @@ MonoBehaviour:
         Value: e06ac053-52ed-4c4e-b425-aa39b28ede0c
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u0422\u0430\u043A, \u043D\u0435 \u0432\u043E\u043B\u043D\u0443\u0439\u0441\u044F!
           \u0412\u0441\u0435 \u0445\u043E\u0440\u043E\u0448\u043E!"
+      - LanguageType: 1
+        LanguageGenericType: Yes, don't worry! Everything is fine!
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -272,8 +277,6 @@ MonoBehaviour:
         Value: 1b922cec-a73e-447d-af20-e5a26c142e59
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u042F \u043D\u0430\u0448\u043B\u0430, \u0441\u043C\u043E\u0442\u0440\u0438\u2026
           \u044F \u043D\u0435 \u0437\u043D\u0430\u043B\u0430 \u0435\u0435, \u043D\u043E
           \u0432\u043E\u0442, \u044F \u043D\u0430\u0448\u043B\u0430. \u042D\u0442\u043E
@@ -282,6 +285,11 @@ MonoBehaviour:
           <b>\u041E\u043D\u0430</b> \u043D\u0430\u043C \u043F\u043E\u0434\u0441\u043A\u0430\u0436\u0435\u0442\u2026
           \u0445\u043E\u0442\u044F \u0431\u044B \u0447\u0442\u043E-\u0442\u043E?
           \u041B\u0430\u0434\u043D\u043E, \u043B\u0430\u0434\u043D\u043E."
+      - LanguageType: 1
+        LanguageGenericType: "I found it, look\u2026 I didn\u2019t know her, but
+          here, I found her. She was an <b>old elf woman</b>, and <b>she</b> knew
+          him! <b>She</b> will give us a hint\u2026 at least something? Alright,
+          alright."
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -293,14 +301,15 @@ MonoBehaviour:
         Value: 502464ba-98f5-4404-98c6-cba76d4086b4
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041D\u0430\u043C \u043D\u0430\u0434\u043E \u0441\u043F\u0440\u043E\u0441\u0438\u0442\u044C,
           \u043A\u0430\u043A \u0434\u0430\u0432\u043D\u043E <b>\u043E\u043D\u0430</b>
           \u0435\u0433\u043E \u0437\u043D\u0430\u0435\u0442! \u0418\u043B\u0438 \u0438\u0437
           \u043A\u0430\u043A\u043E\u0439 \u043E\u043D \u0441\u0435\u043C\u044C\u0438!
           \u0427\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C \u043F\u0443\u0441\u0442\u044C
           \u0440\u0430\u0441\u0441\u043A\u0430\u0436\u0435\u0442!"
+      - LanguageType: 1
+        LanguageGenericType: We need to ask how long <b>she</b> has known him! Or
+          what family he is from! Let her tell us something!
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -329,10 +338,10 @@ MonoBehaviour:
         Value: 7cf77634-dedc-4027-8935-febcefa987b3
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439 \u0435\u0449\u0435
           \u0440\u0430\u0437"
+      - LanguageType: 1
+        LanguageGenericType: Try again.
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -361,10 +370,10 @@ MonoBehaviour:
         Value: 28403139-9d50-43bd-9cb2-4233fbf3074f
       Text:
       - LanguageType: 0
-        LanguageGenericType: 
-      - LanguageType: 1
         LanguageGenericType: "\u042F\u2026 \u044F \u043D\u0435 \u0437\u043D\u0430\u044E,
           \u0447\u0442\u043E \u0442\u0435\u043F\u0435\u0440\u044C \u0434\u0435\u043B\u0430\u0442\u044C\u2026"
+      - LanguageType: 1
+        LanguageGenericType: I... I don't know what to do now...
       AudioClips:
       - LanguageType: 0
         LanguageGenericType: {fileID: 0}
@@ -484,10 +493,10 @@ MonoBehaviour:
       Value: 2
     Text:
     - LanguageType: 0
-      LanguageGenericType: 
-    - LanguageType: 1
       LanguageGenericType: "\u041F\u0435\u0440\u0435\u0434\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442
-        \u043F\u0440\u0438\u0437\u0440\u0430\u043A\u0430 \u043A\u043B\u0438\u0435\u043D\u0442\u0443"
+        \u043F\u0440\u0438\u0437\u0440\u0430\u043A\u0430"
+    - LanguageType: 1
+      LanguageGenericType: Convey the ghost's answer
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}
@@ -500,10 +509,10 @@ MonoBehaviour:
       Value: 1
     Text:
     - LanguageType: 0
-      LanguageGenericType: 
-    - LanguageType: 1
       LanguageGenericType: "\u0425\u043E\u0440\u043E\u0448\u043E, \u044F \u0432\u0430\u043C
         \u043F\u043E\u043C\u043E\u0433\u0443"
+    - LanguageType: 1
+      LanguageGenericType: Alright, I will help you.
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}
@@ -516,10 +525,10 @@ MonoBehaviour:
       Value: 1
     Text:
     - LanguageType: 0
-      LanguageGenericType: 
-    - LanguageType: 1
       LanguageGenericType: "\u041D\u0435\u0442. \u0412\u0430\u043C \u044F \u043D\u0435
         \u043C\u043E\u0433\u0443 \u043F\u043E\u043C\u043E\u0447\u044C."
+    - LanguageType: 1
+      LanguageGenericType: No. I can't help you.
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}
@@ -532,10 +541,10 @@ MonoBehaviour:
       Value: 1
     Text:
     - LanguageType: 0
-      LanguageGenericType: 
-    - LanguageType: 1
       LanguageGenericType: "(\u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C
         \u0440\u0430\u0431\u043E\u0442\u0443)"
+    - LanguageType: 1
+      LanguageGenericType: (continue working)
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}
@@ -548,11 +557,11 @@ MonoBehaviour:
       Value: 1
     Text:
     - LanguageType: 0
-      LanguageGenericType: 
-    - LanguageType: 1
       LanguageGenericType: "\u042F \u043D\u0435 \u0441\u043C\u043E\u0433\u0443 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442\u044C
         \u044D\u0442\u0443 \u0437\u0430\u0434\u0430\u0447\u0443 (\u043E\u0442\u043A\u0430\u0437\u0430\u0442\u044C\u0441\u044F
         \u043E\u0442 \u0440\u0430\u0431\u043E\u0442\u044B)"
+    - LanguageType: 1
+      LanguageGenericType: "I can\u2019t do this (refuse the work)"
     AudioClips:
     - LanguageType: 0
       LanguageGenericType: {fileID: 0}

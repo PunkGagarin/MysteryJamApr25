@@ -12,6 +12,7 @@ namespace Jam.Scripts.Dialogue.UI
     public class ButtonController : MonoBehaviour
     {
         [field: SerializeField] public Button Button { get; private set; }
+        [field: SerializeField] public RectTransform ButtonRect { get; private set; }
         [field: SerializeField] public TMP_Text ButtonText { get; private set; }
 
         [Inject] private LanguageService _languageService;
@@ -24,6 +25,14 @@ namespace Jam.Scripts.Dialogue.UI
             _index = index;
             _genericText = genericText;
             UpdateText();
+            ResizeButton();
+        }
+
+        private void ResizeButton()
+        {
+            ButtonText.ForceMeshUpdate();
+            Vector2 textSize = ButtonText.GetRenderedValues(false);
+            ButtonRect.sizeDelta = new Vector2(ButtonRect.sizeDelta.x, textSize.y + 60f);
         }
 
         private void UpdateText() => 

@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using DG.Tweening;
 using Jam.Scripts.Audio.Domain;
 using Jam.Scripts.Manual;
+using UnityEngine;
 using Zenject;
 
 namespace Jam.Scripts.Ritual.Tools
@@ -30,6 +32,9 @@ namespace Jam.Scripts.Ritual.Tools
             {
                 Charges--;
                 ShowUpdateCharges();
+                Visual.DOColor(Color.white, 1f)
+                    .OnComplete(() => Visual.DOColor(Color.white, 1f)
+                        .OnComplete(() => Visual.DOColor(Color.clear, 1f)));
                 _manual.AddReagentExclusion(excludedReagentToAdd);
                 _audioService.PlaySound(Sounds.foundConflict.ToString());
             }

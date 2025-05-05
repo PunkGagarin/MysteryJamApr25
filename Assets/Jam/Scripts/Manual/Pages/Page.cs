@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Jam.Scripts.Ritual;
 using UnityEngine;
 
-namespace Jam.Scripts.Manual
+namespace Jam.Scripts.Manual.Pages
 {
     public class Page : MonoBehaviour
     {
