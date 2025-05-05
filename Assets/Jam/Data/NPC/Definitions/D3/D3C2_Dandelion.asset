@@ -17,3 +17,4 @@ MonoBehaviour:
   <Id>k__BackingField: 12
   <Dialogue>k__BackingField: {fileID: 11400000, guid: 501726d269c57ce46aa9d58bcdd567f6, type: 2}
   <Visual>k__BackingField: {fileID: 21300000, guid: c249b7c23593c7445bfa909e91117391, type: 3}
+  <ShopIcon>k__BackingField: {fileID: 21300000, guid: d40e82ec74badba429d2199f7d29e41a, type: 3}

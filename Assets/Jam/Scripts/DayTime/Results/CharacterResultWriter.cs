@@ -30,14 +30,15 @@ namespace Jam.Scripts.DayTime.Results
         private void FinalizeWrite() => 
             _currentCharacterResult = null;
 
-        private void UpdateCharacter(int characterId, string characterName)
+        private void UpdateCharacter(NPCDefinition definition)
         {
             CharacterResult characterResult = new CharacterResult
             {
-                CharacterId = characterId,
-                CharacterName = characterName,
+                CharacterId = definition.Id,
+                CharacterName = definition.Name,
                 EarnReputation = 0,
-                EarnMoney = 0
+                EarnMoney = 0,
+                Icon = definition.ShopIcon
             };
             _currentCharacterResult = characterResult;
             DayInfo.CharactersResults.Add(characterResult);

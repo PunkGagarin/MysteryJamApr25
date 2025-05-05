@@ -2,6 +2,7 @@
 using Jam.Scripts.Npc.Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Jam.Scripts.DayTime.Results
@@ -14,6 +15,7 @@ namespace Jam.Scripts.DayTime.Results
         [SerializeField] private TMP_Text _money;
         [SerializeField] private Color _errorColor;
         [SerializeField] private Color _successColor;
+        [SerializeField] private Image _icon;
         [Inject] private Localization _localization;
 
         private const string DAY_RESULT_REPUTATION_KEY = "DAY_RESULT_REPUTATION_KEY";
@@ -25,6 +27,7 @@ namespace Jam.Scripts.DayTime.Results
             _reputation.color = characterResult.EarnReputation > 0 ? _successColor : _errorColor;
             _money.text = $"{_localization.GetText(DAY_RESULT_MONEY_KEY)}: {characterResult.EarnMoney:+0;-0;0}";
             _money.color = characterResult.EarnMoney > 0 ? _successColor : _errorColor;
+            _icon.sprite = characterResult.Icon;
         }
     }
 }
