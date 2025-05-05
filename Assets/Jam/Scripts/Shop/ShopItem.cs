@@ -24,7 +24,7 @@ namespace Jam.Scripts.Shop
         {
             _itemVisual.sprite = toolDefinition.Visual;
             _itemPrice.text = toolDefinition.Cost.ToString();
-            _itemCount.transform.parent.gameObject.SetActive(false);
+            _itemCount.gameObject.SetActive(false);
         }
     }
 }
