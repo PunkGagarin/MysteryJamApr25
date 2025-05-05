@@ -20,8 +20,10 @@ MonoBehaviour:
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 1
   <AgeType>k__BackingField: 1
-  <SexType>k__BackingField: 2
-  <RaceType>k__BackingField: 1
+  <SexType>k__BackingField: 0
+  <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 0
-  <ExcludedReagents>k__BackingField: []
+  <ExcludedReagents>k__BackingField:
+  - {fileID: 11400000, guid: e7855c9b2718d6848883c28847ae2e07, type: 2}
+  - {fileID: 11400000, guid: 420c3ca5bf8fb234da7acf99c08981d6, type: 2}
   <Cost>k__BackingField: 10

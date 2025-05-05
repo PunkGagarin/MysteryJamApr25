@@ -48,6 +48,9 @@ namespace Jam.Scripts.Manual
         {
             _reagentExclusions.Add(excludedReagentToAdd);
             _audioService.PlaySound(Sounds.foundConflict.ToString());
+            
+            var invertedExc = new ReagentExclusion(excludedReagentToAdd.ExcludedReagentId, excludedReagentToAdd.ReagentId);
+            _reagentExclusions.Add(invertedExc);
         }
 
         private void UnlockReagent(int reagentId) => 
