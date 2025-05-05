@@ -34,6 +34,7 @@ namespace Jam.Scripts.DayTime
         [Inject] private ToolController _toolController;
         [Inject] private PointerFirefly _pointerFirefly;
         [Inject] private GameplayOverlayUI _gameplayOverlayUI;
+        [Inject] private ImageFader _dayFader;
         [Inject] private QuestPresenter _questPresenter;
         [Inject] private Memory _memory;
 
@@ -126,7 +127,7 @@ namespace Jam.Scripts.DayTime
 
         private void OnCloseDayResultView()
         {
-            _gameplayOverlayUI.gameObject.SetActive(true);
+            _dayFader.FadeInThenOut(() => _gameplayOverlayUI.gameObject.SetActive(true));
             ResetDayValues();
         }
 

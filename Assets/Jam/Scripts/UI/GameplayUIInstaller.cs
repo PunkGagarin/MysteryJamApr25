@@ -8,12 +8,19 @@ namespace Jam.Scripts.UI
     {
         [SerializeField] private GameplayOverlayUI _gameplayOverlay;
         [SerializeField] private PointerFirefly _pointerFirefly;
+        [SerializeField] private ImageFader _dayFader;
 
         public override void InstallBindings()
         {
             Container
                 .Bind<GameplayOverlayUI>()
                 .FromInstance(_gameplayOverlay)
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<ImageFader>()
+                .FromInstance(_dayFader)
                 .AsSingle()
                 .NonLazy();
 
