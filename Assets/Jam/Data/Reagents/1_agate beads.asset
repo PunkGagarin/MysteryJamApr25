@@ -19,7 +19,7 @@ MonoBehaviour:
   <ManualIcon>k__BackingField: {fileID: 21300000, guid: 76f284e5a8c6e43459685bc99cc97ae9, type: 3}
   <ClickClip>k__BackingField: 11
   <ReagentType>k__BackingField: 2
-  <AgeType>k__BackingField: 2
+  <AgeType>k__BackingField: 0
   <SexType>k__BackingField: 1
   <RaceType>k__BackingField: 0
   <DeathType>k__BackingField: 0

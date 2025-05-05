@@ -1,13 +1,12 @@
-﻿using DG.Tweening;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Jam.Scripts.Ritual.Tools
 {
     public abstract class RitualTool : MonoBehaviour
     {
         [SerializeField] private protected SpriteRenderer Visual;
-        [SerializeField] private Image _fill;
+        [SerializeField] private TMP_Text _fill;
         [SerializeField] private float _fillAnimationTime;
         [SerializeField] private Canvas _canvas;
         [SerializeField] private ToolDefinition _definition;
@@ -24,8 +23,8 @@ namespace Jam.Scripts.Ritual.Tools
         }
         
         protected void ShowUpdateCharges() => 
-            _fill.DOFillAmount(Charges/(float)_definition.Charges, _fillAnimationTime).SetEase(Ease.Linear);
-
+            _fill.text = $"{Charges} / {_definition.Charges}";
+        
         private void Awake()
         {
             _canvas.worldCamera = UnityEngine.Camera.main;
