@@ -28,9 +28,9 @@
   <text key="MANUAL_PAGE_1_AGE">Возраст</text>
   <text key="MANUAL_PAGE_1_RACE">Раса</text>
   <text key="MANUAL_PAGE_1_MIRROR_TITLE">Зеркало</text>
-  <text key="MANUAL_PAGE_1_MIRROR_DESC">Этот инструмент позволяет вам обнаружить конфликты в реагентах. Но используйте с осторожностью. Зеркало не может выдержать всей потусторонней мощи</text>
+  <text key="MANUAL_PAGE_1_MIRROR_DESC">Если два неподходящих друг другу ингредиента появляются в поле его зрения, оно светится, а в записной книжке появляется информация о конфликте. Но зеркало не бесконечно - его нужно наполнять магической энергией</text>
   <text key="MANUAL_PAGE_1_MAGNIFIER_TITLE">Лупа</text>
-  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">Очевидно приближать что то, но я не знаю что</text>
+  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">С помощью лупы можно найти конфликты на столе. Направь лупу на предположительно неподходящие друг другу ингредиенты, и лупа покажет, все ли хорошо.</text>
   <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Маятник</text>
   <text key="MANUAL_PAGE_2_PENDULUM_DESC">Раскачивайте маятник в такт пульсу. Промахи ухудшают связь с душами</text>
   <text key="REAGENT_AGATE_BEADS">Агатовые бусины</text>

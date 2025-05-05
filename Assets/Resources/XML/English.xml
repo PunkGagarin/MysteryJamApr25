@@ -28,9 +28,9 @@
   <text key="MANUAL_PAGE_1_AGE">Age</text>
   <text key="MANUAL_PAGE_1_RACE">Race</text>
   <text key="MANUAL_PAGE_1_MIRROR_TITLE">Mirror</text>
-  <text key="MANUAL_PAGE_1_MIRROR_DESC">This tool allows you to detect conflicts in reagents. But use with caution. The mirror cannot withstand all the otherworldly power</text>
+  <text key="MANUAL_PAGE_1_MIRROR_DESC">If two incompatible ingredients appear within its field of view, it lights up and conflict information is added to the notebook. However, the mirror is not limitless – it needs to be recharged with magical energy.</text>
   <text key="MANUAL_PAGE_1_MAGNIFIER_TITLE">Magnifier</text>
-  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">Obviously something needs to be brought closer, but I don't know what.</text>
+  <text key="MANUAL_PAGE_1_MAGNIFIER_DESC">The magnifying glass helps you detect conflicts on the table. Point it at ingredients that may be incompatible, and it will show whether everything is fine.</text>
   <text key="MANUAL_PAGE_2_PENDULUM_TITLE">Pendulum</text>
   <text key="MANUAL_PAGE_2_PENDULUM_DESC">Swing the pendulum in time with your pulse. Misses worsen the connection with souls</text>
   <text key="REAGENT_AGATE_BEADS">Agate beads</text>
