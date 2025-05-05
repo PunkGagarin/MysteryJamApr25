@@ -31,7 +31,7 @@ MonoBehaviour:
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
-    Position: {x: -1448, y: 180}
+    Position: {x: -780, y: 125}
   DialogueData:
   - NodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     Position: {x: -643, y: 125}
@@ -113,7 +113,7 @@ MonoBehaviour:
     ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
-    Position: {x: 3008, y: -285}
+    Position: {x: 512, y: 160}
     EndNodeType:
       Value: 4
   BranchData: []
