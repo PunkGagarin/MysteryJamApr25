@@ -12,31 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23477e85324342308016e4aebe883ea3, type: 3}
   m_Name: _ManualPagesRepository
   m_EditorClassIdentifier: 
-  <Definitions>k__BackingField: []
-  <InitPages>k__BackingField:
+  <Definitions>k__BackingField:
   - {fileID: 11400000, guid: ba684bc4dcf504b09a9bc4fbb4f92a78, type: 2}
   - {fileID: 11400000, guid: 2f583ebd06ca18d4185aed4eaec9c562, type: 2}
-  - {fileID: 11400000, guid: eb5f9a20f36bd4da0b76180915fb4bb8, type: 2}
+  - {fileID: 11400000, guid: 555ff26ab3b3117438237e7eecfebcac, type: 2}
   - {fileID: 11400000, guid: dc24a8054cddc9849b08e2a01251f541, type: 2}
   - {fileID: 11400000, guid: 51470ea3e82db495daf7598558c8429f, type: 2}
   - {fileID: 11400000, guid: ae3b6732208db4285a42310b65132238, type: 2}
-  <Pages>k__BackingField:
-  - Pages:
-    - {fileID: 11400000, guid: ba684bc4dcf504b09a9bc4fbb4f92a78, type: 2}
-  - Pages:
-    - {fileID: 11400000, guid: 2f583ebd06ca18d4185aed4eaec9c562, type: 2}
-  - Pages:
-    - {fileID: 11400000, guid: eb5f9a20f36bd4da0b76180915fb4bb8, type: 2}
-    - {fileID: 11400000, guid: 3cda1154fda7b41218c581dfadc44718, type: 2}
-    - {fileID: 11400000, guid: 555ff26ab3b3117438237e7eecfebcac, type: 2}
-    - {fileID: 11400000, guid: a73c97a53a8e94cfdae6f8916bbb369e, type: 2}
-  - Pages:
-    - {fileID: 11400000, guid: dc24a8054cddc9849b08e2a01251f541, type: 2}
-  - Pages:
-    - {fileID: 11400000, guid: 51470ea3e82db495daf7598558c8429f, type: 2}
-    - {fileID: 11400000, guid: 7dc843b27e7b24f83b4ad9574ed86913, type: 2}
-    - {fileID: 11400000, guid: 3be609b7c3f9241e0b3b017dcc934904, type: 2}
-    - {fileID: 11400000, guid: c4b0b8883091c46b5b8b5d7da1b18ec0, type: 2}
-  - Pages:
-    - {fileID: 11400000, guid: ae3b6732208db4285a42310b65132238, type: 2}
-    - {fileID: 11400000, guid: e52890a8aaf9a44b391ede78a1752fa9, type: 2}

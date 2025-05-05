@@ -60,11 +60,5 @@ DAY_RESULT_MONEY_KEY,Ден,Mon
 PAGE_3_DESC,"Не забывай, какой путь ты прошла.%Богиня Смерти И Луны дает дар говорить с призраками лишь тем, кто бывал в ее темных чертогах и вернулся живым.%Не забывай, какой путь проходят они.%Призракам трудно найти путь к медиуму. Для этого нужны ориентиры - ингредиенты. Они помогают звать нужного призрака, и тому легче прийти на зов.%Не забывай, зачем ты здесь.%Это единственный способ связаться с тем, кто много для тебя сделал. Найди его.","Do not forget the path you have walked.%The Goddess of Death and the Moon grants the gift of speaking with ghosts only to those who have wandered her dark halls and returned alive.%Do not forget the path they must walk.%It is hard for ghosts to find their way to a medium. They need landmarks—ingredients. These help call the right ghost, making it easier for them to answer.%Do not forget why you are here.%This is the only way to reach someone who once meant so much to you. Find them."
 PAGE_4_TITLE,Изогнутый Странник,The Crooked Wanderer
 PAGE_4_DESC,"У него была светлая улыбка. Он любил гренки. Он всегда помогал окружающим. Он пропал неожиданно. Я не знаю, что произошло. Всех проклятых сжигают. От него не осталось следа.",He had a bright smile. He loved toast. He always helped those around him. He disappeared without warning. I don't know what happened. All the cursed are burned. Nothing of him remains.
-PAGE_5_AGE_0,"Возраст: молодой, взрослый, старый","Age: kid, adult, old"
-PAGE_5_AGE_1,"Возраст: &lt;s&gt;молодой&lt;/s&gt;, взрослый, старый","Age: &lt;s&gt;kid&lt;/s&gt;, adult, old"
-PAGE_5_AGE_2,"Возраст: молодой, &lt;s&gt;взрослый&lt;/s&gt;, старый","Age: kid, &lt;s&gt;adult&lt;/s&gt;, old"
-PAGE_5_AGE_3,"Возраст: молодой, взрослый, &lt;s&gt;старый&lt;/s&gt;","Age: kid, adult, &lt;s&gt;old&lt;/s&gt;"
-PAGE_5_RACE_0,"Раса: эльф, человек, дворф","Race: elf, human, dwarf"
-PAGE_5_RACE_1,"Раса: &lt;s&gt;эльф&lt;/s&gt;, человек, дворф","Race: &lt;s&gt;elf&lt;/s&gt;, human, dwarf"
-PAGE_5_RACE_2,"Раса: эльф, &lt;s&gt;человек&lt;/s&gt;, дворф","Race: elf, &lt;s&gt;human&lt;/s&gt;, dwarf"
-PAGE_5_RACE_3,"Раса: эльф, человек, &lt;s&gt;дворф&lt;/s&gt;","Race: elf, human, &lt;s&gt;dwarf&lt;/s&gt;"
+PAGE_5_AGE,Возраст:,Age:
+PAGE_5_RACE,Раса:,Race:
