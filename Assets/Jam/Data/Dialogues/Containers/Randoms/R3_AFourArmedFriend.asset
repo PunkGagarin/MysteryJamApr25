@@ -17,14 +17,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 3c0c6269-31ff-4adb-8d51-505a59a0a176
     TargetPortGuid: Input
-  - BaseNodeGuid: 3c0c6269-31ff-4adb-8d51-505a59a0a176
-    BasePortGuid: False
-    TargetNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    TargetPortGuid: Input
-  - BaseNodeGuid: 3c0c6269-31ff-4adb-8d51-505a59a0a176
-    BasePortGuid: True
-    TargetNodeGuid: 60858ad7-be18-4203-b262-0d99eb165c3e
-    TargetPortGuid: Input
   - BaseNodeGuid: 60858ad7-be18-4203-b262-0d99eb165c3e
     BasePortGuid: False
     TargetNodeGuid: 7d230dde-785d-4b61-ae4b-10541671a3e9
@@ -41,9 +33,21 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
     TargetPortGuid: Input
+  - BaseNodeGuid: 3c0c6269-31ff-4adb-8d51-505a59a0a176
+    BasePortGuid: False
+    TargetNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3c0c6269-31ff-4adb-8d51-505a59a0a176
+    BasePortGuid: True
+    TargetNodeGuid: 60858ad7-be18-4203-b262-0d99eb165c3e
+    TargetPortGuid: Input
   - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
     BasePortGuid: True
     TargetNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
+    TargetPortGuid: Input
+  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
+    BasePortGuid: False
+    TargetNodeGuid: d17dccfe-f8f8-474d-aae7-7744bc1afbb7
     TargetPortGuid: Input
   - BaseNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
     BasePortGuid: Output
@@ -53,33 +57,37 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     TargetPortGuid: Input
+  - BaseNodeGuid: d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5
+    BasePortGuid: Output
+    TargetNodeGuid: 84163bc7-6d7e-4ca6-b7e9-96a47bd1efc4
+    TargetPortGuid: Input
+  - BaseNodeGuid: 3f5028ce-3e24-41e2-ab01-776dd498fa8f
+    BasePortGuid: Output
+    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    TargetPortGuid: Input
   - BaseNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
     BasePortGuid: Output
     TargetNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    TargetPortGuid: Input
-  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
-    BasePortGuid: Output
-    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
     TargetPortGuid: Input
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
     TargetNodeGuid: 23821228-09df-44bc-be01-104735c8af1b
     TargetPortGuid: Input
-  - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
     BasePortGuid: Output
-    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
+    TargetPortGuid: Input
+  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    BasePortGuid: Output
+    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
     TargetPortGuid: Input
   - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
-  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    BasePortGuid: Continue
-    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    TargetPortGuid: Input
-  - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
-    BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
-    TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
+  - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+    BasePortGuid: Output
+    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
   - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
     BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
@@ -89,41 +97,33 @@ MonoBehaviour:
     BasePortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
     TargetNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
     TargetPortGuid: Input
-  - BaseNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    BasePortGuid: Continue
-    TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
-    TargetPortGuid: Input
-  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    BasePortGuid: Output
-    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    TargetPortGuid: Input
-  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
-    BasePortGuid: False
-    TargetNodeGuid: d17dccfe-f8f8-474d-aae7-7744bc1afbb7
-    TargetPortGuid: Input
   - BaseNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     BasePortGuid: d2873394-5a0d-4c4c-aa00-60ca4802e223
-    TargetNodeGuid: d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5
-    TargetPortGuid: Input
-  - BaseNodeGuid: d17dccfe-f8f8-474d-aae7-7744bc1afbb7
-    BasePortGuid: 25ab95ad-825f-4c55-85b9-2539243f1376
     TargetNodeGuid: d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5
     TargetPortGuid: Input
   - BaseNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     BasePortGuid: 7bbbed78-bcb1-40c8-b677-b551cd1ceced
     TargetNodeGuid: 3f5028ce-3e24-41e2-ab01-776dd498fa8f
     TargetPortGuid: Input
+  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    BasePortGuid: Continue
+    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    TargetPortGuid: Input
+  - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
+    BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
+    TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
+    TargetPortGuid: Input
+  - BaseNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
+    BasePortGuid: Continue
+    TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+    TargetPortGuid: Input
+  - BaseNodeGuid: d17dccfe-f8f8-474d-aae7-7744bc1afbb7
+    BasePortGuid: 25ab95ad-825f-4c55-85b9-2539243f1376
+    TargetNodeGuid: d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5
+    TargetPortGuid: Input
   - BaseNodeGuid: d17dccfe-f8f8-474d-aae7-7744bc1afbb7
     BasePortGuid: b939d3b8-cc4a-4f3a-bed2-dfa1d553783d
     TargetNodeGuid: 3f5028ce-3e24-41e2-ab01-776dd498fa8f
-    TargetPortGuid: Input
-  - BaseNodeGuid: d4b9fdc7-7ae8-426d-94b5-cef5234d4cb5
-    BasePortGuid: Output
-    TargetNodeGuid: 84163bc7-6d7e-4ca6-b7e9-96a47bd1efc4
-    TargetPortGuid: Input
-  - BaseNodeGuid: 3f5028ce-3e24-41e2-ab01-776dd498fa8f
-    BasePortGuid: Output
-    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852

@@ -17,14 +17,6 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 0f49aec0-9e60-4ad6-a885-ca0934965c6f
     TargetPortGuid: Input
-  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    BasePortGuid: True
-    TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    TargetPortGuid: Input
-  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    BasePortGuid: False
-    TargetNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    TargetPortGuid: Input
   - BaseNodeGuid: 3eba1926-ea2e-401a-b38f-459a820f62e9
     BasePortGuid: False
     TargetNodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
@@ -49,9 +41,9 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: 3eba1926-ea2e-401a-b38f-459a820f62e9
     TargetPortGuid: Input
-  - BaseNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
+  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
     BasePortGuid: True
-    TargetNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
+    TargetNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     TargetPortGuid: Input
   - BaseNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
     BasePortGuid: Output
@@ -69,29 +61,29 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
     TargetPortGuid: Input
-  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+  - BaseNodeGuid: db6c305b-4de2-47d4-a4cd-8a089fe7e387
     BasePortGuid: Output
-    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
+    TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    TargetPortGuid: Input
+  - BaseNodeGuid: 0ecb22e2-c706-4ef5-b8e4-b6161c241440
+    BasePortGuid: Output
+    TargetNodeGuid: 0f2ec469-0894-46df-b77d-7ff64336b32c
     TargetPortGuid: Input
   - BaseNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     TargetPortGuid: Input
+  - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
+    BasePortGuid: Output
+    TargetNodeGuid: f6e85fcc-5bbf-4cf8-904d-8714529287dc
+    TargetPortGuid: Input
   - BaseNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
     BasePortGuid: Output
     TargetNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
     TargetPortGuid: Input
-  - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
-    BasePortGuid: Continue
-    TargetNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
-    TargetPortGuid: Input
-  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
-    BasePortGuid: Continue
-    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
-    TargetPortGuid: Input
-  - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
-    BasePortGuid: 67ccf52e-6314-4bd2-8788-72628cd51953
-    TargetNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
+  - BaseNodeGuid: 8c21d36a-20dd-40b1-90cc-e1ca77e35952
+    BasePortGuid: Output
+    TargetNodeGuid: 8007bf89-48cc-43ba-b569-dab0b2eb912a
     TargetPortGuid: Input
   - BaseNodeGuid: dfbdd4a6-f0c3-4eab-97cf-d6faa227c9a4
     BasePortGuid: 842bbd78-6e29-4ae7-a7bb-a90d56c9e979
@@ -105,13 +97,17 @@ MonoBehaviour:
     BasePortGuid: c39bd047-8d15-4cea-a8a2-4796f5a03883
     TargetNodeGuid: 060fbbc5-f17e-42f1-8683-d9a9367c38ad
     TargetPortGuid: Input
-  - BaseNodeGuid: 92f82bfc-d6b6-4875-b9bc-00a36a2cda10
-    BasePortGuid: Output
-    TargetNodeGuid: f6e85fcc-5bbf-4cf8-904d-8714529287dc
+  - BaseNodeGuid: dda5610e-b260-406d-a411-7de950d7d63f
+    BasePortGuid: Continue
+    TargetNodeGuid: f4e23317-ebfa-479c-87af-6e37b2ff7e1b
     TargetPortGuid: Input
-  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    BasePortGuid: 9a3a26b6-79b1-4696-86a2-8b248759531c
-    TargetNodeGuid: 0ecb22e2-c706-4ef5-b8e4-b6161c241440
+  - BaseNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    BasePortGuid: Continue
+    TargetNodeGuid: 57db5c13-f1c9-4d97-a235-159619667564
+    TargetPortGuid: Input
+  - BaseNodeGuid: 7044de6f-57ef-4e7f-81af-fb651d90a534
+    BasePortGuid: 67ccf52e-6314-4bd2-8788-72628cd51953
+    TargetNodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
     TargetPortGuid: Input
   - BaseNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
     BasePortGuid: c489b01b-69cb-49d9-8d06-7adb0bd1e6e9
@@ -122,20 +118,16 @@ MonoBehaviour:
     TargetNodeGuid: db6c305b-4de2-47d4-a4cd-8a089fe7e387
     TargetPortGuid: Input
   - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
+    BasePortGuid: 9a3a26b6-79b1-4696-86a2-8b248759531c
+    TargetNodeGuid: 0ecb22e2-c706-4ef5-b8e4-b6161c241440
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
     BasePortGuid: 6e9ce15f-ac09-40f0-ba17-838b2de15f87
     TargetNodeGuid: db6c305b-4de2-47d4-a4cd-8a089fe7e387
     TargetPortGuid: Input
-  - BaseNodeGuid: db6c305b-4de2-47d4-a4cd-8a089fe7e387
-    BasePortGuid: Output
-    TargetNodeGuid: 51ef8acd-a853-4b0f-a413-7ad51e328041
-    TargetPortGuid: Input
-  - BaseNodeGuid: 0ecb22e2-c706-4ef5-b8e4-b6161c241440
-    BasePortGuid: Output
-    TargetNodeGuid: 0f2ec469-0894-46df-b77d-7ff64336b32c
-    TargetPortGuid: Input
-  - BaseNodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
+  - BaseNodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
     BasePortGuid: False
-    TargetNodeGuid: 0f2ec469-0894-46df-b77d-7ff64336b32c
+    TargetNodeGuid: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
     TargetPortGuid: Input
   StartData:
   - NodeGuid: 46fc0372-c01c-48e3-807d-03672e38ed2f
@@ -436,7 +428,7 @@ MonoBehaviour:
     EndNodeType:
       Value: 4
   - NodeGuid: 0f2ec469-0894-46df-b77d-7ff64336b32c
-    Position: {x: 2105, y: 476}
+    Position: {x: 2156, y: 255}
     EndNodeType:
       Value: 1
   BranchData:
@@ -451,17 +443,6 @@ MonoBehaviour:
         Value: 0
       StringEventConditionType:
         Value: 1
-  - NodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
-    Position: {x: 83, y: 13}
-    TrueGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
-    FalseGuidNode: d05615b3-ae22-44ff-86d5-58d4132f3d60
-    EventDataStringConditions:
-    - StringEventText:
-        Value: Quest
-      Number:
-        Value: 0
-      StringEventConditionType:
-        Value: 2
   - NodeGuid: 0f49aec0-9e60-4ad6-a885-ca0934965c6f
     Position: {x: -972, y: 510}
     TrueGuidNode: 3eba1926-ea2e-401a-b38f-459a820f62e9
@@ -476,7 +457,7 @@ MonoBehaviour:
   - NodeGuid: d05615b3-ae22-44ff-86d5-58d4132f3d60
     Position: {x: 502, y: 134}
     TrueGuidNode: 4a5ff0fb-3cf0-4ecd-9a5c-0652b8480f78
-    FalseGuidNode: d99e4278-7d2f-455b-963e-281c3fb3ee5f
+    FalseGuidNode: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
     EventDataStringConditions:
     - StringEventText:
         Value: Atempts
@@ -484,17 +465,17 @@ MonoBehaviour:
         Value: 1
       StringEventConditionType:
         Value: 3
-  - NodeGuid: d99e4278-7d2f-455b-963e-281c3fb3ee5f
-    Position: {x: 920, y: 371}
-    TrueGuidNode: 91cac1f1-f946-4e4e-bb12-7b91f5ce1ba9
-    FalseGuidNode: 0f2ec469-0894-46df-b77d-7ff64336b32c
+  - NodeGuid: e8271f26-1cd4-4819-9f56-d287d1c05d54
+    Position: {x: 130, y: -70}
+    TrueGuidNode: 51ef8acd-a853-4b0f-a413-7ad51e328041
+    FalseGuidNode: d05615b3-ae22-44ff-86d5-58d4132f3d60
     EventDataStringConditions:
     - StringEventText:
-        Value: Atempts
+        Value: Quest
       Number:
-        Value: 2
+        Value: 0
       StringEventConditionType:
-        Value: 3
+        Value: 2
   ChoiceData:
   - NodeGuid: 52521e1a-3e5d-46a5-94fe-797bcfc06bd0
     Position: {x: 903, y: -470}

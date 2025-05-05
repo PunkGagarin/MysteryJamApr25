@@ -33,6 +33,14 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     TargetPortGuid: Input
+  - BaseNodeGuid: 6d6ab8a7-3fd6-4806-805b-886c12579b2b
+    BasePortGuid: True
+    TargetNodeGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
+    TargetPortGuid: Input
+  - BaseNodeGuid: 6d6ab8a7-3fd6-4806-805b-886c12579b2b
+    BasePortGuid: False
+    TargetNodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
+    TargetPortGuid: Input
   - BaseNodeGuid: 7d230dde-785d-4b61-ae4b-10541671a3e9
     BasePortGuid: True
     TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
@@ -40,10 +48,6 @@ MonoBehaviour:
   - BaseNodeGuid: 7d230dde-785d-4b61-ae4b-10541671a3e9
     BasePortGuid: False
     TargetNodeGuid: 6d6ab8a7-3fd6-4806-805b-886c12579b2b
-    TargetPortGuid: Input
-  - BaseNodeGuid: 6d6ab8a7-3fd6-4806-805b-886c12579b2b
-    BasePortGuid: True
-    TargetNodeGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
     TargetPortGuid: Input
   - BaseNodeGuid: db7feba6-29bd-42a1-9e1d-e48c74e05232
     BasePortGuid: Output
@@ -57,9 +61,13 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
     TargetPortGuid: Input
-  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+  - BaseNodeGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
     BasePortGuid: Output
-    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    TargetPortGuid: Input
+  - BaseNodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
+    BasePortGuid: Output
+    TargetNodeGuid: dfb13bcb-3a55-4d80-8ec4-12d9c0366db3
     TargetPortGuid: Input
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
@@ -69,9 +77,17 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
+  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    BasePortGuid: Output
+    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetPortGuid: Input
   - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    TargetPortGuid: Input
+  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
+    BasePortGuid: Output
+    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     TargetPortGuid: Input
   - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
     BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
@@ -85,25 +101,17 @@ MonoBehaviour:
     BasePortGuid: Continue
     TargetNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
     TargetPortGuid: Input
-  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    BasePortGuid: Continue
-    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    TargetPortGuid: Input
   - BaseNodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
     TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
     TargetPortGuid: Input
-  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    BasePortGuid: Output
-    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    TargetPortGuid: Input
-  - BaseNodeGuid: 6d6ab8a7-3fd6-4806-805b-886c12579b2b
-    BasePortGuid: False
-    TargetNodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
-    TargetPortGuid: Input
   - BaseNodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
     BasePortGuid: cb38162d-c1c6-4dab-a922-9e6892aecdc7
     TargetNodeGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
+    TargetPortGuid: Input
+  - BaseNodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
+    BasePortGuid: 576c391b-2c6b-4706-8a7e-383fafbb7f53
+    TargetNodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
     TargetPortGuid: Input
   - BaseNodeGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
     BasePortGuid: 5ee248d2-f2be-442d-b0bf-957cd535a99e
@@ -113,17 +121,9 @@ MonoBehaviour:
     BasePortGuid: ecf5a59f-90e2-4aaa-a11d-ba92630196ca
     TargetNodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
     TargetPortGuid: Input
-  - BaseNodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
-    BasePortGuid: 576c391b-2c6b-4706-8a7e-383fafbb7f53
-    TargetNodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
-    TargetPortGuid: Input
-  - BaseNodeGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
-    BasePortGuid: Output
-    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    TargetPortGuid: Input
-  - BaseNodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
-    BasePortGuid: Output
-    TargetNodeGuid: dfb13bcb-3a55-4d80-8ec4-12d9c0366db3
+  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    BasePortGuid: Continue
+    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -249,8 +249,113 @@ MonoBehaviour:
       InputGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
       OutputGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     SkipContinue: 0
+  - NodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
+    Position: {x: 2974, y: 200}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 1e087326-61c9-4e31-a690-4625a0cb8df9
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0417\u0430 \u0441\u0432\u043E\u044E <b>\u0434\u043E\u043B\u0433\u0443\u044E
+          \u0436\u0438\u0437\u043D\u044C</b> \u043C\u0430\u043C\u0430 \u043D\u0430\u0436\u0438\u043B\u0430
+          \u043C\u043D\u043E\u0433\u043E \u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u0430."
+      - LanguageType: 1
+        LanguageGenericType: During her <b>long life</b>, my mother acquired a lot
+          of property.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: b0c86d4b-492f-40f3-8d08-ea7c8fcf2959
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u0423\u0434\u0438\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E,
+          \u0447\u0442\u043E \u043E\u043D\u0430 \u0440\u0435\u0448\u0438\u043B\u0430
+          \u043E\u0434\u0430\u0440\u0438\u0442\u044C \u043D\u0435 \u0432\u0441\u0435\u0445
+          \u0441\u0432\u043E\u0438\u0445 \u0434\u0435\u0442\u0435\u0439."
+      - LanguageType: 1
+        LanguageGenericType: It is surprising that she decided not to give gifts
+          to all of her children.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: 576c391b-2c6b-4706-8a7e-383fafbb7f53
+      InputGuid: edb67da4-0ded-47cc-816e-c2f15148b532
+      OutputGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
+    - ID:
+        Value: 0
+      PortGuid: cb38162d-c1c6-4dab-a922-9e6892aecdc7
+      InputGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
+      OutputGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
+    SkipContinue: 0
+  - NodeGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
+    Position: {x: 2964, y: -167}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
+        Value: 0
+      GuidID:
+        Value: 81e6e38f-5839-4ddc-a00c-0a3141e5ca26
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "<b>\u041C\u0430\u0442\u0443\u0448\u043A\u0430</b> \u0431\u044B\u043B\u0430
+          \u0443\u0436\u0435 <b>\u0441\u0442\u0430\u0440\u043E\u0439</b>, \u043A\u043E\u0433\u0434\u0430
+          \u0443\u043C\u0435\u0440\u043B\u0430."
+      - LanguageType: 1
+        LanguageGenericType: <b>Mother</b> was already <b>old</b> when she died.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    - ID:
+        Value: 1
+      GuidID:
+        Value: 6a9093db-8eb6-40ad-ae19-5d5e74d35dff
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041E\u043D\u0430 \u0443\u043C\u0435\u0440\u043B\u0430
+          \u0432\u043E \u0441\u043D\u0435, \u0431\u0435\u0437 \u0431\u043E\u043B\u0438,
+          \u043F\u043E\u0441\u043B\u0435 \u0434\u043E\u043B\u0433\u043E\u0439 \u0431\u043E\u043B\u0435\u0437\u043D\u0438.
+          \u041F\u0440\u0438\u0437\u043D\u0430\u0442\u044C\u0441\u044F, \u044F \u043E\u0436\u0438\u0434\u0430\u043B
+          \u044D\u0442\u043E\u0433\u043E, \u043D\u043E \u044F \u0441\u043A\u0443\u0447\u0430\u044E
+          \u043F\u043E \u043D\u0435\u0439."
+      - LanguageType: 1
+        LanguageGenericType: She died in her sleep, without pain, after a long illness.
+          To be honest, I expected it, but I miss her.
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts:
+    - ID:
+        Value: 0
+      PortGuid: ecf5a59f-90e2-4aaa-a11d-ba92630196ca
+      InputGuid: edb67da4-0ded-47cc-816e-c2f15148b532
+      OutputGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
+    - ID:
+        Value: 0
+      PortGuid: 5ee248d2-f2be-442d-b0bf-957cd535a99e
+      InputGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
+      OutputGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
+    SkipContinue: 0
   - NodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    Position: {x: 3804, y: -333}
+    Position: {x: 3804, y: -302}
     DialogueDataNames: []
     DialogueDataTexts:
     - ID:
@@ -274,84 +379,6 @@ MonoBehaviour:
         LanguageGenericType: {fileID: 0}
     DialogueDataImages: []
     DialogueDataPorts: []
-    SkipContinue: 0
-  - NodeGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
-    Position: {x: 2982, y: -172}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 81e6e38f-5839-4ddc-a00c-0a3141e5ca26
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "<b>\u041C\u0430\u0442\u0443\u0448\u043A\u0430</b> \u0431\u044B\u043B\u0430
-          \u0443\u0436\u0435 <b>\u0441\u0442\u0430\u0440\u043E\u0439</b>, \u043A\u043E\u0433\u0434\u0430
-          \u0443\u043C\u0435\u0440\u043B\u0430. \u041E\u043D\u0430 \u0443\u043C\u0435\u0440\u043B\u0430
-          \u0432\u043E \u0441\u043D\u0435, \u0431\u0435\u0437 \u0431\u043E\u043B\u0438,
-          \u043F\u043E\u0441\u043B\u0435 \u0434\u043E\u043B\u0433\u043E\u0439 \u0431\u043E\u043B\u0435\u0437\u043D\u0438.
-          \u041F\u0440\u0438\u0437\u043D\u0430\u0442\u044C\u0441\u044F, \u044F \u043E\u0436\u0438\u0434\u0430\u043B
-          \u044D\u0442\u043E\u0433\u043E, \u043D\u043E \u044F \u0441\u043A\u0443\u0447\u0430\u044E
-          \u043F\u043E \u043D\u0435\u0439."
-      - LanguageType: 1
-        LanguageGenericType: <b>Mother</b> was already <b>old</b> when she died.
-          She died in her sleep, without pain, after a long illness. To be honest,
-          I expected it, but I miss her.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts:
-    - ID:
-        Value: 0
-      PortGuid: ecf5a59f-90e2-4aaa-a11d-ba92630196ca
-      InputGuid: edb67da4-0ded-47cc-816e-c2f15148b532
-      OutputGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
-    - ID:
-        Value: 0
-      PortGuid: 5ee248d2-f2be-442d-b0bf-957cd535a99e
-      InputGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
-      OutputGuid: 2bdc4408-3df6-49bb-a810-b220e1d977dc
-    SkipContinue: 0
-  - NodeGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
-    Position: {x: 2993, y: 107}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 1e087326-61c9-4e31-a690-4625a0cb8df9
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u0417\u0430 \u0441\u0432\u043E\u044E <b>\u0434\u043E\u043B\u0433\u0443\u044E
-          \u0436\u0438\u0437\u043D\u044C</b> \u043C\u0430\u043C\u0430 \u043D\u0430\u0436\u0438\u043B\u0430
-          \u043C\u043D\u043E\u0433\u043E \u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u0430.
-          \u0423\u0434\u0438\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E, \u0447\u0442\u043E
-          \u043E\u043D\u0430 \u0440\u0435\u0448\u0438\u043B\u0430 \u043E\u0434\u0430\u0440\u0438\u0442\u044C
-          \u043D\u0435 \u0432\u0441\u0435\u0445 \u0441\u0432\u043E\u0438\u0445 \u0434\u0435\u0442\u0435\u0439."
-      - LanguageType: 1
-        LanguageGenericType: During her <b>long life</b>, my mother acquired a lot
-          of property. It is surprising that she decided not to give gifts to all
-          of her children.
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts:
-    - ID:
-        Value: 0
-      PortGuid: 576c391b-2c6b-4706-8a7e-383fafbb7f53
-      InputGuid: edb67da4-0ded-47cc-816e-c2f15148b532
-      OutputGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
-    - ID:
-        Value: 0
-      PortGuid: cb38162d-c1c6-4dab-a922-9e6892aecdc7
-      InputGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
-      OutputGuid: 26818f90-2a7f-4ff8-a120-e4564d1bfcb9
     SkipContinue: 0
   EventData:
   - NodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
@@ -398,12 +425,12 @@ MonoBehaviour:
     Position: {x: 4959, y: -686}
     EndNodeType:
       Value: 4
-  - NodeGuid: dfb13bcb-3a55-4d80-8ec4-12d9c0366db3
-    Position: {x: 3785, y: 51}
-    EndNodeType:
-      Value: 1
   - NodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     Position: {x: 2419, y: 442}
+    EndNodeType:
+      Value: 1
+  - NodeGuid: dfb13bcb-3a55-4d80-8ec4-12d9c0366db3
+    Position: {x: 3804, y: 144}
     EndNodeType:
       Value: 1
   BranchData:
@@ -501,7 +528,7 @@ MonoBehaviour:
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
   - NodeGuid: 97c17be3-8f5e-4eb3-bcaa-183a0a8c915d
-    Position: {x: 3464, y: -143}
+    Position: {x: 3445, y: -50}
     ChoiceStateType:
       Value: 1
     Text:
@@ -518,7 +545,7 @@ MonoBehaviour:
       LanguageGenericType: {fileID: 0}
     EventDataStringConditions: []
   - NodeGuid: edb67da4-0ded-47cc-816e-c2f15148b532
-    Position: {x: 3464, y: 51}
+    Position: {x: 3445, y: 144}
     ChoiceStateType:
       Value: 1
     Text:

@@ -45,6 +45,10 @@ MonoBehaviour:
     BasePortGuid: True
     TargetNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     TargetPortGuid: Input
+  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
+    BasePortGuid: False
+    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    TargetPortGuid: Input
   - BaseNodeGuid: ce233715-8543-41cf-9a34-ce7491221a7e
     BasePortGuid: Output
     TargetNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
@@ -57,21 +61,33 @@ MonoBehaviour:
     BasePortGuid: Output
     TargetNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
     TargetPortGuid: Input
-  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+  - BaseNodeGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
     BasePortGuid: Output
-    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
+    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    TargetPortGuid: Input
+  - BaseNodeGuid: 4f092c8a-b25f-4082-9edf-96148c24ba69
+    BasePortGuid: Output
+    TargetNodeGuid: dc213f0d-d3da-407c-9a32-9546c764223c
+    TargetPortGuid: Input
+  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
+    BasePortGuid: Output
+    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
     TargetPortGuid: Input
   - BaseNodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     BasePortGuid: Output
     TargetNodeGuid: 23821228-09df-44bc-be01-104735c8af1b
     TargetPortGuid: Input
+  - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+    BasePortGuid: Output
+    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    TargetPortGuid: Input
   - BaseNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
     BasePortGuid: Output
     TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     TargetPortGuid: Input
-  - BaseNodeGuid: 249cd7c5-fc9b-427a-be02-7e9513a5c688
+  - BaseNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
     BasePortGuid: Output
-    TargetNodeGuid: 5f763701-487f-4e9f-a319-e6db6da34dab
+    TargetNodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
     TargetPortGuid: Input
   - BaseNodeGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
     BasePortGuid: 386e3240-5372-4c71-a3f6-2054f1ce00db
@@ -89,26 +105,6 @@ MonoBehaviour:
     BasePortGuid: 01c913c2-f8b9-4c41-ae74-6e5ff66a5498
     TargetNodeGuid: dbf01e41-a03e-4bc9-b256-c2669a85855b
     TargetPortGuid: Input
-  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    BasePortGuid: Continue
-    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
-    TargetPortGuid: Input
-  - BaseNodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    BasePortGuid: Output
-    TargetNodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    TargetPortGuid: Input
-  - BaseNodeGuid: f5a75254-f26d-44a3-a158-af439999b5ca
-    BasePortGuid: False
-    TargetNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    TargetPortGuid: Input
-  - BaseNodeGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
-    BasePortGuid: Output
-    TargetNodeGuid: 46359059-d57a-4736-a187-d921f6807214
-    TargetPortGuid: Input
-  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
-    BasePortGuid: 10fd31a5-1bea-48cb-ab9b-c341a94f5c44
-    TargetNodeGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
-    TargetPortGuid: Input
   - BaseNodeGuid: f5480104-3031-4a5b-9d3a-02ea4bbc9190
     BasePortGuid: c6265f78-6b69-47ec-97d8-a9aaf9d74d32
     TargetNodeGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
@@ -117,13 +113,17 @@ MonoBehaviour:
     BasePortGuid: 438dbc1f-8bcf-4ea7-b85c-a943f37ba19a
     TargetNodeGuid: 4f092c8a-b25f-4082-9edf-96148c24ba69
     TargetPortGuid: Input
+  - BaseNodeGuid: 46359059-d57a-4736-a187-d921f6807214
+    BasePortGuid: Continue
+    TargetNodeGuid: 4c4beae4-78a0-4904-a088-9f9f7baebfc3
+    TargetPortGuid: Input
+  - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
+    BasePortGuid: 10fd31a5-1bea-48cb-ab9b-c341a94f5c44
+    TargetNodeGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
+    TargetPortGuid: Input
   - BaseNodeGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
     BasePortGuid: e0d21cb1-d67e-45f7-90e7-f0903ea49e5f
     TargetNodeGuid: 4f092c8a-b25f-4082-9edf-96148c24ba69
-    TargetPortGuid: Input
-  - BaseNodeGuid: 4f092c8a-b25f-4082-9edf-96148c24ba69
-    BasePortGuid: Output
-    TargetNodeGuid: dc213f0d-d3da-407c-9a32-9546c764223c
     TargetPortGuid: Input
   StartData:
   - NodeGuid: b320104d-d18d-4d16-a41c-e6fe9a50b852
@@ -185,28 +185,6 @@ MonoBehaviour:
       PortGuid: 5cef0ee4-30d8-4812-b5eb-f8b09d5cd576
       InputGuid: ce233715-8543-41cf-9a34-ce7491221a7e
       OutputGuid: 29ac1e42-8680-4dde-bfa3-b3f0e6e4a1b9
-    SkipContinue: 0
-  - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
-    Position: {x: 2550, y: -701}
-    DialogueDataNames: []
-    DialogueDataTexts:
-    - ID:
-        Value: 0
-      GuidID:
-        Value: 5a93e724-b467-44fa-ab0f-fbdb5948c53d
-      Text:
-      - LanguageType: 0
-        LanguageGenericType: "\u041E\u0433\u043E?! \u042D\u0442\u043E \u044F \u0434\u043E\u043B\u0436\u0435\u043D
-          \u0443\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435!"
-      - LanguageType: 1
-        LanguageGenericType: Wow?! I need to find out more about this!
-      AudioClips:
-      - LanguageType: 0
-        LanguageGenericType: {fileID: 0}
-      - LanguageType: 1
-        LanguageGenericType: {fileID: 0}
-    DialogueDataImages: []
-    DialogueDataPorts: []
     SkipContinue: 0
   - NodeGuid: f3736d88-3d95-4627-b550-938c6211a9c4
     Position: {x: 1911, y: -719}
@@ -328,17 +306,29 @@ MonoBehaviour:
       InputGuid: 598869eb-f8f3-43a7-9a1f-97db2b108831
       OutputGuid: 9d9bf3fb-430e-44a3-8d70-a4186f7e26dc
     SkipContinue: 0
-  EventData:
-  - NodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
-    Position: {x: 2064, y: 335}
-    EventDataStringModifiers:
-    - StringEventText:
-        Value: Quest
-      Number:
+  - NodeGuid: 43d1a048-65b9-4282-89d0-eb89be8807cc
+    Position: {x: 2550, y: -701}
+    DialogueDataNames: []
+    DialogueDataTexts:
+    - ID:
         Value: 0
-      StringEventModifierType:
-        Value: 3
-    ContainerDialogueEventSOs: []
+      GuidID:
+        Value: 5a93e724-b467-44fa-ab0f-fbdb5948c53d
+      Text:
+      - LanguageType: 0
+        LanguageGenericType: "\u041E\u0433\u043E?! \u042D\u0442\u043E \u044F \u0434\u043E\u043B\u0436\u0435\u043D
+          \u0443\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435!"
+      - LanguageType: 1
+        LanguageGenericType: Wow?! I need to find out more about this!
+      AudioClips:
+      - LanguageType: 0
+        LanguageGenericType: {fileID: 0}
+      - LanguageType: 1
+        LanguageGenericType: {fileID: 0}
+    DialogueDataImages: []
+    DialogueDataPorts: []
+    SkipContinue: 0
+  EventData:
   - NodeGuid: 684709de-3e88-4554-81e1-1581b3d8063b
     Position: {x: 2087, y: 638}
     EventDataStringModifiers: []
@@ -364,21 +354,31 @@ MonoBehaviour:
       StringEventModifierType:
         Value: 4
     ContainerDialogueEventSOs: []
+  - NodeGuid: f4650d63-30bf-4072-a885-d337e83ad62e
+    Position: {x: 2047, y: 442}
+    EventDataStringModifiers:
+    - StringEventText:
+        Value: Quest
+      Number:
+        Value: 0
+      StringEventModifierType:
+        Value: 3
+    ContainerDialogueEventSOs: []
   EndData:
   - NodeGuid: 23821228-09df-44bc-be01-104735c8af1b
     Position: {x: 2419, y: 638}
     EndNodeType:
       Value: 4
-  - NodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
-    Position: {x: 2492, y: 335}
-    EndNodeType:
-      Value: 1
   - NodeGuid: 89747c6d-c85f-4147-b8c4-7cb1958fef91
     Position: {x: 4671, y: -701}
     EndNodeType:
       Value: 4
   - NodeGuid: dc213f0d-d3da-407c-9a32-9546c764223c
     Position: {x: 3500, y: 205}
+    EndNodeType:
+      Value: 1
+  - NodeGuid: 7d71f28b-ffbd-479b-857f-09f8eff00711
+    Position: {x: 2475, y: 442}
     EndNodeType:
       Value: 1
   BranchData:
